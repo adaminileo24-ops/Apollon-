@@ -1,0 +1,46 @@
+name: Apollon — collecte quotidienne
+
+on:
+  schedule:
+    - cron: "12 7 * * 1-5"
+    - cron: "47 21 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collecte:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet requests pandas
+
+      - name: Collecter les données
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        working-directory: pipeline
+        run: python3 apollon_data.py --history 10 --factors
+
+      - name: Archiver à la racine
+        run: |
+          mkdir -p data
+          cp -r pipeline/data/* data/ 2>/dev/null || true
+
+      - name: Committer
+        run: |
+          git config user.name  "Apollon"
+          git config user.email "apollon@users.noreply.github.com"
+          git add -A data/
+          if git diff --staged --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "data: collecte du $(date -u +%Y-%m-%d)"
+            git push
+          fi
