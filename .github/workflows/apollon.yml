@@ -25,13 +25,13 @@ jobs:
       - name: Collecter les données
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        working-directory: pipeline
+        working-directory: apollon-repo/pipeline
         run: python3 apollon_data.py --history 10 --factors
 
       - name: Archiver à la racine
         run: |
           mkdir -p data
-          cp -r pipeline/data/* data/ 2>/dev/null || true
+          cp -r apollon-repo/pipeline/data/* data/ 2>/dev/null || true
 
       - name: Committer
         run: |
