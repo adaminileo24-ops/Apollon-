@@ -1,0 +1,10 @@
+ref,date_emission,section,affirmation,probabilite,echeance,resultat,brier,statut,note
+C-001,2026-08-14,Macro,Hausse Fed des taux directeurs en septembre 2026,0.35,2026-09-17,,,OUVERT,Marche pricait ~36% via CME FedWatch a l emission
+C-002,2026-08-14,Macro,Minutes FOMC du 19 aout plus hawkish qu attendu,0.45,2026-08-19,,,OUVERT,Jugement qualitatif - critere de resolution a preciser avant echeance
+C-003,2026-08-14,Macro,Hausse BoJ portant le taux au-dessus de 1.00% d ici fin octobre 2026,0.55,2026-10-31,,,REFORMULE,Formulation initiale fausse - la BoJ avait deja hike a 1.00% en juin 2026 (erreur E-006)
+C-004,2026-08-14,Macro,Brent au-dessus de 100 USD a un moment avant le 30 septembre 2026,0.30,2026-09-30,,,OUVERT,Astra estime cette probabilite trop haute - EIA vise 78 USD au 4T26
+C-005,2026-08-14,Macro,VIX cloture au-dessus de 20 avant le 30 septembre 2026,0.40,2026-09-30,,,OUVERT,
+C-006,2026-08-14,Macro,Detroit d Ormuz pleinement rouvert avant le 30 septembre 2026,0.35,2026-09-30,,,OUVERT,Astra estime 30-40% sur 6 mois - donc trop haut sur 6 semaines
+C-007,2026-08-14,Astra,Accord formel de reouverture d Ormuz dans les 6 mois,0.35,2027-02-14,,,OUVERT,Emis par Astra en contradiction du brief Macro
+C-008,2026-08-14,Astra,Brent sous 78 USD avant le 31 decembre 2026,0.60,2026-12-31,,,OUVERT,Scenario central EIA - Astra le donne a 55-65%
+C-009,2026-08-14,Astra,Scenario adverse infligeant -3% de NAV ou plus au portefeuille du brief 001,0.40,2027-02-14,,,OUVERT,Portefeuille theorique - resolution par simulation
