@@ -134,7 +134,7 @@ DOMAINES = {                        # absence => DOMAINE FERMÉ, thèses interdi
     "M4_devises":     ["DEXUSEU", "DEXJPUS", "DTWEXBGS"],
     "RISQUE_actions": ["VIXCLS", "SP500", "NASDAQ100"],
     "RISQUE_credit":  ["BAMLH0A0HYM2", "BAMLC0A0CM"],
-    "VOL_TENOR":      ["VIXCLS", "VXVCLS"],   # fermé : VXVCLS absente du dépôt
+    "VOL_TENOR":      ["VIXCLS", "VXVCLS"],   # ouvert dès que VXVCLS est collectée
 }
 
 # ---- Couples obligatoires (E-005) -----------------------------------
@@ -169,6 +169,10 @@ SENS_SERIE: dict[str, dict] = {
     "PAYEMS":       {"role": "emploi",                  "signe_risque": -1},
     "INDPRO":       {"role": "activite_industrielle",   "signe_risque": -1},
     "VIXCLS":       {"role": "volatilite_implicite",    "signe_risque": +1},
+    # E-055 — déclarée AVANT que la série n'arrive au dépôt. Une série
+    # collectée sans sens déclaré bloque toute production (et c'est le
+    # comportement voulu) : la table doit précéder la collecte.
+    "VXVCLS":       {"role": "volatilite_implicite_3m", "signe_risque": +1},
     "SP500":        {"role": "prix_actions",            "signe_risque": -1},
     "NASDAQ100":    {"role": "prix_actions_tech",       "signe_risque": -1},
     "DCOILBRENTEU": {"role": "prix_energie",            "signe_risque": +1},
@@ -196,7 +200,7 @@ CONVENTION = {
     "T10Y2Y": "niveau", "DFII10": "niveau", "T10YIE": "niveau", "T5YIFR": "niveau",
     "UNRATE": "niveau", "BAMLH0A0HYM2": "niveau", "BAMLC0A0CM": "niveau",
     "CPIAUCSL": "log", "CPILFESL": "log", "PAYEMS": "log", "INDPRO": "log",
-    "VIXCLS": "log", "SP500": "log", "NASDAQ100": "log",
+    "VIXCLS": "log", "VXVCLS": "log", "SP500": "log", "NASDAQ100": "log",
     "DCOILBRENTEU": "log", "DCOILWTICO": "log",
     "DEXUSEU": "log", "DEXJPUS": "log", "DTWEXBGS": "log",
 }

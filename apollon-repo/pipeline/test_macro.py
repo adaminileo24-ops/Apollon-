@@ -253,12 +253,34 @@ def t_serie_perimee():
     assert "VIXCLS" in ctrl["series_perimees_vs_arrete"]
 
 
-@cas("4d  dépôt complet => production autorisée, domaine VOL_TENOR fermé")
+@cas("4d  un domaine est fermé SI ET SEULEMENT SI une série lui manque")
 def t_production_autorisee():
-    ctrl = M.controle_production(_series_reelles(), _diags_reels())
+    """E-055 — le test affirmait « VOL_TENOR fermé » en dur.
+
+    C'était vrai tant que VXVCLS était absente du dépôt. La série est
+    maintenant collectée : le domaine s'ouvre, et le test tombait — non
+    parce que le moteur régressait, mais parce que l'ASSERTION était
+    datée. Un banc qui fige un état du dépôt cesse de tester une propriété
+    et se met à tester une circonstance.
+
+    Réécrit en propriété : chaque domaine est fermé exactement quand il
+    lui manque une série, quel que soit le contenu du dépôt.
+    """
+    series = _series_reelles()
+    ctrl = M.controle_production(series, _diags_reels())
     assert ctrl["production_autorisee"] is True
-    assert "VXVCLS" in ctrl["manquantes_liste_doctrine"]
-    assert "VOL_TENOR" in ctrl["domaines_fermes"], \
+
+    presentes = set(series)
+    for nom, requises in M.DOMAINES.items():
+        manquantes = [s for s in requises if s not in presentes]
+        ferme = nom in ctrl["domaines_fermes"]
+        assert ferme == bool(manquantes), (
+            f"{nom} : fermé={ferme} alors qu'il manque {manquantes or 'rien'}")
+
+    # Contre-épreuve : retirer une série DOIT fermer son domaine.
+    sans_vix3m = {k: v for k, v in series.items() if k != "VXVCLS"}
+    ctrl2 = M.controle_production(sans_vix3m, _diags_reels())
+    assert "VOL_TENOR" in ctrl2["domaines_fermes"], \
         "un domaine privé de série obligatoire doit être fermé"
 
 
