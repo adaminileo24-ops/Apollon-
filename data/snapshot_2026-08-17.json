@@ -1,0 +1,223 @@
+{
+  "date": "2026-08-17",
+  "generated_at": "2026-08-17T08:01:46",
+  "regime": {
+    "volatilite": "BASSE",
+    "courbe": "PENTUE",
+    "tendance": "HAUSSIERE",
+    "_spx_vs_ma200_pct": 10.05,
+    "credit": "RESSERREMENT",
+    "_hy_vs_ma60_pb": -2.4,
+    "regime": "BASSE / PENTUE / HAUSSIERE / RESSERREMENT",
+    "politique_couverture": "ACHAT SYSTEMATIQUE — protection bon marche"
+  },
+  "series": {
+    "DFF": {
+      "label": "Fed funds effectif",
+      "unit": "%",
+      "section": "M1",
+      "value": 3.63,
+      "date": "2026-08-13",
+      "chg_1d": 0.0,
+      "chg_20d": 0.0
+    },
+    "DGS2": {
+      "label": "Treasury 2 ans",
+      "unit": "%",
+      "section": "M1",
+      "value": 4.15,
+      "date": "2026-08-13",
+      "chg_1d": -0.05,
+      "chg_20d": -0.01
+    },
+    "DGS10": {
+      "label": "Treasury 10 ans",
+      "unit": "%",
+      "section": "M1",
+      "value": 4.63,
+      "date": "2026-08-13",
+      "chg_1d": -0.05,
+      "chg_20d": 0.06
+    },
+    "DGS30": {
+      "label": "Treasury 30 ans",
+      "unit": "%",
+      "section": "M1",
+      "value": 5.21,
+      "date": "2026-08-13",
+      "chg_1d": -0.03,
+      "chg_20d": 0.12
+    },
+    "T10Y2Y": {
+      "label": "Pente 2s10s",
+      "unit": "%",
+      "section": "M1",
+      "value": 0.51,
+      "date": "2026-08-14",
+      "chg_1d": 0.03,
+      "chg_20d": 0.14
+    },
+    "DFII10": {
+      "label": "Taux réel 10 ans (TIPS)",
+      "unit": "%",
+      "section": "M1",
+      "value": 2.39,
+      "date": "2026-08-13",
+      "chg_1d": -0.03,
+      "chg_20d": 0.04
+    },
+    "T10YIE": {
+      "label": "Point mort inflation 10 ans",
+      "unit": "%",
+      "section": "M1",
+      "value": 2.27,
+      "date": "2026-08-14",
+      "chg_1d": 0.03,
+      "chg_20d": 0.03
+    },
+    "T5YIFR": {
+      "label": "Point mort 5 ans dans 5 ans",
+      "unit": "%",
+      "section": "M1",
+      "value": 2.3,
+      "date": "2026-08-14",
+      "chg_1d": 0.03,
+      "chg_20d": 0.09
+    },
+    "CPIAUCSL": {
+      "label": "CPI global",
+      "unit": "idx",
+      "section": "M2",
+      "value": 332.813,
+      "date": "2026-07-01",
+      "chg_1d": 0.245,
+      "chg_20d": 17.182
+    },
+    "CPILFESL": {
+      "label": "CPI cœur",
+      "unit": "idx",
+      "section": "M2",
+      "value": 336.789,
+      "date": "2026-07-01",
+      "chg_1d": 0.724,
+      "chg_20d": 15.058
+    },
+    "UNRATE": {
+      "label": "Taux de chômage",
+      "unit": "%",
+      "section": "M2",
+      "value": 4.1,
+      "date": "2026-07-01",
+      "chg_1d": -0.1,
+      "chg_20d": 0.0
+    },
+    "PAYEMS": {
+      "label": "Emploi non agricole",
+      "unit": "milliers",
+      "section": "M2",
+      "value": 158858.0,
+      "date": "2026-07-01",
+      "chg_1d": -23.0,
+      "chg_20d": 779.0
+    },
+    "INDPRO": {
+      "label": "Production industrielle",
+      "unit": "idx",
+      "section": "M2",
+      "value": 102.6395,
+      "date": "2026-06-01",
+      "chg_1d": 0.0789,
+      "chg_20d": 3.17
+    },
+    "DCOILBRENTEU": {
+      "label": "Brent",
+      "unit": "$",
+      "section": "M3",
+      "value": 93.26,
+      "date": "2026-08-11",
+      "chg_1d": 0.52,
+      "chg_20d": 9.57
+    },
+    "DCOILWTICO": {
+      "label": "WTI",
+      "unit": "$",
+      "section": "M3",
+      "value": 84.77,
+      "date": "2026-08-11",
+      "chg_1d": 1.01,
+      "chg_20d": 4.33
+    },
+    "DEXUSEU": {
+      "label": "EUR/USD",
+      "unit": "",
+      "section": "M4",
+      "value": 1.1559,
+      "date": "2026-08-07",
+      "chg_1d": 0.0038,
+      "chg_20d": 0.0121
+    },
+    "DEXJPUS": {
+      "label": "USD/JPY",
+      "unit": "",
+      "section": "M4",
+      "value": 157.54,
+      "date": "2026-08-07",
+      "chg_1d": -0.91,
+      "chg_20d": -3.77
+    },
+    "DTWEXBGS": {
+      "label": "Indice dollar large",
+      "unit": "idx",
+      "section": "M4",
+      "value": 119.0649,
+      "date": "2026-08-07",
+      "chg_1d": -0.4464,
+      "chg_20d": -1.4397
+    },
+    "VIXCLS": {
+      "label": "VIX",
+      "unit": "",
+      "section": "RISQUE",
+      "value": 14.63,
+      "date": "2026-08-13",
+      "chg_1d": 0.08,
+      "chg_20d": -2.1
+    },
+    "BAMLH0A0HYM2": {
+      "label": "Spread haut rendement OAS",
+      "unit": "%",
+      "section": "RISQUE",
+      "value": 2.71,
+      "date": "2026-08-13",
+      "chg_1d": 0.0,
+      "chg_20d": 0.0
+    },
+    "BAMLC0A0CM": {
+      "label": "Spread investment grade OAS",
+      "unit": "%",
+      "section": "RISQUE",
+      "value": 0.79,
+      "date": "2026-08-13",
+      "chg_1d": 0.0,
+      "chg_20d": 0.01
+    },
+    "SP500": {
+      "label": "S&P 500",
+      "unit": "idx",
+      "section": "RISQUE",
+      "value": 7785.76,
+      "date": "2026-08-14",
+      "chg_1d": -13.23,
+      "chg_20d": 328.07
+    },
+    "NASDAQ100": {
+      "label": "Nasdaq 100",
+      "unit": "idx",
+      "section": "RISQUE",
+      "value": 30046.14,
+      "date": "2026-08-14",
+      "chg_1d": -38.36,
+      "chg_20d": 1453.48
+    }
+  }
+}
