@@ -1,0 +1,233 @@
+name: Apollon — cycle (auto-réparant)
+
+# Ce workflow commence par NETTOYER le dépôt avant de faire quoi que ce soit.
+#
+# Pourquoi : les navigateurs renomment « fichier.py » en « fichier (1).py »
+# quand une copie existe déjà dans les téléchargements. Le dépôt se retrouve
+# avec des doublons, et deux workflows qui tournent en parallèle.
+#
+# Plutôt que d'exiger de l'utilisateur qu'il renomme à la main, l'étape 0
+# le fait elle-même : le fichier « (n) » le plus récent gagne, l'ancien est
+# écrasé, et les workflows en double sont supprimés.
+
+on:
+  schedule:
+    - cron: "12 5 * * 1-5"
+    - cron: "47 19 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      # =============================================================
+      # 0. AUTO-RÉPARATION — avant tout le reste.
+      # =============================================================
+      - name: 0 · Normaliser les doublons "(n)"
+        run: |
+          git config user.name  "Apollon"
+          git config user.email "apollon@users.noreply.github.com"
+          CHANGE=0
+
+          # Tout fichier « nom (n).ext » remplace « nom.ext ».
+          find . -path ./.git -prune -o -type f -name '* (*)*' -print | while read -r DUP; do
+            PROPRE=$(echo "$DUP" | sed -E 's/ \([0-9]+\)//')
+            echo "  $DUP  ->  $PROPRE"
+            mv -f "$DUP" "$PROPRE"
+          done
+
+          # Un seul workflow. Celui-ci s'appelle apollon-cycle.yml ;
+          # toute autre définition Apollon est supprimée.
+          for VIEUX in .github/workflows/apollon.yml .github/workflows/apollon-complet.yml; do
+            [ -f "$VIEUX" ] && { echo "  suppression de $VIEUX"; rm -f "$VIEUX"; }
+          done
+
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Dépôt déjà propre."
+          else
+            git commit -m "auto-réparation : doublons normalisés, workflow unique"
+            git push
+            CHANGE=1
+          fi
+          echo "reparation=$CHANGE" >> "$GITHUB_ENV"
+
+      # =============================================================
+      # 0b. INVENTAIRE — dire ce qui manque, en clair, avant d'échouer.
+      # =============================================================
+      - name: 0b · Inventaire des fichiers requis
+        working-directory: apollon-repo/pipeline
+        run: |
+          MANQUE=0
+          for F in apollon_data.py apollon_macro.py apollon_quant.py \
+                   apollon_risque.py apollon_trading.py quant_v3.py \
+                   test_macro.py test_veto.py; do
+            if [ -f "$F" ]; then
+              printf '  OK      %-24s %5s lignes\n' "$F" "$(wc -l < "$F")"
+            else
+              printf '  ABSENT  %-24s\n' "$F"
+              MANQUE=$((MANQUE+1))
+            fi
+          done
+          echo "fichiers manquants : $MANQUE"
+          if [ "$MANQUE" -gt 0 ]; then
+            echo "::warning::$MANQUE fichier(s) absent(s) — les sections correspondantes seront sautées"
+          fi
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - run: pip install --quiet requests pandas numpy scipy
+
+      # =============================================================
+      # 1. COLLECTE
+      # =============================================================
+      - name: 1 · Collecte FRED (millésimes + calendrier)
+        id: collecte
+        continue-on-error: true
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        working-directory: apollon-repo/pipeline
+        run: python3 apollon_data.py --history 10 --factors --vintage
+
+      - name: 1b · Facteurs Fama-French à l'emplacement attendu
+        working-directory: apollon-repo/pipeline
+        run: |
+          mkdir -p data
+          if [ -f data/fama_french_5_daily.csv ]; then
+            echo "facteurs déjà dans data/"
+          elif [ -f ../../data/fama_french_5_daily.csv ]; then
+            cp ../../data/fama_french_5_daily.csv data/
+            echo "facteurs copiés depuis la racine"
+          else
+            echo "::warning::facteurs absents — le banc quantitatif se declarera NON ETALONNE"
+          fi
+
+      # =============================================================
+      # 2. BANCS DE TEST — un banc rouge doit se voir, mais ne doit plus
+      #    empêcher les moteurs de tourner : leur verdict reste lisible,
+      #    et l'étape 4 refuse de déclarer le cycle valide.
+      # =============================================================
+      - name: 2 · Bancs de test (normal et -O)
+        id: bancs
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: |
+          ECHEC=0
+          for T in test_macro.py test_veto.py; do
+            [ -f "$T" ] || { echo "::warning::$T absent"; continue; }
+            for MODE in "" "-O"; do
+              if python3 $MODE "$T" > /tmp/out.txt 2>&1; then
+                echo "  OK   python3 $MODE $T"
+              else
+                echo "  KO   python3 $MODE $T"
+                tail -20 /tmp/out.txt
+                ECHEC=1
+              fi
+            done
+          done
+          exit $ECHEC
+
+      # =============================================================
+      # 3. LES QUATRE SECTIONS
+      # =============================================================
+      - name: 3a · Section Macro
+        id: macro
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: python3 apollon_macro.py --data ./data
+
+      - name: 3b · Section Quantitative
+        id: quant
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: |
+          [ -f apollon_quant.py ] || { echo "::warning::apollon_quant.py absent — section sautée"; exit 0; }
+          python3 apollon_quant.py --data ./data
+
+      - name: 3c · Section Trading
+        id: trading
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: python3 apollon_trading.py --data ./data
+
+      - name: 3d · Section Risque — VETO
+        id: risque
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: python3 apollon_risque.py --data ./data
+
+      # =============================================================
+      # 4. VERDICT DU CYCLE
+      # =============================================================
+      - name: 4 · Verdict
+        run: |
+          echo "collecte=${{ steps.collecte.outcome }}  bancs=${{ steps.bancs.outcome }}"
+          echo "macro=${{ steps.macro.outcome }}  quant=${{ steps.quant.outcome }}"
+          echo "trading=${{ steps.trading.outcome }}  risque=${{ steps.risque.outcome }}"
+          echo ""
+          if [ "${{ steps.collecte.outcome }}" = "failure" ]; then
+            echo "::error::COLLECTE EN ÉCHEC — vérifier le secret FRED_API_KEY."
+            exit 1
+          fi
+          if [ "${{ steps.bancs.outcome }}" = "failure" ]; then
+            echo "::error::UN BANC DE TEST EST ROUGE. Les moteurs ont tourné et leurs"
+            echo "::error::sorties sont en artefact, mais AUCUN verdict n'est opposable"
+            echo "::error::tant que les bancs ne passent pas."
+            exit 1
+          fi
+          if [ "${{ steps.macro.outcome }}" = "failure" ] || \
+             [ "${{ steps.trading.outcome }}" = "failure" ]; then
+            echo "::error::Un moteur amont a échoué — cycle invalide."
+            exit 1
+          fi
+          echo "CYCLE VALIDE. Un code non nul en Section Risque signifie un veto"
+          echo "opposé ou une source non examinable : c'est un résultat, pas une panne."
+
+      # =============================================================
+      # 5. ARCHIVAGE — toujours, même après échec.
+      # =============================================================
+      - name: 5 · Archiver
+        if: always()
+        run: |
+          JOUR=$(date -u +%Y-%m-%d)
+          mkdir -p data "cycles/$JOUR"
+          cp -r apollon-repo/pipeline/data/* data/ 2>/dev/null || true
+          cp apollon-repo/pipeline/*_resultats.json \
+             apollon-repo/pipeline/veto_risque.json \
+             apollon-repo/pipeline/brief_macro_*.md \
+             apollon-repo/pipeline/alertes_risque.jsonl \
+             apollon-repo/pipeline/registre_calibration.csv \
+             apollon-repo/pipeline/data/calendrier_publications.csv \
+             "cycles/$JOUR/" 2>/dev/null || true
+          git config user.name  "Apollon"
+          git config user.email "apollon@users.noreply.github.com"
+          git add -A data/ cycles/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Aucun changement à archiver."
+          else
+            git commit -m "cycle du $(date -u +%Y-%m-%dT%H:%M)Z"
+            git pull --rebase --autostash || true
+            git push
+          fi
+
+      - name: 6 · Artefacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cycle-${{ github.run_number }}
+          path: |
+            apollon-repo/pipeline/*_resultats.json
+            apollon-repo/pipeline/veto_risque.json
+            apollon-repo/pipeline/brief_macro_*.md
+            apollon-repo/pipeline/alertes_risque.jsonl
+            apollon-repo/pipeline/data/calendrier_publications.csv
+          retention-days: 30
+          if-no-files-found: ignore
