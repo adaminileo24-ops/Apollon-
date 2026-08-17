@@ -144,9 +144,23 @@ def fred(series_id: str, start: str | None = None,
     # doit porter la mention correspondante.
     # ------------------------------------------------------------------
     if vintage:
-        params["realtime_start"] = params["observation_start"]
-        params["realtime_end"] = date.today().isoformat()
-        params["output_type"] = 2      # 2 = observations telles que publiées
+        # output_type=4 — « Observations, Initial Release Only » : la valeur
+        # TELLE QUE PUBLIÉE la première fois, dans la structure normale
+        # {date, value}.
+        #
+        # FAUTE CORRIGÉE, ET ELLE A COÛTÉ UN CYCLE. J'avais écrit
+        # output_type=2 (« Observations by Vintage Date, All Observations »),
+        # qui renvoie UNE COLONNE PAR MILLÉSIME — une structure que
+        # l'analyseur ci-dessous ne sait pas lire. Il ne levait pas
+        # d'exception : il ne trouvait simplement aucun champ `value`, et
+        # retournait une liste VIDE pour CHAQUE série. La collecte
+        # réussissait en apparence et ne ramenait rien.
+        #
+        # R-053 — Un changement de paramètre qui modifie la FORME de la
+        # réponse doit être vérifié sur une réponse réelle, jamais déduit
+        # de la documentation. Et un analyseur qui ne reconnaît aucun champ
+        # doit le DIRE, pas rendre une liste vide (voir le garde-fou plus bas).
+        params["output_type"] = 4
 
     try:
         r = requests.get(FRED_URL, params=params, timeout=25)
@@ -161,8 +175,22 @@ def fred(series_id: str, start: str | None = None,
         if v not in (".", "", None):
             try:
                 out.append((o["date"], float(v)))
-            except ValueError:
+            except (ValueError, KeyError):
                 continue
+
+    # R-053 — « la réponse est vide » et « je ne sais pas lire cette réponse »
+    # ne peuvent pas produire le même silence. Si le serveur a renvoyé des
+    # lignes et qu'aucune n'est exploitable, la forme a changé : on le dit,
+    # et en mode millésime on retombe sur la requête standard plutôt que de
+    # rendre une série vide qui ferait échouer tout l'aval.
+    if obs and not out:
+        champs = sorted({k for o in obs[:3] if isinstance(o, dict) for k in o})
+        print(f"  ! {series_id}: {len(obs)} lignes reçues, AUCUNE exploitable — "
+              f"champs vus : {champs}", file=sys.stderr)
+        if vintage:
+            print(f"    repli sur la requête standard (valeurs RÉVISÉES) "
+                  f"pour {series_id}", file=sys.stderr)
+            return fred(series_id, start, vintage=False)
     return out
 
 
