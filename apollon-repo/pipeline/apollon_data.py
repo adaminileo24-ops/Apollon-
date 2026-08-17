@@ -104,6 +104,33 @@ SERIES: dict[str, tuple[str, str, str]] = {
 }
 
 
+# ------------------------------------------------- séries réellement révisées
+# E-054 — LE MILLÉSIME NE S'APPLIQUE PAS À TOUT.
+#
+# `output_type=4` (« Initial Release Only ») n'a de sens que pour une série
+# QUI EST RÉVISÉE. Les taux du Trésor, les indices boursiers, les spreads
+# OAS, les changes et les prix du pétrole sont publiés une fois et ne sont
+# jamais corrigés : leur demander la « première publication » n'apporte
+# rien, et peut TRONQUER l'historique — ALFRED n'archive les millésimes
+# que depuis le début de son propre archivage, pas depuis l'origine de la
+# série.
+#
+# Appliquer le millésime à toutes les séries, c'est payer un biais nul par
+# une perte de profondeur réelle. Sur des moteurs dont la puissance est
+# déjà limitée par la profondeur (arête minimale détectable 1,13 %/an),
+# c'est le plus mauvais échange possible.
+SERIES_REVISEES = {
+    "CPIAUCSL",   # IPC — révisions saisonnières annuelles
+    "CPILFESL",   # IPC sous-jacent — idem
+    "PAYEMS",     # emploi — révisé deux fois, puis benchmark annuel
+    "UNRATE",     # taux de chômage — révisions saisonnières
+    "INDPRO",     # production industrielle — révisée plusieurs mois
+}
+
+# Sous ce rapport, la réponse en millésime est jugée TRONQUÉE et rejetée.
+SEUIL_PROFONDEUR_MILLESIME = 0.80
+
+
 # ---------------------------------------------------------------- collecte
 def fred(series_id: str, start: str | None = None,
          vintage: bool = False) -> list[tuple[str, float]]:
@@ -120,6 +147,11 @@ def fred(series_id: str, start: str | None = None,
             "  1. https://fredaccount.stlouisfed.org/apikeys  (gratuit)\n"
             '  2. export FRED_API_KEY="votre_cle"'
         )
+    # Le millésime ne concerne que les séries effectivement révisées.
+    # Le demander ailleurs coûte de la profondeur sans supprimer aucun biais.
+    if vintage and series_id not in SERIES_REVISEES:
+        vintage = False
+
     params = {
         "series_id": series_id,
         "api_key": FRED_KEY,
@@ -183,6 +215,19 @@ def fred(series_id: str, start: str | None = None,
     # lignes et qu'aucune n'est exploitable, la forme a changé : on le dit,
     # et en mode millésime on retombe sur la requête standard plutôt que de
     # rendre une série vide qui ferait échouer tout l'aval.
+    # CONTRÔLE DE PROFONDEUR (E-054). Une réponse en millésime nettement plus
+    # courte que la version standard est une TRONCATURE, pas une correction de
+    # biais. On la rejette et on le déclare — R-011 : jamais de troncature
+    # silencieuse.
+    if vintage and out:
+        standard = fred(series_id, start, vintage=False)
+        if standard and len(out) < SEUIL_PROFONDEUR_MILLESIME * len(standard):
+            print(f"  ! {series_id}: millésime TRONQUÉ — {len(out)} obs contre "
+                  f"{len(standard)} en standard ({100*len(out)/len(standard):.0f} %). "
+                  f"Repli sur les valeurs révisées, biais de révision DÉCLARÉ.",
+                  file=sys.stderr)
+            return standard
+
     if obs and not out:
         champs = sorted({k for o in obs[:3] if isinstance(o, dict) for k in o})
         print(f"  ! {series_id}: {len(obs)} lignes reçues, AUCUNE exploitable — "
