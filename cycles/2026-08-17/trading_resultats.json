@@ -1,0 +1,53 @@
+{
+  "fraicheur": {
+    "genere_le_utc": "2026-08-17T21:25:41Z",
+    "date_donnees": "2026-08-17",
+    "validite_heures": 36.0,
+    "perime_apres_utc": "2026-08-19T09:25:41Z",
+    "execution_complete": true,
+    "n_paires_examinees": 0,
+    "n_paires_ecartees_sur_incident": 0,
+    "controle_attendu_de_l_aval": "REFUSER ce fichier si l'heure UTC courante dépasse `perime_apres_utc`, ou si `date_donnees` ne correspond pas à la date d'arrêté examinée, ou si `execution_complete` est absent ou faux. Un fichier périmé lu comme frais est une position prise sur des chiffres morts."
+  },
+  "idees": [],
+  "date_donnees": "2026-08-17",
+  "graine_simulation": 12345,
+  "n_trajectoires": 100000,
+  "n_trajectoires_exploration": 20000,
+  "sous_pas_par_seance": 20,
+  "taille_pct_nav": 3.0,
+  "convention_cout": {
+    "valeur_pb": 15.0,
+    "base": "points de base du NOTIONNEL de la position, aller-retour"
+  },
+  "horizon_seances": 30,
+  "valeur_critique_engle_granger_5pct": -3.34,
+  "adf_glissant_parametres": {
+    "fenetre": 250,
+    "pas": 25,
+    "seuil_t": -3.04,
+    "n_fenetres_recentes": 24,
+    "fraction_max": 0.2
+  },
+  "hors_echantillon_parametres": {
+    "seuil_p": 0.01,
+    "min_signaux": 10
+  },
+  "doctrine_echantillon": {
+    "profondeur_min_annees": 5.0,
+    "profondeur_min_obs": 250,
+    "exiger_stress_dans_echantillon": true,
+    "opposable": true
+  },
+  "paires_cointegrees_5pct": [],
+  "cointegrations": {},
+  "detail_passages": [],
+  "paires_ecartees_sur_incident": [],
+  "n_transmises": 0,
+  "n_refusees": 0,
+  "statuts_risque_possibles": [
+    "EN_ATTENTE_VETO",
+    "NON_SOUMISE_REFUSEE_EN_AMONT"
+  ],
+  "avertissement": "Ce moteur ne peut pas déclarer une idée exécutable. Une idée TRANSMISE sort en EN_ATTENTE_VETO et n'est qu'une DEMANDE de veto ; une idée REFUSÉE sort en NON_SOUMISE_REFUSEE_EN_AMONT et n'est pas soumise. Seule la Section Risque peut statuer."
+}

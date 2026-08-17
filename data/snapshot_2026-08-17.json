@@ -1,223 +1,194 @@
 {
   "date": "2026-08-17",
-  "generated_at": "2026-08-17T08:01:46",
+  "generated_at": "2026-08-17T21:25:31",
   "regime": {
-    "volatilite": "BASSE",
+    "volatilite": null,
     "courbe": "PENTUE",
-    "tendance": "HAUSSIERE",
-    "_spx_vs_ma200_pct": 10.05,
-    "credit": "RESSERREMENT",
-    "_hy_vs_ma60_pb": -2.4,
-    "regime": "BASSE / PENTUE / HAUSSIERE / RESSERREMENT",
-    "politique_couverture": "ACHAT SYSTEMATIQUE — protection bon marche"
+    "tendance": null,
+    "credit": null,
+    "regime": "PENTUE",
+    "politique_couverture": null
   },
+  "alertes_qualite": [
+    "DFF (Fed funds effectif) : demandé depuis 2016-08-19, obtenu depuis 2026-08-14 — PERCENTILES NON FIABLES sur cette série",
+    "DGS2 (Treasury 2 ans) : demandé depuis 2016-08-19, obtenu depuis 2026-08-14 — PERCENTILES NON FIABLES sur cette série",
+    "DGS10 (Treasury 10 ans) : demandé depuis 2016-08-19, obtenu depuis 2026-08-14 — PERCENTILES NON FIABLES sur cette série",
+    "DGS30 (Treasury 30 ans) : demandé depuis 2016-08-19, obtenu depuis 2026-08-14 — PERCENTILES NON FIABLES sur cette série",
+    "T10Y2Y (Pente 2s10s) : demandé depuis 2016-08-19, obtenu depuis 2026-08-17 — PERCENTILES NON FIABLES sur cette série",
+    "DFII10 (Taux réel 10 ans (TIPS)) : demandé depuis 2016-08-19, obtenu depuis 2026-08-14 — PERCENTILES NON FIABLES sur cette série",
+    "T10YIE (Point mort inflation 10 ans) : demandé depuis 2016-08-19, obtenu depuis 2026-08-17 — PERCENTILES NON FIABLES sur cette série",
+    "T5YIFR (Point mort 5 ans dans 5 ans) : demandé depuis 2016-08-19, obtenu depuis 2026-08-17 — PERCENTILES NON FIABLES sur cette série",
+    "CPIAUCSL: AUCUNE donnée récupérée",
+    "CPILFESL: AUCUNE donnée récupérée",
+    "UNRATE: AUCUNE donnée récupérée",
+    "PAYEMS: AUCUNE donnée récupérée",
+    "INDPRO: AUCUNE donnée récupérée",
+    "DCOILBRENTEU: AUCUNE donnée récupérée",
+    "DCOILWTICO: AUCUNE donnée récupérée",
+    "DEXUSEU (EUR/USD) : demandé depuis 2016-08-19, obtenu depuis 2026-08-10 — PERCENTILES NON FIABLES sur cette série",
+    "DEXJPUS (USD/JPY) : demandé depuis 2016-08-19, obtenu depuis 2026-08-10 — PERCENTILES NON FIABLES sur cette série",
+    "DTWEXBGS (Indice dollar large) : demandé depuis 2016-08-19, obtenu depuis 2026-08-10 — PERCENTILES NON FIABLES sur cette série",
+    "VIXCLS: AUCUNE donnée récupérée",
+    "VXVCLS: AUCUNE donnée récupérée",
+    "VXDCLS: AUCUNE donnée récupérée",
+    "OVXCLS: AUCUNE donnée récupérée",
+    "BAMLH0A0HYM2: AUCUNE donnée récupérée",
+    "BAMLC0A0CM: AUCUNE donnée récupérée",
+    "SP500: AUCUNE donnée récupérée",
+    "NASDAQ100: AUCUNE donnée récupérée",
+    "CALENDRIER INUTILISABLE : aucune date de publication future. Le critère « catalyseur identifié et daté » de la Section Macro reste mort par construction."
+  ],
   "series": {
     "DFF": {
       "label": "Fed funds effectif",
       "unit": "%",
       "section": "M1",
       "value": 3.63,
-      "date": "2026-08-13",
-      "chg_1d": 0.0,
-      "chg_20d": 0.0
+      "date": "2026-08-14",
+      "chg_1d": null,
+      "chg_20d": null,
+      "debut_historique": "2026-08-14",
+      "n_observations": 1,
+      "profondeur_tronquee": true
     },
     "DGS2": {
       "label": "Treasury 2 ans",
       "unit": "%",
       "section": "M1",
-      "value": 4.15,
-      "date": "2026-08-13",
-      "chg_1d": -0.05,
-      "chg_20d": -0.01
+      "value": 4.17,
+      "date": "2026-08-14",
+      "chg_1d": null,
+      "chg_20d": null,
+      "debut_historique": "2026-08-14",
+      "n_observations": 1,
+      "profondeur_tronquee": true
     },
     "DGS10": {
       "label": "Treasury 10 ans",
       "unit": "%",
       "section": "M1",
-      "value": 4.63,
-      "date": "2026-08-13",
-      "chg_1d": -0.05,
-      "chg_20d": 0.06
+      "value": 4.68,
+      "date": "2026-08-14",
+      "chg_1d": null,
+      "chg_20d": null,
+      "debut_historique": "2026-08-14",
+      "n_observations": 1,
+      "profondeur_tronquee": true
     },
     "DGS30": {
       "label": "Treasury 30 ans",
       "unit": "%",
       "section": "M1",
-      "value": 5.21,
-      "date": "2026-08-13",
-      "chg_1d": -0.03,
-      "chg_20d": 0.12
+      "value": 5.25,
+      "date": "2026-08-14",
+      "chg_1d": null,
+      "chg_20d": null,
+      "debut_historique": "2026-08-14",
+      "n_observations": 1,
+      "profondeur_tronquee": true
     },
     "T10Y2Y": {
       "label": "Pente 2s10s",
       "unit": "%",
       "section": "M1",
-      "value": 0.51,
-      "date": "2026-08-14",
-      "chg_1d": 0.03,
-      "chg_20d": 0.14
+      "value": 0.53,
+      "date": "2026-08-17",
+      "chg_1d": null,
+      "chg_20d": null,
+      "debut_historique": "2026-08-17",
+      "n_observations": 1,
+      "profondeur_tronquee": true
     },
     "DFII10": {
       "label": "Taux réel 10 ans (TIPS)",
       "unit": "%",
       "section": "M1",
-      "value": 2.39,
-      "date": "2026-08-13",
-      "chg_1d": -0.03,
-      "chg_20d": 0.04
+      "value": 2.41,
+      "date": "2026-08-14",
+      "chg_1d": null,
+      "chg_20d": null,
+      "debut_historique": "2026-08-14",
+      "n_observations": 1,
+      "profondeur_tronquee": true
     },
     "T10YIE": {
       "label": "Point mort inflation 10 ans",
       "unit": "%",
       "section": "M1",
-      "value": 2.27,
-      "date": "2026-08-14",
-      "chg_1d": 0.03,
-      "chg_20d": 0.03
+      "value": 2.28,
+      "date": "2026-08-17",
+      "chg_1d": null,
+      "chg_20d": null,
+      "debut_historique": "2026-08-17",
+      "n_observations": 1,
+      "profondeur_tronquee": true
     },
     "T5YIFR": {
       "label": "Point mort 5 ans dans 5 ans",
       "unit": "%",
       "section": "M1",
-      "value": 2.3,
-      "date": "2026-08-14",
-      "chg_1d": 0.03,
-      "chg_20d": 0.09
-    },
-    "CPIAUCSL": {
-      "label": "CPI global",
-      "unit": "idx",
-      "section": "M2",
-      "value": 332.813,
-      "date": "2026-07-01",
-      "chg_1d": 0.245,
-      "chg_20d": 17.182
-    },
-    "CPILFESL": {
-      "label": "CPI cœur",
-      "unit": "idx",
-      "section": "M2",
-      "value": 336.789,
-      "date": "2026-07-01",
-      "chg_1d": 0.724,
-      "chg_20d": 15.058
-    },
-    "UNRATE": {
-      "label": "Taux de chômage",
-      "unit": "%",
-      "section": "M2",
-      "value": 4.1,
-      "date": "2026-07-01",
-      "chg_1d": -0.1,
-      "chg_20d": 0.0
-    },
-    "PAYEMS": {
-      "label": "Emploi non agricole",
-      "unit": "milliers",
-      "section": "M2",
-      "value": 158858.0,
-      "date": "2026-07-01",
-      "chg_1d": -23.0,
-      "chg_20d": 779.0
-    },
-    "INDPRO": {
-      "label": "Production industrielle",
-      "unit": "idx",
-      "section": "M2",
-      "value": 102.6395,
-      "date": "2026-06-01",
-      "chg_1d": 0.0789,
-      "chg_20d": 3.17
-    },
-    "DCOILBRENTEU": {
-      "label": "Brent",
-      "unit": "$",
-      "section": "M3",
-      "value": 93.26,
-      "date": "2026-08-11",
-      "chg_1d": 0.52,
-      "chg_20d": 9.57
-    },
-    "DCOILWTICO": {
-      "label": "WTI",
-      "unit": "$",
-      "section": "M3",
-      "value": 84.77,
-      "date": "2026-08-11",
-      "chg_1d": 1.01,
-      "chg_20d": 4.33
+      "value": 2.31,
+      "date": "2026-08-17",
+      "chg_1d": null,
+      "chg_20d": null,
+      "debut_historique": "2026-08-17",
+      "n_observations": 1,
+      "profondeur_tronquee": true
     },
     "DEXUSEU": {
       "label": "EUR/USD",
       "unit": "",
       "section": "M4",
-      "value": 1.1559,
-      "date": "2026-08-07",
-      "chg_1d": 0.0038,
-      "chg_20d": 0.0121
+      "value": 1.1581,
+      "date": "2026-08-14",
+      "chg_1d": 0.005,
+      "chg_20d": null,
+      "debut_historique": "2026-08-10",
+      "n_observations": 5,
+      "profondeur_tronquee": true
     },
     "DEXJPUS": {
       "label": "USD/JPY",
       "unit": "",
       "section": "M4",
-      "value": 157.54,
-      "date": "2026-08-07",
-      "chg_1d": -0.91,
-      "chg_20d": -3.77
+      "value": 159.21,
+      "date": "2026-08-14",
+      "chg_1d": -0.14,
+      "chg_20d": null,
+      "debut_historique": "2026-08-10",
+      "n_observations": 5,
+      "profondeur_tronquee": true
     },
     "DTWEXBGS": {
       "label": "Indice dollar large",
       "unit": "idx",
       "section": "M4",
-      "value": 119.0649,
-      "date": "2026-08-07",
-      "chg_1d": -0.4464,
-      "chg_20d": -1.4397
-    },
-    "VIXCLS": {
-      "label": "VIX",
-      "unit": "",
-      "section": "RISQUE",
-      "value": 14.63,
-      "date": "2026-08-13",
-      "chg_1d": 0.08,
-      "chg_20d": -2.1
-    },
-    "BAMLH0A0HYM2": {
-      "label": "Spread haut rendement OAS",
-      "unit": "%",
-      "section": "RISQUE",
-      "value": 2.71,
-      "date": "2026-08-13",
-      "chg_1d": 0.0,
-      "chg_20d": 0.0
-    },
-    "BAMLC0A0CM": {
-      "label": "Spread investment grade OAS",
-      "unit": "%",
-      "section": "RISQUE",
-      "value": 0.79,
-      "date": "2026-08-13",
-      "chg_1d": 0.0,
-      "chg_20d": 0.01
-    },
-    "SP500": {
-      "label": "S&P 500",
-      "unit": "idx",
-      "section": "RISQUE",
-      "value": 7785.76,
+      "value": 118.9028,
       "date": "2026-08-14",
-      "chg_1d": -13.23,
-      "chg_20d": 328.07
-    },
-    "NASDAQ100": {
-      "label": "Nasdaq 100",
-      "unit": "idx",
-      "section": "RISQUE",
-      "value": 30046.14,
-      "date": "2026-08-14",
-      "chg_1d": -38.36,
-      "chg_20d": 1453.48
+      "chg_1d": -0.282,
+      "chg_20d": null,
+      "debut_historique": "2026-08-10",
+      "n_observations": 5,
+      "profondeur_tronquee": true
     }
+  },
+  "series_obligatoires_manquantes": [
+    "CPIAUCSL",
+    "CPILFESL",
+    "PAYEMS",
+    "SP500",
+    "UNRATE",
+    "VIXCLS",
+    "VXVCLS"
+  ],
+  "production_autorisee": false,
+  "calendrier_publications": {
+    "fichier": "data/calendrier_publications.csv",
+    "n_total": 0,
+    "n_futurs": 0,
+    "n_releases_suivies": 6,
+    "prochaine_publication": null,
+    "calendrier_utilisable": false,
+    "motif_si_inutilisable": "aucune date future récupérée — vérifier que la requête porte bien include_release_dates_with_no_data=true, faute de quoi l'endpoint ne renvoie que le passé et le critère « catalyseur daté » reste mort"
   }
 }
