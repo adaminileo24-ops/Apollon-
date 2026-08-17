@@ -1,18 +1,20 @@
-name: Apollon — collecte quotidienne
+name: Apollon — cycle complet
 
+# 7h30 et 21h00 heure de Paris (UTC+2 en été).
+# La collecte précède les moteurs : sans données fraîches, rien n'est produit.
 on:
   schedule:
-    - cron: "12 7 * * 1-5"
-    - cron: "47 21 * * 1-5"
+    - cron: "12 5 * * 1-5"
+    - cron: "47 19 * * 1-5"
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  collecte:
+  cycle:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -20,27 +22,119 @@ jobs:
         with:
           python-version: "3.12"
 
-      - run: pip install --quiet requests pandas
+      - run: pip install --quiet requests pandas numpy scipy
 
-      - name: Collecter les données
+      # ---------------------------------------------------------------
+      # 1. COLLECTE — bloquante. Si une série obligatoire manque,
+      #    apollon_data.py interdit la production (production_autorisee).
+      # ---------------------------------------------------------------
+      - name: 1 · Collecte FRED
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         working-directory: apollon-repo/pipeline
         run: python3 apollon_data.py --history 10 --factors
 
-      - name: Archiver à la racine
+      # ---------------------------------------------------------------
+      # 2. BANCS DE TEST — avant les moteurs, jamais après.
+      #    Exécutés DEUX FOIS : python3 et python3 -O (R-046).
+      #    Un contrôle dont le comportement dépend d'un drapeau
+      #    d'interpréteur n'est pas un contrôle.
+      # ---------------------------------------------------------------
+      - name: 2 · Bancs de test (normal et -O)
+        working-directory: apollon-repo/pipeline
         run: |
-          mkdir -p data
-          cp -r apollon-repo/pipeline/data/* data/ 2>/dev/null || true
+          python3    test_macro.py
+          python3 -O test_macro.py
+          python3    test_veto.py
+          python3 -O test_veto.py
 
-      - name: Committer
+      # ---------------------------------------------------------------
+      # 3. LA CHAÎNE, DANS L'ORDRE. Chaque étape écrit un fichier daté
+      #    que la suivante contrôle. `continue-on-error` est délibéré :
+      #    le veto de la Section Risque sort en code 2 quand il BLOQUE
+      #    une idée, et en code 3 quand il n'a PAS PU examiner sa source.
+      #    Ces deux codes sont des résultats, pas des pannes — mais ils
+      #    doivent rester visibles, d'où l'étape 4.
+      # ---------------------------------------------------------------
+      - name: 3a · Section Macro
+        id: macro
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: python3 apollon_macro.py --data ./data
+
+      - name: 3b · Section Quantitative
+        id: quant
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: python3 apollon_quant.py --data ./data
+
+      - name: 3c · Section Trading
+        id: trading
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: python3 apollon_trading.py --data ./data
+
+      - name: 3d · Section Risque — VETO
+        id: risque
+        continue-on-error: true
+        working-directory: apollon-repo/pipeline
+        run: python3 apollon_risque.py --data ./data
+
+      # ---------------------------------------------------------------
+      # 4. LECTURE DES CODES DE SORTIE.
+      #    « Je n'ai pas pu examiner » ne peut pas se confondre avec
+      #    « rien à examiner » (R-040). Le cycle échoue bruyamment sur
+      #    un code 3, et sur toute panne réelle.
+      # ---------------------------------------------------------------
+      - name: 4 · Interprétation des verdicts
+        run: |
+          echo "macro=${{ steps.macro.outcome }} quant=${{ steps.quant.outcome }}"
+          echo "trading=${{ steps.trading.outcome }} risque=${{ steps.risque.outcome }}"
+          if [ "${{ steps.macro.outcome }}" = "failure" ] || \
+             [ "${{ steps.trading.outcome }}" = "failure" ]; then
+            echo "::error::Un moteur amont a échoué — le cycle est invalide."
+            exit 1
+          fi
+          if [ "${{ steps.risque.outcome }}" = "failure" ]; then
+            echo "::warning::Section Risque en code non nul : veto opposé, "
+            echo "::warning::ou source non examinable. Voir le journal ci-dessus."
+          fi
+
+      # ---------------------------------------------------------------
+      # 5. ARCHIVAGE — le dépôt est la piste d'audit. Immuable, horodaté.
+      # ---------------------------------------------------------------
+      - name: 5 · Archiver
+        run: |
+          mkdir -p data cycles/$(date -u +%Y-%m-%d)
+          cp -r apollon-repo/pipeline/data/* data/ 2>/dev/null || true
+          cp apollon-repo/pipeline/*_resultats.json \
+             apollon-repo/pipeline/veto_risque.json \
+             apollon-repo/pipeline/brief_macro_*.md \
+             apollon-repo/pipeline/alertes_risque.jsonl \
+             apollon-repo/pipeline/registre_calibration.csv \
+             cycles/$(date -u +%Y-%m-%d)/ 2>/dev/null || true
+
+      - name: 6 · Committer
         run: |
           git config user.name  "Apollon"
           git config user.email "apollon@users.noreply.github.com"
-          git add -A data/
+          git add -A data/ cycles/
           if git diff --staged --quiet; then
             echo "Aucun changement."
           else
-            git commit -m "data: collecte du $(date -u +%Y-%m-%d)"
+            git commit -m "cycle du $(date -u +%Y-%m-%dT%H:%M)Z"
             git push
           fi
+
+      # Les sorties restent téléchargeables 30 jours même si le commit échoue.
+      - name: 7 · Artefacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cycle-${{ github.run_number }}
+          path: |
+            apollon-repo/pipeline/*_resultats.json
+            apollon-repo/pipeline/veto_risque.json
+            apollon-repo/pipeline/brief_macro_*.md
+            apollon-repo/pipeline/alertes_risque.jsonl
+          retention-days: 30
