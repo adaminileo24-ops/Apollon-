@@ -1,6 +1,6 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-08-17T21:41:22+00:00",
+    "genere_le_utc": "2026-08-17T21:50:04+00:00",
     "date_donnees": "2026-08-14",
     "execution_complete": false
   },
@@ -45,8 +45,7 @@
     "series_perimees_vs_arrete": [],
     "series_sans_sens_declare": [
       "OVXCLS",
-      "VXDCLS",
-      "VXVCLS"
+      "VXDCLS"
     ],
     "domaines_fermes": {
       "M2_cycle": [
