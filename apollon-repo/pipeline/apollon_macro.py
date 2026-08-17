@@ -106,6 +106,10 @@ SEUIL_PROFONDEUR_MARGINALE: float = 0.70   # < 70 % du requis => insuffisante
 SEUIL_CONFIRMATION_PCT: float = 30.0       # extrême de percentile exigé
 SEUIL_REDONDANCE_CORR: float = 0.90        # fusion des classes de confirmation
 MIN_CLASSES_CONFIRMATION: int = 2
+# E-050 / R-051 — l'écart entre rendement conditionnel et rendement hors
+# déclenchement doit dépasser ce nombre d'erreurs types, calculées sur les
+# BLOCS INDÉPENDANTS. Origine : posée à la main, non dérivée.
+T_MINIMUM_ARETE: float = 2.0
 RETARD_MAX_SEANCES: int = 5                # retard toléré sur la date d'arrêté
 TAILLE_PCT_NAV: float = 8.0                # plafond alpha de la charte
 TOLERANCE_IDENTITE: float = 0.02           # arrondi FRED à 2 décimales
@@ -947,9 +951,76 @@ def invalidation_est_un_fait(texte: str, serie: str, date_obs: str,
     return True, ""
 
 
-def prochaine_publication(s: pd.Series, arrete: pd.Timestamp) -> str:
-    """Date de la prochaine publication, déduite de la cadence OBSERVÉE de la
-    série. Aucun calendrier extérieur n'est saisi à la main."""
+
+# ---------------------------------------------------------------------
+# CALENDRIER OFFICIEL — le catalyseur cesse d'être déduit
+#
+# `prochaine_publication` extrapolait la cadence OBSERVÉE de la série :
+# médiane des écarts, puis addition. C'est une ESTIMATION, pas un fait
+# daté — et le critère 10 exige un fait. Le calendrier ALFRED, collecté
+# par apollon_data.py, porte les dates réelles annoncées par l'émetteur.
+#
+# R-044 — un instrument collecté et lu par personne est du code mort.
+# Ce bloc est la contrepartie de la collecte : sans lui, le calendrier
+# serait la neuvième occurrence du mode de défaillance dominant.
+# ---------------------------------------------------------------------
+CALENDRIER = BASE / "data" / "calendrier_publications.csv"
+
+# Quelle publication officielle date quelle série.
+RELEASE_DE_SERIE = {
+    "CPIAUCSL": 10, "CPILFESL": 10,       # Consumer Price Index
+    "UNRATE": 50,  "PAYEMS": 50,          # Employment Situation
+    "INDPRO": 13,                          # Production industrielle (G.17)
+}
+
+
+def charger_calendrier(chemin: Path | None = None) -> dict:
+    """Dates officielles à venir, par release. {} si le fichier est absent."""
+    chemin = CALENDRIER if chemin is None else chemin
+    if not chemin.exists():
+        return {}
+    try:
+        d = pd.read_csv(chemin)
+    except Exception:                                       # noqa: BLE001
+        return {}
+    if not {"release_id", "date"}.issubset(d.columns):
+        return {}
+    par_release: dict[int, list[str]] = {}
+    for rid, grp in d.groupby("release_id"):
+        try:
+            par_release[int(rid)] = sorted(str(x) for x in grp["date"])
+        except Exception:                                   # noqa: BLE001
+            continue
+    return par_release
+
+
+def publication_officielle(serie: str, arrete: pd.Timestamp,
+                           calendrier: dict) -> tuple[str, str]:
+    """(date, origine). Origine vaut 'officielle' ou 'deduite'.
+
+    L'origine est publiée avec la date : une date extrapolée et une date
+    annoncée ne se valent pas, et le brief doit dire laquelle il utilise.
+    """
+    rid = RELEASE_DE_SERIE.get(serie)
+    if rid and calendrier.get(rid):
+        borne = str(arrete.date())
+        futures = [j for j in calendrier[rid] if j > borne]
+        if futures:
+            return futures[0], "officielle"
+    return "", "deduite"
+
+
+def prochaine_publication(s: pd.Series, arrete: pd.Timestamp,
+                          serie: str = "", calendrier: dict | None = None) -> str:
+    """Date officielle si le calendrier la porte ; sinon cadence observée.
+
+    Aucune date n'est jamais saisie à la main : elle vient du calendrier
+    collecté, ou d'une extrapolation déclarée comme telle.
+    """
+    if serie and calendrier:
+        officielle, origine = publication_officielle(serie, arrete, calendrier)
+        if origine == "officielle":
+            return officielle
     idx = s[s.index <= arrete].index
     if len(idx) < 3:
         return ""
@@ -969,6 +1040,7 @@ CRITERES = [
     "9_test_execute_et_vrai", "10_invalidation_fait_date",
     "11_invalidation_non_deja_survenue", "12_esperance_positive",
     "13_esperance_non_portee_par_derive", "14_esperance_stable_dans_le_temps",
+    "16_arete_conditionnelle_mesuree",
     "15_enonce_sans_affirmation_politique_non_etayee",
 ]
 
@@ -989,6 +1061,147 @@ def percentile_utilisable(diag: dict) -> tuple[float | None, str, str]:
         if p and p["percentile"] is not None:
             return p["percentile"], nom, p["drapeau"]
     return None, "", "insuffisante"
+
+
+
+# =====================================================================
+# §9 bis  L'ARÊTE CONDITIONNELLE — E-050 / R-051
+#
+# DÉFAUT CORRIGÉ. Jusqu'au 17/08, la règle de confirmation n'était
+# évaluée QU'À LA DATE DU JOUR. L'espérance publiée était donc calculée
+# sur la distribution INCONDITIONNELLE des variations : elle mesurait la
+# dérive de la série, pas la capacité prédictive de la règle.
+#
+# Contrôle positif qui l'a établi : une arête plantée à t = 20,2
+# (+10,96 points d'écart entre quartile haut et bas du VIX) laissait les
+# compteurs d'échec IDENTIQUES au candidat près, et FAISAIT BAISSER
+# l'espérance publiée de +0,1911 % à +0,0487 %.
+#
+# Ce bloc évalue la règle À CHAQUE DATE de l'historique, avec la seule
+# information disponible à cette date, et compare le rendement futur
+# quand la règle est vérifiée à celui quand elle ne l'est pas.
+# =====================================================================
+
+def percentile_glissant(s: pd.Series, fenetre: int | None) -> pd.Series:
+    """Percentile de chaque observation dans sa propre fenêtre passée.
+
+    Aucun regard vers l'avenir : le rang à la date t n'utilise que les
+    observations jusqu'à t incluse.
+    """
+    if fenetre is None:
+        return s.expanding(min_periods=60).rank(pct=True) * 100.0
+    return s.rolling(fenetre, min_periods=max(20, fenetre // 4)).rank(pct=True) * 100.0
+
+
+def masque_confirmation_historique(instr, dossier, direction, regle, series,
+                                   arrete, h, profondeur, classes) -> dict:
+    """Vrai à chaque date où la règle de confirmation AURAIT été vérifiée.
+
+    Le masque est aligné sur les rendements futurs : l'élément i correspond
+    au rendement de la date i à la date i+h, et n'utilise que l'information
+    disponible EN i.
+    """
+    si = series[instr]
+    si = si[si.index <= arrete].dropna()
+    if len(si) <= h + 1:
+        return {"disponible": False, "motif": "historique insuffisant"}
+    dates = si.index[:-h]                       # dates de DÉCISION
+    sens_pari = direction * SENS_SERIE.get(instr, {}).get("signe_risque", 0)
+    per_instr = periodicite(si)
+
+    satisfaites: dict[str, np.ndarray] = {}
+    for sid in dossier:
+        if sid == instr or sid not in series or sid not in SENS_SERIE:
+            continue
+        info = profondeur.get(sid) or {}
+        nom_fen = info.get("fenetre_utilisee")
+        if not nom_fen:
+            continue
+        table = (FENETRES_PERCENTILE if periodicite(series[sid]) != "mensuelle"
+                 else FENETRES_PERCENTILE_MENSUEL)
+        fen = table.get(nom_fen)
+        ss = series[sid]
+        ss = ss[ss.index <= arrete].dropna()
+        if ss.empty:
+            continue
+        pct = percentile_glissant(ss, fen).reindex(dates, method="ffill")
+        sg = SENS_SERIE[sid]["signe_risque"]
+        niveau = pct if sg > 0 else (100.0 - pct)
+        if regle == "aligne":
+            sat = (niveau >= 100.0 - SEUIL_CONFIRMATION_PCT) if sens_pari > 0 \
+                else (niveau <= SEUIL_CONFIRMATION_PCT)
+        else:
+            sat = (niveau <= SEUIL_CONFIRMATION_PCT) if sens_pari > 0 \
+                else (niveau >= 100.0 - SEUIL_CONFIRMATION_PCT)
+        satisfaites[sid] = sat.fillna(False).to_numpy(bool)
+
+    if not satisfaites:
+        return {"disponible": False, "motif": "aucune série de confirmation exploitable"}
+
+    n = len(dates)
+    masque = np.zeros(n, dtype=bool)
+    n_classes_par_date = np.zeros(n, dtype=int)
+    for i in range(n):
+        retenues = [sid for sid, arr in satisfaites.items() if arr[i]]
+        k = classes.n_classes(retenues) if retenues else 0
+        n_classes_par_date[i] = k
+        masque[i] = k >= MIN_CLASSES_CONFIRMATION
+    return {"disponible": True, "masque": masque, "n_dates": n,
+            "n_declenchements": int(masque.sum()),
+            "n_series_testees": len(satisfaites),
+            "classes_medianes": float(np.median(n_classes_par_date))}
+
+
+def arete_conditionnelle(instr, series, arrete, h, masque, pnl, dist) -> dict:
+    """Compare le rendement futur QUAND la règle se déclenche à celui du reste.
+
+    Retourne l'espérance conditionnelle, l'inconditionnelle, l'écart, et
+    l'erreur type de l'écart calculée sur le nombre de blocs INDÉPENDANTS
+    (les rendements à h jours se chevauchent : n/h, pas n).
+    """
+    d, h2 = variations_horizon(series[instr], instr, arrete)
+    if d.size == 0 or masque is None or len(masque) != d.size:
+        return {"mesurable": False,
+                "motif": f"alignement impossible ({d.size} rendements, "
+                         f"{0 if masque is None else len(masque)} dates)"}
+    taille = TAILLE_PCT_NAV / 100.0
+    niveau = float(series[instr][series[instr].index <= arrete].dropna().iloc[-1])
+
+    def pnl_de(variations: np.ndarray) -> np.ndarray:
+        sig = dist["sigma_horizon"]
+        ks = variations / sig if sig else variations * 0.0
+        # P&L interpolé sur la grille déclarée — mêmes points, même convention
+        gk = np.array(sorted(pnl), dtype=float)
+        gv = np.array([pnl[k] for k in sorted(pnl)], dtype=float)
+        return np.interp(np.clip(ks, gk[0], gk[-1]), gk, gv)
+
+    dedans, dehors = d[masque], d[~masque]
+    if dedans.size < MIN_OBS_BANDE or dehors.size < MIN_OBS_BANDE:
+        return {"mesurable": False,
+                "motif": f"effectifs insuffisants : {dedans.size} déclenchements, "
+                         f"{dehors.size} hors déclenchement (minimum {MIN_OBS_BANDE})"}
+    p_in, p_out, p_all = pnl_de(dedans), pnl_de(dehors), pnl_de(d)
+    e_in = 100.0 * float(np.mean(p_in)) * taille
+    e_out = 100.0 * float(np.mean(p_out)) * taille
+    e_all = 100.0 * float(np.mean(p_all)) * taille
+    n_in = max(1, dedans.size // h2)          # blocs indépendants
+    n_out = max(1, dehors.size // h2)
+    se = 100.0 * taille * math.sqrt(float(np.var(p_in, ddof=1)) / n_in
+                                    + float(np.var(p_out, ddof=1)) / n_out)
+    ecart = e_in - e_out
+    return {"mesurable": True,
+            "esperance_conditionnelle_pct_nav": e_in,
+            "esperance_hors_declenchement_pct_nav": e_out,
+            "esperance_inconditionnelle_pct_nav": e_all,
+            "ecart_pct_nav": ecart,
+            "erreur_type_ecart": se,
+            "t_ecart": (ecart / se) if se > 0 else float("nan"),
+            "n_declenchements": int(dedans.size),
+            "n_blocs_independants_declenchement": int(n_in),
+            "n_hors": int(dehors.size),
+            "note": ("l'écart mesure la CAPACITÉ PRÉDICTIVE de la règle. "
+                     "L'espérance inconditionnelle mesure la dérive de la "
+                     "série et ne peut fonder aucune admission (E-050).")}
 
 
 def engendrer_candidats(series, diags, dists, arrete, classes, ctrl):
@@ -1132,7 +1345,10 @@ def evaluer_candidat(instr, direction, regle, series, diags, dists, arrete,
     # --- 10/11. invalidation : un FAIT observable et daté
     serie_inval = next((s for s in dossier if s in SERIES_PUBLICATION_DATEE), "")
     if serie_inval and serie_inval in series:
-        date_inval = prochaine_publication(series[serie_inval], arrete)
+        _cal = charger_calendrier()
+        date_inval = prochaine_publication(series[serie_inval], arrete,
+                                           serie_inval, _cal)
+        _, _origine_date = publication_officielle(serie_inval, arrete, _cal)
         sg_i = SENS_SERIE[serie_inval]["signe_risque"]
         cible = "s'écarte de la lecture retenue" if sens_pari > 0 else "confirme la détente"
         texte_inval = (
@@ -1152,12 +1368,20 @@ def evaluer_candidat(instr, direction, regle, series, diags, dists, arrete,
             return bool(_sp * _sg * variation < 0)
     else:
         date_inval, texte_inval, test_invalidation = "", "", None
+        _origine_date = "aucune"
 
     ok_inval, motif_inval = (invalidation_est_un_fait(texte_inval, serie_inval,
                                                       date_inval, instr)
                              if texte_inval else (False, "aucune série de publication datée"))
-    diag_crit["10_invalidation_fait_date"] = {"ok": ok_inval, "motif": motif_inval,
-                                              "serie": serie_inval, "date": date_inval}
+    diag_crit["10_invalidation_fait_date"] = {
+        "ok": ok_inval, "motif": motif_inval, "serie": serie_inval,
+        "date": date_inval,
+        "origine_date": (_origine_date if serie_inval and serie_inval in series
+                         else "aucune"),
+        "note": ("« officielle » = date annoncée par l'émetteur, lue dans "
+                 "data/calendrier_publications.csv. « deduite » = extrapolée "
+                 "de la cadence observée : c'est une estimation, pas un fait "
+                 "daté, et le critère l'indique plutôt que de les confondre.")}
     if not ok_inval:
         echecs.append("10_invalidation_fait_date")
 
@@ -1239,6 +1463,52 @@ def evaluer_candidat(instr, direction, regle, series, diags, dists, arrete,
                  "échantillon, pas par la forme de la distribution")}
     if not ok_derive:
         echecs.append("13_esperance_non_portee_par_derive")
+
+    # --- 16. L'ARÊTE CONDITIONNELLE (E-050 / R-051)
+    # L'espérance des critères 12 à 14 est INCONDITIONNELLE : elle mesure la
+    # dérive de la série. Ce critère mesure ce que la règle de confirmation
+    # apporte RÉELLEMENT, en comparant le rendement futur quand elle se
+    # déclenche à celui du reste de l'échantillon.
+    arete = {"mesurable": False, "motif": "non calculé"}
+    if ok_instr and dist.get("estimable") and pnl:
+        try:
+            mh = masque_confirmation_historique(instr, dossier, direction, regle,
+                                                series, arrete, dist.get("horizon", HORIZON_SEANCES),
+                                                profondeur, classes)
+            if mh.get("disponible"):
+                arete = arete_conditionnelle(instr, series, arrete,
+                                             dist.get("horizon", HORIZON_SEANCES),
+                                             mh["masque"], pnl, dist)
+                arete["declenchements"] = mh
+            else:
+                arete = {"mesurable": False, "motif": mh.get("motif", "masque indisponible")}
+        except Exception as exc:                                # pragma: no cover
+            arete = {"mesurable": False, "motif": f"{type(exc).__name__}: {exc}"}
+
+    t_arete = arete.get("t_ecart", float("nan")) if arete.get("mesurable") else float("nan")
+    ok_arete = bool(np.isfinite(t_arete) and t_arete >= T_MINIMUM_ARETE)
+    # PUISSANCE — R-051. Publier ce que le portier PEUT voir, à côté de ce
+    # qu'il voit. Sans cette ligne, « 0 thèse » se lit comme une information
+    # sur le marché alors que c'est une propriété de l'échantillon.
+    se_a = arete.get("erreur_type_ecart", float("nan")) if arete.get("mesurable") else float("nan")
+    arete_min = T_MINIMUM_ARETE * se_a if np.isfinite(se_a) else float("nan")
+    arete["ecart_minimal_detectable_pct_nav"] = None if not np.isfinite(arete_min) else arete_min
+    arete["ecart_minimal_detectable_annualise_pct"] = (
+        None if not np.isfinite(arete_min)
+        else arete_min * (252.0 / max(1, dist.get("horizon", HORIZON_SEANCES))))
+    arete["note_puissance"] = (
+        "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à "
+        "ce nombre est invisible pour ce portier, quelle que soit sa réalité : "
+        "le refus ne porte alors aucune information sur le marché.")
+
+    diag_crit["16_arete_conditionnelle_mesuree"] = {
+        "ok": ok_arete, "t_minimum_exige": T_MINIMUM_ARETE, **arete,
+        "note": ("un portier qui n'a jamais mesuré sa capacite a dire OUI ne "
+                 "mesure rien quand il dit NON (R-051). Ce critere est le seul "
+                 "qui teste une capacite PREDICTIVE ; les criteres 12 a 14 "
+                 "testent la forme de la distribution inconditionnelle.")}
+    if not ok_arete:
+        echecs.append("16_arete_conditionnelle_mesuree")
 
     ok_stab = bool(np.isfinite(esp_h1) and np.isfinite(esp_h2)
                    and esp_h1 > 0 and esp_h2 > 0)

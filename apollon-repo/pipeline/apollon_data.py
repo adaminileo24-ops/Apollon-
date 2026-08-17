@@ -105,8 +105,15 @@ SERIES: dict[str, tuple[str, str, str]] = {
 
 
 # ---------------------------------------------------------------- collecte
-def fred(series_id: str, start: str | None = None) -> list[tuple[str, float]]:
-    """Retourne [(date, valeur), ...] pour une série FRED. Liste vide si échec."""
+def fred(series_id: str, start: str | None = None,
+         vintage: bool = False) -> list[tuple[str, float]]:
+    """Retourne [(date, valeur), ...] pour une série FRED.
+
+    `vintage=True` demande les valeurs TELLES QUE CONNUES à l'époque
+    (ALFRED), et non la version révisée d'aujourd'hui. Voir le bloc
+    ci-dessous : sans cela, tout test hors échantillon sur une série
+    révisable est optimiste.
+    """
     if not FRED_KEY:
         raise RuntimeError(
             "FRED_API_KEY absente.\n"
@@ -119,6 +126,28 @@ def fred(series_id: str, start: str | None = None) -> list[tuple[str, float]]:
         "file_type": "json",
         "observation_start": start or (date.today() - timedelta(days=400)).isoformat(),
     }
+    # ------------------------------------------------------------------
+    # BIAIS D'ANTICIPATION PAR RÉVISION — le plus discret du dispositif.
+    #
+    # PAYEMS, INDPRO, CPIAUCSL sont RÉVISÉES, parfois lourdement. Sans
+    # paramètre temps réel, FRED renvoie la version RÉVISÉE D'AUJOURD'HUI
+    # pour TOUTE l'histoire. Un signal daté du 15 mars 2024 est alors
+    # calculé sur un chiffre d'emploi qui n'existait pas le 15 mars 2024.
+    #
+    # Le test hors échantillon de la Section Trading et le critère 16 de
+    # la Section Macro mesurent tous deux des rendements futurs à partir
+    # d'états passés : sur données révisées, ils SURESTIMENT.
+    #
+    # `vintage=True` demande à ALFRED la valeur telle qu'elle était CONNUE
+    # à sa date d'observation. C'est plus lent et plus lourd, donc c'est
+    # une option déclarée — mais toute conclusion tirée de séries révisées
+    # doit porter la mention correspondante.
+    # ------------------------------------------------------------------
+    if vintage:
+        params["realtime_start"] = params["observation_start"]
+        params["realtime_end"] = date.today().isoformat()
+        params["output_type"] = 2      # 2 = observations telles que publiées
+
     try:
         r = requests.get(FRED_URL, params=params, timeout=25)
         r.raise_for_status()
@@ -205,6 +234,118 @@ def classify(latest: dict[str, float], series: dict[str, list[tuple[str, float]]
     return r
 
 
+
+# ------------------------------------------------- calendrier de publications
+# E-050 bis — DEUX CRITÈRES DU PORTIER MACRO SONT MORTS PAR CONSTRUCTION.
+# « Catalyseur identifié ET DATÉ » et « invalidation observable » ne peuvent
+# être franchis par aucune donnée : le dépôt ne contenait que des séries.
+# La Réserve fédérale de Saint-Louis publie pourtant les dates de publication
+# À VENIR, avec la même clé. Il fallait la demander, pas la déclarer absente
+# (R-028 : une lacune déclarée est une requête non lancée).
+#
+# PIÈGE, ET C'EST TOUT LE POINT : par défaut l'endpoint EXCLUT les dates
+# futures. Sans include_release_dates_with_no_data=true, on récupère
+# l'historique des publications passées et on croit avoir un calendrier.
+RELEASES_URL = "https://api.stlouisfed.org/fred/releases/dates"
+
+# Publications qui déplacent les marchés. Identifiants de RELEASE (pas de
+# série) — stables, vérifiables sur fred.stlouisfed.org/releases/<id>.
+RELEASES_SUIVIES = {
+    10:  "Indice des prix à la consommation (CPI)",
+    50:  "Situation de l'emploi (Employment Situation)",
+    53:  "Produit intérieur brut (GDP)",
+    13:  "Production industrielle et taux d'utilisation (G.17)",
+    18:  "H.15 — taux d'intérêt sélectionnés",
+    175: "Décisions du FOMC — communiqués",
+}
+
+
+def calendrier_publications(jours_avant: int = 400, jours_apres: int = 120) -> list[dict]:
+    """Dates de publication PASSÉES ET FUTURES des releases suivies.
+
+    Retourne [] en cas d'échec — jamais une exception : le calendrier est un
+    enrichissement, il ne peut pas faire tomber la collecte des séries.
+    """
+    if not FRED_KEY:
+        return []
+    params = {
+        "api_key": FRED_KEY,
+        "file_type": "json",
+        # SANS ce paramètre, aucune date future n'est renvoyée.
+        "include_release_dates_with_no_data": "true",
+        "realtime_start": (date.today() - timedelta(days=jours_avant)).isoformat(),
+        "realtime_end":   (date.today() + timedelta(days=jours_apres)).isoformat(),
+        "sort_order": "asc",
+        "limit": 10000,
+    }
+    try:
+        r = requests.get(RELEASES_URL, params=params, timeout=30)
+        r.raise_for_status()
+        brut = r.json().get("release_dates", [])
+    except Exception as exc:                                  # noqa: BLE001
+        print(f"  ! calendrier de publications : {exc}", file=sys.stderr)
+        return []
+
+    aujourdhui = date.today().isoformat()
+    out = []
+    for d in brut:
+        rid = d.get("release_id")
+        if rid not in RELEASES_SUIVIES:
+            continue
+        jour = d.get("date")
+        if not jour:
+            continue
+        out.append({
+            "release_id": rid,
+            "intitule": RELEASES_SUIVIES[rid],
+            "date": jour,
+            "futur": jour > aujourdhui,
+        })
+    out.sort(key=lambda x: (x["date"], x["release_id"]))
+    return out
+
+
+def archiver_calendrier(evenements: list[dict]) -> dict:
+    """Écrit data/calendrier_publications.csv et rend un compte-rendu.
+
+    Le fichier est le SEUL objet du dépôt qui porte des faits datés dans le
+    futur. Sans lui, le critère « catalyseur daté » ne peut pas exister.
+    """
+    chemin = DATA / "calendrier_publications.csv"
+    fusion: dict[tuple, dict] = {}
+    if chemin.exists():
+        with chemin.open(newline="", encoding="utf-8") as fh:
+            for ligne in csv.DictReader(fh):
+                fusion[(ligne["release_id"], ligne["date"])] = ligne
+    for e in evenements:
+        fusion[(str(e["release_id"]), e["date"])] = {
+            "release_id": str(e["release_id"]),
+            "intitule": e["intitule"],
+            "date": e["date"],
+        }
+    lignes = sorted(fusion.values(), key=lambda x: (x["date"], x["release_id"]))
+    with chemin.open("w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=["release_id", "intitule", "date"])
+        w.writeheader()
+        w.writerows(lignes)
+
+    aujourdhui = date.today().isoformat()
+    futurs = [l for l in lignes if l["date"] > aujourdhui]
+    prochaine = futurs[0] if futurs else None
+    return {
+        "fichier": str(chemin.relative_to(BASE)),
+        "n_total": len(lignes),
+        "n_futurs": len(futurs),
+        "n_releases_suivies": len(RELEASES_SUIVIES),
+        "prochaine_publication": prochaine,
+        "calendrier_utilisable": bool(futurs),
+        "motif_si_inutilisable": ("" if futurs else
+            "aucune date future récupérée — vérifier que la requête porte bien "
+            "include_release_dates_with_no_data=true, faute de quoi l'endpoint "
+            "ne renvoie que le passé et le critère « catalyseur daté » reste mort"),
+    }
+
+
 # ---------------------------------------------------------------- facteurs
 FF_URL = ("https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/"
           "F-F_Research_Data_5_Factors_2x3_daily_CSV.zip")
@@ -282,6 +423,11 @@ def main() -> int:
                     help="années d'historique à récupérer (défaut : ~400 jours)")
     ap.add_argument("--factors", action="store_true",
                     help="télécharger aussi les facteurs Fama-French")
+    ap.add_argument("--sans-calendrier", action="store_true",
+                    help="ne pas collecter le calendrier de publications")
+    ap.add_argument("--vintage", action="store_true",
+                    help="valeurs telles que CONNUES à l'époque (ALFRED) plutôt "
+                         "que révisées : supprime le biais d'anticipation par révision")
     args = ap.parse_args()
 
     start = None
@@ -296,7 +442,7 @@ def main() -> int:
     alertes: list[str] = []
 
     for sid, (label, unit, section) in SERIES.items():
-        rows = fred(sid, start)
+        rows = fred(sid, start, vintage=args.vintage)
         if not rows:
             print(f"  ✗ {sid:<15} {label}")
             alertes.append(f"{sid}: AUCUNE donnée récupérée")
@@ -370,6 +516,24 @@ def main() -> int:
         print("\nFacteurs Fama-French…")
         p = fetch_factors()
         print(f"  {'✓ ' + p if p else '✗ échec'}")
+
+    # Calendrier de publications — nourrit le critère « catalyseur daté »,
+    # mort par construction tant qu'aucune date future n'existait au dépôt.
+    if not args.sans_calendrier:
+        print("\nCalendrier de publications (dates FUTURES incluses)…")
+        cal = archiver_calendrier(calendrier_publications())
+        snap["calendrier_publications"] = cal
+        if cal["calendrier_utilisable"]:
+            pr = cal["prochaine_publication"]
+            print(f"  ✓ {cal['n_total']} dates dont {cal['n_futurs']} à venir "
+                  f"sur {cal['n_releases_suivies']} publications suivies")
+            print(f"    prochaine : {pr['date']} — {pr['intitule']}")
+        else:
+            print(f"  ✗ AUCUNE DATE FUTURE — {cal['motif_si_inutilisable']}")
+            alertes.append(
+                "CALENDRIER INUTILISABLE : aucune date de publication future. "
+                "Le critère « catalyseur identifié et daté » de la Section Macro "
+                "reste mort par construction.")
 
     stamp = snap["date"]
     (DATA / f"snapshot_{stamp}.json").write_text(

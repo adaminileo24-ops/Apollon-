@@ -33,6 +33,7 @@ from __future__ import annotations
 
 import json
 import sys
+from datetime import datetime, timedelta, timezone
 import tempfile
 from pathlib import Path
 
@@ -460,6 +461,32 @@ def test_beta_corrige_rho() -> None:
 # G. LA SOURCE — fichier absent, corrompu, schéma invalide, liste vide
 # ══════════════════════════════════════════════════════════════════════════
 
+
+# ---------------------------------------------------------------------------
+# E-047 — Depuis l'ajout du contrôle de fraîcheur (R-047), toute source lue
+# par la Section Risque doit porter un bloc `fraicheur` valide. Les fixtures
+# de ce banc l'ignoraient : le banc a échoué au premier passage sur le dépôt,
+# et c'est le BANC qui était périmé, pas le moteur.
+#
+# Faute consignée : un contrat modifié en amont sans relance du banc en aval.
+# ---------------------------------------------------------------------------
+def _fraicheur(valide: bool = True) -> dict:
+    """Bloc de fraîcheur. `valide=False` produit une source périmée."""
+    maintenant = datetime.now(timezone.utc)
+    limite = maintenant + timedelta(hours=36 if valide else -1)
+    return {"genere_le_utc": maintenant.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "date_donnees": "2026-08-14",
+            "validite_heures": 36.0,
+            "perime_apres_utc": limite.strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "execution_complete": True}
+
+
+def _source(charge: dict, valide: bool = True) -> str:
+    """Sérialise une charge utile en y agrafant un bloc de fraîcheur."""
+    return json.dumps({**charge, "fraicheur": _fraicheur(valide)},
+                      ensure_ascii=False)
+
+
 def test_source() -> None:
     print("\nG. Source d'idées — traitée et déclarée dans tous les cas")
     with tempfile.TemporaryDirectory() as d:
@@ -489,7 +516,7 @@ def test_source() -> None:
 
         # G4 — clé `idees` absente
         p = rep / "sans_idees.json"
-        p.write_text('{"date_donnees": "2026-08-14"}', encoding="utf-8")
+        p.write_text(_source({"date_donnees": "2026-08-14"}), encoding="utf-8")
         s = lire_idees_transmises(p)
         verifier("G4 clé idees absente · statut SCHEMA_INVALIDE",
                  s["statut"] == "SCHEMA_INVALIDE", s["statut"])
@@ -497,14 +524,14 @@ def test_source() -> None:
 
         # G5 — `idees` non-liste
         p = rep / "idees_dict.json"
-        p.write_text('{"idees": {"a": 1}}', encoding="utf-8")
+        p.write_text(_source({"idees": {"a": 1}}), encoding="utf-8")
         s = lire_idees_transmises(p)
         verifier("G5 idees non-liste · statut SCHEMA_INVALIDE",
                  s["statut"] == "SCHEMA_INVALIDE", s["statut"])
 
         # G6 — `idees` vide : état LÉGITIME, examinable, rien à examiner
         p = rep / "vide.json"
-        p.write_text('{"idees": []}', encoding="utf-8")
+        p.write_text(_source({"idees": []}), encoding="utf-8")
         s = lire_idees_transmises(p)
         verifier("G6 idees vide · statut OK", s["statut"] == "OK", s["statut"])
         verifier("G6 · EXAMINABLE (rien à examiner ≠ pas pu examiner)",
@@ -513,16 +540,48 @@ def test_source() -> None:
 
         # G7 — entrée non-dict dans la liste : soumise au veto, donc bloquée
         p = rep / "entree_pourrie.json"
-        p.write_text('{"idees": ["ceci n\'est pas une idée"]}', encoding="utf-8")
+        p.write_text(_source({"idees": ["ceci n'est pas une idée"]}), encoding="utf-8")
         s = lire_idees_transmises(p)
         verifier("G7 entrée non-dict · soumise au veto", s["n_soumises"] == 1,
                  str(s))
         v = veto(s["idees"], MESURES, LIMITES)
         verifier("G7 · bloquée", v[0]["veto"] is True, str(v))
 
+
+        # ------------------------------------------------------------------
+        # G9 à G11 — LE CONTRÔLE DE FRAÎCHEUR LUI-MÊME (R-047, E-047).
+        # Le producteur émettait le marqueur ; personne ne le lisait. Ces
+        # trois cas prouvent qu'il est désormais lu, et qu'il bloque.
+        # ------------------------------------------------------------------
+        p = rep / "perime.json"
+        p.write_text(_source({"idees": []}, valide=False), encoding="utf-8")
+        s = lire_idees_transmises(p)
+        verifier("G9 source périmée · statut PERIME",
+                 s["statut"] == "PERIME", s["statut"])
+        verifier("G9 · NON examinable (périmé ≠ vide)",
+                 s["examinable"] is False, str(s))
+        verifier("G9 · le retard est chiffré dans le motif",
+                 "h" in s.get("motif", "") and "PÉRIM" in s.get("motif", ""),
+                 s.get("motif", ""))
+
+        p = rep / "sans_fraicheur.json"
+        p.write_text(json.dumps({"idees": []}), encoding="utf-8")
+        s = lire_idees_transmises(p)
+        verifier("G10 marqueur absent · SANS_MARQUEUR_FRAICHEUR",
+                 s["statut"] == "SANS_MARQUEUR_FRAICHEUR", s["statut"])
+        verifier("G10 · NON examinable", s["examinable"] is False, str(s))
+
+        p = rep / "incomplet.json"
+        fr = _fraicheur(); fr["execution_complete"] = False
+        p.write_text(json.dumps({"idees": [], "fraicheur": fr}), encoding="utf-8")
+        s = lire_idees_transmises(p)
+        verifier("G11 exécution incomplète · EXECUTION_INCOMPLETE",
+                 s["statut"] == "EXECUTION_INCOMPLETE", s["statut"])
+        verifier("G11 · NON examinable", s["examinable"] is False, str(s))
+
         # G8 — idée sans verdict NI statut : non triable ⇒ soumise ⇒ bloquée
         p = rep / "sans_verdict.json"
-        p.write_text(json.dumps({"idees": [{"paire": "X"}]}), encoding="utf-8")
+        p.write_text(_source({"idees": [{"paire": "X"}]}), encoding="utf-8")
         s = lire_idees_transmises(p)
         verifier("G8 sans verdict ni statut · soumise au veto",
                  s["n_soumises"] == 1, str(s))
@@ -531,7 +590,7 @@ def test_source() -> None:
 
         # G9 — idée au verdict amont définitif : NON soumise, mais DÉCLARÉE
         p = rep / "refusee.json"
-        p.write_text(json.dumps({"idees": [
+        p.write_text(_source({"idees": [
             {"paire": "Y", "verdict": "REFUSEE", "statut_risque": "CLOSE"}]}),
             encoding="utf-8")
         s = lire_idees_transmises(p)
