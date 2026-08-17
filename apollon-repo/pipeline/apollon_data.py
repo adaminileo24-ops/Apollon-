@@ -55,6 +55,18 @@ for d in (DATA, HIST):
 FRED_KEY = os.environ.get("FRED_API_KEY", "").strip()
 FRED_URL = "https://api.stlouisfed.org/fred/series/observations"
 
+# --- SÉRIES OBLIGATOIRES (règle R-028) --------------------------------------
+# Toute série de cette liste absente de la collecte interdit la production d'un
+# brief. Une lacune sur l'une d'elles n'est jamais une « réserve de méthode » :
+# c'est un échec de collecte. Origine : faute F-5 de la note Astra 005 — cinq
+# séries déclarées indisponibles étaient obtenables en une requête, dont deux
+# chez le fournisseur de rang 1 du fonds.
+SERIES_OBLIGATOIRES = {
+    "DGS2", "DGS10", "DGS30", "T10Y2Y", "DFII10", "T10YIE",
+    "CPIAUCSL", "CPILFESL", "UNRATE", "PAYEMS",
+    "VIXCLS", "VXVCLS", "SP500", "DFF",
+}
+
 # ---------------------------------------------------------------- séries FRED
 # code FRED -> (libellé, unité, section propriétaire)
 SERIES: dict[str, tuple[str, str, str]] = {
@@ -81,7 +93,10 @@ SERIES: dict[str, tuple[str, str, str]] = {
     "DEXJPUS":        ("USD/JPY",                       "",     "M4"),
     "DTWEXBGS":       ("Indice dollar large",           "idx",  "M4"),
     # RISQUE — régime
-    "VIXCLS":         ("VIX",                           "",     "RISQUE"),
+    "VIXCLS":         ("VIX 30 jours",                  "",     "RISQUE"),
+    "VXVCLS":         ("VIX3M — 3 mois",                "",     "RISQUE"),
+    "VXDCLS":         ("VXD — Dow",                     "",     "RISQUE"),
+    "OVXCLS":         ("OVX — volatilité pétrole",      "",     "RISQUE"),
     "BAMLH0A0HYM2":   ("Spread haut rendement OAS",     "%",    "RISQUE"),
     "BAMLC0A0CM":     ("Spread investment grade OAS",   "%",    "RISQUE"),
     "SP500":          ("S&P 500",                       "idx",  "RISQUE"),
@@ -219,6 +234,16 @@ def to_markdown(snap: dict) -> str:
         f"**Régime :** `{snap['regime']['regime']}`",
         f"**Politique de couverture :** {snap['regime'].get('politique_couverture') or 'n/d'}",
         "",
+    ]
+    alertes = snap.get("alertes_qualite") or []
+    if alertes:
+        L += ["> ## ⚠ ALERTES QUALITÉ — lire avant toute analyse", ">"]
+        L += [f"> - {a}" for a in alertes]
+        L += [">",
+              "> Un percentile calculé sur une série tronquée n'a aucune valeur.",
+              "> Toute analyse portant sur ces séries doit citer la profondeur réelle.",
+              ""]
+    L += [
         "## Axes de régime",
         "",
         "| Axe | État |",
@@ -268,22 +293,43 @@ def main() -> int:
     latest: dict[str, float] = {}
     snap_series: dict[str, dict] = {}
 
+    alertes: list[str] = []
+
     for sid, (label, unit, section) in SERIES.items():
         rows = fred(sid, start)
         if not rows:
             print(f"  ✗ {sid:<15} {label}")
+            alertes.append(f"{sid}: AUCUNE donnée récupérée")
             continue
         archive(sid, rows)
         series_data[sid] = rows
         vals = [v for _, v in rows]
         latest[sid] = vals[-1]
+
+        # --- CONTRÔLE DE PROFONDEUR (règle R-011) -------------------------
+        # FRED renvoie parfois moins d'historique que demandé, sans erreur.
+        # Une profondeur silencieusement tronquée invalide tout percentile
+        # calculé dessus. On la mesure, on la publie, on alerte.
+        obtenu = rows[0][0]
+        tronque = bool(start and obtenu > start)
+        if tronque:
+            alertes.append(
+                f"{sid} ({label}) : demandé depuis {start}, obtenu depuis {obtenu} "
+                f"— PERCENTILES NON FIABLES sur cette série"
+            )
+
         snap_series[sid] = {
             "label": label, "unit": unit, "section": section,
             "value": vals[-1], "date": rows[-1][0],
             "chg_1d": round(vals[-1] - vals[-2], 4) if len(vals) > 1 else None,
             "chg_20d": round(vals[-1] - vals[-21], 4) if len(vals) > 20 else None,
+            "debut_historique": obtenu,
+            "n_observations": len(rows),
+            "profondeur_tronquee": tronque,
         }
-        print(f"  ✓ {sid:<15} {label:<32} {vals[-1]:>12.4g}   ({len(rows)} pts)")
+        flag = "  ⚠ TRONQUÉ" if tronque else ""
+        print(f"  ✓ {sid:<15} {label:<32} {vals[-1]:>12.4g}   "
+              f"({len(rows)} pts depuis {obtenu}){flag}")
 
     if not snap_series:
         print("\nAucune série récupérée. Vérifiez FRED_API_KEY et la connexion.",
@@ -295,8 +341,30 @@ def main() -> int:
         "date": date.today().isoformat(),
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "regime": regime,
+        "alertes_qualite": alertes,
         "series": snap_series,
     }
+
+    # --- CONTRÔLE DES SÉRIES OBLIGATOIRES (R-028) ---------------------------
+    manquantes = sorted(SERIES_OBLIGATOIRES - set(snap_series))
+    snap["series_obligatoires_manquantes"] = manquantes
+    snap["production_autorisee"] = not manquantes
+
+    if alertes:
+        print("\n" + "!" * 62)
+        print("ALERTES QUALITÉ DES DONNÉES — à lire avant toute analyse")
+        print("!" * 62)
+        for a in alertes:
+            print(f"  ⚠ {a}")
+
+    if manquantes:
+        print("\n" + "#" * 62)
+        print("SÉRIES OBLIGATOIRES MANQUANTES — PRODUCTION DE BRIEF INTERDITE")
+        print("#" * 62)
+        for m in manquantes:
+            print(f"  ✗ {m}")
+        print("\nUne lacune sur une série obligatoire n'est pas une réserve de")
+        print("méthode : c'est un échec de collecte. Corriger avant de produire.")
 
     if args.factors:
         print("\nFacteurs Fama-French…")
