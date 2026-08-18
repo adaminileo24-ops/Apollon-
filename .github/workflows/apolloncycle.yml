@@ -24,39 +24,95 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
 
       # =============================================================
       # 0. AUTO-RÉPARATION — avant tout le reste.
       # =============================================================
-      - name: 0 · Normaliser les doublons "(n)"
+      - name: 0 · Auto-réparation
         run: |
+          set +e
           git config user.name  "Apollon"
           git config user.email "apollon@users.noreply.github.com"
-          CHANGE=0
 
-          # Tout fichier « nom (n).ext » remplace « nom.ext ».
+          # ---------------------------------------------------------------
+          # LIMITE GITHUB, NON CONTOURNABLE (E-061).
+          #
+          # Le GITHUB_TOKEN d'Actions ne peut JAMAIS écrire dans
+          # .github/workflows/ :
+          #   « refusing to allow a GitHub App to create or update workflow
+          #     ... without `workflows` permission »
+          # Ce scope n'existe pas pour ce jeton — ce n'est pas une permission
+          # à ajouter, c'est une interdiction de plateforme.
+          #
+          # La première version stageait TOUT. Un seul doublon de workflow
+          # faisait rejeter le push ENTIER, et les renommages des fichiers
+          # Python étaient perdus avec lui. Un nettoyage qui échoue en bloc
+          # sur ce qu'il n'a pas le droit de toucher n'est pas un nettoyage.
+          #
+          # Désormais : on répare TOUT dans l'arbre de travail (le cycle
+          # courant utilise donc les bons fichiers), et on ne COMMITE que
+          # ce qui est committable.
+          # ---------------------------------------------------------------
+
+          # Les doublons SOUS .github/workflows/ sont relevés AVANT le
+          # renommage : celui-ci les consomme dans l'arbre local, mais le
+          # dépôt les conserve — le commit n'a pas le droit d'y toucher.
+          # Sans ce relevé, deux workflows repartiraient au cycle suivant
+          # sans que rien ne le signale.
+          A_SUPPRIMER=""
+          for F in .github/workflows/*\ \(*\)*; do
+            [ -f "$F" ] && A_SUPPRIMER="$A_SUPPRIMER|$F"
+          done
+
+          echo "— normalisation des doublons « (n) » —"
           find . -path ./.git -prune -o -type f -name '* (*)*' -print | while read -r DUP; do
             PROPRE=$(echo "$DUP" | sed -E 's/ \([0-9]+\)//')
             echo "  $DUP  ->  $PROPRE"
             mv -f "$DUP" "$PROPRE"
           done
 
-          # Un seul workflow. Celui-ci s'appelle apollon-cycle.yml ;
-          # toute autre définition Apollon est supprimée.
-          for VIEUX in .github/workflows/apollon.yml .github/workflows/apollon-complet.yml; do
-            [ -f "$VIEUX" ] && { echo "  suppression de $VIEUX"; rm -f "$VIEUX"; }
-          done
-
-          git add -A
-          if git diff --staged --quiet; then
-            echo "Dépôt déjà propre."
+          echo "— doublons de workflow —"
+          MOI=$(echo "${{ github.workflow_ref }}" | sed -E 's#^[^/]+/[^/]+/##; s#@.*$##')
+          echo "  workflow courant : ${MOI:-INDÉTERMINÉ}"
+          if [ -n "$MOI" ] && [ -f "$MOI" ]; then
+            for F in .github/workflows/*.yml .github/workflows/*.yaml; do
+              [ -f "$F" ] || continue
+              [ "$F" = "$MOI" ] && continue
+              if head -5 "$F" | grep -qi '^name:.*Apollon'; then
+                A_SUPPRIMER="$A_SUPPRIMER|$F"
+                rm -f "$F"
+              fi
+            done
           else
-            git commit -m "auto-réparation : doublons normalisés, workflow unique"
-            git push
-            CHANGE=1
+            echo "::warning::workflow courant non résolu — doublons non examinés"
           fi
-          echo "reparation=$CHANGE" >> "$GITHUB_ENV"
+
+          echo "— commit (workflows EXCLUS : interdiction de plateforme) —"
+          git add -A -- . ':(exclude).github/workflows'
+          if git diff --staged --quiet; then
+            echo "  rien à committer hors workflows."
+          else
+            git commit -q -m "auto-réparation : doublons normalisés"
+            git pull --rebase --autostash -q || true
+            if git push -q; then
+              echo "  poussé."
+            else
+              echo "::warning::push refusé — le cycle continue sur l'arbre local réparé"
+            fi
+          fi
+
+          # Ce que la machine ne PEUT PAS faire, elle le dit précisément.
+          if [ -n "$A_SUPPRIMER" ]; then
+            echo ""
+            echo "::error::ACTION MANUELLE REQUISE — doublons de workflow"
+            echo "$A_SUPPRIMER" | tr '|' '\n' | while read -r F; do
+              [ -n "$F" ] && echo "::error::  supprimez « $F » sur github.com (menu ... > Delete file)"
+            done
+            echo "::error::Tant qu'ils existent, DEUX cycles tournent en parallèle."
+            echo "::error::Le jeton d'Actions n'a pas le droit d'y toucher."
+          fi
+          exit 0
 
       # =============================================================
       # 0b. INVENTAIRE — dire ce qui manque, en clair, avant d'échouer.
@@ -67,7 +123,8 @@ jobs:
           MANQUE=0
           for F in apollon_data.py apollon_macro.py apollon_quant.py \
                    apollon_risque.py apollon_trading.py quant_v3.py \
-                   test_macro.py test_veto.py; do
+                   test_macro.py test_veto.py test_collecte.py \
+                   simulateur_fred.py; do
             if [ -f "$F" ]; then
               printf '  OK      %-24s %5s lignes\n' "$F" "$(wc -l < "$F")"
             else
@@ -80,7 +137,7 @@ jobs:
             echo "::warning::$MANQUE fichier(s) absent(s) — les sections correspondantes seront sautées"
           fi
 
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
@@ -121,7 +178,7 @@ jobs:
         working-directory: apollon-repo/pipeline
         run: |
           ECHEC=0
-          for T in test_macro.py test_veto.py; do
+          for T in test_macro.py test_veto.py test_collecte.py; do
             [ -f "$T" ] || { echo "::warning::$T absent"; continue; }
             for MODE in "" "-O"; do
               if python3 $MODE "$T" > /tmp/out.txt 2>&1; then
