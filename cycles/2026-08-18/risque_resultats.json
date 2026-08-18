@@ -1,7 +1,7 @@
 {
   "date_arrete": "2026-08-17",
   "date_donnees_sp500": "2026-08-17",
-  "n_series": 21,
+  "n_series": 22,
   "n_cotations_sp500": 2510,
   "n_rendements": 2509,
   "methode_var_retenue_ex_ante": "historique",
@@ -1731,37 +1731,37 @@
     }
   ],
   "regime": {
-    "volatilite": "BASSE",
-    "vix": 14.25,
+    "volatilite": "MOYENNE",
+    "vix": 15.19,
     "courbe": "PENTUE",
     "pente_2s10s": 0.53,
     "tendance": "HAUSSIERE",
     "ecart_ma200_pct": 9.406280025796509,
     "credit": "RESSERREMENT",
-    "hy_oas": 2.67,
-    "hy_vs_ma60_pb": -6.316666666666704,
-    "regime": "BASSE / PENTUE / HAUSSIERE / RESSERREMENT"
+    "hy_oas": 2.7,
+    "hy_vs_ma60_pb": -3.283333333333305,
+    "regime": "MOYENNE / PENTUE / HAUSSIERE / RESSERREMENT"
   },
   "percentiles": {
     "VIXCLS": {
       "disponible": true,
-      "valeur": 14.25,
-      "date": "2026-08-14",
-      "n_obs_total": 2541,
-      "pct_252": 1.984126984126984,
+      "valeur": 15.19,
+      "date": "2026-08-17",
+      "n_obs_total": 2542,
+      "pct_252": 11.11111111111111,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2541,
+        "n_obs": 2542,
         "cible": 252,
-        "ecart_pct": 908.33,
+        "ecart_pct": 908.73,
         "etat": "suffisante"
       },
-      "pct_2520": 28.293650793650794,
+      "pct_2520": 34.960317460317455,
       "n_obs_2520": 2520,
       "profondeur_2520": {
-        "n_obs": 2541,
+        "n_obs": 2542,
         "cible": 2520,
-        "ecart_pct": 0.83,
+        "ecart_pct": 0.87,
         "etat": "suffisante"
       }
     },
@@ -1789,10 +1789,10 @@
     },
     "BAMLH0A0HYM2": {
       "disponible": true,
-      "valeur": 2.67,
-      "date": "2026-08-14",
+      "valeur": 2.7,
+      "date": "2026-08-17",
       "n_obs_total": 785,
-      "pct_252": 3.1746031746031744,
+      "pct_252": 7.5396825396825395,
       "n_obs_252": 252,
       "profondeur_252": {
         "n_obs": 785,
@@ -1800,7 +1800,7 @@
         "ecart_pct": 211.51,
         "etat": "suffisante"
       },
-      "pct_2520": 4.840764331210192,
+      "pct_2520": 8.40764331210191,
       "n_obs_2520": 785,
       "profondeur_2520": {
         "n_obs": 785,
@@ -2072,23 +2072,16 @@
       "mesure": "N_eff covariance 1.372 (N_eff corrélation 3.542, non opposable)",
       "seuil": "3.0",
       "action_exigee": "Nombre effectif de paris insuffisant sur la matrice OPPOSABLE : diversification apparente, pas réelle. VIXCLS porte 95.5 % de la variance du panier."
-    },
-    {
-      "type": "REGIME",
-      "niveau": "INFORMATION",
-      "mesure": "VIX 14.25",
-      "seuil": "< 15.0",
-      "action_exigee": "Politique de couverture : achat systématique SI intérêt assurable (bêta ≥ 0,15) ET VIX3M ≤ 17."
     }
   ],
-  "n_alertes_cycle": 3,
-  "n_alertes_non_traitees": 3,
+  "n_alertes_cycle": 2,
+  "n_alertes_non_traitees": 2,
   "journal": {
-    "lignes_alertes_brutes": 3,
-    "alertes_uniques": 3,
+    "lignes_alertes_brutes": 2,
+    "alertes_uniques": 2,
     "cle_de_dedoublonnage": "(type, niveau) — la date en est SORTIE (G-10)",
     "clotures": 0,
-    "n_non_traitees": 3,
+    "n_non_traitees": 2,
     "non_traitees": [
       {
         "id": "AL-751be29c",
@@ -2106,15 +2099,6 @@
         "premiere_date_donnees": "2026-08-17",
         "derniere_date_donnees": "2026-08-17",
         "derniere_mesure": "N_eff covariance 1.372 (N_eff corrélation 3.542, non opposable)",
-        "occurrences": 1
-      },
-      {
-        "id": "AL-bf4c9bcc",
-        "type": "REGIME",
-        "niveau": "INFORMATION",
-        "premiere_date_donnees": "2026-08-17",
-        "derniere_date_donnees": "2026-08-17",
-        "derniere_mesure": "VIX 14.25",
         "occurrences": 1
       }
     ]
