@@ -1,6 +1,6 @@
 {
   "date": "2026-08-18",
-  "generated_at": "2026-08-18T05:45:11",
+  "generated_at": "2026-08-18T12:18:08",
   "regime": {
     "volatilite": "BASSE",
     "courbe": "PENTUE",
@@ -37,6 +37,7 @@
     "BAMLC0A0CM (Spread investment grade OAS) : demandé depuis 2016-08-20, obtenu depuis 2023-08-18 — PERCENTILES NON FIABLES sur cette série",
     "SP500 (S&P 500) : demandé depuis 2016-08-20, obtenu depuis 2016-08-22 — PERCENTILES NON FIABLES sur cette série",
     "NASDAQ100 (Nasdaq 100) : demandé depuis 2016-08-20, obtenu depuis 2016-08-22 — PERCENTILES NON FIABLES sur cette série",
+    "MILLÉSIMES INERTES : aucune série n'a obtenu de valeurs « première publication ». Tout test hors échantillon reste optimiste du montant des révisions.",
     "CALENDRIER INUTILISABLE : aucune date de publication future. Le critère « catalyseur identifié et daté » de la Section Macro reste mort par construction."
   ],
   "series": {
@@ -300,6 +301,13 @@
     "UNRATE"
   ],
   "production_autorisee": false,
+  "millesimes": {
+    "demande": true,
+    "series_avec_millesime": [],
+    "series_repliees": [],
+    "actif": false,
+    "lecture": "AUCUNE série n'a obtenu de millésime : l'option est INERTE. Toutes les valeurs sont RÉVISÉES. Le biais de révision n'est pas supprimé, il est seulement déclaré."
+  },
   "calendrier_publications": {
     "fichier": "data/calendrier_publications.csv",
     "n_total": 0,

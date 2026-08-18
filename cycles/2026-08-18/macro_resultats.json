@@ -1,6 +1,6 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-08-18T05:45:22+00:00",
+    "genere_le_utc": "2026-08-18T12:18:20+00:00",
     "date_donnees": "2026-08-14",
     "execution_complete": false
   },
@@ -43,10 +43,7 @@
       "UNRATE"
     ],
     "series_perimees_vs_arrete": [],
-    "series_sans_sens_declare": [
-      "OVXCLS",
-      "VXDCLS"
-    ],
+    "series_sans_sens_declare": [],
     "domaines_fermes": {
       "M2_cycle": [
         "CPIAUCSL",
