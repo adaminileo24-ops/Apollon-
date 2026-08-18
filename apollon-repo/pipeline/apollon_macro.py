@@ -173,6 +173,8 @@ SENS_SERIE: dict[str, dict] = {
     # collectée sans sens déclaré bloque toute production (et c'est le
     # comportement voulu) : la table doit précéder la collecte.
     "VXVCLS":       {"role": "volatilite_implicite_3m", "signe_risque": +1},
+    "VXDCLS":       {"role": "volatilite_implicite_dow", "signe_risque": +1},
+    "OVXCLS":       {"role": "volatilite_implicite_petrole", "signe_risque": +1},
     "SP500":        {"role": "prix_actions",            "signe_risque": -1},
     "NASDAQ100":    {"role": "prix_actions_tech",       "signe_risque": -1},
     "DCOILBRENTEU": {"role": "prix_energie",            "signe_risque": +1},
@@ -200,7 +202,8 @@ CONVENTION = {
     "T10Y2Y": "niveau", "DFII10": "niveau", "T10YIE": "niveau", "T5YIFR": "niveau",
     "UNRATE": "niveau", "BAMLH0A0HYM2": "niveau", "BAMLC0A0CM": "niveau",
     "CPIAUCSL": "log", "CPILFESL": "log", "PAYEMS": "log", "INDPRO": "log",
-    "VIXCLS": "log", "VXVCLS": "log", "SP500": "log", "NASDAQ100": "log",
+    "VIXCLS": "log", "VXVCLS": "log", "VXDCLS": "log", "OVXCLS": "log",
+    "SP500": "log", "NASDAQ100": "log",
     "DCOILBRENTEU": "log", "DCOILWTICO": "log",
     "DEXUSEU": "log", "DEXJPUS": "log", "DTWEXBGS": "log",
 }

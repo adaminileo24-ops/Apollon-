@@ -130,6 +130,11 @@ SERIES_REVISEES = {
 # Sous ce rapport, la réponse en millésime est jugée TRONQUÉE et rejetée.
 SEUIL_PROFONDEUR_MILLESIME = 0.80
 
+# Journal d'efficacité du millésime. Une option qui se replie toujours est
+# INERTE : elle ne supprime aucun biais, elle en déclare un. Ce compteur
+# rend l'état visible dans la sortie au lieu de le laisser supposer.
+_MILLESIME_JOURNAL: dict[str, str] = {}
+
 
 # ---------------------------------------------------------------- collecte
 def fred(series_id: str, start: str | None = None,
@@ -151,6 +156,7 @@ def fred(series_id: str, start: str | None = None,
     # Le demander ailleurs coûte de la profondeur sans supprimer aucun biais.
     if vintage and series_id not in SERIES_REVISEES:
         vintage = False
+        _MILLESIME_JOURNAL[series_id] = "hors_perimetre"
 
     params = {
         "series_id": series_id,
@@ -219,14 +225,35 @@ def fred(series_id: str, start: str | None = None,
     # courte que la version standard est une TRONCATURE, pas une correction de
     # biais. On la rejette et on le déclare — R-011 : jamais de troncature
     # silencieuse.
-    if vintage and out:
+    # CONTRÔLE DE PROFONDEUR (E-054, corrigé E-056).
+    #
+    # La première version testait `if vintage and out`. Quand la requête en
+    # millésime renvoie ZÉRO observation — le cas réel pour les séries
+    # mensuelles, dont ALFRED n'archive pas les millésimes aussi loin que
+    # l'observation_start demandé — `out` est vide, le garde ne se déclenche
+    # pas, et la fonction rend une liste vide. LES QUATRE SÉRIES DE NOYAU
+    # CPIAUCSL, CPILFESL, PAYEMS et UNRATE ONT DISPARU DU DÉPÔT.
+    #
+    # Un garde-fou qui ne couvre pas le cas le plus dégradé n'est pas un
+    # garde-fou. La règle est désormais absolue : le millésime ne peut
+    # JAMAIS faire perdre une série. Toute dégradation entraîne le repli,
+    # et le repli est déclaré.
+    if vintage:
         standard = fred(series_id, start, vintage=False)
+        if not out and standard:
+            print(f"  ! {series_id}: millésime VIDE ({len(standard)} obs en "
+                  f"standard). Repli sur les valeurs révisées, biais de "
+                  f"révision DÉCLARÉ.", file=sys.stderr)
+            _MILLESIME_JOURNAL[series_id] = "repli_vide"
+            return standard
         if standard and len(out) < SEUIL_PROFONDEUR_MILLESIME * len(standard):
             print(f"  ! {series_id}: millésime TRONQUÉ — {len(out)} obs contre "
                   f"{len(standard)} en standard ({100*len(out)/len(standard):.0f} %). "
                   f"Repli sur les valeurs révisées, biais de révision DÉCLARÉ.",
                   file=sys.stderr)
+            _MILLESIME_JOURNAL[series_id] = "repli_tronque"
             return standard
+        _MILLESIME_JOURNAL[series_id] = "millesime_obtenu"
 
     if obs and not out:
         champs = sorted({k for o in obs[:3] if isinstance(o, dict) for k in o})
@@ -378,6 +405,14 @@ def calendrier_publications(jours_avant: int = 400, jours_apres: int = 120) -> l
     return out
 
 
+def _chemin_lisible(chemin: Path) -> str:
+    """Chemin relatif au dépôt si possible, absolu sinon. Ne lève jamais."""
+    try:
+        return str(chemin.relative_to(BASE))
+    except ValueError:
+        return str(chemin)
+
+
 def archiver_calendrier(evenements: list[dict]) -> dict:
     """Écrit data/calendrier_publications.csv et rend un compte-rendu.
 
@@ -406,7 +441,11 @@ def archiver_calendrier(evenements: list[dict]) -> dict:
     futurs = [l for l in lignes if l["date"] > aujourdhui]
     prochaine = futurs[0] if futurs else None
     return {
-        "fichier": str(chemin.relative_to(BASE)),
+        # `relative_to` lève si le chemin sort de l'arborescence — cas
+        # normal en test, et il faisait tomber la fonction. Un chemin de
+        # sortie n'est pas une information critique : il ne doit jamais
+        # faire échouer ce qu'il décrit.
+        "fichier": _chemin_lisible(chemin),
         "n_total": len(lignes),
         "n_futurs": len(futurs),
         "n_releases_suivies": len(RELEASES_SUIVIES),
@@ -589,6 +628,30 @@ def main() -> int:
         print("\nFacteurs Fama-French…")
         p = fetch_factors()
         print(f"  {'✓ ' + p if p else '✗ échec'}")
+
+    if args.vintage:
+        obtenus = [s for s, v in _MILLESIME_JOURNAL.items() if v == "millesime_obtenu"]
+        replis = [s for s, v in _MILLESIME_JOURNAL.items() if v.startswith("repli")]
+        snap["millesimes"] = {
+            "demande": True,
+            "series_avec_millesime": sorted(obtenus),
+            "series_repliees": sorted(replis),
+            "actif": bool(obtenus),
+            "lecture": ("le biais de révision est SUPPRIMÉ sur les séries listées"
+                        if obtenus else
+                        "AUCUNE série n'a obtenu de millésime : l'option est INERTE. "
+                        "Toutes les valeurs sont RÉVISÉES. Le biais de révision "
+                        "n'est pas supprimé, il est seulement déclaré."),
+        }
+        print(f"\nMillésimes : {len(obtenus)} série(s) obtenue(s), "
+              f"{len(replis)} repli(s)")
+        if not obtenus:
+            print("  ATTENTION — option INERTE : toutes les valeurs sont RÉVISÉES.")
+            print("  Le biais de révision n'est pas supprimé, il est déclaré.")
+            alertes.append(
+                "MILLÉSIMES INERTES : aucune série n'a obtenu de valeurs "
+                "« première publication ». Tout test hors échantillon reste "
+                "optimiste du montant des révisions.")
 
     # Calendrier de publications — nourrit le critère « catalyseur daté »,
     # mort par construction tant qu'aucune date future n'existait au dépôt.

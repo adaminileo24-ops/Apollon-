@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import pathlib
 import sys
 import tempfile
 import traceback
@@ -283,6 +284,43 @@ def t_production_autorisee():
     assert "VOL_TENOR" in ctrl2["domaines_fermes"], \
         "un domaine privé de série obligatoire doit être fermé"
 
+
+
+@cas("4e  toute série COLLECTÉE est DÉCLARÉE côté Macro (R-056)")
+def t_toute_serie_collectee_est_declaree():
+    """E-055 / E-056 — trois fois la même faute, en trois cycles.
+
+    VXVCLS, puis VXDCLS et OVXCLS sont arrivées au dépôt sans sens
+    déclaré, et chacune a bloqué la production d'un cycle entier. Corriger
+    série par série est un jeu de taupes : la quatrième aurait cassé le
+    quatrième cycle.
+
+    Ce contrôle lit la liste de collecte D'APOLLON_DATA et exige que
+    chaque série y figurant soit déclarée dans la table des sens ET dans
+    la table des conventions. Il échoue à l'écriture du collecteur, pas à
+    l'exécution du cycle.
+    """
+    import importlib.util
+    chemin = pathlib.Path(M.__file__).with_name("apollon_data.py")
+    if not chemin.exists():
+        return                                  # collecteur absent : rien à vérifier
+    spec = importlib.util.spec_from_file_location("_ad", chemin)
+    ad = importlib.util.module_from_spec(spec)
+    sys.modules["_ad"] = ad
+    spec.loader.exec_module(ad)
+
+    collectees = set(ad.SERIES)
+    sans_sens = sorted(collectees - set(M.SENS_SERIE))
+    assert not sans_sens, (
+        f"séries collectées SANS SENS DÉCLARÉ : {sans_sens}. "
+        f"Elles bloqueront la production (E-007). La déclaration précède "
+        f"la collecte (R-056).")
+
+    sans_convention = sorted(
+        s for s in collectees
+        if s not in M.CONVENTION and s not in getattr(M, "MATURITE_OBLIGATION", {}))
+    assert not sans_convention, (
+        f"séries collectées SANS CONVENTION de P&L : {sans_convention}")
 
 # =====================================================================
 # 5. INVALIDATION = NIVEAU DE PRIX  =>  THÈSE REJETÉE
