@@ -1,0 +1,60 @@
+{
+  "fraicheur": {
+    "genere_le_utc": "2026-08-19T05:46:38+00:00",
+    "date_donnees": "2026-08-17",
+    "execution_complete": false
+  },
+  "production_autorisee": false,
+  "motif_blocage": "séries de noyau manquantes : CPIAUCSL, CPILFESL, PAYEMS, UNRATE",
+  "controle_series": {
+    "series_presentes": [
+      "BAMLC0A0CM",
+      "BAMLH0A0HYM2",
+      "DCOILBRENTEU",
+      "DCOILWTICO",
+      "DEXJPUS",
+      "DEXUSEU",
+      "DFF",
+      "DFII10",
+      "DGS10",
+      "DGS2",
+      "DGS30",
+      "DTWEXBGS",
+      "NASDAQ100",
+      "OVXCLS",
+      "SP500",
+      "T10Y2Y",
+      "T10YIE",
+      "T5YIFR",
+      "VIXCLS",
+      "VXDCLS",
+      "VXVCLS"
+    ],
+    "manquantes_noyau": [
+      "CPIAUCSL",
+      "CPILFESL",
+      "PAYEMS",
+      "UNRATE"
+    ],
+    "manquantes_liste_doctrine": [
+      "CPIAUCSL",
+      "CPILFESL",
+      "PAYEMS",
+      "UNRATE"
+    ],
+    "series_perimees_vs_arrete": [],
+    "series_sans_sens_declare": [],
+    "domaines_fermes": {
+      "M2_cycle": [
+        "CPIAUCSL",
+        "CPILFESL",
+        "INDPRO",
+        "PAYEMS",
+        "UNRATE"
+      ]
+    },
+    "retard_max_tolere_seances": 5,
+    "production_autorisee": false
+  },
+  "theses": []
+}
