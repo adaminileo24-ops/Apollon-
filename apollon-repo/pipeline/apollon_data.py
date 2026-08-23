@@ -205,7 +205,26 @@ def fred(series_id: str, start: str | None = None,
         r.raise_for_status()
         obs = r.json().get("observations", [])
     except Exception as exc:                                  # noqa: BLE001
+        # E-062 — LE REPLI DOIT COUVRIR L'ÉCHEC DE LA REQUÊTE ELLE-MÊME.
+        #
+        # Le garde-fou de E-056 était placé APRÈS l'analyse de la réponse.
+        # Or `output_type=4` fait répondre le serveur en ERREUR HTTP pour
+        # les séries mensuelles : on sortait ici, par le `except`, AVANT
+        # d'atteindre le repli. Résultat mesuré sur cinq cycles réels :
+        # CPIAUCSL, CPILFESL, PAYEMS, UNRATE et INDPRO absentes du snapshot,
+        # production Macro bloquée, et `series_repliees: []` — la preuve
+        # que le repli n'avait jamais été atteint.
+        #
+        # Troisième fois que le même garde-fou manque un cas plus dégradé
+        # que celui qu'il couvre (R-058). La règle est absolue et sans
+        # exception : EN MODE MILLÉSIME, TOUT ÉCHEC — quel qu'il soit —
+        # entraîne une requête standard.
         print(f"  ! {series_id}: {exc}", file=sys.stderr)
+        if vintage:
+            print(f"    échec en mode millésime — repli sur la requête "
+                  f"standard pour {series_id}", file=sys.stderr)
+            _MILLESIME_JOURNAL[series_id] = "repli_erreur"
+            return fred(series_id, start, vintage=False)
         return []
     out = []
     for o in obs:
@@ -373,8 +392,18 @@ def calendrier_publications(jours_avant: int = 400, jours_apres: int = 120) -> l
         "file_type": "json",
         # SANS ce paramètre, aucune date future n'est renvoyée.
         "include_release_dates_with_no_data": "true",
+        # E-063 — NE PAS BORNER `realtime_end`.
+        #
+        # La version antérieure posait realtime_end = aujourd'hui + 120 j,
+        # croyant élargir la fenêtre. La valeur PAR DÉFAUT documentée est
+        # 9999-12-31 : la borne RESTREIGNAIT donc la réponse au lieu de
+        # l'étendre, et filtrait exactement ce qu'elle cherchait. Résultat
+        # mesuré sur cinq cycles : « CALENDRIER INUTILISABLE : aucune date
+        # de publication future ».
+        #
+        # realtime_start par défaut = premier jour de l'année courante ;
+        # on l'élargit vers le PASSÉ seulement, jamais vers le futur.
         "realtime_start": (date.today() - timedelta(days=jours_avant)).isoformat(),
-        "realtime_end":   (date.today() + timedelta(days=jours_apres)).isoformat(),
         "sort_order": "asc",
         "limit": 10000,
     }

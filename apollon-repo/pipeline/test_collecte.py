@@ -117,6 +117,23 @@ def t_millesime_vide():
         assert len(r) > 100, f"{sid} : {len(r)} obs seulement"
 
 
+@cas("2e  E-062 : millésime en ERREUR HTTP => repli, la série n'est PAS perdue")
+def t_millesime_http400():
+    """Le cas qui a coûté cinq cycles.
+
+    Le garde-fou de E-056 vivait APRÈS l'analyse de la réponse. Le serveur
+    répondant en erreur pour output_type=4, on sortait par le `except`
+    AVANT de l'atteindre. Cinq séries de noyau perdues, production bloquée.
+    """
+    ad, _ = charger("millesime_http400")
+    for sid in sorted(MENSUELLES):
+        r = ad.fred(sid, "2016-01-01", vintage=True)
+        assert r, (f"{sid} PERDUE sur erreur HTTP en mode millésime — "
+                   f"c'est E-062 : le repli ne couvrait pas l'échec de la "
+                   f"requête elle-même")
+        assert len(r) > 100, f"{sid} : {len(r)} obs seulement"
+
+
 @cas("2c  E-054 : millésime TRONQUÉ (12 %) => repli sur la version complète")
 def t_millesime_tronque():
     ad, _ = charger("millesime_tronque")
@@ -132,7 +149,8 @@ def t_propriete_millesime():
     test par mode connu laisse passer le mode suivant ; écrire la
     propriété la ferme définitivement.
     """
-    modes = ["nominal", "millesime_vide", "millesime_tronque", "forme_millesime"]
+    modes = ["nominal", "millesime_vide", "millesime_tronque",
+             "forme_millesime", "millesime_http400"]
     for mode in modes:
         for sid in ("CPIAUCSL", "PAYEMS", "DGS10", "SP500"):
             ad, _ = charger(mode)
@@ -158,6 +176,18 @@ def t_calendrier_parametre():
     assert req[0].get("include_release_dates_with_no_data") == "true", (
         "sans ce paramètre l'API ne renvoie QUE le passé, et le critère "
         "« catalyseur daté » reste mort par construction")
+
+
+@cas("3e  E-063 : aucune borne `realtime_end` — elle filtrerait le futur")
+def t_calendrier_pas_de_borne_future():
+    """La valeur par défaut est 9999-12-31. Toute borne la RESTREINT."""
+    ad, sim = charger()
+    ad.calendrier_publications()
+    req = [a for a in sim.appels if "releases/dates" in a["url"]][0]
+    assert "realtime_end" not in req, (
+        f"realtime_end={req.get('realtime_end')} borne la fenêtre alors que "
+        f"le défaut documenté est 9999-12-31 : la borne filtre les dates "
+        f"futures qu'on cherche précisément à obtenir (E-063).")
 
 
 @cas("3b  seules les publications suivies sont retenues")

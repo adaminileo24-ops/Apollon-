@@ -76,6 +76,8 @@ class SimulateurFred:
       "http_500"         — le serveur tombe
       "json_malforme"    — réponse non parsable
       "calendrier_passe" — le calendrier ne rend que des dates passées
+      "millesime_http400"— output_type=4 fait répondre le serveur en ERREUR
+                           (comportement RÉEL observé en production, E-062)
     """
 
     def __init__(self, mode: str = "nominal", n_obs_quotidien: int = 2500,
@@ -104,6 +106,9 @@ class SimulateurFred:
         mensuelle = sid in MENSUELLES
 
         if ot == 4:                                    # millésime demandé
+            if self.mode == "millesime_http400":
+                # Comportement RÉEL du serveur, mesuré sur 5 cycles.
+                return ReponseSimulee(None, 400)
             if self.mode == "forme_millesime":
                 # Structure du type 2 : une colonne par millésime, pas de `value`
                 return ReponseSimulee({"observations": [
