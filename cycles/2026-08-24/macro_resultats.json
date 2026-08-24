@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-08-24T05:53:45+00:00",
+    "genere_le_utc": "2026-08-24T20:03:04+00:00",
     "date_donnees": "2026-08-20",
     "validite_heures": 24.0,
-    "perime_apres_utc": "2026-08-25T05:53:45+00:00",
+    "perime_apres_utc": "2026-08-25T20:03:04+00:00",
     "execution_complete": true,
     "controle_attendu_de_l_aval": "REFUSER ce fichier si l'heure UTC courante dépasse `perime_apres_utc`, si `date_donnees` ne correspond pas à la date d'arrêté examinée, ou si `execution_complete` est absent ou faux."
   },
@@ -125,7 +125,7 @@
         "BAMLH0A0HYM2"
       ],
       "correlation": 0.9396,
-      "n": 726,
+      "n": 723,
       "seuil": 0.9
     },
     {
@@ -12471,16 +12471,16 @@
               "percentile": 28.57142857142857,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 787,
-              "profondeur_annees": 3.0,
+              "n_obs": 784,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "BAMLC0A0CM": {
               "percentile": 83.33333333333334,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 786,
-              "profondeur_annees": 3.0,
+              "n_obs": 783,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "T10Y2Y": {
@@ -12685,12 +12685,12 @@
           "ok": false,
           "t_minimum_exige": 2.0,
           "mesurable": true,
-          "esperance_conditionnelle_pct_nav": 0.20770465613322098,
+          "esperance_conditionnelle_pct_nav": 0.20770465613322103,
           "esperance_hors_declenchement_pct_nav": 0.6086088092736038,
           "esperance_inconditionnelle_pct_nav": 0.3127579076908234,
-          "ecart_pct_nav": -0.40090415314038286,
+          "ecart_pct_nav": -0.4009041531403828,
           "erreur_type_ecart": 0.2035048488174516,
-          "t_ecart": -1.969998039211355,
+          "t_ecart": -1.9699980392113545,
           "n_declenchements": 1808,
           "n_blocs_independants_declenchement": 30,
           "n_hors": 642,
@@ -12876,16 +12876,16 @@
               "percentile": 28.57142857142857,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 787,
-              "profondeur_annees": 3.0,
+              "n_obs": 784,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "BAMLC0A0CM": {
               "percentile": 83.33333333333334,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 786,
-              "profondeur_annees": 3.0,
+              "n_obs": 783,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "T10Y2Y": {
@@ -13280,16 +13280,16 @@
               "percentile": 28.57142857142857,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 787,
-              "profondeur_annees": 3.0,
+              "n_obs": 784,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "BAMLC0A0CM": {
               "percentile": 83.33333333333334,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 786,
-              "profondeur_annees": 3.0,
+              "n_obs": 783,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "T10Y2Y": {
@@ -13687,16 +13687,16 @@
               "percentile": 28.57142857142857,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 787,
-              "profondeur_annees": 3.0,
+              "n_obs": 784,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "BAMLC0A0CM": {
               "percentile": 83.33333333333334,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 786,
-              "profondeur_annees": 3.0,
+              "n_obs": 783,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "T10Y2Y": {
@@ -13901,12 +13901,12 @@
           "ok": false,
           "t_minimum_exige": 2.0,
           "mesurable": true,
-          "esperance_conditionnelle_pct_nav": -0.20770465613322098,
+          "esperance_conditionnelle_pct_nav": -0.20770465613322103,
           "esperance_hors_declenchement_pct_nav": -0.6086088092736038,
           "esperance_inconditionnelle_pct_nav": -0.3127579076908234,
-          "ecart_pct_nav": 0.40090415314038286,
+          "ecart_pct_nav": 0.4009041531403828,
           "erreur_type_ecart": 0.2035048488174516,
-          "t_ecart": 1.969998039211355,
+          "t_ecart": 1.9699980392113545,
           "n_declenchements": 1808,
           "n_blocs_independants_declenchement": 30,
           "n_hors": 642,
@@ -14085,16 +14085,16 @@
               "percentile": 28.57142857142857,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 787,
-              "profondeur_annees": 3.0,
+              "n_obs": 784,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "BAMLC0A0CM": {
               "percentile": 83.33333333333334,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 786,
-              "profondeur_annees": 3.0,
+              "n_obs": 783,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "T10Y2Y": {
@@ -14469,16 +14469,16 @@
               "percentile": 28.57142857142857,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 787,
-              "profondeur_annees": 3.0,
+              "n_obs": 784,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "BAMLC0A0CM": {
               "percentile": 83.33333333333334,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 786,
-              "profondeur_annees": 3.0,
+              "n_obs": 783,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "T10Y2Y": {
@@ -14853,16 +14853,16 @@
               "percentile": 28.57142857142857,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 787,
-              "profondeur_annees": 3.0,
+              "n_obs": 784,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "BAMLC0A0CM": {
               "percentile": 83.33333333333334,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 786,
-              "profondeur_annees": 3.0,
+              "n_obs": 783,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "T10Y2Y": {
@@ -15240,16 +15240,16 @@
               "percentile": 28.57142857142857,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 787,
-              "profondeur_annees": 3.0,
+              "n_obs": 784,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "BAMLC0A0CM": {
               "percentile": 83.33333333333334,
               "fenetre_utilisee": "1 an",
               "drapeau": "suffisante",
-              "n_obs": 786,
-              "profondeur_annees": 3.0,
+              "n_obs": 783,
+              "profondeur_annees": 2.99,
               "fenetre_reduite": true
             },
             "T10Y2Y": {
