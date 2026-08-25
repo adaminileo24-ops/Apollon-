@@ -1732,36 +1732,36 @@
   ],
   "regime": {
     "volatilite": "MOYENNE",
-    "vix": 15.13,
+    "vix": 15.85,
     "courbe": "PLATE",
     "pente_2s10s": 0.46,
     "tendance": "HAUSSIERE",
     "ecart_ma200_pct": 7.784778689738325,
     "credit": "RESSERREMENT",
-    "hy_oas": 2.7,
-    "hy_vs_ma60_pb": -3.3499999999999197,
+    "hy_oas": 2.69,
+    "hy_vs_ma60_pb": -4.2999999999999705,
     "regime": "MOYENNE / PLATE / HAUSSIERE / RESSERREMENT"
   },
   "percentiles": {
     "VIXCLS": {
       "disponible": true,
-      "valeur": 15.13,
-      "date": "2026-08-21",
-      "n_obs_total": 2541,
-      "pct_252": 9.523809523809524,
+      "valeur": 15.85,
+      "date": "2026-08-24",
+      "n_obs_total": 2542,
+      "pct_252": 22.22222222222222,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2541,
+        "n_obs": 2542,
         "cible": 252,
-        "ecart_pct": 908.33,
+        "ecart_pct": 908.73,
         "etat": "suffisante"
       },
-      "pct_2520": 34.48412698412698,
+      "pct_2520": 39.76190476190476,
       "n_obs_2520": 2520,
       "profondeur_2520": {
-        "n_obs": 2541,
+        "n_obs": 2542,
         "cible": 2520,
-        "ecart_pct": 0.83,
+        "ecart_pct": 0.87,
         "etat": "suffisante"
       }
     },
@@ -1789,10 +1789,10 @@
     },
     "BAMLH0A0HYM2": {
       "disponible": true,
-      "valeur": 2.7,
-      "date": "2026-08-21",
+      "valeur": 2.69,
+      "date": "2026-08-24",
       "n_obs_total": 785,
-      "pct_252": 7.5396825396825395,
+      "pct_252": 4.761904761904762,
       "n_obs_252": 252,
       "profondeur_252": {
         "n_obs": 785,
@@ -1800,7 +1800,7 @@
         "ecart_pct": 211.51,
         "etat": "suffisante"
       },
-      "pct_2520": 8.40764331210191,
+      "pct_2520": 6.8789808917197455,
       "n_obs_2520": 785,
       "profondeur_2520": {
         "n_obs": 785,
