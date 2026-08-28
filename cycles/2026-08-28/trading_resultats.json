@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-08-28T03:52:25Z",
+    "genere_le_utc": "2026-08-28T17:27:16Z",
     "date_donnees": "2026-08-27",
     "validite_heures": 36.0,
-    "perime_apres_utc": "2026-08-29T15:52:25Z",
+    "perime_apres_utc": "2026-08-30T05:27:16Z",
     "execution_complete": true,
     "n_paires_examinees": 5,
     "n_paires_ecartees_sur_incident": 0,
@@ -637,29 +637,29 @@
       "verdict": "REFUSEE",
       "sens": "long_spread",
       "taille_pct_nav": 3.0,
-      "esperance_brute_pct": 0.1213630941481751,
-      "esperance_nette_pct": 0.1168630941481751,
-      "perte_au_stop_pct": -0.11563487213566416,
-      "p_cible": 0.71864,
-      "p_stop": 0.19756,
-      "p_aucune": 0.0838,
-      "z_entree": -1.5748793417616653,
-      "demi_vie": 10.288242450181208,
+      "esperance_brute_pct": 0.12409687775871309,
+      "esperance_nette_pct": 0.11959687775871308,
+      "perte_au_stop_pct": -0.10238696707226616,
+      "p_cible": 0.68298,
+      "p_stop": 0.23167,
+      "p_aucune": 0.08535,
+      "z_entree": -1.6869097687307961,
+      "demi_vie": 10.358174767506416,
       "demi_vie_ic95": [
-        6.403282616622174,
-        14.173202283740242
+        6.42363754450264,
+        14.292711990510192
       ],
       "demi_vie_identifiee": true,
-      "demi_vie_libelle": "10.3 [6.4 ; 14.2]",
-      "adf_t": -5.129827258237036,
+      "demi_vie_libelle": "10.4 [6.4 ; 14.3]",
+      "adf_t": -5.1069479805430085,
       "adf_retards": 0,
       "n_obs": 786,
       "profondeur_annees": 2.9952087611225187,
       "echantillon_contient_stress": false,
       "criteres": {
         "1_ratio_asymetrie": {
-          "passe": false,
-          "valeur": 1.671442044774155
+          "passe": true,
+          "valeur": 2.020350505150745
         },
         "2_catalyseur_date": {
           "passe": false,
@@ -675,7 +675,7 @@
         },
         "5_correlation_marche_actions": {
           "passe": true,
-          "valeur": 0.5307111070878631
+          "valeur": 0.5314977855747441
         },
         "6_taille_sous_limite": {
           "passe": true,
@@ -683,7 +683,7 @@
         },
         "7_esperance_nette_positive": {
           "passe": true,
-          "valeur": 0.1168630941481751
+          "valeur": 0.11959687775871308
         },
         "8_adf_glissant_stable": {
           "passe": false,
@@ -691,7 +691,7 @@
         },
         "9_hors_echantillon_non_refute": {
           "passe": false,
-          "valeur": 1.5731157894268845e-13
+          "valeur": 6.444562533749914e-13
         },
         "10_profondeur_et_stress": {
           "passe": false,
@@ -703,78 +703,78 @@
       "stop_z": -2.5,
       "cout_pct": 0.0045000000000000005,
       "convention_cout": "15 pb — points de base du NOTIONNEL de la position, aller-retour",
-      "seuil_rentabilite_pb_notionnel": 404.5436471605837,
-      "depassement_du_stop": 0.049300705697209235,
-      "depassement_de_la_cible": 0.030249423680491994,
-      "ratio_aux_niveaux_nominaux": 1.70235020452428,
-      "biais_de_discretisation_sur_le_ratio": -0.01815617002188008,
+      "seuil_rentabilite_pb_notionnel": 413.65625919571033,
+      "depassement_du_stop": 0.05595025282576915,
+      "depassement_de_la_cible": 0.0282934494324234,
+      "ratio_aux_niveaux_nominaux": 2.074689504137311,
+      "biais_de_discretisation_sur_le_ratio": -0.026191388580413588,
       "sous_pas_par_seance": 20,
-      "z_causal_glissant": -2.662348248249542,
-      "z_causal_expansif": -1.5795189751317216,
-      "biais_anticipation_ecart_type": 0.3222136837212176,
-      "ecart_type_z_glissant_vs_plein": 0.7812276347166834,
+      "z_causal_glissant": -2.7419094705836526,
+      "z_causal_expansif": -1.6925618237994489,
+      "biais_anticipation_ecart_type": 0.3237242015434982,
+      "ecart_type_z_glissant_vs_plein": 0.7823936893680703,
       "test_hors_echantillon": {
         "disponible": true,
-        "n_trades": 33,
+        "n_trades": 35,
         "n_obs_calibrage": 393,
         "n_obs_test": 393,
-        "demi_vie_calibrage": 7.269936508688196,
+        "demi_vie_calibrage": 7.293174981659072,
         "demi_vie_calibrage_identifiee": true,
-        "adf_t_calibrage": -4.740774380842188,
-        "sigma_calibrage": 0.03136822154739715,
+        "adf_t_calibrage": -4.773668011355329,
+        "sigma_calibrage": 0.03131356314160445,
         "n_cible": 4,
-        "n_stop": 26,
+        "n_stop": 28,
         "n_marche": 3,
-        "part_cible": 0.12121212121212122,
-        "part_stop": 0.7878787878787878,
-        "part_marche": 0.09090909090909091,
-        "pnl_moyen_pct": -0.025021713253518738,
-        "pnl_moyen_pb_nav": -2.502171325351874,
-        "pnl_ecart_type_pct": 0.09865849752369281,
-        "pnl_total_pct": -0.8257165373661184,
-        "part_gagnants": 0.21212121212121213
+        "part_cible": 0.11428571428571428,
+        "part_stop": 0.8,
+        "part_marche": 0.08571428571428572,
+        "pnl_moyen_pct": -0.028070717081544645,
+        "pnl_moyen_pb_nav": -2.8070717081544645,
+        "pnl_ecart_type_pct": 0.09429801289939994,
+        "pnl_total_pct": -0.9824750978540626,
+        "part_gagnants": 0.2
       },
       "confrontation_hors_echantillon": {
         "applicable": true,
-        "n_signaux": 33,
+        "n_signaux": 35,
         "observe": {
           "cible": 4,
-          "stop": 26,
+          "stop": 28,
           "marche": 3
         },
         "attendu_modele": {
-          "cible": 23.71512,
-          "stop": 6.519480000000001,
-          "marche": 2.7654
+          "cible": 23.904300000000003,
+          "stop": 8.10845,
+          "marche": 2.98725
         },
         "probabilites_modele": {
-          "cible": 0.71864,
-          "stop": 0.19756,
-          "marche": 0.0838
+          "cible": 0.68298,
+          "stop": 0.23167,
+          "marche": 0.08535
         },
-        "p_multinomial_exact": 1.5731157894268845e-13,
-        "chi2": 74.6184284107892,
+        "p_multinomial_exact": 6.444562533749914e-13,
+        "chi2": 65.37139633101509,
         "ddl": 2,
-        "p_chi2": 6.26345766641217e-17,
+        "p_chi2": 6.379426668218756e-15,
         "chi2_valide": false,
-        "p_binomial_exact_stops": 4.764345133827454e-13,
-        "t_pnl": -8.523510064791815,
-        "p_student_pnl": 9.689832605000314e-10,
+        "p_binomial_exact_stops": 1.884621451925709e-12,
+        "t_pnl": -9.54670839604798,
+        "p_student_pnl": 3.774712150638064e-11,
         "tests_declares": {
-          "multinomial_exact_trois_issues": 1.5731157894268845e-13,
-          "student_pnl_moyen": 9.689832605000314e-10
+          "multinomial_exact_trois_issues": 6.444562533749914e-13,
+          "student_pnl_moyen": 3.774712150638064e-11
         },
         "n_tests_declares": 2,
         "seuil_bonferroni": 0.005,
         "test_le_plus_defavorable": "multinomial_exact_trois_issues",
-        "p_valeur": 1.5731157894268845e-13,
+        "p_valeur": 6.444562533749914e-13,
         "regle_de_selection": "deux tests DÉCLARÉS EX ANTE (fréquence des issues : multinomial exact ; amplitude : Student sur le P&L moyen). Réfutation si min(p) < seuil/2 (Bonferroni). Le χ² et le binomial sur les stops sont publiés mais ne tranchent pas.",
         "seuil_p": 0.01,
         "modele_refute": true,
-        "pnl_moyen_hors_echantillon_pb": -2.502171325351874,
-        "pnl_moyen_predit_pb": 12.13630941481751,
-        "effectif_attendu_min": 2.7654,
-        "reserve": "signaux chevauchants ET effectif attendu minimal de 2.8 : p-valeurs indicatives, retenues comme test de RUPTURE et non comme niveaux exacts"
+        "pnl_moyen_hors_echantillon_pb": -2.8070717081544645,
+        "pnl_moyen_predit_pb": 12.409687775871308,
+        "effectif_attendu_min": 2.98725,
+        "reserve": "signaux chevauchants ET effectif attendu minimal de 3.0 : p-valeurs indicatives, retenues comme test de RUPTURE et non comme niveaux exacts"
       },
       "adf_glissant": {
         "disponible": true,
@@ -784,52 +784,52 @@
         "n_fenetres": 22,
         "n_fenetres_recentes": 22,
         "dates_fin_fenetre": [
-          "2024-08-08",
-          "2024-09-11",
-          "2024-10-16",
-          "2024-11-20",
-          "2024-12-26",
-          "2025-01-31",
-          "2025-03-07",
-          "2025-04-11",
-          "2025-05-19",
-          "2025-06-20",
-          "2025-07-25",
-          "2025-08-29",
-          "2025-10-02",
-          "2025-11-06",
-          "2025-12-10",
-          "2026-01-16",
-          "2026-02-19",
-          "2026-03-25",
-          "2026-04-29",
-          "2026-06-02",
-          "2026-07-07",
-          "2026-08-11"
+          "2024-08-09",
+          "2024-09-12",
+          "2024-10-17",
+          "2024-11-21",
+          "2024-12-27",
+          "2025-02-03",
+          "2025-03-10",
+          "2025-04-14",
+          "2025-05-20",
+          "2025-06-23",
+          "2025-07-28",
+          "2025-08-31",
+          "2025-10-03",
+          "2025-11-07",
+          "2025-12-11",
+          "2026-01-19",
+          "2026-02-20",
+          "2026-03-26",
+          "2026-04-30",
+          "2026-06-03",
+          "2026-07-08",
+          "2026-08-12"
         ],
         "t_glissants": [
-          -4.053263006211788,
-          -4.087598294697054,
-          -4.069775409045757,
-          -3.8564308546927064,
-          -3.821960909658154,
-          -3.1214193812984443,
-          -3.39546703742715,
-          -2.5386191907001505,
-          -3.008366086961627,
-          -2.8990994121857008,
-          -2.790763026761226,
-          -2.7345816077181833,
-          -2.617153796980534,
-          -2.706392724190198,
-          -3.234397705621142,
-          -3.862023675591541,
-          -4.081317100546774,
-          -4.228263470094071,
-          -3.938542768757714,
-          -4.279560055149788,
-          -4.010066926959044,
-          -3.2274093829272275
+          -4.032344059515123,
+          -4.095249023189805,
+          -4.120973273030102,
+          -3.395792788888952,
+          -3.912993908305238,
+          -3.1955185279030376,
+          -3.4197836813779072,
+          -2.5677438166201894,
+          -2.972657346329539,
+          -2.9104375280064345,
+          -2.8043750398543428,
+          -2.782030409906127,
+          -2.6685036007825556,
+          -2.7900815656433733,
+          -3.407622162199048,
+          -3.937503665110005,
+          -4.013163982620525,
+          -4.214325717802119,
+          -3.944356083025147,
+          -4.283918363903415,
+          -4.084485685560689,
+          -3.1684771514879273
         ],
         "retards_glissants": [
           0,
@@ -855,9 +855,9 @@
           0,
           0
         ],
-        "t_min": -4.279560055149788,
-        "t_max": -2.5386191907001505,
-        "t_dernier": -3.2274093829272275,
+        "t_min": -4.283918363903415,
+        "t_max": -2.5677438166201894,
+        "t_dernier": -3.1684771514879273,
         "n_franchissements": 7,
         "fraction_franchissements": 0.3181818181818182,
         "n_franchissements_recents": 7,
@@ -869,58 +869,58 @@
         "m_grossier": 1,
         "m_retenu": 20,
         "p_stop": {
-          "m_grossier": 0.13735,
-          "m_retenu": 0.1979,
-          "extrapole_infini": 0.21533883326711709,
-          "sous_estimation_au_pas_journalier_pct": -36.21679939650079
+          "m_grossier": 0.16145,
+          "m_retenu": 0.22905,
+          "extrapole_infini": 0.24851928371357745,
+          "sous_estimation_au_pas_journalier_pct": -35.03522238295448
         },
         "ratio": {
-          "m_grossier": 1.623618567848595,
-          "m_retenu": 1.671607018119823,
-          "extrapole_infini": 1.6854280351805544
+          "m_grossier": 1.9259937806503125,
+          "m_retenu": 2.0172313139807865,
+          "extrapole_infini": 2.043508376432532
         },
         "esperance_brute_pb": {
-          "m_grossier": 14.244030430020963,
-          "m_retenu": 12.164341642381354,
-          "extrapole_infini": 11.565376390273343,
-          "surevaluation_au_pas_journalier_pct": 23.160975910826444
+          "m_grossier": 14.700196118976924,
+          "m_retenu": 12.512688194747684,
+          "extrapole_infini": 11.882670259799193,
+          "surevaluation_au_pas_journalier_pct": 23.711218081257645
         },
-        "residu_a_la_maille_retenue_pb": 0.5989652521080093,
-        "esperance_nette_extrapolee_pb": 11.115376390273344,
+        "residu_a_la_maille_retenue_pb": 0.6300179349484916,
+        "esperance_nette_extrapolee_pb": 11.432670259799192,
         "note": "extrapolation de Richardson en 1/√m entre m=1 et m=20 ; grille réduite à 20000 trajectoires, déclarée"
       },
       "esperance_sur_ic_kappa": {
         "applicable": true,
         "ic95_demi_vie": [
-          6.403282616622174,
-          14.173202283740242
+          6.42363754450264,
+          14.292711990510192
         ],
         "ic_kappa": [
-          0.04890547433695605,
-          0.10824872523361942
+          0.04849654712276916,
+          0.1079057116404617
         ],
         "points": {
           "demi_vie_basse_kappa_haut": {
-            "demi_vie": 6.403282616622174,
-            "kappa": 0.10824872523361942,
-            "p_cible": 0.78132,
-            "p_stop": 0.20181,
-            "esperance_brute_pb": 12.965066213476161,
-            "esperance_nette_pb": 12.515066213476162,
-            "ratio": 1.6653337710700014
+            "demi_vie": 6.42363754450264,
+            "kappa": 0.1079057116404617,
+            "p_cible": 0.74775,
+            "p_stop": 0.23522,
+            "esperance_brute_pb": 13.266600938667949,
+            "esperance_nette_pb": 12.81660093866795,
+            "ratio": 2.0085059267313197
           },
           "demi_vie_haute_kappa_bas": {
-            "demi_vie": 14.173202283740242,
-            "kappa": 0.04890547433695605,
-            "p_cible": 0.63379,
-            "p_stop": 0.18724,
-            "esperance_brute_pb": 11.1931668751933,
-            "esperance_nette_pb": 10.7431668751933,
-            "ratio": 1.6759837926733239
+            "demi_vie": 14.292711990510192,
+            "kappa": 0.04849654712276916,
+            "p_cible": 0.59627,
+            "p_stop": 0.22208,
+            "esperance_brute_pb": 11.425412345435104,
+            "esperance_nette_pb": 10.975412345435103,
+            "ratio": 2.0271023896252665
           }
         },
-        "esperance_nette_min_pb": 10.7431668751933,
-        "esperance_nette_max_pb": 12.515066213476162,
+        "esperance_nette_min_pb": 10.975412345435103,
+        "esperance_nette_max_pb": 12.81660093866795,
         "signe_stable_sur_ic": true,
         "positive_sur_tout_ic": true
       },
@@ -930,96 +930,96 @@
         "cible_z": 0.0,
         "stop_z_absolu": 2.5,
         "ratio_minimum": 2.0,
-        "z_observe": -1.5748793417616653,
+        "z_observe": -1.6869097687307961,
         "formule_approchee": "ratio ≈ |z₀| / (2.50 − |z₀|)",
         "z_franchissement_analytique": 1.6666666666666667,
         "z_franchissement_simule": 1.68206298828125,
         "ligne_au_franchissement": {
           "z": -1.68206298828125,
-          "ratio": 2.0002189641068395,
-          "p_cible": 0.6882,
-          "p_stop": 0.22775,
-          "esperance_nette_pb": 12.05079553648298
+          "ratio": 2.000621840064573,
+          "p_cible": 0.68665,
+          "p_stop": 0.2276,
+          "esperance_nette_pb": 12.048231401634936
         },
-        "esperance_nette_au_franchissement_pb": 12.05079553648298,
+        "esperance_nette_au_franchissement_pb": 12.048231401634936,
         "z_esperance_maximale": -1.75,
-        "esperance_nette_maximale_pb": 12.180496363123774,
-        "esperance_nette_au_z_observe_pb": 11.714470422481298,
-        "gain_d_esperance_au_franchissement_pct": 2.8710227767209773,
+        "esperance_nette_maximale_pb": 12.178358356006797,
+        "esperance_nette_au_z_observe_pb": 12.06259490858432,
+        "gain_d_esperance_au_franchissement_pct": -0.11907476839134734,
         "criteres_1_et_7_antagonistes": false,
         "lignes": [
           {
             "z": -1.25,
-            "ratio": 1.0024056476881757,
-            "p_cible": 0.79845,
-            "p_stop": 0.12785,
-            "esperance_nette_pb": 10.123785583893714
+            "ratio": 1.002342261037684,
+            "p_cible": 0.79705,
+            "p_stop": 0.12755,
+            "esperance_nette_pb": 10.124563800182553
           },
           {
             "z": -1.5,
-            "ratio": 1.4801310009363908,
-            "p_cible": 0.74035,
-            "p_stop": 0.1775,
-            "esperance_nette_pb": 11.458855116762738
-          },
-          {
-            "z": -1.5749,
-            "ratio": 1.6716320198916754,
-            "p_cible": 0.71925,
-            "p_stop": 0.1979,
-            "esperance_nette_pb": 11.714470422481298
+            "ratio": 1.480156501342101,
+            "p_cible": 0.7388,
+            "p_stop": 0.1774,
+            "esperance_nette_pb": 11.452526853552547
           },
           {
             "z": -1.6667,
-            "ratio": 1.9484303611750056,
-            "p_cible": 0.69285,
+            "ratio": 1.9488086572380416,
+            "p_cible": 0.69095,
             "p_stop": 0.22295,
-            "esperance_nette_pb": 12.014279269246583
+            "esperance_nette_pb": 12.003430216896321
+          },
+          {
+            "z": -1.6869,
+            "ratio": 2.0172124193917607,
+            "p_cible": 0.6854,
+            "p_stop": 0.22905,
+            "esperance_nette_pb": 12.06259490858432
           },
           {
             "z": -1.75,
-            "ratio": 2.2619879959458506,
-            "p_cible": 0.66595,
-            "p_stop": 0.24985,
-            "esperance_nette_pb": 12.180496363123774
+            "ratio": 2.2620077329539083,
+            "p_cible": 0.6644,
+            "p_stop": 0.2495,
+            "esperance_nette_pb": 12.178358356006797
           },
           {
             "z": -2.0,
-            "ratio": 3.753172678914193,
-            "p_cible": 0.55495,
-            "p_stop": 0.36825,
-            "esperance_nette_pb": 11.584994614085161
+            "ratio": 3.754111022367142,
+            "p_cible": 0.5534,
+            "p_stop": 0.36845,
+            "esperance_nette_pb": 11.573903573994011
           },
           {
             "z": -2.2,
-            "ratio": 6.497856433950034,
-            "p_cible": 0.42335,
+            "ratio": 6.499738534868657,
+            "p_cible": 0.42235,
             "p_stop": 0.5129,
-            "esperance_nette_pb": 9.6626471663348
+            "esperance_nette_pb": 9.656567085876851
           },
           {
             "z": -2.4,
-            "ratio": 16.80482828165969,
-            "p_cible": 0.22595,
-            "p_stop": 0.7382,
-            "esperance_nette_pb": 5.457100238341874
+            "ratio": 16.817142429875855,
+            "p_cible": 0.2252,
+            "p_stop": 0.73845,
+            "esperance_nette_pb": 5.450102059239005
           }
         ]
       },
       "table_sensibilite_stop": [
         {
           "stop_z": 2.5,
-          "ratio": 1.671607018119823,
-          "p_cible": 0.71925,
-          "p_stop": 0.1979,
-          "esperance_nette_pb": 11.714341642381353
+          "ratio": 2.0172313139807865,
+          "p_cible": 0.6854,
+          "p_stop": 0.22905,
+          "esperance_nette_pb": 12.062688194747684
         },
         {
           "stop_z": 2.0,
-          "ratio": 3.445763620322038,
-          "p_cible": 0.48035,
-          "p_stop": 0.50095,
-          "esperance_nette_pb": 6.181150209514673
+          "ratio": 4.830731852699285,
+          "p_cible": 0.40055,
+          "p_stop": 0.5834,
+          "esperance_nette_pb": 5.498229633431392
         }
       ],
       "alertes_echantillon": [
@@ -1027,7 +1027,6 @@
         "ECHANTILLON_SANS_STRESS"
       ],
       "echecs": [
-        "1_ratio_asymetrie",
         "2_catalyseur_date",
         "8_adf_glissant_stable",
         "9_hors_echantillon_non_refute",
@@ -2087,8 +2086,8 @@
       "disponible": true,
       "n_obs": 786,
       "n_exclues_non_positives": 0,
-      "debut": "2023-08-28",
-      "fin": "2026-08-26",
+      "debut": "2023-08-29",
+      "fin": "2026-08-27",
       "profondeur_annees": 2.9952087611225187,
       "echantillon_contient_stress": false,
       "marqueurs_stress": [],
@@ -2096,23 +2095,23 @@
         "PROFONDEUR_INSUFFISANTE (3.00 ans < 5.0)",
         "ECHANTILLON_SANS_STRESS"
       ],
-      "beta_couverture": 0.8257118736331154,
-      "adf_t": -5.129827258237036,
+      "beta_couverture": 0.8269744705983908,
+      "adf_t": -5.1069479805430085,
       "adf_retards": 0,
       "adf_p_max": 20,
       "adf_critere": "BIC",
-      "adf_t_aic": -4.76617964749694,
+      "adf_t_aic": -4.736357281194547,
       "adf_retards_aic": 1,
-      "adf_t_ancien_retards_1": -4.76617964749694,
+      "adf_t_ancien_retards_1": -4.736357281194547,
       "cointegre_5pct": true,
       "cointegre_10pct": true,
-      "demi_vie_seances": 10.288242450181208,
+      "demi_vie_seances": 10.358174767506416,
       "demi_vie_ic95": [
-        6.403282616622174,
-        14.173202283740242
+        6.42363754450264,
+        14.292711990510192
       ],
       "demi_vie_identifiee": true,
-      "demi_vie_libelle": "10.3 [6.4 ; 14.2]",
+      "demi_vie_libelle": "10.4 [6.4 ; 14.3]",
       "demi_vie_motif_non_identifiee": null,
       "adf_glissant": {
         "disponible": true,
@@ -2122,52 +2121,52 @@
         "n_fenetres": 22,
         "n_fenetres_recentes": 22,
         "dates_fin_fenetre": [
-          "2024-08-08",
-          "2024-09-11",
-          "2024-10-16",
-          "2024-11-20",
-          "2024-12-26",
-          "2025-01-31",
-          "2025-03-07",
-          "2025-04-11",
-          "2025-05-19",
-          "2025-06-20",
-          "2025-07-25",
-          "2025-08-29",
-          "2025-10-02",
-          "2025-11-06",
-          "2025-12-10",
-          "2026-01-16",
-          "2026-02-19",
-          "2026-03-25",
-          "2026-04-29",
-          "2026-06-02",
-          "2026-07-07",
-          "2026-08-11"
+          "2024-08-09",
+          "2024-09-12",
+          "2024-10-17",
+          "2024-11-21",
+          "2024-12-27",
+          "2025-02-03",
+          "2025-03-10",
+          "2025-04-14",
+          "2025-05-20",
+          "2025-06-23",
+          "2025-07-28",
+          "2025-08-31",
+          "2025-10-03",
+          "2025-11-07",
+          "2025-12-11",
+          "2026-01-19",
+          "2026-02-20",
+          "2026-03-26",
+          "2026-04-30",
+          "2026-06-03",
+          "2026-07-08",
+          "2026-08-12"
         ],
         "t_glissants": [
-          -4.053263006211788,
-          -4.087598294697054,
-          -4.069775409045757,
-          -3.8564308546927064,
-          -3.821960909658154,
-          -3.1214193812984443,
-          -3.39546703742715,
-          -2.5386191907001505,
-          -3.008366086961627,
-          -2.8990994121857008,
-          -2.790763026761226,
-          -2.7345816077181833,
-          -2.617153796980534,
-          -2.706392724190198,
-          -3.234397705621142,
-          -3.862023675591541,
-          -4.081317100546774,
-          -4.228263470094071,
-          -3.938542768757714,
-          -4.279560055149788,
-          -4.010066926959044,
-          -3.2274093829272275
+          -4.032344059515123,
+          -4.095249023189805,
+          -4.120973273030102,
+          -3.395792788888952,
+          -3.912993908305238,
+          -3.1955185279030376,
+          -3.4197836813779072,
+          -2.5677438166201894,
+          -2.972657346329539,
+          -2.9104375280064345,
+          -2.8043750398543428,
+          -2.782030409906127,
+          -2.6685036007825556,
+          -2.7900815656433733,
+          -3.407622162199048,
+          -3.937503665110005,
+          -4.013163982620525,
+          -4.214325717802119,
+          -3.944356083025147,
+          -4.283918363903415,
+          -4.084485685560689,
+          -3.1684771514879273
         ],
         "retards_glissants": [
           0,
@@ -2193,29 +2192,29 @@
           0,
           0
         ],
-        "t_min": -4.279560055149788,
-        "t_max": -2.5386191907001505,
-        "t_dernier": -3.2274093829272275,
+        "t_min": -4.283918363903415,
+        "t_max": -2.5677438166201894,
+        "t_dernier": -3.1684771514879273,
         "n_franchissements": 7,
         "fraction_franchissements": 0.3181818181818182,
         "n_franchissements_recents": 7,
         "fraction_franchissements_recents": 0.3181818181818182
       },
-      "z_courant": -1.5748793417616653,
-      "spread_std": 0.0397071965699695,
-      "sigma_increment": 0.014663432941838157,
+      "z_courant": -1.6869097687307961,
+      "spread_std": 0.039750374246653994,
+      "sigma_increment": 0.014660352931840061,
       "coherence_ou": {
         "applicable": true,
-        "kappa": 0.0673727494191913,
-        "sigma_n_theorique": 0.03994648073036015,
-        "sigma_n_observe": 0.0397071965699695,
-        "rapport": 1.0060262164307923,
+        "kappa": 0.06691788815287683,
+        "sigma_n_theorique": 0.04007359589458125,
+        "sigma_n_observe": 0.039750374246653994,
+        "rapport": 1.0081312856558695,
         "borne_basse": 0.75,
         "borne_haute": 1.33,
         "coherent": true,
-        "sigma_horizon_ou": 0.039357105355200366,
-        "sigma_horizon_racine_du_temps": 0.08031492992709097,
-        "facteur_surevaluation_racine_du_temps": 2.040671670394549
+        "sigma_horizon_ou": 0.039390161327547364,
+        "sigma_horizon_racine_du_temps": 0.08029806001755799,
+        "facteur_surevaluation_racine_du_temps": 2.0385308744953488
       }
     },
     "30 ans / 10 ans": {
@@ -2751,45 +2750,45 @@
         "sens": "long_spread",
         "cible_z": 0.0,
         "stop_z": -2.5,
-        "z_entree": -1.5748793417616653,
-        "kappa": 0.0673727494191913,
-        "sigma_niveau": 0.0397071965699695,
-        "p_cible": 0.71864,
-        "p_stop": 0.19756,
-        "p_aucune": 0.0838,
-        "esperance_brute_pct": 0.1213630941481751,
-        "gain_a_la_cible_pct": 0.19327698712963245,
-        "perte_au_stop_pct": -0.11563487213566416,
-        "pnl_marquage_marche_pct": 0.06338121069758755,
-        "gain_nominal_pct": 0.18760213079194388,
-        "perte_nominale_pct": -0.11020184348282738,
-        "depassement_du_stop": 0.049300705697209235,
-        "depassement_de_la_cible": 0.030249423680491994,
-        "ratio_aux_niveaux_nominaux": 1.70235020452428,
-        "ratio_aux_cours_franchis": 1.671442044774155,
-        "biais_de_discretisation_sur_le_ratio": -0.01815617002188008,
+        "z_entree": -1.6869097687307961,
+        "kappa": 0.06691788815287683,
+        "sigma_niveau": 0.039750374246653994,
+        "p_cible": 0.68298,
+        "p_stop": 0.23167,
+        "p_aucune": 0.08535,
+        "esperance_brute_pct": 0.12409687775871309,
+        "gain_a_la_cible_pct": 0.20685756064530564,
+        "perte_au_stop_pct": -0.10238696707226616,
+        "pnl_marquage_marche_pct": 0.07659390334873023,
+        "gain_nominal_pct": 0.20116588388215706,
+        "perte_nominale_pct": -0.09696192296774792,
+        "depassement_du_stop": 0.05595025282576915,
+        "depassement_de_la_cible": 0.0282934494324234,
+        "ratio_aux_niveaux_nominaux": 2.074689504137311,
+        "ratio_aux_cours_franchis": 2.020350505150745,
+        "biais_de_discretisation_sur_le_ratio": -0.026191388580413588,
         "sous_pas_par_seance": 20,
-        "ecart_type_pnl_pct": 0.12425922475921725,
-        "esperance_erreur_type_mc": 0.0003929421705259142,
+        "ecart_type_pnl_pct": 0.13079506022031548,
+        "esperance_erreur_type_mc": 0.0004136102969950815,
         "n_trajectoires": 100000,
         "graine": 12345,
-        "controle_horizon_infini_p_cible": 0.37004826329533386,
+        "controle_horizon_infini_p_cible": 0.32523609250768154,
         "methode": "Ornstein-Uhlenbeck exact, deux barrières, horizon fini 30 séances × 20 sous-pas, sortie au cours franchi"
       },
       "portier": {
         "nom": "Haut rendement / Investment grade",
         "criteres": {
           "1_ratio_asymetrie": {
-            "valeur": 1.671442044774155,
+            "valeur": 2.020350505150745,
             "seuil": 2.0,
-            "passe": false,
-            "ratio_aux_niveaux_nominaux": 1.70235020452428,
-            "biais_de_discretisation_sur_le_ratio": -0.01815617002188008,
+            "passe": true,
+            "ratio_aux_niveaux_nominaux": 2.074689504137311,
+            "biais_de_discretisation_sur_le_ratio": -0.026191388580413588,
             "z_franchissement_analytique": 1.6666666666666667,
             "z_franchissement_simule": 1.68206298828125,
-            "esperance_nette_au_franchissement_pb": 12.05079553648298,
+            "esperance_nette_au_franchissement_pb": 12.048231401634936,
             "z_esperance_maximale": -1.75,
-            "note": "gain moyen à la cible / perte moyenne au stop, AU COURS EFFECTIVEMENT FRANCHI (R-030). Le ratio vaut approximativement |z₀|/(2.50−|z₀|) et franchit 2:1 à |z₀| = 1.67 (valeur analytique, sans dépassement de barrière) ; le point de franchissement effectivement simulé pour cette paire est publié ci-dessus. Le refus porte sur le z OBSERVÉ (-1.57), PAS sur la classe des pair trades : à constantes de doctrine inchangées, le critère est franchissable, et l'espérance nette y est maximale, pas détruite. Les critères 1 et 7 ne sont pas antagonistes."
+            "note": "gain moyen à la cible / perte moyenne au stop, AU COURS EFFECTIVEMENT FRANCHI (R-030). Le ratio vaut approximativement |z₀|/(2.50−|z₀|) et franchit 2:1 à |z₀| = 1.67 (valeur analytique, sans dépassement de barrière) ; le point de franchissement effectivement simulé pour cette paire est publié ci-dessus. Le refus porte sur le z OBSERVÉ (-1.69), PAS sur la classe des pair trades : à constantes de doctrine inchangées, le critère est franchissable, et l'espérance nette y est maximale, pas détruite. Les critères 1 et 7 ne sont pas antagonistes."
           },
           "2_catalyseur_date": {
             "valeur": null,
@@ -2807,7 +2806,7 @@
             "note": "obstacle d'arbitrage NOMMÉ dans un vocabulaire fermé, plus un mécanisme explicite. Pas de texte libre."
           },
           "5_correlation_marche_actions": {
-            "valeur": 0.5307111070878631,
+            "valeur": 0.5314977855747441,
             "seuil": 0.7,
             "passe": true,
             "pire_paire": "S&P 500",
@@ -2820,25 +2819,25 @@
             "note": "plafond de 8 % en dur, quelle que soit la conviction"
           },
           "7_esperance_nette_positive": {
-            "valeur": 0.1168630941481751,
+            "valeur": 0.11959687775871308,
             "seuil": 0.0,
             "passe": true,
-            "esperance_brute_pct": 0.1213630941481751,
+            "esperance_brute_pct": 0.12409687775871309,
             "cout_pct": 0.0045000000000000005,
-            "esperance_nette_min_sur_ic_kappa_pct": 0.107431668751933,
-            "esperance_nette_max_sur_ic_kappa_pct": 0.12515066213476161,
+            "esperance_nette_min_sur_ic_kappa_pct": 0.10975412345435104,
+            "esperance_nette_max_sur_ic_kappa_pct": 0.1281660093866795,
             "ic95_demi_vie": [
-              6.403282616622174,
-              14.173202283740242
+              6.42363754450264,
+              14.292711990510192
             ],
             "ic_kappa": [
-              0.04890547433695605,
-              0.10824872523361942
+              0.04849654712276916,
+              0.1079057116404617
             ],
             "positive_sur_tout_ic_kappa": true,
             "motif_ic_indisponible": null,
-            "erreur_type_mc_pct": 0.0003929421705259142,
-            "seuil_rentabilite_pb_notionnel": 404.5436471605837,
+            "erreur_type_mc_pct": 0.0004136102969950815,
+            "seuil_rentabilite_pb_notionnel": 413.65625919571033,
             "note": "espérance NETTE des coûts (15 pb points de base du NOTIONNEL de la position, aller-retour), exigée positive AU POINT ESTIMÉ ET AUX DEUX BORNES de l'IC à 95 % de la demi-vie. L'espérance est produite par la DÉRIVE MESURÉE (retour à la moyenne), jamais par le placement du stop : sans dérive, tout couple stop/cible donne zéro (Doob, 1953). L'erreur type de Monte-Carlo est publiée pour mémoire, elle ne tranche rien — elle mesure le générateur, pas le marché."
           },
           "8_adf_glissant_stable": {
@@ -2849,34 +2848,34 @@
             "n_fenetres_recentes": 22,
             "n_franchissements_recents": 7,
             "fraction_franchissements_toutes_fenetres": 0.3181818181818182,
-            "t_glissant_min": -4.279560055149788,
-            "t_glissant_max": -2.5386191907001505,
-            "t_glissant_dernier": -3.2274093829272275,
+            "t_glissant_min": -4.283918363903415,
+            "t_glissant_max": -2.5677438166201894,
+            "t_glissant_dernier": -3.1684771514879273,
             "seuil_t": -3.04,
             "fenetre": 250,
             "pas": 25,
             "note": "fraction des 24 dernières fenêtres de 250 séances (pas 25) où l'ADF, retards par BIC, REMONTE au-dessus de -3.04. C'est le test que le critère 3 promettait sans le calculer. Une relation qui ne tient que par intermittence n'est pas la condition nécessaire d'un pair trade. Absence de mesure = échec : le portier refuse par défaut."
           },
           "9_hors_echantillon_non_refute": {
-            "valeur": 1.5731157894268845e-13,
+            "valeur": 6.444562533749914e-13,
             "seuil": 0.01,
             "passe": false,
-            "chi2": 74.6184284107892,
+            "chi2": 65.37139633101509,
             "ddl": 2,
             "observe": {
               "cible": 4,
-              "stop": 26,
+              "stop": 28,
               "marche": 3
             },
             "attendu_modele": {
-              "cible": 23.71512,
-              "stop": 6.519480000000001,
-              "marche": 2.7654
+              "cible": 23.904300000000003,
+              "stop": 8.10845,
+              "marche": 2.98725
             },
-            "pnl_moyen_hors_echantillon_pb": -2.502171325351874,
-            "pnl_moyen_predit_pb": 12.13630941481751,
+            "pnl_moyen_hors_echantillon_pb": -2.8070717081544645,
+            "pnl_moyen_predit_pb": 12.409687775871308,
             "motif_non_applicable": null,
-            "reserve": "signaux chevauchants ET effectif attendu minimal de 2.8 : p-valeurs indicatives, retenues comme test de RUPTURE et non comme niveaux exacts",
+            "reserve": "signaux chevauchants ET effectif attendu minimal de 3.0 : p-valeurs indicatives, retenues comme test de RUPTURE et non comme niveaux exacts",
             "note": "χ² de Pearson à 2 ddl entre les trois issues RÉALISÉES hors échantillon et les trois probabilités PRÉDITES par la simulation. p < 0.01 ⇒ le modèle est réfuté sur des données qu'il n'a pas vues ⇒ refus. Le test existait déjà et n'alimentait rien. Absence de test = échec."
           },
           "10_profondeur_et_stress": {
@@ -2895,19 +2894,18 @@
           }
         },
         "echecs": [
-          "1_ratio_asymetrie",
           "2_catalyseur_date",
           "8_adf_glissant_stable",
           "9_hors_echantillon_non_refute",
           "10_profondeur_et_stress"
         ],
-        "ratio": 1.671442044774155,
-        "gain_max_pct": 0.19327698712963245,
-        "perte_max_pct": -0.11563487213566416,
-        "esperance_brute_pct": 0.1213630941481751,
-        "esperance_nette_pct": 0.1168630941481751,
+        "ratio": 2.020350505150745,
+        "gain_max_pct": 0.20685756064530564,
+        "perte_max_pct": -0.10238696707226616,
+        "esperance_brute_pct": 0.12409687775871309,
+        "esperance_nette_pct": 0.11959687775871308,
         "cout_pct": 0.0045000000000000005,
-        "seuil_rentabilite_pb_notionnel": 404.5436471605837,
+        "seuil_rentabilite_pb_notionnel": 413.65625919571033,
         "verdict": "REFUSEE",
         "statut_risque": "NON_SOUMISE_REFUSEE_EN_AMONT"
       },
