@@ -1,0 +1,91 @@
+{
+  "date_arrete": "2026-09-02",
+  "horodatage": "2026-09-03T09:51:08+00:00",
+  "statut": "AUCUNE IDEE SOUMISE",
+  "entete": "VETO — 0 idée(s) soumise(s), 0 bloquée(s) — AUCUNE IDEE SOUMISE (source lue, liste vide)",
+  "source": "trading_resultats.json",
+  "chemin_source": "trading_resultats.json",
+  "source_statut": "OK",
+  "source_examinable": true,
+  "source_motif": "source lue",
+  "source_disponible": true,
+  "schema_idee": {
+    "chemins_canoniques": {
+      "nom": "paire",
+      "taille_pct": "taille_pct_nav",
+      "perte_stop_pct": "perte_au_stop_pct",
+      "correlation": "criteres.5_correlation_marche_actions.valeur",
+      "n_obs_paire": "n_obs",
+      "echantillon_contient_stress": "echantillon_contient_stress"
+    },
+    "champs_requis": {
+      "nom": [
+        "texte"
+      ],
+      "taille_pct": [
+        "nombre",
+        0.0,
+        100.0
+      ],
+      "perte_stop_pct": [
+        "nombre",
+        -100.0,
+        100.0
+      ],
+      "correlation": [
+        "nombre",
+        -1.0,
+        1.0
+      ],
+      "n_obs_paire": [
+        "nombre",
+        0.0,
+        10000000.0
+      ],
+      "echantillon_contient_stress": [
+        "booleen"
+      ]
+    },
+    "regle": "toute donnée absente / None / NaN / non numérique / mal typée / hors domaine ⇒ VETO ; aucune substitution, aucun repli"
+  },
+  "limites": {
+    "LIMITE_VAR_POSITION_PCT": 2.0,
+    "LIMITE_TAILLE_PCT": 8.0,
+    "LIMITE_CORRELATION": 0.7,
+    "LIMITE_PERTE_STRESS_PCT": 2.0,
+    "MIN_SEANCES_PAIRE": 1260
+  },
+  "sigma_marche_par_paire": {
+    "Brent / WTI": 0.011431178613016959,
+    "S&P 500 / Nasdaq 100": 0.011429193382249356,
+    "10 ans / 2 ans": 0.011431178613016959,
+    "Haut rendement / Investment grade": 0.009452967648357971,
+    "30 ans / 10 ans": 0.011431178613016959
+  },
+  "mesures_utilisees": {
+    "date_arrete": "2026-09-02",
+    "var_retenue_pct": -1.66,
+    "var_limite_fondee": true,
+    "pire_episode_pct": -30.943899333383275
+  },
+  "verdicts": [],
+  "n_idees_lues": 2,
+  "n_non_soumises": 2,
+  "non_soumises": [
+    {
+      "id": "brent_wti_20260902",
+      "nom": "Brent / WTI",
+      "verdict": "REFUSEE",
+      "statut_risque": "NON_SOUMISE_REFUSEE_EN_AMONT"
+    },
+    {
+      "id": "hy_ig_20260902",
+      "nom": "Haut rendement / Investment grade",
+      "verdict": "REFUSEE",
+      "statut_risque": "NON_SOUMISE_REFUSEE_EN_AMONT"
+    }
+  ],
+  "n_soumises": 0,
+  "n_bloquees": 0,
+  "n_bloquees_au_schema": 0
+}
