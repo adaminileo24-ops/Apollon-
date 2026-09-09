@@ -1,5 +1,5 @@
 {
-  "date_arrete": "2026-09-08",
+  "date_arrete": "2026-09-09",
   "date_donnees_sp500": "2026-09-08",
   "n_series": 26,
   "n_cotations_sp500": 2511,
@@ -1732,45 +1732,89 @@
   ],
   "regime": {
     "volatilite": "MOYENNE",
-    "vix": 15.3,
+    "vix": 15.72,
     "courbe": "PLATE",
-    "pente_2s10s": 0.41,
+    "pente_2s10s": 0.4,
     "tendance": "HAUSSIERE",
     "ecart_ma200_pct": 7.366317599835193,
     "credit": "RESSERREMENT",
-    "hy_oas": 2.68,
-    "hy_vs_ma60_pb": -3.816666666666668,
+    "hy_oas": 2.67,
+    "hy_vs_ma60_pb": -4.750000000000032,
     "regime": "MOYENNE / PLATE / HAUSSIERE / RESSERREMENT"
   },
   "percentiles": {
     "VIXCLS": {
       "disponible": true,
-      "valeur": 15.3,
-      "date": "2026-09-07",
-      "n_obs_total": 2543,
-      "pct_252": 12.698412698412698,
+      "valeur": 15.72,
+      "date": "2026-09-08",
+      "n_obs_total": 2544,
+      "pct_252": 17.857142857142858,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2543,
+        "n_obs": 2544,
         "cible": 252,
-        "ecart_pct": 909.13,
+        "ecart_pct": 909.52,
         "etat": "suffisante"
       },
-      "pct_2520": 35.51587301587302,
+      "pct_2520": 38.492063492063494,
       "n_obs_2520": 2520,
       "profondeur_2520": {
-        "n_obs": 2543,
+        "n_obs": 2544,
         "cible": 2520,
-        "ecart_pct": 0.91,
+        "ecart_pct": 0.95,
         "etat": "suffisante"
       }
     },
     "T10Y2Y": {
       "disponible": true,
-      "valeur": 0.41,
+      "valeur": 0.4,
+      "date": "2026-09-09",
+      "n_obs_total": 2498,
+      "pct_252": 11.507936507936508,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 2498,
+        "cible": 252,
+        "ecart_pct": 891.27,
+        "etat": "suffisante"
+      },
+      "pct_2520": 49.71977582065652,
+      "n_obs_2520": 2498,
+      "profondeur_2520": {
+        "n_obs": 2498,
+        "cible": 2520,
+        "ecart_pct": -0.87,
+        "etat": "marginale"
+      }
+    },
+    "BAMLH0A0HYM2": {
+      "disponible": true,
+      "valeur": 2.67,
+      "date": "2026-09-08",
+      "n_obs_total": 786,
+      "pct_252": 5.555555555555555,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 786,
+        "cible": 252,
+        "ecart_pct": 211.9,
+        "etat": "suffisante"
+      },
+      "pct_2520": 5.597964376590331,
+      "n_obs_2520": 786,
+      "profondeur_2520": {
+        "n_obs": 786,
+        "cible": 2520,
+        "ecart_pct": -68.81,
+        "etat": "insuffisante"
+      }
+    },
+    "DGS10": {
+      "disponible": true,
+      "valeur": 4.8,
       "date": "2026-09-08",
       "n_obs_total": 2497,
-      "pct_252": 13.88888888888889,
+      "pct_252": 99.60317460317461,
       "n_obs_252": 252,
       "profondeur_252": {
         "n_obs": 2497,
@@ -1778,7 +1822,7 @@
         "ecart_pct": 890.87,
         "etat": "suffisante"
       },
-      "pct_2520": 50.14016820184221,
+      "pct_2520": 99.47937525030036,
       "n_obs_2520": 2497,
       "profondeur_2520": {
         "n_obs": 2497,
@@ -1787,69 +1831,25 @@
         "etat": "marginale"
       }
     },
-    "BAMLH0A0HYM2": {
-      "disponible": true,
-      "valeur": 2.68,
-      "date": "2026-09-07",
-      "n_obs_total": 785,
-      "pct_252": 6.746031746031746,
-      "n_obs_252": 252,
-      "profondeur_252": {
-        "n_obs": 785,
-        "cible": 252,
-        "ecart_pct": 211.51,
-        "etat": "suffisante"
-      },
-      "pct_2520": 6.751592356687898,
-      "n_obs_2520": 785,
-      "profondeur_2520": {
-        "n_obs": 785,
-        "cible": 2520,
-        "ecart_pct": -68.85,
-        "etat": "insuffisante"
-      }
-    },
-    "DGS10": {
-      "disponible": true,
-      "valeur": 4.78,
-      "date": "2026-09-04",
-      "n_obs_total": 2496,
-      "pct_252": 98.80952380952381,
-      "n_obs_252": 252,
-      "profondeur_252": {
-        "n_obs": 2496,
-        "cible": 252,
-        "ecart_pct": 890.48,
-        "etat": "suffisante"
-      },
-      "pct_2520": 99.27884615384616,
-      "n_obs_2520": 2496,
-      "profondeur_2520": {
-        "n_obs": 2496,
-        "cible": 2520,
-        "ecart_pct": -0.95,
-        "etat": "marginale"
-      }
-    },
     "DFII10": {
       "disponible": true,
       "valeur": 2.43,
-      "date": "2026-09-04",
-      "n_obs_total": 2496,
-      "pct_252": 94.84126984126983,
+      "date": "2026-09-08",
+      "n_obs_total": 2497,
+      "pct_252": 94.44444444444444,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2496,
+        "n_obs": 2497,
         "cible": 252,
-        "ecart_pct": 890.48,
+        "ecart_pct": 890.87,
         "etat": "suffisante"
       },
-      "pct_2520": 99.03846153846155,
-      "n_obs_2520": 2496,
+      "pct_2520": 98.99879855826993,
+      "n_obs_2520": 2497,
       "profondeur_2520": {
-        "n_obs": 2496,
+        "n_obs": 2497,
         "cible": 2520,
-        "ecart_pct": -0.95,
+        "ecart_pct": -0.91,
         "etat": "marginale"
       }
     }
@@ -2084,20 +2084,20 @@
     "n_non_traitees": 2,
     "non_traitees": [
       {
-        "id": "AL-b64d8732",
+        "id": "AL-07a4215e",
         "type": "CORRELATION_MAX",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-08",
-        "derniere_date_donnees": "2026-09-08",
+        "premiere_date_donnees": "2026-09-09",
+        "derniere_date_donnees": "2026-09-09",
         "derniere_mesure": "0.933 (SP500 / NASDAQ100)",
         "occurrences": 1
       },
       {
-        "id": "AL-85f1410e",
+        "id": "AL-f697e168",
         "type": "CONCENTRATION",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-08",
-        "derniere_date_donnees": "2026-09-08",
+        "premiere_date_donnees": "2026-09-09",
+        "derniere_date_donnees": "2026-09-09",
         "derniere_mesure": "N_eff covariance 1.376 (N_eff corrélation 3.543, non opposable)",
         "occurrences": 1
       }
