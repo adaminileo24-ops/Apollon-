@@ -18,36 +18,36 @@
       {
         "alpha_injecte_pct": 0.0,
         "taux_detection": 0.045,
-        "alpha_moyen_recupere_pct": -0.19442819206942452,
-        "t_moyen": -0.08377335680144657,
+        "alpha_moyen_recupere_pct": -0.19442819206942807,
+        "t_moyen": -0.0837733568014481,
         "se_alpha_pct": 2.3570273656678533
       },
       {
         "alpha_injecte_pct": 3.0,
         "taux_detection": 0.22,
-        "alpha_moyen_recupere_pct": 2.8055718079305767,
-        "t_moyen": 1.2102223373053302,
+        "alpha_moyen_recupere_pct": 2.8055718079305727,
+        "t_moyen": 1.2102223373053285,
         "se_alpha_pct": 2.357027365667854
       },
       {
         "alpha_injecte_pct": 6.0,
         "taux_detection": 0.68,
-        "alpha_moyen_recupere_pct": 5.805571807930575,
-        "t_moyen": 2.504218031412106,
+        "alpha_moyen_recupere_pct": 5.805571807930574,
+        "t_moyen": 2.5042180314121048,
         "se_alpha_pct": 2.3570273656678533
       },
       {
         "alpha_injecte_pct": 9.0,
         "taux_detection": 0.96,
-        "alpha_moyen_recupere_pct": 8.805571807930578,
-        "t_moyen": 3.7982137255188833,
+        "alpha_moyen_recupere_pct": 8.805571807930574,
+        "t_moyen": 3.798213725518882,
         "se_alpha_pct": 2.357027365667854
       },
       {
         "alpha_injecte_pct": 12.0,
         "taux_detection": 1.0,
-        "alpha_moyen_recupere_pct": 11.805571807930578,
-        "t_moyen": 5.092209419625659,
+        "alpha_moyen_recupere_pct": 11.805571807930573,
+        "t_moyen": 5.092209419625658,
         "se_alpha_pct": 2.3570273656678533
       }
     ],
@@ -91,7 +91,7 @@
         "alpha_t": -2.2678629071167187,
         "beta": 0.37493849648874356,
         "gamma_timing": 2.439188755238363,
-        "gamma_t": 12.450060106346797
+        "gamma_t": 12.450060106346799
       },
       "alpha_min_detectable": 5.5894212987152905,
       "retenue": false
@@ -169,7 +169,7 @@
         "alpha_t": -2.2377998683695774,
         "beta": 0.3812111047196386,
         "gamma_timing": 2.3921414647158903,
-        "gamma_t": 12.15294049733872
+        "gamma_t": 12.152940497338722
       },
       "alpha_min_detectable": 5.577621104667378,
       "retenue": false
