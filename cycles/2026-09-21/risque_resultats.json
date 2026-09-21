@@ -1,0 +1,2175 @@
+{
+  "date_arrete": "2026-09-18",
+  "date_donnees_sp500": "2026-09-17",
+  "n_series": 26,
+  "n_cotations_sp500": 2509,
+  "n_rendements": 2508,
+  "methode_var_retenue_ex_ante": "historique",
+  "regle_fenetre_limite": "la plus longue fenêtre non rejetée par LR_cc",
+  "regle_valeur_critique_backtest_ex_ante": "calibrée par simulation sous H0, tailles réelles",
+  "var_retenue_pct": -3.3,
+  "var_limite_fondee": false,
+  "cellule_de_limite": null,
+  "fenetres": [
+    {
+      "fenetre": "252",
+      "n_obs": 252,
+      "debut_effectif": "2025-09-17",
+      "fin_effective": "2026-09-17",
+      "contient_drawdown_max": false,
+      "date_drawdown_max": "2020-03-23"
+    },
+    {
+      "fenetre": "504",
+      "n_obs": 504,
+      "debut_effectif": "2024-09-13",
+      "fin_effective": "2026-09-17",
+      "contient_drawdown_max": false,
+      "date_drawdown_max": "2020-03-23"
+    },
+    {
+      "fenetre": "1260",
+      "n_obs": 1260,
+      "debut_effectif": "2021-09-10",
+      "fin_effective": "2026-09-17",
+      "contient_drawdown_max": false,
+      "date_drawdown_max": "2020-03-23"
+    },
+    {
+      "fenetre": "complet",
+      "n_obs": 2508,
+      "debut_effectif": "2016-09-26",
+      "fin_effective": "2026-09-17",
+      "contient_drawdown_max": true,
+      "date_drawdown_max": "2020-03-23"
+    }
+  ],
+  "aucune_fenetre_courte_ne_contient_de_crise": true,
+  "var": [
+    {
+      "niveau": 0.95,
+      "fenetre": "252",
+      "n_obs": 252,
+      "debut_effectif": "2025-09-17",
+      "contient_drawdown_max": false,
+      "historique_pct": -1.4,
+      "historique_erreur_type_pct": 0.1384982975206536,
+      "johnson_su_pct": -1.3,
+      "annexe_parametrique_pct": -1.3,
+      "annexe_cornish_fisher_pct": -1.3,
+      "cornish_fisher_motif": "monotone sur [-4.0 ; 0.0]",
+      "cvar": {
+        "disponible": false,
+        "n_queue": 13,
+        "motif": "queue de 13 observation(s) < MIN_OBS_QUEUE=20 : refus de publier"
+      },
+      "statut_annexes": "publiées pour information, n'entrent dans aucune limite"
+    },
+    {
+      "niveau": 0.95,
+      "fenetre": "504",
+      "n_obs": 504,
+      "debut_effectif": "2024-09-13",
+      "contient_drawdown_max": false,
+      "historique_pct": -1.6,
+      "historique_erreur_type_pct": 0.10919911050049355,
+      "johnson_su_pct": -1.4,
+      "annexe_parametrique_pct": -1.6,
+      "annexe_cornish_fisher_pct": null,
+      "cornish_fisher_motif": "kurtosis excédentaire 16.39 > seuil 1.2 : hors domaine de validité de l'expansion tronquée à l'ordre 4",
+      "cvar": {
+        "disponible": true,
+        "n_queue": 26,
+        "valeur_pct": -2.29111149876944,
+        "erreur_type_pct": 0.2174702445793712,
+        "valeur_arrondie_pct": -2.3,
+        "ic95_pct": [
+          -2.7,
+          -1.9
+        ]
+      },
+      "statut_annexes": "publiées pour information, n'entrent dans aucune limite"
+    },
+    {
+      "niveau": 0.95,
+      "fenetre": "1260",
+      "n_obs": 1260,
+      "debut_effectif": "2021-09-10",
+      "contient_drawdown_max": false,
+      "historique_pct": -1.66,
+      "historique_erreur_type_pct": 0.06699570854107184,
+      "johnson_su_pct": -1.61,
+      "annexe_parametrique_pct": -1.72,
+      "annexe_cornish_fisher_pct": null,
+      "cornish_fisher_motif": "kurtosis excédentaire 6.28 > seuil 1.2 : hors domaine de validité de l'expansion tronquée à l'ordre 4",
+      "cvar": {
+        "disponible": true,
+        "n_queue": 63,
+        "valeur_pct": -2.4910188066043992,
+        "erreur_type_pct": 0.1115793720316488,
+        "valeur_arrondie_pct": -2.5,
+        "ic95_pct": [
+          -2.7,
+          -2.3
+        ]
+      },
+      "statut_annexes": "publiées pour information, n'entrent dans aucune limite"
+    },
+    {
+      "niveau": 0.95,
+      "fenetre": "complet",
+      "n_obs": 2508,
+      "debut_effectif": "2016-09-26",
+      "contient_drawdown_max": true,
+      "historique_pct": -1.67,
+      "historique_erreur_type_pct": 0.0646924356471155,
+      "johnson_su_pct": -1.69,
+      "annexe_parametrique_pct": -1.83,
+      "annexe_cornish_fisher_pct": null,
+      "cornish_fisher_motif": "kurtosis excédentaire 16.74 > seuil 1.2 : hors domaine de validité de l'expansion tronquée à l'ordre 4",
+      "cvar": {
+        "disponible": true,
+        "n_queue": 126,
+        "valeur_pct": -2.802489086772281,
+        "erreur_type_pct": 0.13521920967331139,
+        "valeur_arrondie_pct": -2.8,
+        "ic95_pct": [
+          -3.1,
+          -2.5
+        ]
+      },
+      "statut_annexes": "publiées pour information, n'entrent dans aucune limite"
+    },
+    {
+      "niveau": 0.99,
+      "fenetre": "252",
+      "n_obs": 252,
+      "debut_effectif": "2025-09-17",
+      "contient_drawdown_max": false,
+      "historique_pct": -1.9,
+      "historique_erreur_type_pct": 0.3670114028958483,
+      "johnson_su_pct": -2.1,
+      "annexe_parametrique_pct": -1.8,
+      "annexe_cornish_fisher_pct": -2.1,
+      "cornish_fisher_motif": "monotone sur [-4.0 ; 0.0]",
+      "cvar": {
+        "disponible": false,
+        "n_queue": 3,
+        "motif": "queue de 3 observation(s) < MIN_OBS_QUEUE=20 : refus de publier"
+      },
+      "statut_annexes": "publiées pour information, n'entrent dans aucune limite"
+    },
+    {
+      "niveau": 0.99,
+      "fenetre": "504",
+      "n_obs": 504,
+      "debut_effectif": "2024-09-13",
+      "contient_drawdown_max": false,
+      "historique_pct": -2.7,
+      "historique_erreur_type_pct": 0.5076433833807404,
+      "johnson_su_pct": -2.6,
+      "annexe_parametrique_pct": -2.3,
+      "annexe_cornish_fisher_pct": null,
+      "cornish_fisher_motif": "kurtosis excédentaire 16.39 > seuil 1.2 : hors domaine de validité de l'expansion tronquée à l'ordre 4",
+      "cvar": {
+        "disponible": false,
+        "n_queue": 6,
+        "motif": "queue de 6 observation(s) < MIN_OBS_QUEUE=20 : refus de publier"
+      },
+      "statut_annexes": "publiées pour information, n'entrent dans aucune limite"
+    },
+    {
+      "niveau": 0.99,
+      "fenetre": "1260",
+      "n_obs": 1260,
+      "debut_effectif": "2021-09-10",
+      "contient_drawdown_max": false,
+      "historique_pct": -3.0,
+      "historique_erreur_type_pct": 0.2287991155884848,
+      "johnson_su_pct": -2.9,
+      "annexe_parametrique_pct": -2.5,
+      "annexe_cornish_fisher_pct": null,
+      "cornish_fisher_motif": "kurtosis excédentaire 6.28 > seuil 1.2 : hors domaine de validité de l'expansion tronquée à l'ordre 4",
+      "cvar": {
+        "disponible": false,
+        "n_queue": 13,
+        "motif": "queue de 13 observation(s) < MIN_OBS_QUEUE=20 : refus de publier"
+      },
+      "statut_annexes": "publiées pour information, n'entrent dans aucune limite"
+    },
+    {
+      "niveau": 0.99,
+      "fenetre": "complet",
+      "n_obs": 2508,
+      "debut_effectif": "2016-09-26",
+      "contient_drawdown_max": true,
+      "historique_pct": -3.3,
+      "historique_erreur_type_pct": 0.1879723659211382,
+      "johnson_su_pct": -3.4,
+      "annexe_parametrique_pct": -2.6,
+      "annexe_cornish_fisher_pct": null,
+      "cornish_fisher_motif": "kurtosis excédentaire 16.74 > seuil 1.2 : hors domaine de validité de l'expansion tronquée à l'ordre 4",
+      "cvar": {
+        "disponible": true,
+        "n_queue": 26,
+        "valeur_pct": -4.893584380537053,
+        "erreur_type_pct": 0.4357316757265192,
+        "valeur_arrondie_pct": -4.9,
+        "ic95_pct": [
+          -5.7,
+          -4.0
+        ]
+      },
+      "statut_annexes": "publiées pour information, n'entrent dans aucune limite"
+    }
+  ],
+  "ecart_max_methodes_valides_pt": 0.20000000000000018,
+  "backtest": [
+    {
+      "fenetre": "252",
+      "niveau": 0.95,
+      "methode": "historique",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 124,
+      "depassements_attendus": 112.8,
+      "ic95_binomial": [
+        93,
+        134
+      ],
+      "LR_uc": 1.1356,
+      "p_kupiec": 0.2866,
+      "LR_ind": 22.5612,
+      "p_christoffersen": 0.0,
+      "LR_cc": 23.6968,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.0978,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.8812,
+      "valeur_critique_christoffersen_calibree": 4.0032,
+      "p_kupiec_calibree": 0.2905,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2028,
+        "n01": 103,
+        "n10": 103,
+        "n11": 21
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "252",
+      "niveau": 0.95,
+      "methode": "parametrique",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 131,
+      "depassements_attendus": 112.8,
+      "ic95_binomial": [
+        93,
+        134
+      ],
+      "LR_uc": 2.9452,
+      "p_kupiec": 0.0861,
+      "LR_ind": 18.9584,
+      "p_christoffersen": 0.0,
+      "LR_cc": 21.9037,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.0978,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.8812,
+      "valeur_critique_christoffersen_calibree": 4.0032,
+      "p_kupiec_calibree": 0.0953,
+      "p_christoffersen_calibree": 0.0001,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2014,
+        "n01": 110,
+        "n10": 110,
+        "n11": 21
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "252",
+      "niveau": 0.95,
+      "methode": "johnson_su",
+      "hors_echantillon": true,
+      "n_tests": 2091,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 165,
+      "taux_echec_modele_pct": 7.314,
+      "depassements_observes": 126,
+      "depassements_attendus": 104.6,
+      "ic95_binomial": [
+        85,
+        124
+      ],
+      "LR_uc": 4.3598,
+      "p_kupiec": 0.0368,
+      "LR_ind": 16.6937,
+      "p_christoffersen": 0.0,
+      "LR_cc": 21.0535,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.156,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.9733,
+      "valeur_critique_christoffersen_calibree": 4.0734,
+      "p_kupiec_calibree": 0.0412,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1858,
+        "n01": 106,
+        "n10": 106,
+        "n11": 20
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "252",
+      "niveau": 0.99,
+      "methode": "historique",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 38,
+      "depassements_attendus": 22.6,
+      "ic95_binomial": [
+        14,
+        32
+      ],
+      "LR_uc": 8.854,
+      "p_kupiec": 0.0029,
+      "LR_ind": 12.9007,
+      "p_christoffersen": 0.0003,
+      "LR_cc": 21.7547,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.0706,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.7934,
+      "valeur_critique_christoffersen_calibree": 2.0606,
+      "p_kupiec_calibree": 0.0047,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2184,
+        "n01": 33,
+        "n10": 33,
+        "n11": 5
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "252",
+      "niveau": 0.99,
+      "methode": "parametrique",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 65,
+      "depassements_attendus": 22.6,
+      "ic95_binomial": [
+        14,
+        32
+      ],
+      "LR_uc": 53.4988,
+      "p_kupiec": 0.0,
+      "LR_ind": 12.2196,
+      "p_christoffersen": 0.0005,
+      "LR_cc": 65.7183,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.0706,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.7934,
+      "valeur_critique_christoffersen_calibree": 2.0606,
+      "p_kupiec_calibree": 0.0,
+      "p_christoffersen_calibree": 0.0001,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2133,
+        "n01": 57,
+        "n10": 57,
+        "n11": 8
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "252",
+      "niveau": 0.99,
+      "methode": "johnson_su",
+      "hors_echantillon": true,
+      "n_tests": 2091,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 165,
+      "taux_echec_modele_pct": 7.314,
+      "depassements_observes": 38,
+      "depassements_attendus": 20.9,
+      "ic95_binomial": [
+        12,
+        30
+      ],
+      "LR_uc": 11.3607,
+      "p_kupiec": 0.0008,
+      "LR_ind": 12.219,
+      "p_christoffersen": 0.0005,
+      "LR_cc": 23.5797,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.2159,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.5182,
+      "valeur_critique_christoffersen_calibree": 2.1201,
+      "p_kupiec_calibree": 0.0009,
+      "p_christoffersen_calibree": 0.0001,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2019,
+        "n01": 33,
+        "n10": 33,
+        "n11": 5
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "504",
+      "niveau": 0.95,
+      "methode": "historique",
+      "hors_echantillon": true,
+      "n_tests": 2004,
+      "n_jours_calibrables": 2004,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 104,
+      "depassements_attendus": 100.2,
+      "ic95_binomial": [
+        82,
+        120
+      ],
+      "LR_uc": 0.1499,
+      "p_kupiec": 0.6986,
+      "LR_ind": 11.0616,
+      "p_christoffersen": 0.0009,
+      "LR_cc": 11.2115,
+      "p_conjoint": 0.0037,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.0188,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.6998,
+      "valeur_critique_christoffersen_calibree": 3.9873,
+      "p_kupiec_calibree": 0.7178,
+      "p_christoffersen_calibree": 0.0014,
+      "p_conjoint_calibree": 0.004,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1809,
+        "n01": 90,
+        "n10": 90,
+        "n11": 14
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "504",
+      "niveau": 0.95,
+      "methode": "parametrique",
+      "hors_echantillon": true,
+      "n_tests": 2004,
+      "n_jours_calibrables": 2004,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 105,
+      "depassements_attendus": 100.2,
+      "ic95_binomial": [
+        82,
+        120
+      ],
+      "LR_uc": 0.2385,
+      "p_kupiec": 0.6253,
+      "LR_ind": 15.5125,
+      "p_christoffersen": 0.0001,
+      "LR_cc": 15.7509,
+      "p_conjoint": 0.0004,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.0188,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.6998,
+      "valeur_critique_christoffersen_calibree": 3.9873,
+      "p_kupiec_calibree": 0.6433,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0003,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1809,
+        "n01": 89,
+        "n10": 89,
+        "n11": 16
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "504",
+      "niveau": 0.95,
+      "methode": "johnson_su",
+      "hors_echantillon": true,
+      "n_tests": 2004,
+      "n_jours_calibrables": 2004,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 111,
+      "depassements_attendus": 100.2,
+      "ic95_binomial": [
+        82,
+        120
+      ],
+      "LR_uc": 1.1857,
+      "p_kupiec": 0.2762,
+      "LR_ind": 12.8575,
+      "p_christoffersen": 0.0003,
+      "LR_cc": 14.0433,
+      "p_conjoint": 0.0009,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.0188,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.6998,
+      "valeur_critique_christoffersen_calibree": 3.9873,
+      "p_kupiec_calibree": 0.2773,
+      "p_christoffersen_calibree": 0.0004,
+      "p_conjoint_calibree": 0.0007,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1797,
+        "n01": 95,
+        "n10": 95,
+        "n11": 16
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "504",
+      "niveau": 0.99,
+      "methode": "historique",
+      "hors_echantillon": true,
+      "n_tests": 2004,
+      "n_jours_calibrables": 2004,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 32,
+      "depassements_attendus": 20.0,
+      "ic95_binomial": [
+        12,
+        29
+      ],
+      "LR_uc": 6.1046,
+      "p_kupiec": 0.0135,
+      "LR_ind": 6.0471,
+      "p_christoffersen": 0.0139,
+      "LR_cc": 12.1517,
+      "p_conjoint": 0.0023,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.0462,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.8048,
+      "valeur_critique_christoffersen_calibree": 2.0472,
+      "p_kupiec_calibree": 0.0176,
+      "p_christoffersen_calibree": 0.0043,
+      "p_conjoint_calibree": 0.001,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1942,
+        "n01": 29,
+        "n10": 29,
+        "n11": 3
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "504",
+      "niveau": 0.99,
+      "methode": "parametrique",
+      "hors_echantillon": true,
+      "n_tests": 2004,
+      "n_jours_calibrables": 2004,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 57,
+      "depassements_attendus": 20.0,
+      "ic95_binomial": [
+        12,
+        29
+      ],
+      "LR_uc": 45.9395,
+      "p_kupiec": 0.0,
+      "LR_ind": 14.3265,
+      "p_christoffersen": 0.0002,
+      "LR_cc": 60.2659,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.0462,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.8048,
+      "valeur_critique_christoffersen_calibree": 2.0472,
+      "p_kupiec_calibree": 0.0,
+      "p_christoffersen_calibree": 0.0001,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1897,
+        "n01": 49,
+        "n10": 49,
+        "n11": 8
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "504",
+      "niveau": 0.99,
+      "methode": "johnson_su",
+      "hors_echantillon": true,
+      "n_tests": 2004,
+      "n_jours_calibrables": 2004,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 35,
+      "depassements_attendus": 20.0,
+      "ic95_binomial": [
+        12,
+        29
+      ],
+      "LR_uc": 9.2263,
+      "p_kupiec": 0.0024,
+      "LR_ind": 5.1077,
+      "p_christoffersen": 0.0238,
+      "LR_cc": 14.3341,
+      "p_conjoint": 0.0008,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.0462,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.8048,
+      "valeur_critique_christoffersen_calibree": 2.0472,
+      "p_kupiec_calibree": 0.0035,
+      "p_christoffersen_calibree": 0.0076,
+      "p_conjoint_calibree": 0.0003,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1936,
+        "n01": 32,
+        "n10": 32,
+        "n11": 3
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "1260",
+      "niveau": 0.95,
+      "methode": "historique",
+      "hors_echantillon": true,
+      "n_tests": 1248,
+      "n_jours_calibrables": 1248,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 49,
+      "depassements_attendus": 62.4,
+      "ic95_binomial": [
+        48,
+        78
+      ],
+      "LR_uc": 3.2599,
+      "p_kupiec": 0.071,
+      "LR_ind": 3.9554,
+      "p_christoffersen": 0.0467,
+      "LR_cc": 7.2153,
+      "p_conjoint": 0.0271,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.4634,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.7872,
+      "valeur_critique_christoffersen_calibree": 4.6192,
+      "p_kupiec_calibree": 0.0789,
+      "p_christoffersen_calibree": 0.0656,
+      "p_conjoint_calibree": 0.0309,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1155,
+        "n01": 43,
+        "n10": 44,
+        "n11": 5
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "1260",
+      "niveau": 0.95,
+      "methode": "parametrique",
+      "hors_echantillon": true,
+      "n_tests": 1248,
+      "n_jours_calibrables": 1248,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 37,
+      "depassements_attendus": 62.4,
+      "ic95_binomial": [
+        48,
+        78
+      ],
+      "LR_uc": 12.6644,
+      "p_kupiec": 0.0004,
+      "LR_ind": 2.5502,
+      "p_christoffersen": 0.1103,
+      "LR_cc": 15.2146,
+      "p_conjoint": 0.0005,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.4634,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.7872,
+      "valeur_critique_christoffersen_calibree": 4.6192,
+      "p_kupiec_calibree": 0.0005,
+      "p_christoffersen_calibree": 0.1186,
+      "p_conjoint_calibree": 0.0003,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1177,
+        "n01": 33,
+        "n10": 34,
+        "n11": 3
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "1260",
+      "niveau": 0.95,
+      "methode": "johnson_su",
+      "hors_echantillon": true,
+      "n_tests": 1248,
+      "n_jours_calibrables": 1248,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 48,
+      "depassements_attendus": 62.4,
+      "ic95_binomial": [
+        48,
+        78
+      ],
+      "LR_uc": 3.7872,
+      "p_kupiec": 0.0516,
+      "LR_ind": 2.1835,
+      "p_christoffersen": 0.1395,
+      "LR_cc": 5.9708,
+      "p_conjoint": 0.0505,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.4634,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.7872,
+      "valeur_critique_christoffersen_calibree": 4.6192,
+      "p_kupiec_calibree": 0.0578,
+      "p_christoffersen_calibree": 0.1509,
+      "p_conjoint_calibree": 0.0771,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": false,
+      "rejetee_calibree": false,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1156,
+        "n01": 43,
+        "n10": 44,
+        "n11": 4
+      },
+      "rejetee": false,
+      "consequence": "admissible comme limite"
+    },
+    {
+      "fenetre": "1260",
+      "niveau": 0.99,
+      "methode": "historique",
+      "hors_echantillon": true,
+      "n_tests": 1248,
+      "n_jours_calibrables": 1248,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 8,
+      "depassements_attendus": 12.5,
+      "ic95_binomial": [
+        6,
+        20
+      ],
+      "LR_uc": 1.8613,
+      "p_kupiec": 0.1725,
+      "LR_ind": 4.2786,
+      "p_christoffersen": 0.0386,
+      "LR_cc": 6.1399,
+      "p_conjoint": 0.0464,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 4.5221,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 4.2055,
+      "valeur_critique_christoffersen_calibree": 2.3877,
+      "p_kupiec_calibree": 0.21,
+      "p_christoffersen_calibree": 0.0107,
+      "p_conjoint_calibree": 0.0258,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1232,
+        "n01": 7,
+        "n10": 7,
+        "n11": 1
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "1260",
+      "niveau": 0.99,
+      "methode": "parametrique",
+      "hors_echantillon": true,
+      "n_tests": 1248,
+      "n_jours_calibrables": 1248,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 14,
+      "depassements_attendus": 12.5,
+      "ic95_binomial": [
+        6,
+        20
+      ],
+      "LR_uc": 0.1799,
+      "p_kupiec": 0.6715,
+      "LR_ind": 2.1205,
+      "p_christoffersen": 0.1453,
+      "LR_cc": 2.3004,
+      "p_conjoint": 0.3166,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 4.5221,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 4.2055,
+      "valeur_critique_christoffersen_calibree": 2.3877,
+      "p_kupiec_calibree": 0.7783,
+      "p_christoffersen_calibree": 0.0659,
+      "p_conjoint_calibree": 0.2434,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": false,
+      "rejetee_calibree": false,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1220,
+        "n01": 13,
+        "n10": 13,
+        "n11": 1
+      },
+      "rejetee": false,
+      "consequence": "admissible comme limite"
+    },
+    {
+      "fenetre": "1260",
+      "niveau": 0.99,
+      "methode": "johnson_su",
+      "hors_echantillon": true,
+      "n_tests": 1248,
+      "n_jours_calibrables": 1248,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 5,
+      "depassements_attendus": 12.5,
+      "ic95_binomial": [
+        6,
+        20
+      ],
+      "LR_uc": 5.8583,
+      "p_kupiec": 0.0155,
+      "LR_ind": 6.2739,
+      "p_christoffersen": 0.0123,
+      "LR_cc": 12.1322,
+      "p_conjoint": 0.0023,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 4.5221,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 4.2055,
+      "valeur_critique_christoffersen_calibree": 2.3877,
+      "p_kupiec_calibree": 0.0234,
+      "p_christoffersen_calibree": 0.0042,
+      "p_conjoint_calibree": 0.0012,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 1238,
+        "n01": 4,
+        "n10": 4,
+        "n11": 1
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "complet",
+      "niveau": 0.95,
+      "methode": "historique",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 130,
+      "depassements_attendus": 112.8,
+      "ic95_binomial": [
+        93,
+        134
+      ],
+      "LR_uc": 2.6371,
+      "p_kupiec": 0.1044,
+      "LR_ind": 22.0558,
+      "p_christoffersen": 0.0,
+      "LR_cc": 24.6929,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.0978,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.8812,
+      "valeur_critique_christoffersen_calibree": 4.0032,
+      "p_kupiec_calibree": 0.1156,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2017,
+        "n01": 108,
+        "n10": 108,
+        "n11": 22
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "complet",
+      "niveau": 0.95,
+      "methode": "parametrique",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 120,
+      "depassements_attendus": 112.8,
+      "ic95_binomial": [
+        93,
+        134
+      ],
+      "LR_uc": 0.4743,
+      "p_kupiec": 0.491,
+      "LR_ind": 19.1947,
+      "p_christoffersen": 0.0,
+      "LR_cc": 19.669,
+      "p_conjoint": 0.0001,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.0978,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.8812,
+      "valeur_critique_christoffersen_calibree": 4.0032,
+      "p_kupiec_calibree": 0.5028,
+      "p_christoffersen_calibree": 0.0001,
+      "p_conjoint_calibree": 0.0001,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2034,
+        "n01": 101,
+        "n10": 101,
+        "n11": 19
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "complet",
+      "niveau": 0.95,
+      "methode": "johnson_su",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 128,
+      "depassements_attendus": 112.8,
+      "ic95_binomial": [
+        93,
+        134
+      ],
+      "LR_uc": 2.07,
+      "p_kupiec": 0.1502,
+      "LR_ind": 20.453,
+      "p_christoffersen": 0.0,
+      "LR_cc": 22.523,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 6.0978,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.8812,
+      "valeur_critique_christoffersen_calibree": 4.0032,
+      "p_kupiec_calibree": 0.167,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2020,
+        "n01": 107,
+        "n10": 107,
+        "n11": 21
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "complet",
+      "niveau": 0.99,
+      "methode": "historique",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 33,
+      "depassements_attendus": 22.6,
+      "ic95_binomial": [
+        14,
+        32
+      ],
+      "LR_uc": 4.2706,
+      "p_kupiec": 0.0388,
+      "LR_ind": 15.6659,
+      "p_christoffersen": 0.0001,
+      "LR_cc": 19.9365,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.0706,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.7934,
+      "valeur_critique_christoffersen_calibree": 2.0606,
+      "p_kupiec_calibree": 0.0439,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2194,
+        "n01": 28,
+        "n10": 28,
+        "n11": 5
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "complet",
+      "niveau": 0.99,
+      "methode": "parametrique",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 69,
+      "depassements_attendus": 22.6,
+      "ic95_binomial": [
+        14,
+        32
+      ],
+      "LR_uc": 62.3665,
+      "p_kupiec": 0.0,
+      "LR_ind": 21.0474,
+      "p_christoffersen": 0.0,
+      "LR_cc": 83.4138,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.0706,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.7934,
+      "valeur_critique_christoffersen_calibree": 2.0606,
+      "p_kupiec_calibree": 0.0,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2128,
+        "n01": 58,
+        "n10": 58,
+        "n11": 11
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    },
+    {
+      "fenetre": "complet",
+      "niveau": 0.99,
+      "methode": "johnson_su",
+      "hors_echantillon": true,
+      "n_tests": 2256,
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_modele_pct": 0.0,
+      "depassements_observes": 38,
+      "depassements_attendus": 22.6,
+      "ic95_binomial": [
+        14,
+        32
+      ],
+      "LR_uc": 8.854,
+      "p_kupiec": 0.0029,
+      "LR_ind": 17.7609,
+      "p_christoffersen": 0.0,
+      "LR_cc": 26.6149,
+      "p_conjoint": 0.0,
+      "regle_de_decision": "calibrée par simulation sous H0, tailles réelles",
+      "valeur_critique_5pct_calibree": 5.0706,
+      "valeur_critique_5pct_asymptotique": 5.9915,
+      "valeur_critique_kupiec_calibree": 3.7934,
+      "valeur_critique_christoffersen_calibree": 2.0606,
+      "p_kupiec_calibree": 0.0047,
+      "p_christoffersen_calibree": 0.0,
+      "p_conjoint_calibree": 0.0,
+      "n_simulations_calibration": 20000,
+      "graine_calibration": 20260814,
+      "rejetee_asymptotique": true,
+      "rejetee_calibree": true,
+      "verdicts_divergent": false,
+      "matrice_transition": {
+        "n00": 2185,
+        "n01": 32,
+        "n10": 32,
+        "n11": 6
+      },
+      "rejetee": true,
+      "consequence": "RETIRÉE du tableau des limites"
+    }
+  ],
+  "calibration_backtest_sous_h0": [
+    {
+      "T": 2256,
+      "p": 0.050000000000000044,
+      "n_simulations": 20000,
+      "graine": 20260814,
+      "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
+      "valeur_critique_5pct": {
+        "kupiec": 3.8812286688356608,
+        "christoffersen": 4.0031604647161885,
+        "conjoint": 6.09779178286567
+      },
+      "valeur_critique_1pct": {
+        "kupiec": 6.433976525348271,
+        "christoffersen": 7.193592760671406,
+        "conjoint": 9.951355599335784
+      },
+      "valeur_critique_asymptotique_5pct": {
+        "kupiec": 3.841458820694124,
+        "christoffersen": 3.841458820694124,
+        "conjoint": 5.991464547107979
+      },
+      "taux_rejet_effectif_asymptotique_5pct": {
+        "kupiec": 0.05355,
+        "christoffersen": 0.05695,
+        "conjoint": 0.0537
+      },
+      "taux_rejet_effectif_asymptotique_1pct": {
+        "kupiec": 0.0096,
+        "christoffersen": 0.0128,
+        "conjoint": 0.0129
+      }
+    },
+    {
+      "T": 2091,
+      "p": 0.050000000000000044,
+      "n_simulations": 20000,
+      "graine": 20260814,
+      "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
+      "valeur_critique_5pct": {
+        "kupiec": 3.9733316157397667,
+        "christoffersen": 4.073363753723584,
+        "conjoint": 6.155966294526329
+      },
+      "valeur_critique_1pct": {
+        "kupiec": 7.029115687643525,
+        "christoffersen": 7.383605366484606,
+        "conjoint": 10.1895533404313
+      },
+      "valeur_critique_asymptotique_5pct": {
+        "kupiec": 3.841458820694124,
+        "christoffersen": 3.841458820694124,
+        "conjoint": 5.991464547107979
+      },
+      "taux_rejet_effectif_asymptotique_5pct": {
+        "kupiec": 0.0536,
+        "christoffersen": 0.0553,
+        "conjoint": 0.0546
+      },
+      "taux_rejet_effectif_asymptotique_1pct": {
+        "kupiec": 0.01025,
+        "christoffersen": 0.0139,
+        "conjoint": 0.01655
+      }
+    },
+    {
+      "T": 2256,
+      "p": 0.010000000000000009,
+      "n_simulations": 20000,
+      "graine": 20260814,
+      "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
+      "valeur_critique_5pct": {
+        "kupiec": 3.7933749581657707,
+        "christoffersen": 2.060577481383376,
+        "conjoint": 5.070605914334032
+      },
+      "valeur_critique_1pct": {
+        "kupiec": 6.849556423824367,
+        "christoffersen": 4.706768621860988,
+        "conjoint": 8.045198399332207
+      },
+      "valeur_critique_asymptotique_5pct": {
+        "kupiec": 3.841458820694124,
+        "christoffersen": 3.841458820694124,
+        "conjoint": 5.991464547107979
+      },
+      "taux_rejet_effectif_asymptotique_5pct": {
+        "kupiec": 0.04385,
+        "christoffersen": 0.0173,
+        "conjoint": 0.0333
+      },
+      "taux_rejet_effectif_asymptotique_1pct": {
+        "kupiec": 0.01125,
+        "christoffersen": 0.00325,
+        "conjoint": 0.0056
+      }
+    },
+    {
+      "T": 2091,
+      "p": 0.010000000000000009,
+      "n_simulations": 20000,
+      "graine": 20260814,
+      "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
+      "valeur_critique_5pct": {
+        "kupiec": 3.5181658670740603,
+        "christoffersen": 2.1200616307475286,
+        "conjoint": 5.215859579025448
+      },
+      "valeur_critique_1pct": {
+        "kupiec": 7.124549841676725,
+        "christoffersen": 4.7374668911652975,
+        "conjoint": 8.168286075268952
+      },
+      "valeur_critique_asymptotique_5pct": {
+        "kupiec": 3.841458820694124,
+        "christoffersen": 3.841458820694124,
+        "conjoint": 5.991464547107979
+      },
+      "taux_rejet_effectif_asymptotique_5pct": {
+        "kupiec": 0.0494,
+        "christoffersen": 0.0163,
+        "conjoint": 0.02985
+      },
+      "taux_rejet_effectif_asymptotique_1pct": {
+        "kupiec": 0.01245,
+        "christoffersen": 0.00265,
+        "conjoint": 0.0051
+      }
+    },
+    {
+      "T": 2004,
+      "p": 0.050000000000000044,
+      "n_simulations": 20000,
+      "graine": 20260814,
+      "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
+      "valeur_critique_5pct": {
+        "kupiec": 3.699810677510868,
+        "christoffersen": 3.9872749493752053,
+        "conjoint": 6.018787695948731
+      },
+      "valeur_critique_1pct": {
+        "kupiec": 6.688224202877109,
+        "christoffersen": 7.3561803155844245,
+        "conjoint": 9.752924166806224
+      },
+      "valeur_critique_asymptotique_5pct": {
+        "kupiec": 3.841458820694124,
+        "christoffersen": 3.841458820694124,
+        "conjoint": 5.991464547107979
+      },
+      "taux_rejet_effectif_asymptotique_5pct": {
+        "kupiec": 0.0489,
+        "christoffersen": 0.0545,
+        "conjoint": 0.05055
+      },
+      "taux_rejet_effectif_asymptotique_1pct": {
+        "kupiec": 0.01015,
+        "christoffersen": 0.0138,
+        "conjoint": 0.01485
+      }
+    },
+    {
+      "T": 2004,
+      "p": 0.010000000000000009,
+      "n_simulations": 20000,
+      "graine": 20260814,
+      "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
+      "valeur_critique_5pct": {
+        "kupiec": 3.8047711501775723,
+        "christoffersen": 2.04723160313236,
+        "conjoint": 5.046245218103024
+      },
+      "valeur_critique_1pct": {
+        "kupiec": 6.227819127619881,
+        "christoffersen": 4.5891368805359125,
+        "conjoint": 7.813461288310393
+      },
+      "valeur_critique_asymptotique_5pct": {
+        "kupiec": 3.841458820694124,
+        "christoffersen": 3.841458820694124,
+        "conjoint": 5.991464547107979
+      },
+      "taux_rejet_effectif_asymptotique_5pct": {
+        "kupiec": 0.0409,
+        "christoffersen": 0.01525,
+        "conjoint": 0.0303
+      },
+      "taux_rejet_effectif_asymptotique_1pct": {
+        "kupiec": 0.0099,
+        "christoffersen": 0.0031,
+        "conjoint": 0.0062
+      }
+    },
+    {
+      "T": 1248,
+      "p": 0.050000000000000044,
+      "n_simulations": 20000,
+      "graine": 20260814,
+      "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
+      "valeur_critique_5pct": {
+        "kupiec": 3.7872255733670954,
+        "christoffersen": 4.619242075808188,
+        "conjoint": 6.463352641739107
+      },
+      "valeur_critique_1pct": {
+        "kupiec": 6.515724879011714,
+        "christoffersen": 7.048948832798828,
+        "conjoint": 9.104387499813633
+      },
+      "valeur_critique_asymptotique_5pct": {
+        "kupiec": 3.841458820694124,
+        "christoffersen": 3.841458820694124,
+        "conjoint": 5.991464547107979
+      },
+      "taux_rejet_effectif_asymptotique_5pct": {
+        "kupiec": 0.04255,
+        "christoffersen": 0.06865,
+        "conjoint": 0.07445
+      },
+      "taux_rejet_effectif_asymptotique_1pct": {
+        "kupiec": 0.0096,
+        "christoffersen": 0.0146,
+        "conjoint": 0.00985
+      }
+    },
+    {
+      "T": 1248,
+      "p": 0.010000000000000009,
+      "n_simulations": 20000,
+      "graine": 20260814,
+      "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
+      "valeur_critique_5pct": {
+        "kupiec": 4.205512028641863,
+        "christoffersen": 2.3877333908361322,
+        "conjoint": 4.522085709074162
+      },
+      "valeur_critique_1pct": {
+        "kupiec": 7.1727044996836185,
+        "christoffersen": 4.278641058073063,
+        "conjoint": 7.94115003265302
+      },
+      "valeur_critique_asymptotique_5pct": {
+        "kupiec": 3.841458820694124,
+        "christoffersen": 3.841458820694124,
+        "conjoint": 5.991464547107979
+      },
+      "taux_rejet_effectif_asymptotique_5pct": {
+        "kupiec": 0.065,
+        "christoffersen": 0.0111,
+        "conjoint": 0.02575
+      },
+      "taux_rejet_effectif_asymptotique_1pct": {
+        "kupiec": 0.01015,
+        "christoffersen": 0.0034,
+        "conjoint": 0.00555
+      }
+    }
+  ],
+  "decompte_cellules": {
+    "methode_retenue": "historique",
+    "n_cellules_methode_retenue": 8,
+    "n_admissibles_methode_retenue": 0,
+    "n_cellules_toutes_methodes": 24,
+    "n_admissibles_toutes_methodes": 2,
+    "note": "G-4 — deux populations distinctes. Seules les cellules de la méthode retenue ex ante sont opposables ; les cellules paramétriques et Johnson SU sont des annexes."
+  },
+  "echecs_johnson_su_backtest": {
+    "252": {
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 165,
+      "taux_echec_pct": 7.314,
+      "n_tests_retenus": 2091
+    },
+    "504": {
+      "n_jours_calibrables": 2004,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_pct": 0.0,
+      "n_tests_retenus": 2004
+    },
+    "1260": {
+      "n_jours_calibrables": 1248,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_pct": 0.0,
+      "n_tests_retenus": 1248
+    },
+    "complet": {
+      "n_jours_calibrables": 2256,
+      "n_jours_ecartes_sans_var": 0,
+      "taux_echec_pct": 0.0,
+      "n_tests_retenus": 2256
+    }
+  },
+  "tableau_limites_admissibles": [
+    {
+      "methode": "johnson_su",
+      "fenetre": "1260",
+      "niveau": 0.95,
+      "p_conjoint_calibree": 0.0771,
+      "p_conjoint_asymptotique": 0.0505,
+      "opposable": false
+    },
+    {
+      "methode": "parametrique",
+      "fenetre": "1260",
+      "niveau": 0.99,
+      "p_conjoint_calibree": 0.2434,
+      "p_conjoint_asymptotique": 0.3166,
+      "opposable": false
+    }
+  ],
+  "cornish_fisher_statut": "REFUSÉE — hors domaine de validité",
+  "cornish_fisher_diagnostic": {
+    "504": {
+      "skew": 0.521797263015826,
+      "kurtosis_exces": 16.3898036084131,
+      "monotone_en_niveau": false,
+      "max_var_cf_pct": 0.5035469372962506,
+      "niveau_du_max": 0.7750000000000002,
+      "var_cf_positive": true,
+      "lecture": "maximum de la « VaR » CF = +0.504 % atteint au niveau 77.5 %"
+    },
+    "complet": {
+      "skew": -0.6762186012449485,
+      "kurtosis_exces": 16.740086386251747,
+      "monotone_en_niveau": false,
+      "max_var_cf_pct": 0.6778538910272199,
+      "niveau_du_max": 0.7460000000000002,
+      "var_cf_positive": true,
+      "lecture": "maximum de la « VaR » CF = +0.678 % atteint au niveau 74.6 %"
+    }
+  },
+  "performance": {
+    "rendement_annualise_pct": 13.506053786572636,
+    "volatilite_annualisee_pct": 18.129467435767257,
+    "sharpe_brut": 0.7449779666404771,
+    "note": "sharpe_brut n'est PAS un Sharpe : il omet le taux sans risque",
+    "taux_sans_risque_moyen_pct": 2.4057798407659536,
+    "rendement_excedentaire_pct": 11.100273945806682,
+    "sharpe_excedentaire": 0.612277993555794,
+    "sharpe_excedentaire_vol_exces": 0.5979090069095626
+  },
+  "sortino": 1.0291887962799056,
+  "coherence_sortino_sharpe": {
+    "skew": -0.6762186012449485,
+    "ecart_sortino_sharpe": 0.28421082963942845,
+    "suspect": false,
+    "motif": "écart cohérent avec l'asymétrie mesurée"
+  },
+  "calmar": 0.3981155519425711,
+  "drawdown": {
+    "max": -0.3392495902426065,
+    "date_creux": "2020-03-23",
+    "courant": -0.020673189733542152,
+    "seances_sous_eau": 2066,
+    "pct_temps_sous_eau": 82.37639553429027,
+    "plus_longue_serie_sous_eau": 511,
+    "valeur_finale": 3.528338930747591
+  },
+  "paliers_drawdown": "ACTIFS",
+  "paliers_drawdown_actifs": true,
+  "statut_paliers_drawdown": {
+    "paliers_drawdown_actifs": true,
+    "drawdown_courant_pct": -2.067318973354215,
+    "drawdown_courant_non_nul": true,
+    "positions_detenues": 0,
+    "motif_mesure": "aucune position détenue, mais drawdown NON NUL mesuré sur le portefeuille de référence : -2.07 %",
+    "condition": "positions_detenues > 0 OU |drawdown_courant| > 0",
+    "seuils_pct": [
+      -5.0,
+      -10.0,
+      -15.0,
+      -20.0
+    ]
+  },
+  "kelly": {
+    "disponible": true,
+    "kelly_plein": 4.0,
+    "kelly_plein_brut": 4.354415113259815,
+    "kelly_erreur_type": 1.8354571748993542,
+    "kelly_ic90": [
+      1.0,
+      7.0
+    ],
+    "kelly_ic90_brut": [
+      1.4528295084154383,
+      7.488237660810676
+    ],
+    "kelly_mediane_bootstrap": 4.0,
+    "kelly_sans_terme_sigma2_sur_2": 3.8544151132598157,
+    "ecart_du_au_terme_sigma2_sur_2": 0.49999999999999956,
+    "n_bootstrap": 20000,
+    "fraction_appliquee": 0.25,
+    "taille_recommandee_x": 1.1,
+    "plafond_doctrinal_x": 2.2,
+    "publication_interdite": "quatre chiffres significatifs — l'intervalle à 90 % couvre Kelly ¼, ½ et plein",
+    "avertissement": "Kelly plein ruine. Plafond ½, défaut ¼.",
+    "lecture": "Kelly plein ∈ [1.0 ; 7.0] à 90 %"
+  },
+  "simulation_levier_quotidien": [
+    {
+      "fraction_kelly": 1.0,
+      "levier": 4.354415113259815,
+      "reequilibrage_seances": 1,
+      "valeur_finale_x": 20.15,
+      "drawdown_max_pct": -90.7,
+      "capital_restant_au_creux_pct": 9.3,
+      "ruine": false
+    },
+    {
+      "fraction_kelly": 0.5,
+      "levier": 2.1772075566299076,
+      "reequilibrage_seances": 1,
+      "valeur_finale_x": 10.18,
+      "drawdown_max_pct": -62.9,
+      "capital_restant_au_creux_pct": 37.1,
+      "ruine": false
+    },
+    {
+      "fraction_kelly": 0.25,
+      "levier": 1.0886037783149538,
+      "reequilibrage_seances": 1,
+      "valeur_finale_x": 3.88,
+      "drawdown_max_pct": -36.5,
+      "capital_restant_au_creux_pct": 63.5,
+      "ruine": false
+    }
+  ],
+  "simulation_levier_mensuel": [
+    {
+      "fraction_kelly": 1.0,
+      "levier": 4.354415113259815,
+      "reequilibrage_seances": 21,
+      "valeur_finale_x": 0.0,
+      "drawdown_max_pct": -100.0,
+      "capital_restant_au_creux_pct": 0.0,
+      "ruine": true
+    },
+    {
+      "fraction_kelly": 0.5,
+      "levier": 2.1772075566299076,
+      "reequilibrage_seances": 21,
+      "valeur_finale_x": 12.84,
+      "drawdown_max_pct": -67.1,
+      "capital_restant_au_creux_pct": 32.9,
+      "ruine": false
+    },
+    {
+      "fraction_kelly": 0.25,
+      "levier": 1.0886037783149538,
+      "reequilibrage_seances": 21,
+      "valeur_finale_x": 4.11,
+      "drawdown_max_pct": -37.5,
+      "capital_restant_au_creux_pct": 62.5,
+      "ruine": false
+    }
+  ],
+  "regime": {
+    "volatilite": "MOYENNE",
+    "vix": 15.44,
+    "courbe": "PLATE",
+    "pente_2s10s": 0.25,
+    "tendance": "HAUSSIERE",
+    "ecart_ma200_pct": 6.392313898613877,
+    "credit": "RESSERREMENT",
+    "hy_oas": 2.7,
+    "hy_vs_ma60_pb": -1.8833333333332813,
+    "regime": "MOYENNE / PLATE / HAUSSIERE / RESSERREMENT"
+  },
+  "percentiles": {
+    "VIXCLS": {
+      "disponible": true,
+      "valeur": 15.44,
+      "date": "2026-09-17",
+      "n_obs_total": 2542,
+      "pct_252": 14.682539682539684,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 2542,
+        "cible": 252,
+        "ecart_pct": 908.73,
+        "etat": "suffisante"
+      },
+      "pct_2520": 36.46825396825397,
+      "n_obs_2520": 2520,
+      "profondeur_2520": {
+        "n_obs": 2542,
+        "cible": 2520,
+        "ecart_pct": 0.87,
+        "etat": "suffisante"
+      }
+    },
+    "T10Y2Y": {
+      "disponible": true,
+      "valeur": 0.25,
+      "date": "2026-09-18",
+      "n_obs_total": 2496,
+      "pct_252": 0.0,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 2496,
+        "cible": 252,
+        "ecart_pct": 890.48,
+        "etat": "suffisante"
+      },
+      "pct_2520": 38.90224358974359,
+      "n_obs_2520": 2496,
+      "profondeur_2520": {
+        "n_obs": 2496,
+        "cible": 2520,
+        "ecart_pct": -0.95,
+        "etat": "marginale"
+      }
+    },
+    "BAMLH0A0HYM2": {
+      "disponible": true,
+      "valeur": 2.7,
+      "date": "2026-09-17",
+      "n_obs_total": 787,
+      "pct_252": 11.904761904761903,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 787,
+        "cible": 252,
+        "ecart_pct": 212.3,
+        "etat": "suffisante"
+      },
+      "pct_2520": 9.91105463786531,
+      "n_obs_2520": 787,
+      "profondeur_2520": {
+        "n_obs": 787,
+        "cible": 2520,
+        "ecart_pct": -68.77,
+        "etat": "insuffisante"
+      }
+    },
+    "DGS10": {
+      "disponible": true,
+      "valeur": 4.94,
+      "date": "2026-09-17",
+      "n_obs_total": 2495,
+      "pct_252": 97.61904761904762,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 2495,
+        "cible": 252,
+        "ecart_pct": 890.08,
+        "etat": "suffisante"
+      },
+      "pct_2520": 99.67935871743488,
+      "n_obs_2520": 2495,
+      "profondeur_2520": {
+        "n_obs": 2495,
+        "cible": 2520,
+        "ecart_pct": -0.99,
+        "etat": "marginale"
+      }
+    },
+    "DFII10": {
+      "disponible": true,
+      "valeur": 2.61,
+      "date": "2026-09-17",
+      "n_obs_total": 2495,
+      "pct_252": 98.80952380952381,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 2495,
+        "cible": 252,
+        "ecart_pct": 890.08,
+        "etat": "suffisante"
+      },
+      "pct_2520": 99.87975951903807,
+      "n_obs_2520": 2495,
+      "profondeur_2520": {
+        "n_obs": 2495,
+        "cible": 2520,
+        "ecart_pct": -0.99,
+        "etat": "marginale"
+      }
+    }
+  },
+  "correlations": {
+    "n_actifs": 6,
+    "actifs": [
+      "SP500",
+      "NASDAQ100",
+      "OBLIG10A",
+      "DCOILBRENTEU",
+      "DEXUSEU",
+      "VIXCLS"
+    ],
+    "correlation_moyenne_signee": -0.010397931595507533,
+    "correlation_signee_max": {
+      "paire": "SP500 / NASDAQ100",
+      "valeur": 0.9334225616725418
+    },
+    "correlation_signee_min": {
+      "paire": "SP500 / VIXCLS",
+      "valeur": -0.7251803613978194
+    },
+    "correlation_absolue_moyenne_POUR_MEMOIRE": 0.24854893060004252,
+    "n_effectif_paris_correlation": 3.5430179941329976,
+    "n_effectif_paris_covariance": 1.3781085317831192,
+    "n_effectif_paris_opposable": 1.3781085317831192,
+    "base_n_eff_opposable": "covariance",
+    "motif_base_opposable": "la volatilité de panier est calculée à poids ÉGAUX sur les rendements bruts ; la matrice correspondant à cette pondération est la covariance. N_eff sur la corrélation décrirait un portefeuille pondéré en risque, qui n'est pas celui-ci.",
+    "n_effectif_paris": 1.3781085317831192,
+    "contributions_variance_pct": {
+      "SP500": -6.281172053225583,
+      "NASDAQ100": -7.785684869114666,
+      "OBLIG10A": 0.6641348153732081,
+      "DCOILBRENTEU": 18.07436034729238,
+      "DEXUSEU": 0.33513513141433615,
+      "VIXCLS": 94.99322662826032
+    },
+    "actif_dominant_variance": {
+      "actif": "VIXCLS",
+      "part_variance_pct": 94.99322662826032
+    },
+    "lambda_max_sur_n": 0.4413540032306192,
+    "ratio_diversification": 2.099791042903827,
+    "volatilite_panier_equipondere": 0.01166929179010742,
+    "note": "seule la corrélation SIGNÉE entre dans une limite ; |ρ| est publiée pour mémoire et n'est opposable à rien",
+    "matrice": {
+      "SP500": {
+        "SP500": 1.0,
+        "NASDAQ100": 0.9334225616725418,
+        "OBLIG10A": -0.1111550484824715,
+        "DCOILBRENTEU": 0.1875426509780535,
+        "DEXUSEU": 0.113930330246513,
+        "VIXCLS": -0.7251803613978194
+      },
+      "NASDAQ100": {
+        "SP500": 0.9334225616725418,
+        "NASDAQ100": 1.0,
+        "OBLIG10A": -0.05624565815640632,
+        "DCOILBRENTEU": 0.13219165277943185,
+        "DEXUSEU": 0.10135308917308122,
+        "VIXCLS": -0.7030907639693047
+      },
+      "OBLIG10A": {
+        "SP500": -0.1111550484824715,
+        "NASDAQ100": -0.05624565815640632,
+        "OBLIG10A": 1.0,
+        "DCOILBRENTEU": -0.17465832148786128,
+        "DEXUSEU": 0.199238296908074,
+        "VIXCLS": 0.11845391077631716
+      },
+      "DCOILBRENTEU": {
+        "SP500": 0.1875426509780535,
+        "NASDAQ100": 0.13219165277943185,
+        "OBLIG10A": -0.17465832148786128,
+        "DCOILBRENTEU": 1.0,
+        "DEXUSEU": -0.021347195157626727,
+        "VIXCLS": -0.10253430874170102
+      },
+      "DEXUSEU": {
+        "SP500": 0.113930330246513,
+        "NASDAQ100": 0.10135308917308122,
+        "OBLIG10A": 0.199238296908074,
+        "DCOILBRENTEU": -0.021347195157626727,
+        "DEXUSEU": 1.0,
+        "VIXCLS": -0.04788980907343439
+      },
+      "VIXCLS": {
+        "SP500": -0.7251803613978194,
+        "NASDAQ100": -0.7030907639693047,
+        "OBLIG10A": 0.11845391077631716,
+        "DCOILBRENTEU": -0.10253430874170102,
+        "DEXUSEU": -0.04788980907343439,
+        "VIXCLS": 1.0
+      }
+    }
+  },
+  "correlation_stress": {
+    "disponible": true,
+    "conditionnement": "EXOGÈNE — VIXCLS > percentile 80 (22.83)",
+    "n_seances_conditionnelles": 487,
+    "correlation_moyenne_signee_complet": -0.010397931595507533,
+    "correlation_moyenne_signee_stress": -0.009516006841722638,
+    "delta_observe": 0.0008819247537848948,
+    "null_correlation_constante": {
+      "n_simulations": 2000,
+      "delta_moyen": -0.00014640079992676213,
+      "ic90": [
+        -0.015342183054850052,
+        0.014931619630829363
+      ]
+    },
+    "ecart_au_null": 0.001028325553711657,
+    "significatif_a_90pct": false,
+    "methode_biaisee_pour_memoire": {
+      "conditionnement": "queue gauche 1 % du S&P 500, corrélations INCLUANT le S&P 500",
+      "correlation_moyenne_signee": 0.1040121206978272,
+      "artefact_estime": 0.11441005229333473,
+      "note": "biais de sélection Boyer-Gibson-Loretan — NON OPPOSABLE"
+    },
+    "reproduction_chiffre_doctrine": {
+      "disponible": true,
+      "construction": "moyenne des |ρ| sur le décile des pires séances du S&P 500, corrélations incluant le S&P 500. Appliquée ici au panier CORRIGÉ (10 ans converti en rendement obligataire) ; la même construction est appliquée au panier D'ORIGINE dans la clé `chiffre_doctrine_produit`, dont la valeur est CALCULÉE et non affirmée.",
+      "valeur_reproduite": 0.23158055494927338,
+      "valeur_complet": 0.24854893060004252,
+      "delta_observe": -0.01696837565076914,
+      "null_delta_moyen": -0.08169807915571675,
+      "null_ic90": [
+        -0.10412016513601802,
+        -0.05496660769158553
+      ],
+      "ecart_au_null": 0.06472970350494761,
+      "chiffre_doctrine_produit": {
+        "disponible": true,
+        "construction": "moyenne des |ρ| du panier D'ORIGINE (DGS10 en log(taux), non corrigé) sur le décile inférieur du S&P 500, corrélations incluant le S&P 500",
+        "actifs": [
+          "SP500",
+          "NASDAQ100",
+          "DGS10",
+          "DCOILBRENTEU",
+          "DEXUSEU",
+          "VIXCLS"
+        ],
+        "n_obs": 2440,
+        "n_obs_decile": 244,
+        "seuil_decile_sp500": -0.011119828189136349,
+        "valeur_produite": 0.25188161351471156,
+        "valeur_produite_arrondie": 0.2519,
+        "valeur_complet": 0.26871122090452815,
+        "chiffre_de_doctrine": 0.25,
+        "ecart_au_chiffre_de_doctrine": 0.0018816135147115554,
+        "reproduit": false
+      },
+      "ecart_panier_origine_vs_corrige": 0.02030105856543818,
+      "lecture": "la baisse brute est un ARTEFACT de sélection : sous corrélation CONSTANTE, la même construction fait baisser la mesure davantage encore. L'écart au null est de SIGNE OPPOSÉ à la lecture brute — la corrélation conditionnelle est au-dessus du null, pas en dessous."
+    }
+  },
+  "chiffre_doctrine_produit": {
+    "disponible": true,
+    "construction": "moyenne des |ρ| du panier D'ORIGINE (DGS10 en log(taux), non corrigé) sur le décile inférieur du S&P 500, corrélations incluant le S&P 500",
+    "actifs": [
+      "SP500",
+      "NASDAQ100",
+      "DGS10",
+      "DCOILBRENTEU",
+      "DEXUSEU",
+      "VIXCLS"
+    ],
+    "n_obs": 2440,
+    "n_obs_decile": 244,
+    "seuil_decile_sp500": -0.011119828189136349,
+    "valeur_produite": 0.25188161351471156,
+    "valeur_produite_arrondie": 0.2519,
+    "valeur_complet": 0.26871122090452815,
+    "chiffre_de_doctrine": 0.25,
+    "ecart_au_chiffre_de_doctrine": 0.0018816135147115554,
+    "reproduit": false
+  },
+  "episodes_stress": [
+    {
+      "fin_fenetre": "2020-03-20",
+      "perte_20_seances_pct": -30.943899333383275
+    },
+    {
+      "fin_fenetre": "2019-01-03",
+      "perte_20_seances_pct": -12.273641130029366
+    },
+    {
+      "fin_fenetre": "2022-10-10",
+      "perte_20_seances_pct": -12.11606628049272
+    },
+    {
+      "fin_fenetre": "2025-04-04",
+      "perte_20_seances_pct": -12.064053239055916
+    },
+    {
+      "fin_fenetre": "2022-05-18",
+      "perte_20_seances_pct": -12.014261848434272
+    }
+  ],
+  "veto": "AUCUNE IDEE SOUMISE",
+  "verdicts_veto": [],
+  "source_veto": {
+    "statut": "OK",
+    "examinable": true,
+    "motif": "source lue",
+    "chemin": "trading_resultats.json"
+  },
+  "alertes": [
+    {
+      "type": "VAR",
+      "niveau": "ALERTE",
+      "mesure": "-3.30 %",
+      "seuil": "-3.00 %",
+      "action_exigee": "VaR quotidienne du portefeuille de référence au-delà de la limite : réduction de l'exposition brute exigée."
+    },
+    {
+      "type": "BACKTEST_VAR",
+      "niveau": "ALERTE",
+      "mesure": "aucune cellule non rejetée",
+      "seuil": "p_conjoint ≥ 0.05",
+      "action_exigee": "Toutes les cellules de VaR sont rejetées par le test conjoint (dépassements groupés). La limite de VaR est déclarée NON FONDÉE : le veto s'appuie sur la limite de stress."
+    },
+    {
+      "type": "CORRELATION_MAX",
+      "niveau": "ALERTE",
+      "mesure": "0.933 (SP500 / NASDAQ100)",
+      "seuil": "maximum > 0.9",
+      "action_exigee": "Paire de corrélation signée extrême : doublon, à traiter comme position unique (charte §4.2 / §4.5)."
+    },
+    {
+      "type": "CONCENTRATION",
+      "niveau": "ALERTE",
+      "mesure": "N_eff covariance 1.378 (N_eff corrélation 3.543, non opposable)",
+      "seuil": "3.0",
+      "action_exigee": "Nombre effectif de paris insuffisant sur la matrice OPPOSABLE : diversification apparente, pas réelle. VIXCLS porte 95.0 % de la variance du panier."
+    }
+  ],
+  "n_alertes_cycle": 4,
+  "n_alertes_non_traitees": 4,
+  "journal": {
+    "lignes_alertes_brutes": 4,
+    "alertes_uniques": 4,
+    "cle_de_dedoublonnage": "(type, niveau) — la date en est SORTIE (G-10)",
+    "clotures": 0,
+    "n_non_traitees": 4,
+    "non_traitees": [
+      {
+        "id": "AL-b9f25fca",
+        "type": "VAR",
+        "niveau": "ALERTE",
+        "premiere_date_donnees": "2026-09-18",
+        "derniere_date_donnees": "2026-09-18",
+        "derniere_mesure": "-3.30 %",
+        "occurrences": 1
+      },
+      {
+        "id": "AL-360d30da",
+        "type": "BACKTEST_VAR",
+        "niveau": "ALERTE",
+        "premiere_date_donnees": "2026-09-18",
+        "derniere_date_donnees": "2026-09-18",
+        "derniere_mesure": "aucune cellule non rejetée",
+        "occurrences": 1
+      },
+      {
+        "id": "AL-e3f5bdc4",
+        "type": "CORRELATION_MAX",
+        "niveau": "ALERTE",
+        "premiere_date_donnees": "2026-09-18",
+        "derniere_date_donnees": "2026-09-18",
+        "derniere_mesure": "0.933 (SP500 / NASDAQ100)",
+        "occurrences": 1
+      },
+      {
+        "id": "AL-d4a6b113",
+        "type": "CONCENTRATION",
+        "niveau": "ALERTE",
+        "premiere_date_donnees": "2026-09-18",
+        "derniere_date_donnees": "2026-09-18",
+        "derniere_mesure": "N_eff covariance 1.378 (N_eff corrélation 3.543, non opposable)",
+        "occurrences": 1
+      }
+    ]
+  },
+  "constantes": {
+    "n_constantes_materielles": 37,
+    "n_tracables_charte": 6,
+    "n_proprietes": 14,
+    "n_constantes_libres": 17,
+    "tracables_charte": {
+      "LIMITE_CORRELATION": "charte §4.2",
+      "LIMITE_DRAWDOWN_ALERTE": "charte §4.3",
+      "LIMITE_DRAWDOWN_COUPE_CIRCUIT": "charte §4.3",
+      "LIMITE_DRAWDOWN_REDUCTION": "charte §4.3",
+      "LIMITE_DRAWDOWN_SUSPENSION": "charte §4.3",
+      "LIMITE_TAILLE_PCT": "charte §4.1"
+    },
+    "proprietes": [
+      "CORRELATION_BORNE",
+      "DUREE_OBLIGATAIRE_10A",
+      "GRAINE",
+      "MIN_OBS_QUEUE",
+      "NIVEAUX_VAR",
+      "N_BOOTSTRAP_ERREUR",
+      "N_BOOTSTRAP_KELLY",
+      "N_SIM_CALIBRATION_BACKTEST",
+      "N_SIM_NULL_CORR",
+      "PERTE_STOP_MAX_PLAUSIBLE_PCT",
+      "SEUIL_BACKTEST",
+      "SEUIL_KURT_CF",
+      "TAILLE_MAX_PLAUSIBLE_PCT",
+      "TAILLE_MIN_PLAUSIBLE_PCT"
+    ],
+    "constantes_libres": [
+      "BACKTEST_BURN_IN",
+      "FENETRES_VAR",
+      "KELLY_DEFAUT",
+      "KELLY_PLAFOND",
+      "LIMITE_CORRELATION_MAX",
+      "LIMITE_CORRELATION_MOYENNE",
+      "LIMITE_N_EFF_MIN",
+      "LIMITE_PERTE_STRESS_PCT",
+      "LIMITE_VAR_PORTEFEUILLE_PCT",
+      "LIMITE_VAR_POSITION_PCT",
+      "METHODE_VAR_RETENUE",
+      "MIN_SEANCES_PAIRE",
+      "PANIER_NOMS",
+      "PERCENTILE_VIX_STRESS",
+      "REGLE_FENETRE_LIMITE",
+      "REGLE_VALEUR_CRITIQUE_BACKTEST",
+      "SEUILS_REGIME"
+    ],
+    "non_enregistrees": [],
+    "enregistrees_inexistantes": [],
+    "registre_complet": true,
+    "limite_var_portefeuille_origine": "posée à la main, non dérivée — aucune limite de VaR ne figure dans la charte fondatrice, ni en partie IV ni ailleurs"
+  }
+}
