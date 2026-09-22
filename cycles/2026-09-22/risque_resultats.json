@@ -1,5 +1,5 @@
 {
-  "date_arrete": "2026-09-21",
+  "date_arrete": "2026-09-22",
   "date_donnees_sp500": "2026-09-21",
   "n_series": 26,
   "n_cotations_sp500": 2510,
@@ -1708,9 +1708,9 @@
   ],
   "regime": {
     "volatilite": "BASSE",
-    "vix": 14.81,
+    "vix": 14.87,
     "courbe": "PLATE",
-    "pente_2s10s": 0.2,
+    "pente_2s10s": 0.25,
     "tendance": "HAUSSIERE",
     "ecart_ma200_pct": 8.027145063571496,
     "credit": "RESSERREMENT",
@@ -1721,45 +1721,45 @@
   "percentiles": {
     "VIXCLS": {
       "disponible": true,
-      "valeur": 14.81,
-      "date": "2026-09-18",
-      "n_obs_total": 2542,
-      "pct_252": 6.349206349206349,
+      "valeur": 14.87,
+      "date": "2026-09-21",
+      "n_obs_total": 2543,
+      "pct_252": 7.142857142857142,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2542,
+        "n_obs": 2543,
         "cible": 252,
-        "ecart_pct": 908.73,
+        "ecart_pct": 909.13,
         "etat": "suffisante"
       },
-      "pct_2520": 31.706349206349206,
+      "pct_2520": 32.22222222222222,
       "n_obs_2520": 2520,
       "profondeur_2520": {
-        "n_obs": 2542,
+        "n_obs": 2543,
         "cible": 2520,
-        "ecart_pct": 0.87,
+        "ecart_pct": 0.91,
         "etat": "suffisante"
       }
     },
     "T10Y2Y": {
       "disponible": true,
-      "valeur": 0.2,
-      "date": "2026-09-21",
-      "n_obs_total": 2496,
-      "pct_252": 0.0,
+      "valeur": 0.25,
+      "date": "2026-09-22",
+      "n_obs_total": 2497,
+      "pct_252": 0.3968253968253968,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2496,
+        "n_obs": 2497,
         "cible": 252,
-        "ecart_pct": 890.48,
+        "ecart_pct": 890.87,
         "etat": "suffisante"
       },
-      "pct_2520": 33.97435897435898,
-      "n_obs_2520": 2496,
+      "pct_2520": 38.926712054465355,
+      "n_obs_2520": 2497,
       "profondeur_2520": {
-        "n_obs": 2496,
+        "n_obs": 2497,
         "cible": 2520,
-        "ecart_pct": -0.95,
+        "ecart_pct": -0.91,
         "etat": "marginale"
       }
     },
@@ -1787,45 +1787,45 @@
     },
     "DGS10": {
       "disponible": true,
-      "valeur": 5.01,
-      "date": "2026-09-18",
-      "n_obs_total": 2495,
-      "pct_252": 99.20634920634922,
+      "valeur": 4.96,
+      "date": "2026-09-21",
+      "n_obs_total": 2496,
+      "pct_252": 97.61904761904762,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2495,
+        "n_obs": 2496,
         "cible": 252,
-        "ecart_pct": 890.08,
+        "ecart_pct": 890.48,
         "etat": "suffisante"
       },
-      "pct_2520": 99.91983967935872,
-      "n_obs_2520": 2495,
+      "pct_2520": 99.71955128205127,
+      "n_obs_2520": 2496,
       "profondeur_2520": {
-        "n_obs": 2495,
+        "n_obs": 2496,
         "cible": 2520,
-        "ecart_pct": -0.99,
+        "ecart_pct": -0.95,
         "etat": "marginale"
       }
     },
     "DFII10": {
       "disponible": true,
-      "valeur": 2.68,
-      "date": "2026-09-18",
-      "n_obs_total": 2495,
-      "pct_252": 99.20634920634922,
+      "valeur": 2.62,
+      "date": "2026-09-21",
+      "n_obs_total": 2496,
+      "pct_252": 98.4126984126984,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2495,
+        "n_obs": 2496,
         "cible": 252,
-        "ecart_pct": 890.08,
+        "ecart_pct": 890.48,
         "etat": "suffisante"
       },
-      "pct_2520": 99.91983967935872,
-      "n_obs_2520": 2495,
+      "pct_2520": 99.83974358974359,
+      "n_obs_2520": 2496,
       "profondeur_2520": {
-        "n_obs": 2495,
+        "n_obs": 2496,
         "cible": 2520,
-        "ecart_pct": -0.99,
+        "ecart_pct": -0.95,
         "etat": "marginale"
       }
     }
@@ -2066,7 +2066,7 @@
     {
       "type": "REGIME",
       "niveau": "INFORMATION",
-      "mesure": "VIX 14.81",
+      "mesure": "VIX 14.87",
       "seuil": "< 15.0",
       "action_exigee": "Politique de couverture : achat systématique SI intérêt assurable (bêta ≥ 0,15) ET VIX3M ≤ 17."
     }
@@ -2081,48 +2081,48 @@
     "n_non_traitees": 5,
     "non_traitees": [
       {
-        "id": "AL-8689c5f0",
+        "id": "AL-3ee86ff6",
         "type": "VAR",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-21",
-        "derniere_date_donnees": "2026-09-21",
+        "premiere_date_donnees": "2026-09-22",
+        "derniere_date_donnees": "2026-09-22",
         "derniere_mesure": "-3.30 %",
         "occurrences": 1
       },
       {
-        "id": "AL-7f2d4576",
+        "id": "AL-ee6079eb",
         "type": "BACKTEST_VAR",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-21",
-        "derniere_date_donnees": "2026-09-21",
+        "premiere_date_donnees": "2026-09-22",
+        "derniere_date_donnees": "2026-09-22",
         "derniere_mesure": "aucune cellule non rejetée",
         "occurrences": 1
       },
       {
-        "id": "AL-871d1a9e",
+        "id": "AL-162ea002",
         "type": "CORRELATION_MAX",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-21",
-        "derniere_date_donnees": "2026-09-21",
+        "premiere_date_donnees": "2026-09-22",
+        "derniere_date_donnees": "2026-09-22",
         "derniere_mesure": "0.933 (SP500 / NASDAQ100)",
         "occurrences": 1
       },
       {
-        "id": "AL-478ce539",
+        "id": "AL-887e5cb4",
         "type": "CONCENTRATION",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-21",
-        "derniere_date_donnees": "2026-09-21",
+        "premiere_date_donnees": "2026-09-22",
+        "derniere_date_donnees": "2026-09-22",
         "derniere_mesure": "N_eff covariance 1.379 (N_eff corrélation 3.543, non opposable)",
         "occurrences": 1
       },
       {
-        "id": "AL-608fc7ea",
+        "id": "AL-87a1c902",
         "type": "REGIME",
         "niveau": "INFORMATION",
-        "premiere_date_donnees": "2026-09-21",
-        "derniere_date_donnees": "2026-09-21",
-        "derniere_mesure": "VIX 14.81",
+        "premiere_date_donnees": "2026-09-22",
+        "derniere_date_donnees": "2026-09-22",
+        "derniere_mesure": "VIX 14.87",
         "occurrences": 1
       }
     ]
