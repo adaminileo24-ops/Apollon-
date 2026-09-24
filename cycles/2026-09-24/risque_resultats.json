@@ -1,7 +1,7 @@
 {
-  "date_arrete": "2026-09-23",
+  "date_arrete": "2026-09-24",
   "date_donnees_sp500": "2026-09-23",
-  "n_series": 25,
+  "n_series": 26,
   "n_cotations_sp500": 2512,
   "n_rendements": 2511,
   "methode_var_retenue_ex_ante": "historique",
@@ -1710,13 +1710,13 @@
     "volatilite": "BASSE",
     "vix": 14.21,
     "courbe": "PLATE",
-    "pente_2s10s": 0.26,
+    "pente_2s10s": 0.31,
     "tendance": "HAUSSIERE",
     "ecart_ma200_pct": 7.079509324857569,
-    "credit": "RESSERREMENT",
-    "hy_oas": 2.68,
-    "hy_vs_ma60_pb": -3.283333333333349,
-    "regime": "BASSE / PLATE / HAUSSIERE / RESSERREMENT"
+    "credit": "ELARGISSEMENT",
+    "hy_oas": 2.73,
+    "hy_vs_ma60_pb": 1.7333333333333645,
+    "regime": "BASSE / PLATE / HAUSSIERE / ELARGISSEMENT"
   },
   "percentiles": {
     "VIXCLS": {
@@ -1743,10 +1743,54 @@
     },
     "T10Y2Y": {
       "disponible": true,
-      "valeur": 0.26,
+      "valeur": 0.31,
+      "date": "2026-09-24",
+      "n_obs_total": 2499,
+      "pct_252": 4.761904761904762,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 2499,
+        "cible": 252,
+        "ecart_pct": 891.67,
+        "etat": "suffisante"
+      },
+      "pct_2520": 45.53821528611445,
+      "n_obs_2520": 2499,
+      "profondeur_2520": {
+        "n_obs": 2499,
+        "cible": 2520,
+        "ecart_pct": -0.83,
+        "etat": "marginale"
+      }
+    },
+    "BAMLH0A0HYM2": {
+      "disponible": true,
+      "valeur": 2.73,
+      "date": "2026-09-23",
+      "n_obs_total": 787,
+      "pct_252": 25.793650793650798,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 787,
+        "cible": 252,
+        "ecart_pct": 212.3,
+        "etat": "suffisante"
+      },
+      "pct_2520": 15.501905972045742,
+      "n_obs_2520": 787,
+      "profondeur_2520": {
+        "n_obs": 787,
+        "cible": 2520,
+        "ecart_pct": -68.77,
+        "etat": "insuffisante"
+      }
+    },
+    "DGS10": {
+      "disponible": true,
+      "valeur": 5.11,
       "date": "2026-09-23",
       "n_obs_total": 2498,
-      "pct_252": 1.1904761904761905,
+      "pct_252": 99.60317460317461,
       "n_obs_252": 252,
       "profondeur_252": {
         "n_obs": 2498,
@@ -1754,7 +1798,7 @@
         "ecart_pct": 891.27,
         "etat": "suffisante"
       },
-      "pct_2520": 40.27221777421938,
+      "pct_2520": 99.95996797437951,
       "n_obs_2520": 2498,
       "profondeur_2520": {
         "n_obs": 2498,
@@ -1763,69 +1807,25 @@
         "etat": "marginale"
       }
     },
-    "BAMLH0A0HYM2": {
-      "disponible": true,
-      "valeur": 2.68,
-      "date": "2026-09-22",
-      "n_obs_total": 786,
-      "pct_252": 7.936507936507936,
-      "n_obs_252": 252,
-      "profondeur_252": {
-        "n_obs": 786,
-        "cible": 252,
-        "ecart_pct": 211.9,
-        "etat": "suffisante"
-      },
-      "pct_2520": 7.124681933842239,
-      "n_obs_2520": 786,
-      "profondeur_2520": {
-        "n_obs": 786,
-        "cible": 2520,
-        "ecart_pct": -68.81,
-        "etat": "insuffisante"
-      }
-    },
-    "DGS10": {
-      "disponible": true,
-      "valeur": 4.96,
-      "date": "2026-09-22",
-      "n_obs_total": 2497,
-      "pct_252": 97.22222222222221,
-      "n_obs_252": 252,
-      "profondeur_252": {
-        "n_obs": 2497,
-        "cible": 252,
-        "ecart_pct": 890.87,
-        "etat": "suffisante"
-      },
-      "pct_2520": 99.67961553864637,
-      "n_obs_2520": 2497,
-      "profondeur_2520": {
-        "n_obs": 2497,
-        "cible": 2520,
-        "ecart_pct": -0.91,
-        "etat": "marginale"
-      }
-    },
     "DFII10": {
       "disponible": true,
-      "valeur": 2.63,
-      "date": "2026-09-22",
-      "n_obs_total": 2497,
-      "pct_252": 98.80952380952381,
+      "valeur": 2.76,
+      "date": "2026-09-23",
+      "n_obs_total": 2498,
+      "pct_252": 99.60317460317461,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2497,
+        "n_obs": 2498,
         "cible": 252,
-        "ecart_pct": 890.87,
+        "ecart_pct": 891.27,
         "etat": "suffisante"
       },
-      "pct_2520": 99.8798558269924,
-      "n_obs_2520": 2497,
+      "pct_2520": 99.95996797437951,
+      "n_obs_2520": 2498,
       "profondeur_2520": {
-        "n_obs": 2497,
+        "n_obs": 2498,
         "cible": 2520,
-        "ecart_pct": -0.91,
+        "ecart_pct": -0.87,
         "etat": "marginale"
       }
     }
@@ -2081,47 +2081,47 @@
     "n_non_traitees": 5,
     "non_traitees": [
       {
-        "id": "AL-2e29f090",
+        "id": "AL-62114bd1",
         "type": "VAR",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-23",
-        "derniere_date_donnees": "2026-09-23",
+        "premiere_date_donnees": "2026-09-24",
+        "derniere_date_donnees": "2026-09-24",
         "derniere_mesure": "-3.30 %",
         "occurrences": 1
       },
       {
-        "id": "AL-4eaeaf4d",
+        "id": "AL-349f1528",
         "type": "BACKTEST_VAR",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-23",
-        "derniere_date_donnees": "2026-09-23",
+        "premiere_date_donnees": "2026-09-24",
+        "derniere_date_donnees": "2026-09-24",
         "derniere_mesure": "aucune cellule non rejetée",
         "occurrences": 1
       },
       {
-        "id": "AL-d9e94e73",
+        "id": "AL-ecdc11b0",
         "type": "CORRELATION_MAX",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-23",
-        "derniere_date_donnees": "2026-09-23",
+        "premiere_date_donnees": "2026-09-24",
+        "derniere_date_donnees": "2026-09-24",
         "derniere_mesure": "0.933 (SP500 / NASDAQ100)",
         "occurrences": 1
       },
       {
-        "id": "AL-89fa556d",
+        "id": "AL-c8e3fd9d",
         "type": "CONCENTRATION",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-09-23",
-        "derniere_date_donnees": "2026-09-23",
+        "premiere_date_donnees": "2026-09-24",
+        "derniere_date_donnees": "2026-09-24",
         "derniere_mesure": "N_eff covariance 1.379 (N_eff corrélation 3.544, non opposable)",
         "occurrences": 1
       },
       {
-        "id": "AL-3b3f803c",
+        "id": "AL-133d8584",
         "type": "REGIME",
         "niveau": "INFORMATION",
-        "premiere_date_donnees": "2026-09-23",
-        "derniere_date_donnees": "2026-09-23",
+        "premiere_date_donnees": "2026-09-24",
+        "derniere_date_donnees": "2026-09-24",
         "derniere_mesure": "VIX 14.21",
         "occurrences": 1
       }
