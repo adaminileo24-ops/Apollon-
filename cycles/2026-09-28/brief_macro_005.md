@@ -1,6 +1,6 @@
 # BRIEF MACRO n° 005 — arrêté au 2026-09-22
 
-*Produit par `apollon_macro.py` le 2026-09-28T11:42:00+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
+*Produit par `apollon_macro.py` le 2026-09-28T23:57:20+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
 
 **Grille de scénarios (R-029, §11), déclarée avant toute lecture de données et empreintée :** `[-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0]` · empreinte SHA-256 `6aaeb3863c875923…` · symétrique : True · horizon 60 séances (3 mois pour les séries mensuelles).
 
@@ -28,20 +28,20 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 | série | rôle déclaré | valeur | date | retard | n obs | profondeur | pct 1 an | pct 5 ans | pct complet |
 |---|---|---:|---|---:|---:|---:|---:|---:|---:|
-| BAMLC0A0CM | risque_credit_ig | 0.77 | 2026-09-22 | 0 | 784 | 2.99 ans | 31.0 | REFUSÉ (insuffisante, -38 %) | 13.6 |
-| BAMLH0A0HYM2 | risque_credit_hy | 2.68 | 2026-09-22 | 0 | 785 | 2.99 ans | 10.3 | REFUSÉ (insuffisante, -38 %) | 8.7 |
+| BAMLC0A0CM | risque_credit_ig | 0.77 | 2026-09-22 | 0 | 781 | 2.98 ans | 31.0 | REFUSÉ (insuffisante, -38 %) | 13.7 |
+| BAMLH0A0HYM2 | risque_credit_hy | 2.68 | 2026-09-22 | 0 | 782 | 2.98 ans | 10.3 | REFUSÉ (insuffisante, -38 %) | 8.7 |
 | CPIAUCSL | inflation_globale | 334.1 | 2026-08-01 | 52 | 119 | 9.91 ans | 100.0 | 100.0 | 100.0 |
 | CPILFESL | inflation_sous_jacente | 337.8 | 2026-08-01 | 52 | 119 | 9.91 ans | 100.0 | 100.0 | 100.0 |
 | DCOILBRENTEU | prix_energie | 114.9 | 2026-09-22 | 0 | 2530 | 9.98 ans | 88.9 | 94.2 | 97.1 |
 | DCOILWTICO | prix_energie_wti | 96.41 | 2026-09-22 | 0 | 2494 | 9.98 ans | 81.0 | 87.8 | 93.8 |
-| DEXJPUS | devise_usdjpy | 156.9 | 2026-09-18 | 2 | 2488 | 9.97 ans | 43.7 | 84.8 | 92.3 |
-| DEXUSEU | devise_eurusd | 1.146 | 2026-09-18 | 2 | 2488 | 9.97 ans | 11.9 | 73.2 | 62.4 |
+| DEXJPUS | devise_usdjpy | 157.6 | 2026-09-22 | 0 | 2490 | 9.98 ans | 49.2 | 87.3 | 93.6 |
+| DEXUSEU | devise_eurusd | 1.143 | 2026-09-22 | 0 | 2490 | 9.98 ans | 8.7 | 72.1 | 61.2 |
 | DFF | politique_monetaire | 3.88 | 2026-09-22 | 0 | 3645 | 9.98 ans | 100.0 | 25.0 | 70.8 |
 | DFII10 | taux_reel_10a | 2.63 | 2026-09-22 | 0 | 2493 | 9.98 ans | 99.2 | 99.8 | 99.9 |
 | DGS10 | taux_nominal_10a | 4.96 | 2026-09-22 | 0 | 2493 | 9.98 ans | 98.4 | 99.6 | 99.8 |
 | DGS2 | taux_nominal_2a | 4.71 | 2026-09-22 | 0 | 2493 | 9.98 ans | 98.8 | 86.0 | 92.9 |
 | DGS30 | taux_nominal_30a | 5.29 | 2026-09-22 | 0 | 2493 | 9.98 ans | 97.2 | 99.4 | 99.7 |
-| DTWEXBGS | dollar_large | 119.5 | 2026-09-18 | 2 | 2486 | 9.97 ans | 45.6 | 31.0 | 62.1 |
+| DTWEXBGS | dollar_large | 119.6 | 2026-09-22 | 0 | 2488 | 9.98 ans | 47.2 | 32.1 | 62.8 |
 | INDPRO | activite_industrielle | 103.1 | 2026-08-01 | 52 | 120 | 9.91 ans | 100.0 | 100.0 | 92.5 |
 | NASDAQ100 | prix_actions_tech | 3.073e+04 | 2026-09-22 | 0 | 2508 | 9.98 ans | 100.0 | 100.0 | 100.0 |
 | OVXCLS | volatilite_implicite_petrole | 51.89 | 2026-09-22 | 0 | 2509 | 9.98 ans | 53.6 | 82.9 | 86.6 |
@@ -72,7 +72,7 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 - identité comptable : T10YIE = DGS10 - DFII10 — T10YIE, DGS10, DFII10 (résidu max 0.0000)
 - identité comptable : T10Y2Y = DGS10 - DGS2 — T10Y2Y, DGS10, DGS2 (résidu max 0.0000)
-- corrélation des variations à 60 séances : BAMLC0A0CM / BAMLH0A0HYM2 = +0.941 sur 724 points (seuil 0.9)
+- corrélation des variations à 60 séances : BAMLC0A0CM / BAMLH0A0HYM2 = +0.941 sur 721 points (seuil 0.9)
 - corrélation des variations à 60 séances : DGS10 / DGS30 = +0.966 sur 2433 points (seuil 0.9)
 - corrélation des variations à 60 séances : INDPRO / PAYEMS = +0.913 sur 117 points (seuil 0.9)
 - corrélation des variations à 60 séances : INDPRO / UNRATE = -0.917 sur 116 points (seuil 0.9)
@@ -88,17 +88,17 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 σ est **mesuré** sur chaque série, jamais choisi. Les probabilités sont les **fréquences historiques** dans chaque bande, jamais un jugement. L'effectif de chaque bande est publié ; sous 20 observations la bande est déclarée NON ESTIMABLE. La colonne « emp./gauss. » est la double confrontation exigée par §11.5 : tout écart supérieur à un facteur 2 est déclaré (⚠).
 
-**BAMLH0A0HYM2** (niveau) — σ à 60 pas = **0.45600** · estimateurs croisés : racine-h 0.53783, blocs disjoints 0.46844 (écart relatif 17.9 %) · dérive d'échantillon -0.11319 (-0.25 σ) · 725 variations chevauchantes, 12 blocs indépendants · 2023-09-26 → 2026-09-22
+**BAMLH0A0HYM2** (niveau) — σ à 60 pas = **0.45591** · estimateurs croisés : racine-h 0.53834, blocs disjoints 0.42420 (écart relatif 26.9 %) · dérive d'échantillon -0.11122 (-0.24 σ) · 722 variations chevauchantes, 12 blocs indépendants · 2023-09-29 → 2026-09-22
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.6840 | 55 | 1 | 0.0759 | 0.0668 | 1.14 | oui |
-| -1.0 | -0.6840 | -0.3420 | 123 | 2 | 0.1697 | 0.1598 | 1.06 | oui |
-| -0.5 | -0.3420 | -0.1140 | 194 | 3 | 0.2676 | 0.1747 | 1.53 | oui |
-| +0.0 | -0.1140 | +0.1140 | 193 | 3 | 0.2662 | 0.1974 | 1.35 | oui |
-| +0.5 | +0.1140 | +0.3420 | 80 | 1 | 0.1103 | 0.1747 | 0.63 | oui |
-| +1.0 | +0.3420 | +0.6840 | 51 | 1 | 0.0703 | 0.1598 | 0.44 ⚠ | oui |
-| +2.0 | +0.6840 | +∞ | 29 | 0 | 0.0400 | 0.0668 | 0.60 | oui |
+| -2.0 | −∞ | -0.6839 | 55 | 1 | 0.0762 | 0.0668 | 1.14 | oui |
+| -1.0 | -0.6839 | -0.3419 | 120 | 2 | 0.1662 | 0.1598 | 1.04 | oui |
+| -0.5 | -0.3419 | -0.1140 | 194 | 3 | 0.2687 | 0.1747 | 1.54 | oui |
+| +0.0 | -0.1140 | +0.1140 | 193 | 3 | 0.2673 | 0.1974 | 1.35 | oui |
+| +0.5 | +0.1140 | +0.3419 | 80 | 1 | 0.1108 | 0.1747 | 0.63 | oui |
+| +1.0 | +0.3419 | +0.6839 | 51 | 1 | 0.0706 | 0.1598 | 0.44 ⚠ | oui |
+| +2.0 | +0.6839 | +∞ | 29 | 0 | 0.0402 | 0.0668 | 0.60 | oui |
 
 **DCOILBRENTEU** (log) — σ à 60 pas = **0.24632** · estimateurs croisés : racine-h 0.24776, blocs disjoints 0.26940 (écart relatif 9.4 %) · dérive d'échantillon +0.01570 (+0.06 σ) · 2470 variations chevauchantes, 41 blocs indépendants · 2016-09-30 → 2026-09-22
 
@@ -114,29 +114,29 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 **DCOILWTICO** — non scénarisable : convention log inapplicable : 1 observation(s) non strictement positive(s), minimum -36.98 le 2020-04-20. Le prix a été négatif : aucun log-rendement n'existe. La série est déclarée NON SCÉNARISABLE plutôt que corrigée en silence.
 
-**DEXJPUS** (log) — σ à 60 pas = **0.04239** · estimateurs croisés : racine-h 0.04391, blocs disjoints 0.04565 (écart relatif 7.7 %) · dérive d'échantillon +0.00941 (+0.22 σ) · 2428 variations chevauchantes, 40 blocs indépendants · 2016-09-30 → 2026-09-18
+**DEXJPUS** (log) — σ à 60 pas = **0.04238** · estimateurs croisés : racine-h 0.04390, blocs disjoints 0.04565 (écart relatif 7.7 %) · dérive d'échantillon +0.00938 (+0.22 σ) · 2430 variations chevauchantes, 40 blocs indépendants · 2016-09-30 → 2026-09-22
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
 | -2.0 | −∞ | -0.0636 | 103 | 2 | 0.0424 | 0.0668 | 0.63 | oui |
 | -1.0 | -0.0636 | -0.0318 | 239 | 4 | 0.0984 | 0.1598 | 0.62 | oui |
-| -0.5 | -0.0318 | -0.0106 | 377 | 6 | 0.1553 | 0.1747 | 0.89 | oui |
-| +0.0 | -0.0106 | +0.0106 | 499 | 8 | 0.2055 | 0.1974 | 1.04 | oui |
-| +0.5 | +0.0106 | +0.0318 | 545 | 9 | 0.2245 | 0.1747 | 1.29 | oui |
-| +1.0 | +0.0318 | +0.0636 | 472 | 8 | 0.1944 | 0.1598 | 1.22 | oui |
-| +2.0 | +0.0636 | +∞ | 193 | 3 | 0.0795 | 0.0668 | 1.19 | oui |
+| -0.5 | -0.0318 | -0.0106 | 379 | 6 | 0.1560 | 0.1747 | 0.89 | oui |
+| +0.0 | -0.0106 | +0.0106 | 499 | 8 | 0.2053 | 0.1974 | 1.04 | oui |
+| +0.5 | +0.0106 | +0.0318 | 543 | 9 | 0.2235 | 0.1747 | 1.28 | oui |
+| +1.0 | +0.0318 | +0.0636 | 474 | 8 | 0.1951 | 0.1598 | 1.22 | oui |
+| +2.0 | +0.0636 | +∞ | 193 | 3 | 0.0794 | 0.0668 | 1.19 | oui |
 
-**DEXUSEU** (log) — σ à 60 pas = **0.03447** · estimateurs croisés : racine-h 0.03468, blocs disjoints 0.03534 (écart relatif 2.5 %) · dérive d'échantillon +0.00160 (+0.05 σ) · 2428 variations chevauchantes, 40 blocs indépendants · 2016-09-30 → 2026-09-18
+**DEXUSEU** (log) — σ à 60 pas = **0.03445** · estimateurs croisés : racine-h 0.03467, blocs disjoints 0.03534 (écart relatif 2.6 %) · dérive d'échantillon +0.00160 (+0.05 σ) · 2430 variations chevauchantes, 40 blocs indépendants · 2016-09-30 → 2026-09-22
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.0517 | 134 | 2 | 0.0552 | 0.0668 | 0.83 | oui |
-| -1.0 | -0.0517 | -0.0259 | 321 | 5 | 0.1322 | 0.1598 | 0.83 | oui |
-| -0.5 | -0.0259 | -0.0086 | 507 | 8 | 0.2088 | 0.1747 | 1.20 | oui |
-| +0.0 | -0.0086 | +0.0086 | 612 | 10 | 0.2521 | 0.1974 | 1.28 | oui |
-| +0.5 | +0.0086 | +0.0259 | 326 | 5 | 0.1343 | 0.1747 | 0.77 | oui |
-| +1.0 | +0.0259 | +0.0517 | 304 | 5 | 0.1252 | 0.1598 | 0.78 | oui |
-| +2.0 | +0.0517 | +∞ | 224 | 4 | 0.0923 | 0.0668 | 1.38 | oui |
+| -2.0 | −∞ | -0.0517 | 134 | 2 | 0.0551 | 0.0668 | 0.83 | oui |
+| -1.0 | -0.0517 | -0.0258 | 322 | 5 | 0.1325 | 0.1598 | 0.83 | oui |
+| -0.5 | -0.0258 | -0.0086 | 506 | 8 | 0.2082 | 0.1747 | 1.19 | oui |
+| +0.0 | -0.0086 | +0.0086 | 614 | 10 | 0.2527 | 0.1974 | 1.28 | oui |
+| +0.5 | +0.0086 | +0.0258 | 326 | 5 | 0.1342 | 0.1747 | 0.77 | oui |
+| +1.0 | +0.0258 | +0.0517 | 304 | 5 | 0.1251 | 0.1598 | 0.78 | oui |
+| +2.0 | +0.0517 | +∞ | 224 | 4 | 0.0922 | 0.0668 | 1.38 | oui |
 
 **DGS10** (niveau) — σ à 60 pas = **0.42275** · estimateurs croisés : racine-h 0.41390, blocs disjoints 0.39369 (écart relatif 7.4 %) · dérive d'échantillon +0.06362 (+0.15 σ) · 2433 variations chevauchantes, 41 blocs indépendants · 2016-09-30 → 2026-09-22
 
@@ -174,17 +174,17 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | +1.0 | +0.2737 | +0.5474 | 394 | 7 | 0.1619 | 0.1598 | 1.01 | oui |
 | +2.0 | +0.5474 | +∞ | 207 | 3 | 0.0851 | 0.0668 | 1.27 | oui |
 
-**DTWEXBGS** (log) — σ à 60 pas = **0.02597** · estimateurs croisés : racine-h 0.02405, blocs disjoints 0.02758 (écart relatif 14.7 %) · dérive d'échantillon +0.00081 (+0.03 σ) · 2426 variations chevauchantes, 40 blocs indépendants · 2016-09-30 → 2026-09-18
+**DTWEXBGS** (log) — σ à 60 pas = **0.02596** · estimateurs croisés : racine-h 0.02404, blocs disjoints 0.02758 (écart relatif 14.7 %) · dérive d'échantillon +0.00080 (+0.03 σ) · 2428 variations chevauchantes, 40 blocs indépendants · 2016-09-30 → 2026-09-22
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.0390 | 159 | 3 | 0.0655 | 0.0668 | 0.98 | oui |
-| -1.0 | -0.0390 | -0.0195 | 387 | 6 | 0.1595 | 0.1598 | 1.00 | oui |
-| -0.5 | -0.0195 | -0.0065 | 357 | 6 | 0.1472 | 0.1747 | 0.84 | oui |
-| +0.0 | -0.0065 | +0.0065 | 542 | 9 | 0.2234 | 0.1974 | 1.13 | oui |
-| +0.5 | +0.0065 | +0.0195 | 464 | 8 | 0.1913 | 0.1747 | 1.10 | oui |
-| +1.0 | +0.0195 | +0.0390 | 307 | 5 | 0.1265 | 0.1598 | 0.79 | oui |
-| +2.0 | +0.0390 | +∞ | 210 | 4 | 0.0866 | 0.0668 | 1.30 | oui |
+| -2.0 | −∞ | -0.0389 | 159 | 3 | 0.0655 | 0.0668 | 0.98 | oui |
+| -1.0 | -0.0389 | -0.0195 | 387 | 6 | 0.1594 | 0.1598 | 1.00 | oui |
+| -0.5 | -0.0195 | -0.0065 | 359 | 6 | 0.1479 | 0.1747 | 0.85 | oui |
+| +0.0 | -0.0065 | +0.0065 | 542 | 9 | 0.2232 | 0.1974 | 1.13 | oui |
+| +0.5 | +0.0065 | +0.0195 | 463 | 8 | 0.1907 | 0.1747 | 1.09 | oui |
+| +1.0 | +0.0195 | +0.0389 | 308 | 5 | 0.1269 | 0.1598 | 0.79 | oui |
+| +2.0 | +0.0389 | +∞ | 210 | 4 | 0.0865 | 0.0668 | 1.29 | oui |
 
 **NASDAQ100** (log) — σ à 60 pas = **0.08875** · estimateurs croisés : racine-h 0.11138, blocs disjoints 0.08043 (écart relatif 38.5 %) · dérive d'échantillon +0.04414 (+0.50 σ) · 2448 variations chevauchantes, 41 blocs indépendants · 2016-09-30 → 2026-09-22
 
@@ -335,11 +335,10 @@ Aucune prédiction émise ce cycle : aucune thèse n'a été transmise. Une pré
 
 **Source unique : dépôt Apollon `data/history/*.csv`, 26 séries FRED.** Aucune valeur n'a d'autre origine. Portée temporelle complète publiée série par série au §3 (E-004).
 
-- `BAMLC0A0CM` : percentile REFUSÉ sur 5 ans — profondeur réelle 784 obs / 2.99 ans (début 2023-09-26). R-011 : un percentile calculé sur une série tronquée est sans valeur.
-- `BAMLH0A0HYM2` : percentile REFUSÉ sur 5 ans — profondeur réelle 785 obs / 2.99 ans (début 2023-09-26). R-011 : un percentile calculé sur une série tronquée est sans valeur.
+- `BAMLC0A0CM` : percentile REFUSÉ sur 5 ans — profondeur réelle 781 obs / 2.98 ans (début 2023-09-29). R-011 : un percentile calculé sur une série tronquée est sans valeur.
+- `BAMLH0A0HYM2` : percentile REFUSÉ sur 5 ans — profondeur réelle 782 obs / 2.98 ans (début 2023-09-29). R-011 : un percentile calculé sur une série tronquée est sans valeur.
 - `BAMLH0A0HYM2` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
 - `BAMLC0A0CM` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
-- Retards sur la date d'arrêté unique (E-014) : DEXJPUS 2 séance(s), DEXUSEU 2 séance(s), DTWEXBGS 2 séance(s)
 
 **Vérification tierce (R-032) : NON SATISFAITE pour ce brief.** Le moteur ne dispose d'aucune source extérieure au dépôt. Trois estimateurs **internes** de σ sont publiés côte à côte au §5 ; ce sont des contrôles de cohérence interne, **pas** une vérification tierce, et ils ne sont pas présentés comme telle.
 
