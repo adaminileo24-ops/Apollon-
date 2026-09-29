@@ -1,6 +1,6 @@
 {
-  "date_arrete": "2026-09-28",
-  "horodatage": "2026-09-29T11:23:07+00:00",
+  "date_arrete": "2026-09-29",
+  "horodatage": "2026-09-29T23:13:36+00:00",
   "statut": "AUCUNE IDEE SOUMISE",
   "entete": "VETO — 0 idée(s) soumise(s), 0 bloquée(s) — AUCUNE IDEE SOUMISE (source lue, liste vide)",
   "source": "trading_resultats.json",
@@ -58,12 +58,12 @@
   "sigma_marche_par_paire": {
     "Brent / WTI": 0.011425553152068118,
     "S&P 500 / Nasdaq 100": 0.01141914390415015,
-    "10 ans / 2 ans": 0.011420232711972676,
-    "Haut rendement / Investment grade": 0.009437519554857549,
-    "30 ans / 10 ans": 0.011420232711972676
+    "10 ans / 2 ans": 0.01141914390415015,
+    "Haut rendement / Investment grade": 0.009441793569514674,
+    "30 ans / 10 ans": 0.01141914390415015
   },
   "mesures_utilisees": {
-    "date_arrete": "2026-09-28",
+    "date_arrete": "2026-09-29",
     "var_retenue_pct": -3.3,
     "var_limite_fondee": false,
     "pire_episode_pct": -30.943899333383275
@@ -73,13 +73,13 @@
   "n_non_soumises": 2,
   "non_soumises": [
     {
-      "id": "brent_wti_20260928",
+      "id": "brent_wti_20260929",
       "nom": "Brent / WTI",
       "verdict": "REFUSEE",
       "statut_risque": "NON_SOUMISE_REFUSEE_EN_AMONT"
     },
     {
-      "id": "hy_ig_20260928",
+      "id": "hy_ig_20260929",
       "nom": "Haut rendement / Investment grade",
       "verdict": "REFUSEE",
       "statut_risque": "NON_SOUMISE_REFUSEE_EN_AMONT"

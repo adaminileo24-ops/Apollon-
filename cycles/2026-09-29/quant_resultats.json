@@ -4,12 +4,12 @@
   "n_essais_declares": 90,
   "n_evalues": 90,
   "reference_bh_sharpe": 0.7295603911681652,
-  "moyenne_grille": 0.4226016580042449,
-  "variance_grille": 0.06493957033998302,
-  "seuil_nul_centre_zero": 0.635375881765146,
-  "seuil_recentre_derive": 1.057977539769391,
+  "moyenne_grille": 0.42260497858634516,
+  "variance_grille": 0.06494345076364356,
+  "seuil_nul_centre_zero": 0.6353948647270105,
+  "seuil_recentre_derive": 1.0579998433133557,
   "meilleur_sharpe": 0.8754575190155396,
-  "ecart_au_seuil_recentre": -0.18252002075385132,
+  "ecart_au_seuil_recentre": -0.18254232429781614,
   "controle_positif": {
     "disponible": true,
     "beta_injecte": 0.35,
@@ -18,36 +18,36 @@
       {
         "alpha_injecte_pct": 0.0,
         "taux_detection": 0.045,
-        "alpha_moyen_recupere_pct": -0.2015692208218555,
-        "t_moyen": -0.086601804257525,
+        "alpha_moyen_recupere_pct": -0.2015692208218592,
+        "t_moyen": -0.0866018042575266,
         "se_alpha_pct": 2.150229176283383
       },
       {
         "alpha_injecte_pct": 3.0,
         "taux_detection": 0.21,
-        "alpha_moyen_recupere_pct": 2.7984307791781453,
-        "t_moyen": 1.2097083448076844,
+        "alpha_moyen_recupere_pct": 2.7984307791781413,
+        "t_moyen": 1.2097083448076826,
         "se_alpha_pct": 2.1502291762833816
       },
       {
         "alpha_injecte_pct": 6.0,
         "taux_detection": 0.73,
-        "alpha_moyen_recupere_pct": 5.798430779178145,
-        "t_moyen": 2.5060184938728938,
-        "se_alpha_pct": 2.150229176283382
+        "alpha_moyen_recupere_pct": 5.798430779178142,
+        "t_moyen": 2.506018493872892,
+        "se_alpha_pct": 2.1502291762833816
       },
       {
         "alpha_injecte_pct": 9.0,
         "taux_detection": 0.965,
-        "alpha_moyen_recupere_pct": 8.798430779178148,
-        "t_moyen": 3.8023286429381034,
+        "alpha_moyen_recupere_pct": 8.798430779178142,
+        "t_moyen": 3.8023286429381016,
         "se_alpha_pct": 2.1502291762833807
       },
       {
         "alpha_injecte_pct": 12.0,
         "taux_detection": 1.0,
-        "alpha_moyen_recupere_pct": 11.798430779178148,
-        "t_moyen": 5.098638792003313,
+        "alpha_moyen_recupere_pct": 11.798430779178146,
+        "t_moyen": 5.098638792003311,
         "se_alpha_pct": 2.1502291762833825
       }
     ],
@@ -60,7 +60,7 @@
     {
       "nom": "T10Y2Y|60|0.75|dessus",
       "sharpe": 0.8754575190155396,
-      "dsr": 0.2797310814611774,
+      "dsr": 0.2797070853078687,
       "stabilite": {
         "disponible": true,
         "n_plis_total": 8,
@@ -99,7 +99,7 @@
     {
       "nom": "VIXCLS|20|0.75|dessous",
       "sharpe": 0.8740886907290554,
-      "dsr": 0.285250591643183,
+      "dsr": 0.2852272218139642,
       "stabilite": {
         "disponible": true,
         "n_plis_total": 8,
@@ -138,7 +138,7 @@
     {
       "nom": "T10Y2Y|20|0.75|dessus",
       "sharpe": 0.8660695809028663,
-      "dsr": 0.2701291345481119,
+      "dsr": 0.27010559548944907,
       "stabilite": {
         "disponible": true,
         "n_plis_total": 8,
@@ -207,9 +207,9 @@
     },
     {
       "nom": "VIXCLS|120|0.5|dessous",
-      "sharpe": 0.7702975588067925,
+      "sharpe": 0.7707496012827633,
       "n_obs": 2473,
-      "expo_moy": 0.3522038010513546,
+      "expo_moy": 0.35179943388596846,
       "rotations_an": 2.1083665338645416
     },
     {
@@ -585,9 +585,9 @@
     },
     {
       "nom": "VIXCLS|120|0.5|dessus",
-      "sharpe": 0.322124344506392,
+      "sharpe": 0.321971154419438,
       "n_obs": 2473,
-      "expo_moy": 0.5463000404367165,
+      "expo_moy": 0.5467044076021027,
       "rotations_an": 2.00796812749004
     },
     {
