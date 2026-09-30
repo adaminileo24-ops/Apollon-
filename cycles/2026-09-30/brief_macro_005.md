@@ -1,6 +1,6 @@
-# BRIEF MACRO n° 005 — arrêté au 2026-09-28
+# BRIEF MACRO n° 005 — arrêté au 2026-09-29
 
-*Produit par `apollon_macro.py` le 2026-09-30T11:10:33+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
+*Produit par `apollon_macro.py` le 2026-09-30T23:13:05+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
 
 **Grille de scénarios (R-029, §11), déclarée avant toute lecture de données et empreintée :** `[-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0]` · empreinte SHA-256 `6aaeb3863c875923…` · symétrique : True · horizon 60 séances (3 mois pour les séries mensuelles).
 
@@ -12,7 +12,7 @@
 
 **Abstention. Aucune thèse ne survit.** Ce n'est pas un silence : c'est un résultat, produit par le même portier que celui qui aurait admis une thèse. Le détail des échecs, critère par critère, figure au §6. La Section Macro ne transmet rien à la Section Risque ce cycle.
 
-**Position détenue (contrôle 9, E-020) — 100 % cash, testée sur la même grille.** Espérance excédentaire du cash : +0.000 % de NAV. Référence 60/40 : +1.371 % (hors dérive : -0.182 %). **Écart du cash contre la référence : -1.371 % de NAV** sur 60 séances.
+**Position détenue (contrôle 9, E-020) — 100 % cash, testée sur la même grille.** Espérance excédentaire du cash : +0.000 % de NAV. Référence 60/40 : +1.373 % (hors dérive : -0.181 %). **Écart du cash contre la référence : -1.373 % de NAV** sur 60 séances.
 
 ---
 
@@ -28,32 +28,32 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 | série | rôle déclaré | valeur | date | retard | n obs | profondeur | pct 1 an | pct 5 ans | pct complet |
 |---|---|---:|---|---:|---:|---:|---:|---:|---:|
-| BAMLC0A0CM | risque_credit_ig | 0.83 | 2026-09-28 | 0 | 784 | 3.00 ans | 85.7 | REFUSÉ (insuffisante, -38 %) | 46.6 |
-| BAMLH0A0HYM2 | risque_credit_hy | 3.02 | 2026-09-28 | 0 | 785 | 3.00 ans | 82.5 | REFUSÉ (insuffisante, -38 %) | 50.2 |
-| CPIAUCSL | inflation_globale | 334.1 | 2026-08-01 | 58 | 118 | 9.83 ans | 100.0 | 100.0 | 100.0 |
-| CPILFESL | inflation_sous_jacente | 337.8 | 2026-08-01 | 58 | 118 | 9.83 ans | 100.0 | 100.0 | 100.0 |
-| DCOILBRENTEU | prix_energie | 114.9 | 2026-09-22 | 4 | 2529 | 9.97 ans | 88.9 | 94.2 | 97.1 |
-| DCOILWTICO | prix_energie_wti | 96.41 | 2026-09-22 | 4 | 2493 | 9.97 ans | 81.0 | 87.8 | 93.8 |
-| DEXJPUS | devise_usdjpy | 157.2 | 2026-09-25 | 1 | 2492 | 9.98 ans | 45.2 | 85.6 | 92.7 |
-| DEXUSEU | devise_eurusd | 1.14 | 2026-09-25 | 1 | 2492 | 9.98 ans | 4.8 | 70.4 | 59.4 |
-| DFF | politique_monetaire | 3.88 | 2026-09-28 | 0 | 3649 | 9.99 ans | 100.0 | 25.5 | 70.9 |
-| DFII10 | taux_reel_10a | 2.9 | 2026-09-28 | 0 | 2496 | 9.98 ans | 100.0 | 100.0 | 100.0 |
-| DGS10 | taux_nominal_10a | 5.24 | 2026-09-28 | 0 | 2496 | 9.98 ans | 100.0 | 100.0 | 100.0 |
-| DGS2 | taux_nominal_2a | 4.92 | 2026-09-28 | 0 | 2496 | 9.98 ans | 100.0 | 93.8 | 96.9 |
-| DGS30 | taux_nominal_30a | 5.56 | 2026-09-28 | 0 | 2496 | 9.98 ans | 100.0 | 100.0 | 100.0 |
-| DTWEXBGS | dollar_large | 120.3 | 2026-09-25 | 1 | 2490 | 9.98 ans | 67.1 | 43.5 | 69.0 |
-| INDPRO | activite_industrielle | 103.1 | 2026-08-01 | 58 | 119 | 9.83 ans | 100.0 | 100.0 | 92.4 |
-| NASDAQ100 | prix_actions_tech | 3.028e+04 | 2026-09-28 | 0 | 2511 | 9.98 ans | 94.8 | 99.0 | 99.5 |
-| OVXCLS | volatilite_implicite_petrole | 56.11 | 2026-09-28 | 0 | 2512 | 9.98 ans | 60.3 | 88.8 | 90.7 |
-| PAYEMS | emploi | 1.591e+05 | 2026-08-01 | 58 | 119 | 9.83 ans | 100.0 | 100.0 | 100.0 |
-| SP500 | prix_actions | 7684 | 2026-09-28 | 0 | 2510 | 9.98 ans | 91.3 | 98.3 | 99.1 |
-| T10Y2Y | pente_courbe | 0.32 | 2026-09-28 | 0 | 2496 | 9.98 ans | 7.1 | 59.7 | 46.8 |
-| T10YIE | point_mort_10a | 2.34 | 2026-09-28 | 0 | 2496 | 9.98 ans | 69.4 | 57.2 | 75.8 |
-| T5YIFR | point_mort_5a5a | 2.35 | 2026-09-28 | 0 | 2496 | 9.98 ans | 99.6 | 83.7 | 91.6 |
-| UNRATE | chomage | 4.1 | 2026-08-01 | 58 | 118 | 9.83 ans | 16.7 | 65.0 | 55.9 |
-| VIXCLS | volatilite_implicite | 16.07 | 2026-09-28 | 0 | 2543 | 9.98 ans | 28.2 | 32.9 | 42.3 |
-| VXDCLS | volatilite_implicite_dow | 15.55 | 2026-09-28 | 0 | 2513 | 9.98 ans | 45.6 | 43.0 | 46.6 |
-| VXVCLS | volatilite_implicite_3m | 18.23 | 2026-09-28 | 0 | 2510 | 9.98 ans | 9.5 | 27.0 | 41.4 |
+| BAMLC0A0CM | risque_credit_ig | 0.84 | 2026-09-29 | 0 | 784 | 2.99 ans | 88.9 | REFUSÉ (insuffisante, -38 %) | 49.9 |
+| BAMLH0A0HYM2 | risque_credit_hy | 3.08 | 2026-09-29 | 0 | 785 | 2.99 ans | 86.5 | REFUSÉ (insuffisante, -38 %) | 53.9 |
+| CPIAUCSL | inflation_globale | 334.1 | 2026-08-01 | 59 | 118 | 9.83 ans | 100.0 | 100.0 | 100.0 |
+| CPILFESL | inflation_sous_jacente | 337.8 | 2026-08-01 | 59 | 118 | 9.83 ans | 100.0 | 100.0 | 100.0 |
+| DCOILBRENTEU | prix_energie | 114 | 2026-09-29 | 0 | 2534 | 9.99 ans | 86.1 | 93.2 | 96.6 |
+| DCOILWTICO | prix_energie_wti | 96.16 | 2026-09-29 | 0 | 2498 | 9.99 ans | 79.4 | 87.4 | 93.6 |
+| DEXJPUS | devise_usdjpy | 157.2 | 2026-09-25 | 2 | 2492 | 9.98 ans | 45.2 | 85.6 | 92.7 |
+| DEXUSEU | devise_eurusd | 1.14 | 2026-09-25 | 2 | 2492 | 9.98 ans | 4.8 | 70.4 | 59.4 |
+| DFF | politique_monetaire | 3.88 | 2026-09-29 | 0 | 3650 | 9.99 ans | 100.0 | 25.6 | 70.9 |
+| DFII10 | taux_reel_10a | 2.91 | 2026-09-29 | 0 | 2497 | 9.99 ans | 100.0 | 100.0 | 100.0 |
+| DGS10 | taux_nominal_10a | 5.26 | 2026-09-29 | 0 | 2497 | 9.99 ans | 100.0 | 100.0 | 100.0 |
+| DGS2 | taux_nominal_2a | 4.89 | 2026-09-29 | 0 | 2497 | 9.99 ans | 99.6 | 92.8 | 96.4 |
+| DGS30 | taux_nominal_30a | 5.59 | 2026-09-29 | 0 | 2497 | 9.99 ans | 100.0 | 100.0 | 100.0 |
+| DTWEXBGS | dollar_large | 120.3 | 2026-09-25 | 2 | 2490 | 9.98 ans | 67.1 | 43.5 | 69.0 |
+| INDPRO | activite_industrielle | 103.1 | 2026-08-01 | 59 | 119 | 9.83 ans | 100.0 | 100.0 | 92.4 |
+| NASDAQ100 | prix_actions_tech | 3.034e+04 | 2026-09-29 | 0 | 2512 | 9.99 ans | 95.2 | 99.0 | 99.5 |
+| OVXCLS | volatilite_implicite_petrole | 53.74 | 2026-09-29 | 0 | 2513 | 9.99 ans | 55.6 | 85.9 | 88.7 |
+| PAYEMS | emploi | 1.591e+05 | 2026-08-01 | 59 | 119 | 9.83 ans | 100.0 | 100.0 | 100.0 |
+| SP500 | prix_actions | 7671 | 2026-09-29 | 0 | 2511 | 9.99 ans | 89.3 | 97.9 | 98.9 |
+| T10Y2Y | pente_courbe | 0.37 | 2026-09-29 | 0 | 2497 | 9.99 ans | 14.3 | 63.4 | 49.4 |
+| T10YIE | point_mort_10a | 2.35 | 2026-09-29 | 0 | 2497 | 9.99 ans | 75.8 | 61.4 | 78.2 |
+| T5YIFR | point_mort_5a5a | 2.36 | 2026-09-29 | 0 | 2497 | 9.99 ans | 100.0 | 85.3 | 92.5 |
+| UNRATE | chomage | 4.1 | 2026-08-01 | 59 | 118 | 9.83 ans | 16.7 | 65.0 | 55.9 |
+| VIXCLS | volatilite_implicite | 16.04 | 2026-09-29 | 0 | 2544 | 9.99 ans | 27.4 | 32.7 | 42.0 |
+| VXDCLS | volatilite_implicite_dow | 15.71 | 2026-09-29 | 0 | 2514 | 9.99 ans | 48.0 | 44.6 | 47.9 |
+| VXVCLS | volatilite_implicite_3m | 18.09 | 2026-09-29 | 0 | 2511 | 9.99 ans | 7.5 | 25.6 | 40.3 |
 
 **Couples obligatoires contrôlés :** CPIAUCSL/CPILFESL, DGS10/DFII10, DGS10/T10YIE, BAMLH0A0HYM2/BAMLC0A0CM, UNRATE/PAYEMS, VIXCLS/SP500 — 0 manquement(s).
 
@@ -65,22 +65,22 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 | identité | vérifiable | n dates | résidu absolu max | tolérance | vérifiée |
 |---|:---:|---:|---:|---:|:---:|
-| T10YIE = DGS10 - DFII10 | oui | 2496 | 0.0000 | 0.02 | OUI |
-| T10Y2Y = DGS10 - DGS2 | oui | 2496 | 0.0000 | 0.02 | OUI |
+| T10YIE = DGS10 - DFII10 | oui | 2497 | 0.0000 | 0.02 | OUI |
+| T10Y2Y = DGS10 - DGS2 | oui | 2497 | 0.0000 | 0.02 | OUI |
 
 **Redondances détectées (11) — deux séries liées ne comptent jamais pour deux confirmations indépendantes :**
 
 - identité comptable : T10YIE = DGS10 - DFII10 — T10YIE, DGS10, DFII10 (résidu max 0.0000)
 - identité comptable : T10Y2Y = DGS10 - DGS2 — T10Y2Y, DGS10, DGS2 (résidu max 0.0000)
 - corrélation des variations à 60 séances : BAMLC0A0CM / BAMLH0A0HYM2 = +0.941 sur 724 points (seuil 0.9)
-- corrélation des variations à 60 séances : DGS10 / DGS30 = +0.967 sur 2436 points (seuil 0.9)
+- corrélation des variations à 60 séances : DGS10 / DGS30 = +0.967 sur 2437 points (seuil 0.9)
 - corrélation des variations à 60 séances : INDPRO / PAYEMS = +0.913 sur 116 points (seuil 0.9)
 - corrélation des variations à 60 séances : INDPRO / UNRATE = -0.918 sur 115 points (seuil 0.9)
-- corrélation des variations à 60 séances : NASDAQ100 / SP500 = +0.903 sur 2450 points (seuil 0.9)
+- corrélation des variations à 60 séances : NASDAQ100 / SP500 = +0.903 sur 2451 points (seuil 0.9)
 - corrélation des variations à 60 séances : PAYEMS / UNRATE = -0.983 sur 115 points (seuil 0.9)
-- corrélation des variations à 60 séances : VIXCLS / VXDCLS = +0.930 sur 2450 points (seuil 0.9)
-- corrélation des variations à 60 séances : VIXCLS / VXVCLS = +0.958 sur 2450 points (seuil 0.9)
-- corrélation des variations à 60 séances : VXDCLS / VXVCLS = +0.934 sur 2450 points (seuil 0.9)
+- corrélation des variations à 60 séances : VIXCLS / VXDCLS = +0.930 sur 2451 points (seuil 0.9)
+- corrélation des variations à 60 séances : VIXCLS / VXVCLS = +0.958 sur 2451 points (seuil 0.9)
+- corrélation des variations à 60 séances : VXDCLS / VXVCLS = +0.934 sur 2451 points (seuil 0.9)
 
 ---
 
@@ -88,29 +88,29 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 σ est **mesuré** sur chaque série, jamais choisi. Les probabilités sont les **fréquences historiques** dans chaque bande, jamais un jugement. L'effectif de chaque bande est publié ; sous 20 observations la bande est déclarée NON ESTIMABLE. La colonne « emp./gauss. » est la double confrontation exigée par §11.5 : tout écart supérieur à un facteur 2 est déclaré (⚠).
 
-**BAMLH0A0HYM2** (niveau) — σ à 60 pas = **0.45502** · estimateurs croisés : racine-h 0.53969, blocs disjoints 0.30818 (écart relatif 75.1 %) · dérive d'échantillon -0.10917 (-0.24 σ) · 725 variations chevauchantes, 12 blocs indépendants · 2023-09-30 → 2026-09-28
+**BAMLH0A0HYM2** (niveau) — σ à 60 pas = **0.45500** · estimateurs croisés : racine-h 0.53949, blocs disjoints 0.31394 (écart relatif 71.8 %) · dérive d'échantillon -0.10772 (-0.24 σ) · 725 variations chevauchantes, 12 blocs indépendants · 2023-10-02 → 2026-09-29
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
 | -2.0 | −∞ | -0.6825 | 55 | 1 | 0.0759 | 0.0668 | 1.14 | oui |
-| -1.0 | -0.6825 | -0.3413 | 119 | 2 | 0.1641 | 0.1598 | 1.03 | oui |
-| -0.5 | -0.3413 | -0.1138 | 194 | 3 | 0.2676 | 0.1747 | 1.53 | oui |
-| +0.0 | -0.1138 | +0.1138 | 195 | 3 | 0.2690 | 0.1974 | 1.36 | oui |
-| +0.5 | +0.1138 | +0.3413 | 82 | 1 | 0.1131 | 0.1747 | 0.65 | oui |
-| +1.0 | +0.3413 | +0.6825 | 51 | 1 | 0.0703 | 0.1598 | 0.44 ⚠ | oui |
+| -1.0 | -0.6825 | -0.3412 | 118 | 2 | 0.1628 | 0.1598 | 1.02 | oui |
+| -0.5 | -0.3412 | -0.1137 | 194 | 3 | 0.2676 | 0.1747 | 1.53 | oui |
+| +0.0 | -0.1137 | +0.1137 | 195 | 3 | 0.2690 | 0.1974 | 1.36 | oui |
+| +0.5 | +0.1137 | +0.3412 | 82 | 1 | 0.1131 | 0.1747 | 0.65 | oui |
+| +1.0 | +0.3412 | +0.6825 | 52 | 1 | 0.0717 | 0.1598 | 0.45 ⚠ | oui |
 | +2.0 | +0.6825 | +∞ | 29 | 0 | 0.0400 | 0.0668 | 0.60 | oui |
 
-**DCOILBRENTEU** (log) — σ à 60 pas = **0.24636** · estimateurs croisés : racine-h 0.24781, blocs disjoints 0.28493 (écart relatif 15.7 %) · dérive d'échantillon +0.01566 (+0.06 σ) · 2469 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-22
+**DCOILBRENTEU** (log) — σ à 60 pas = **0.24720** · estimateurs croisés : racine-h 0.24789, blocs disjoints 0.28493 (écart relatif 15.3 %) · dérive d'échantillon +0.01669 (+0.07 σ) · 2474 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-29
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.3695 | 84 | 1 | 0.0340 | 0.0668 | 0.51 | oui |
-| -1.0 | -0.3695 | -0.1848 | 155 | 3 | 0.0628 | 0.1598 | 0.39 ⚠ | oui |
-| -0.5 | -0.1848 | -0.0616 | 503 | 8 | 0.2037 | 0.1747 | 1.17 | oui |
-| +0.0 | -0.0616 | +0.0616 | 763 | 13 | 0.3090 | 0.1974 | 1.57 | oui |
-| +0.5 | +0.0616 | +0.1848 | 614 | 10 | 0.2487 | 0.1747 | 1.42 | oui |
-| +1.0 | +0.1848 | +0.3695 | 220 | 4 | 0.0891 | 0.1598 | 0.56 | oui |
-| +2.0 | +0.3695 | +∞ | 130 | 2 | 0.0527 | 0.0668 | 0.79 | oui |
+| -2.0 | −∞ | -0.3708 | 84 | 1 | 0.0340 | 0.0668 | 0.51 | oui |
+| -1.0 | -0.3708 | -0.1854 | 155 | 3 | 0.0627 | 0.1598 | 0.39 ⚠ | oui |
+| -0.5 | -0.1854 | -0.0618 | 500 | 8 | 0.2021 | 0.1747 | 1.16 | oui |
+| +0.0 | -0.0618 | +0.0618 | 768 | 13 | 0.3104 | 0.1974 | 1.57 | oui |
+| +0.5 | +0.0618 | +0.1854 | 613 | 10 | 0.2478 | 0.1747 | 1.42 | oui |
+| +1.0 | +0.1854 | +0.3708 | 219 | 4 | 0.0885 | 0.1598 | 0.55 | oui |
+| +2.0 | +0.3708 | +∞ | 135 | 2 | 0.0546 | 0.0668 | 0.82 | oui |
 
 **DCOILWTICO** — non scénarisable : convention log inapplicable : 1 observation(s) non strictement positive(s), minimum -36.98 le 2020-04-20. Le prix a été négatif : aucun log-rendement n'existe. La série est déclarée NON SCÉNARISABLE plutôt que corrigée en silence.
 
@@ -138,41 +138,41 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | +1.0 | +0.0258 | +0.0516 | 303 | 5 | 0.1246 | 0.1598 | 0.78 | oui |
 | +2.0 | +0.0516 | +∞ | 226 | 4 | 0.0929 | 0.0668 | 1.39 | oui |
 
-**DGS10** (niveau) — σ à 60 pas = **0.42302** · estimateurs croisés : racine-h 0.41455, blocs disjoints 0.40534 (écart relatif 4.4 %) · dérive d'échantillon +0.06437 (+0.15 σ) · 2436 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-28
+**DGS10** (niveau) — σ à 60 pas = **0.42318** · estimateurs croisés : racine-h 0.41448, blocs disjoints 0.40534 (écart relatif 4.4 %) · dérive d'échantillon +0.06466 (+0.15 σ) · 2437 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-29
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.6345 | 123 | 2 | 0.0505 | 0.0668 | 0.76 | oui |
-| -1.0 | -0.6345 | -0.3173 | 284 | 5 | 0.1166 | 0.1598 | 0.73 | oui |
-| -0.5 | -0.3173 | -0.1058 | 371 | 6 | 0.1523 | 0.1747 | 0.87 | oui |
+| -2.0 | −∞ | -0.6348 | 123 | 2 | 0.0505 | 0.0668 | 0.76 | oui |
+| -1.0 | -0.6348 | -0.3174 | 284 | 5 | 0.1165 | 0.1598 | 0.73 | oui |
+| -0.5 | -0.3174 | -0.1058 | 371 | 6 | 0.1522 | 0.1747 | 0.87 | oui |
 | +0.0 | -0.1058 | +0.1058 | 528 | 9 | 0.2167 | 0.1974 | 1.10 | oui |
-| +0.5 | +0.1058 | +0.3173 | 555 | 9 | 0.2278 | 0.1747 | 1.30 | oui |
-| +1.0 | +0.3173 | +0.6345 | 369 | 6 | 0.1515 | 0.1598 | 0.95 | oui |
-| +2.0 | +0.6345 | +∞ | 206 | 3 | 0.0846 | 0.0668 | 1.27 | oui |
+| +0.5 | +0.1058 | +0.3174 | 555 | 9 | 0.2277 | 0.1747 | 1.30 | oui |
+| +1.0 | +0.3174 | +0.6348 | 369 | 6 | 0.1514 | 0.1598 | 0.95 | oui |
+| +2.0 | +0.6348 | +∞ | 207 | 3 | 0.0849 | 0.0668 | 1.27 | oui |
 
-**DGS2** (niveau) — σ à 60 pas = **0.49549** · estimateurs croisés : racine-h 0.42150, blocs disjoints 0.49914 (écart relatif 18.4 %) · dérive d'échantillon +0.08237 (+0.17 σ) · 2436 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-28
-
-| kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
-|---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.7432 | 115 | 2 | 0.0472 | 0.0668 | 0.71 | oui |
-| -1.0 | -0.7432 | -0.3716 | 228 | 4 | 0.0936 | 0.1598 | 0.59 | oui |
-| -0.5 | -0.3716 | -0.1239 | 323 | 5 | 0.1326 | 0.1747 | 0.76 | oui |
-| +0.0 | -0.1239 | +0.1239 | 739 | 12 | 0.3034 | 0.1974 | 1.54 | oui |
-| +0.5 | +0.1239 | +0.3716 | 483 | 8 | 0.1983 | 0.1747 | 1.14 | oui |
-| +1.0 | +0.3716 | +0.7432 | 348 | 6 | 0.1429 | 0.1598 | 0.89 | oui |
-| +2.0 | +0.7432 | +∞ | 200 | 3 | 0.0821 | 0.0668 | 1.23 | oui |
-
-**DGS30** (niveau) — σ à 60 pas = **0.36499** · estimateurs croisés : racine-h 0.39253, blocs disjoints 0.35007 (écart relatif 12.1 %) · dérive d'échantillon +0.05904 (+0.16 σ) · 2436 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-28
+**DGS2** (niveau) — σ à 60 pas = **0.49558** · estimateurs croisés : racine-h 0.42145, blocs disjoints 0.49914 (écart relatif 18.4 %) · dérive d'échantillon +0.08265 (+0.17 σ) · 2437 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-29
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.5475 | 128 | 2 | 0.0525 | 0.0668 | 0.79 | oui |
-| -1.0 | -0.5475 | -0.2737 | 276 | 5 | 0.1133 | 0.1598 | 0.71 | oui |
-| -0.5 | -0.2737 | -0.0912 | 338 | 6 | 0.1388 | 0.1747 | 0.79 | oui |
-| +0.0 | -0.0912 | +0.0912 | 629 | 10 | 0.2582 | 0.1974 | 1.31 | oui |
-| +0.5 | +0.0912 | +0.2737 | 461 | 8 | 0.1892 | 0.1747 | 1.08 | oui |
-| +1.0 | +0.2737 | +0.5475 | 396 | 7 | 0.1626 | 0.1598 | 1.02 | oui |
-| +2.0 | +0.5475 | +∞ | 208 | 3 | 0.0854 | 0.0668 | 1.28 | oui |
+| -2.0 | −∞ | -0.7434 | 115 | 2 | 0.0472 | 0.0668 | 0.71 | oui |
+| -1.0 | -0.7434 | -0.3717 | 228 | 4 | 0.0936 | 0.1598 | 0.59 | oui |
+| -0.5 | -0.3717 | -0.1239 | 323 | 5 | 0.1325 | 0.1747 | 0.76 | oui |
+| +0.0 | -0.1239 | +0.1239 | 739 | 12 | 0.3032 | 0.1974 | 1.54 | oui |
+| +0.5 | +0.1239 | +0.3717 | 483 | 8 | 0.1982 | 0.1747 | 1.13 | oui |
+| +1.0 | +0.3717 | +0.7434 | 348 | 6 | 0.1428 | 0.1598 | 0.89 | oui |
+| +2.0 | +0.7434 | +∞ | 201 | 3 | 0.0825 | 0.0668 | 1.23 | oui |
+
+**DGS30** (niveau) — σ à 60 pas = **0.36508** · estimateurs croisés : racine-h 0.39247, blocs disjoints 0.35007 (écart relatif 12.1 %) · dérive d'échantillon +0.05926 (+0.16 σ) · 2437 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-29
+
+| kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
+|---:|---:|---:|---:|---:|---:|---:|---:|:---:|
+| -2.0 | −∞ | -0.5476 | 128 | 2 | 0.0525 | 0.0668 | 0.79 | oui |
+| -1.0 | -0.5476 | -0.2738 | 276 | 5 | 0.1133 | 0.1598 | 0.71 | oui |
+| -0.5 | -0.2738 | -0.0913 | 338 | 6 | 0.1387 | 0.1747 | 0.79 | oui |
+| +0.0 | -0.0913 | +0.0913 | 629 | 10 | 0.2581 | 0.1974 | 1.31 | oui |
+| +0.5 | +0.0913 | +0.2738 | 461 | 8 | 0.1892 | 0.1747 | 1.08 | oui |
+| +1.0 | +0.2738 | +0.5476 | 396 | 7 | 0.1625 | 0.1598 | 1.02 | oui |
+| +2.0 | +0.5476 | +∞ | 209 | 3 | 0.0858 | 0.0668 | 1.28 | oui |
 
 **DTWEXBGS** (log) — σ à 60 pas = **0.02593** · estimateurs croisés : racine-h 0.02405, blocs disjoints 0.02817 (écart relatif 17.1 %) · dérive d'échantillon +0.00077 (+0.03 σ) · 2430 variations chevauchantes, 40 blocs indépendants · 2016-10-03 → 2026-09-25
 
@@ -186,41 +186,41 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | +1.0 | +0.0194 | +0.0389 | 309 | 5 | 0.1272 | 0.1598 | 0.80 | oui |
 | +2.0 | +0.0389 | +∞ | 209 | 3 | 0.0860 | 0.0668 | 1.29 | oui |
 
-**NASDAQ100** (log) — σ à 60 pas = **0.08870** · estimateurs croisés : racine-h 0.11134, blocs disjoints 0.08445 (écart relatif 31.8 %) · dérive d'échantillon +0.04411 (+0.50 σ) · 2451 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-28
+**NASDAQ100** (log) — σ à 60 pas = **0.08868** · estimateurs croisés : racine-h 0.11132, blocs disjoints 0.08445 (écart relatif 31.8 %) · dérive d'échantillon +0.04410 (+0.50 σ) · 2452 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-29
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.1331 | 108 | 2 | 0.0441 | 0.0668 | 0.66 | oui |
-| -1.0 | -0.1331 | -0.0665 | 167 | 3 | 0.0681 | 0.1598 | 0.43 ⚠ | oui |
+| -2.0 | −∞ | -0.1330 | 109 | 2 | 0.0445 | 0.0668 | 0.67 | oui |
+| -1.0 | -0.1330 | -0.0665 | 166 | 3 | 0.0677 | 0.1598 | 0.42 ⚠ | oui |
 | -0.5 | -0.0665 | -0.0222 | 186 | 3 | 0.0759 | 0.1747 | 0.43 ⚠ | oui |
-| +0.0 | -0.0222 | +0.0222 | 358 | 6 | 0.1461 | 0.1974 | 0.74 | oui |
-| +0.5 | +0.0222 | +0.0665 | 585 | 10 | 0.2387 | 0.1747 | 1.37 | oui |
-| +1.0 | +0.0665 | +0.1331 | 731 | 12 | 0.2982 | 0.1598 | 1.87 | oui |
-| +2.0 | +0.1331 | +∞ | 316 | 5 | 0.1289 | 0.0668 | 1.93 | oui |
+| +0.0 | -0.0222 | +0.0222 | 359 | 6 | 0.1464 | 0.1974 | 0.74 | oui |
+| +0.5 | +0.0222 | +0.0665 | 585 | 10 | 0.2386 | 0.1747 | 1.37 | oui |
+| +1.0 | +0.0665 | +0.1330 | 731 | 12 | 0.2981 | 0.1598 | 1.87 | oui |
+| +2.0 | +0.1330 | +∞ | 316 | 5 | 0.1289 | 0.0668 | 1.93 | oui |
 
-**SP500** (log) — σ à 60 pas = **0.06916** · estimateurs croisés : racine-h 0.08845, blocs disjoints 0.06841 (écart relatif 29.3 %) · dérive d'échantillon +0.03064 (+0.44 σ) · 2450 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-28
+**SP500** (log) — σ à 60 pas = **0.06914** · estimateurs croisés : racine-h 0.08844, blocs disjoints 0.06841 (écart relatif 29.3 %) · dérive d'échantillon +0.03063 (+0.44 σ) · 2451 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-29
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
 | -2.0 | −∞ | -0.1037 | 115 | 2 | 0.0469 | 0.0668 | 0.70 | oui |
 | -1.0 | -0.1037 | -0.0519 | 158 | 3 | 0.0645 | 0.1598 | 0.40 ⚠ | oui |
 | -0.5 | -0.0519 | -0.0173 | 176 | 3 | 0.0718 | 0.1747 | 0.41 ⚠ | oui |
-| +0.0 | -0.0173 | +0.0173 | 293 | 5 | 0.1196 | 0.1974 | 0.61 | oui |
-| +0.5 | +0.0173 | +0.0519 | 745 | 12 | 0.3041 | 0.1747 | 1.74 | oui |
-| +1.0 | +0.0519 | +0.1037 | 753 | 13 | 0.3073 | 0.1598 | 1.92 | oui |
+| +0.0 | -0.0173 | +0.0173 | 293 | 5 | 0.1195 | 0.1974 | 0.61 | oui |
+| +0.5 | +0.0173 | +0.0519 | 745 | 12 | 0.3040 | 0.1747 | 1.74 | oui |
+| +1.0 | +0.0519 | +0.1037 | 754 | 13 | 0.3076 | 0.1598 | 1.92 | oui |
 | +2.0 | +0.1037 | +∞ | 210 | 4 | 0.0857 | 0.0668 | 1.28 | oui |
 
-**VIXCLS** (log) — σ à 60 pas = **0.34679** · estimateurs croisés : racine-h 0.61237, blocs disjoints 0.34737 (écart relatif 76.6 %) · dérive d'échantillon +0.00332 (+0.01 σ) · 2483 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-28
+**VIXCLS** (log) — σ à 60 pas = **0.34672** · estimateurs croisés : racine-h 0.61225, blocs disjoints 0.34737 (écart relatif 76.6 %) · dérive d'échantillon +0.00332 (+0.01 σ) · 2484 variations chevauchantes, 41 blocs indépendants · 2016-10-03 → 2026-09-29
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.5202 | 77 | 1 | 0.0310 | 0.0668 | 0.46 ⚠ | oui |
-| -1.0 | -0.5202 | -0.2601 | 388 | 6 | 0.1563 | 0.1598 | 0.98 | oui |
-| -0.5 | -0.2601 | -0.0867 | 604 | 10 | 0.2433 | 0.1747 | 1.39 | oui |
-| +0.0 | -0.0867 | +0.0867 | 615 | 10 | 0.2477 | 0.1974 | 1.25 | oui |
-| +0.5 | +0.0867 | +0.2601 | 373 | 6 | 0.1502 | 0.1747 | 0.86 | oui |
-| +1.0 | +0.2601 | +0.5202 | 248 | 4 | 0.0999 | 0.1598 | 0.62 | oui |
-| +2.0 | +0.5202 | +∞ | 178 | 3 | 0.0717 | 0.0668 | 1.07 | oui |
+| -2.0 | −∞ | -0.5201 | 77 | 1 | 0.0310 | 0.0668 | 0.46 ⚠ | oui |
+| -1.0 | -0.5201 | -0.2600 | 388 | 6 | 0.1562 | 0.1598 | 0.98 | oui |
+| -0.5 | -0.2600 | -0.0867 | 604 | 10 | 0.2432 | 0.1747 | 1.39 | oui |
+| +0.0 | -0.0867 | +0.0867 | 616 | 10 | 0.2480 | 0.1974 | 1.26 | oui |
+| +0.5 | +0.0867 | +0.2600 | 373 | 6 | 0.1502 | 0.1747 | 0.86 | oui |
+| +1.0 | +0.2600 | +0.5201 | 248 | 4 | 0.0998 | 0.1598 | 0.62 | oui |
+| +2.0 | +0.5201 | +∞ | 178 | 3 | 0.0717 | 0.0668 | 1.07 | oui |
 
 ---
 
@@ -230,10 +230,10 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 | candidat | verdict | espérance % NAV | sans dérive | 1re moitié | 2e moitié | gain max | perte max | ratio (info) | critères échoués |
 |---|:---:|---:|---:|---:|---:|---:|---:|---:|---|
-| M005-DCOILBRENTEU-HAUSSE-ALIGNE | REFUSEE | +0.250 | +0.125 | +0.256 | +0.124 | +5.02 | -3.19 | 1.58:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
-| M005-DCOILBRENTEU-HAUSSE-CONTRARIEN | REFUSEE | +0.250 | +0.125 | +0.256 | +0.124 | +5.02 | -3.19 | 1.58:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
-| M005-DCOILBRENTEU-BAISSE-ALIGNE | REFUSEE | -0.250 | -0.125 | -0.256 | -0.124 | +3.19 | -5.02 | 0.63:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DCOILBRENTEU-BAISSE-CONTRARIEN | REFUSEE | -0.250 | -0.125 | -0.256 | -0.124 | +3.19 | -5.02 | 0.63:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILBRENTEU-HAUSSE-ALIGNE | REFUSEE | +0.261 | +0.126 | +0.255 | +0.144 | +5.04 | -3.19 | 1.58:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
+| M005-DCOILBRENTEU-HAUSSE-CONTRARIEN | REFUSEE | +0.261 | +0.126 | +0.255 | +0.144 | +5.04 | -3.19 | 1.58:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
+| M005-DCOILBRENTEU-BAISSE-ALIGNE | REFUSEE | -0.261 | -0.126 | -0.255 | -0.144 | +3.19 | -5.04 | 0.63:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILBRENTEU-BAISSE-CONTRARIEN | REFUSEE | -0.261 | -0.126 | -0.255 | -0.144 | +3.19 | -5.04 | 0.63:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DCOILWTICO-HAUSSE-ALIGNE | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DCOILWTICO-HAUSSE-CONTRARIEN | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DCOILWTICO-BAISSE-ALIGNE | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
@@ -246,18 +246,18 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | M005-DEXUSEU-HAUSSE-CONTRARIEN | REFUSEE | -0.061 | -0.075 | -0.033 | -0.072 | +0.50 | -0.61 | 0.82:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DEXUSEU-BAISSE-ALIGNE | REFUSEE | +0.061 | +0.075 | +0.033 | +0.072 | +0.61 | -0.50 | 1.22:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
 | M005-DEXUSEU-BAISSE-CONTRARIEN | REFUSEE | +0.061 | +0.075 | +0.033 | +0.072 | +0.61 | -0.50 | 1.22:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
-| M005-DGS10-HAUSSE-ALIGNE | REFUSEE | +0.006 | -0.029 | -0.050 | +0.054 | +0.48 | -0.57 | 0.84:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS10-HAUSSE-CONTRARIEN | REFUSEE | +0.006 | -0.029 | -0.050 | +0.054 | +0.48 | -0.57 | 0.84:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS10-BAISSE-ALIGNE | REFUSEE | -0.006 | +0.029 | +0.050 | -0.054 | +0.57 | -0.48 | 1.20:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS10-BAISSE-CONTRARIEN | REFUSEE | -0.006 | +0.029 | +0.050 | -0.054 | +0.57 | -0.48 | 1.20:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS2-HAUSSE-ALIGNE | REFUSEE | -0.009 | -0.019 | -0.025 | +0.003 | +0.13 | -0.17 | 0.75:1 | 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS2-HAUSSE-CONTRARIEN | REFUSEE | -0.009 | -0.019 | -0.025 | +0.003 | +0.13 | -0.17 | 0.75:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS2-BAISSE-ALIGNE | REFUSEE | +0.009 | +0.019 | +0.025 | -0.003 | +0.17 | -0.13 | 1.34:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS2-BAISSE-CONTRARIEN | REFUSEE | +0.009 | +0.019 | +0.025 | -0.003 | +0.17 | -0.13 | 1.34:1 | 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS30-HAUSSE-ALIGNE | REFUSEE | +0.012 | -0.044 | -0.096 | +0.119 | +0.75 | -0.95 | 0.79:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS30-HAUSSE-CONTRARIEN | REFUSEE | +0.012 | -0.044 | -0.096 | +0.119 | +0.75 | -0.95 | 0.79:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS30-BAISSE-ALIGNE | REFUSEE | -0.012 | +0.044 | +0.096 | -0.119 | +0.95 | -0.75 | 1.27:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DGS30-BAISSE-CONTRARIEN | REFUSEE | -0.012 | +0.044 | +0.096 | -0.119 | +0.95 | -0.75 | 1.27:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS10-HAUSSE-ALIGNE | REFUSEE | +0.006 | -0.029 | -0.050 | +0.054 | +0.47 | -0.57 | 0.83:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS10-HAUSSE-CONTRARIEN | REFUSEE | +0.006 | -0.029 | -0.050 | +0.054 | +0.47 | -0.57 | 0.83:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS10-BAISSE-ALIGNE | REFUSEE | -0.006 | +0.029 | +0.050 | -0.054 | +0.57 | -0.47 | 1.20:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS10-BAISSE-CONTRARIEN | REFUSEE | -0.006 | +0.029 | +0.050 | -0.054 | +0.57 | -0.47 | 1.20:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS2-HAUSSE-ALIGNE | REFUSEE | -0.008 | -0.019 | -0.024 | +0.003 | +0.13 | -0.17 | 0.75:1 | 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS2-HAUSSE-CONTRARIEN | REFUSEE | -0.008 | -0.019 | -0.024 | +0.003 | +0.13 | -0.17 | 0.75:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS2-BAISSE-ALIGNE | REFUSEE | +0.008 | +0.019 | +0.024 | -0.003 | +0.17 | -0.13 | 1.33:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS2-BAISSE-CONTRARIEN | REFUSEE | +0.008 | +0.019 | +0.024 | -0.003 | +0.17 | -0.13 | 1.33:1 | 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS30-HAUSSE-ALIGNE | REFUSEE | +0.012 | -0.044 | -0.096 | +0.118 | +0.75 | -0.95 | 0.79:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS30-HAUSSE-CONTRARIEN | REFUSEE | +0.012 | -0.044 | -0.096 | +0.118 | +0.75 | -0.95 | 0.79:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS30-BAISSE-ALIGNE | REFUSEE | -0.012 | +0.044 | +0.096 | -0.118 | +0.95 | -0.75 | 1.27:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DGS30-BAISSE-CONTRARIEN | REFUSEE | -0.012 | +0.044 | +0.096 | -0.118 | +0.95 | -0.75 | 1.27:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DTWEXBGS-HAUSSE-ALIGNE | REFUSEE | -0.065 | -0.072 | -0.081 | -0.053 | +0.35 | -0.48 | 0.74:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DTWEXBGS-HAUSSE-CONTRARIEN | REFUSEE | -0.065 | -0.072 | -0.081 | -0.053 | +0.35 | -0.48 | 0.74:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DTWEXBGS-BAISSE-ALIGNE | REFUSEE | +0.065 | +0.072 | +0.081 | +0.053 | +0.48 | -0.35 | 1.36:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
@@ -335,11 +335,11 @@ Aucune prédiction émise ce cycle : aucune thèse n'a été transmise. Une pré
 
 **Source unique : dépôt Apollon `data/history/*.csv`, 26 séries FRED.** Aucune valeur n'a d'autre origine. Portée temporelle complète publiée série par série au §3 (E-004).
 
-- `BAMLC0A0CM` : percentile REFUSÉ sur 5 ans — profondeur réelle 784 obs / 3.00 ans (début 2023-09-30). R-011 : un percentile calculé sur une série tronquée est sans valeur.
-- `BAMLH0A0HYM2` : percentile REFUSÉ sur 5 ans — profondeur réelle 785 obs / 3.00 ans (début 2023-09-30). R-011 : un percentile calculé sur une série tronquée est sans valeur.
+- `BAMLC0A0CM` : percentile REFUSÉ sur 5 ans — profondeur réelle 784 obs / 2.99 ans (début 2023-10-02). R-011 : un percentile calculé sur une série tronquée est sans valeur.
+- `BAMLH0A0HYM2` : percentile REFUSÉ sur 5 ans — profondeur réelle 785 obs / 2.99 ans (début 2023-10-02). R-011 : un percentile calculé sur une série tronquée est sans valeur.
 - `BAMLH0A0HYM2` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
 - `BAMLC0A0CM` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
-- Retards sur la date d'arrêté unique (E-014) : DCOILBRENTEU 4 séance(s), DCOILWTICO 4 séance(s), DEXJPUS 1 séance(s), DEXUSEU 1 séance(s), DTWEXBGS 1 séance(s)
+- Retards sur la date d'arrêté unique (E-014) : DEXJPUS 2 séance(s), DEXUSEU 2 séance(s), DTWEXBGS 2 séance(s)
 
 **Vérification tierce (R-032) : NON SATISFAITE pour ce brief.** Le moteur ne dispose d'aucune source extérieure au dépôt. Trois estimateurs **internes** de σ sont publiés côte à côte au §5 ; ce sont des contrôles de cohérence interne, **pas** une vérification tierce, et ils ne sont pas présentés comme telle.
 
