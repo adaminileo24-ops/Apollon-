@@ -1,5 +1,5 @@
 {
-  "date_arrete": "2026-10-06",
+  "date_arrete": "2026-10-07",
   "date_donnees_sp500": "2026-10-06",
   "n_series": 26,
   "n_cotations_sp500": 2511,
@@ -1708,45 +1708,89 @@
   ],
   "regime": {
     "volatilite": "MOYENNE",
-    "vix": 15.52,
-    "courbe": "PLATE",
-    "pente_2s10s": 0.48,
+    "vix": 15.01,
+    "courbe": "PENTUE",
+    "pente_2s10s": 0.51,
     "tendance": "HAUSSIERE",
     "ecart_ma200_pct": 8.053366624589419,
     "credit": "ELARGISSEMENT",
-    "hy_oas": 3.12,
-    "hy_vs_ma60_pb": 36.14999999999999,
-    "regime": "MOYENNE / PLATE / HAUSSIERE / ELARGISSEMENT"
+    "hy_oas": 3.03,
+    "hy_vs_ma60_pb": 26.633333333333333,
+    "regime": "MOYENNE / PENTUE / HAUSSIERE / ELARGISSEMENT"
   },
   "percentiles": {
     "VIXCLS": {
       "disponible": true,
-      "valeur": 15.52,
-      "date": "2026-10-05",
-      "n_obs_total": 2543,
-      "pct_252": 18.253968253968253,
+      "valeur": 15.01,
+      "date": "2026-10-06",
+      "n_obs_total": 2544,
+      "pct_252": 10.714285714285714,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2543,
+        "n_obs": 2544,
         "cible": 252,
-        "ecart_pct": 909.13,
+        "ecart_pct": 909.52,
         "etat": "suffisante"
       },
-      "pct_2520": 37.22222222222222,
+      "pct_2520": 33.37301587301587,
       "n_obs_2520": 2520,
       "profondeur_2520": {
-        "n_obs": 2543,
+        "n_obs": 2544,
         "cible": 2520,
-        "ecart_pct": 0.91,
+        "ecart_pct": 0.95,
         "etat": "suffisante"
       }
     },
     "T10Y2Y": {
       "disponible": true,
-      "valeur": 0.48,
+      "valeur": 0.51,
+      "date": "2026-10-07",
+      "n_obs_total": 2498,
+      "pct_252": 45.23809523809524,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 2498,
+        "cible": 252,
+        "ecart_pct": 891.27,
+        "etat": "suffisante"
+      },
+      "pct_2520": 59.607686148919136,
+      "n_obs_2520": 2498,
+      "profondeur_2520": {
+        "n_obs": 2498,
+        "cible": 2520,
+        "ecart_pct": -0.87,
+        "etat": "marginale"
+      }
+    },
+    "BAMLH0A0HYM2": {
+      "disponible": true,
+      "valeur": 3.03,
+      "date": "2026-10-06",
+      "n_obs_total": 785,
+      "pct_252": 81.34920634920636,
+      "n_obs_252": 252,
+      "profondeur_252": {
+        "n_obs": 785,
+        "cible": 252,
+        "ecart_pct": 211.51,
+        "etat": "suffisante"
+      },
+      "pct_2520": 50.19108280254777,
+      "n_obs_2520": 785,
+      "profondeur_2520": {
+        "n_obs": 785,
+        "cible": 2520,
+        "ecart_pct": -68.85,
+        "etat": "insuffisante"
+      }
+    },
+    "DGS10": {
+      "disponible": true,
+      "valeur": 5.27,
       "date": "2026-10-06",
       "n_obs_total": 2497,
-      "pct_252": 34.92063492063492,
+      "pct_252": 98.4126984126984,
       "n_obs_252": 252,
       "profondeur_252": {
         "n_obs": 2497,
@@ -1754,7 +1798,7 @@
         "ecart_pct": 890.87,
         "etat": "suffisante"
       },
-      "pct_2520": 56.14737685222266,
+      "pct_2520": 99.83980776932319,
       "n_obs_2520": 2497,
       "profondeur_2520": {
         "n_obs": 2497,
@@ -1763,69 +1807,25 @@
         "etat": "marginale"
       }
     },
-    "BAMLH0A0HYM2": {
-      "disponible": true,
-      "valeur": 3.12,
-      "date": "2026-10-05",
-      "n_obs_total": 784,
-      "pct_252": 86.90476190476191,
-      "n_obs_252": 252,
-      "profondeur_252": {
-        "n_obs": 784,
-        "cible": 252,
-        "ecart_pct": 211.11,
-        "etat": "suffisante"
-      },
-      "pct_2520": 57.39795918367348,
-      "n_obs_2520": 784,
-      "profondeur_2520": {
-        "n_obs": 784,
-        "cible": 2520,
-        "ecart_pct": -68.89,
-        "etat": "insuffisante"
-      }
-    },
-    "DGS10": {
-      "disponible": true,
-      "valeur": 5.31,
-      "date": "2026-10-05",
-      "n_obs_total": 2496,
-      "pct_252": 99.60317460317461,
-      "n_obs_252": 252,
-      "profondeur_252": {
-        "n_obs": 2496,
-        "cible": 252,
-        "ecart_pct": 890.48,
-        "etat": "suffisante"
-      },
-      "pct_2520": 99.9599358974359,
-      "n_obs_2520": 2496,
-      "profondeur_2520": {
-        "n_obs": 2496,
-        "cible": 2520,
-        "ecart_pct": -0.95,
-        "etat": "marginale"
-      }
-    },
     "DFII10": {
       "disponible": true,
-      "valeur": 2.95,
-      "date": "2026-10-05",
-      "n_obs_total": 2496,
-      "pct_252": 99.60317460317461,
+      "valeur": 2.91,
+      "date": "2026-10-06",
+      "n_obs_total": 2497,
+      "pct_252": 98.01587301587301,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2496,
+        "n_obs": 2497,
         "cible": 252,
-        "ecart_pct": 890.48,
+        "ecart_pct": 890.87,
         "etat": "suffisante"
       },
-      "pct_2520": 99.9599358974359,
-      "n_obs_2520": 2496,
+      "pct_2520": 99.79975971165399,
+      "n_obs_2520": 2497,
       "profondeur_2520": {
-        "n_obs": 2496,
+        "n_obs": 2497,
         "cible": 2520,
-        "ecart_pct": -0.95,
+        "ecart_pct": -0.91,
         "etat": "marginale"
       }
     }
@@ -1840,124 +1840,124 @@
       "DEXUSEU",
       "VIXCLS"
     ],
-    "correlation_moyenne_signee": -0.01073948507654788,
+    "correlation_moyenne_signee": -0.010831344007062094,
     "correlation_signee_max": {
       "paire": "SP500 / NASDAQ100",
-      "valeur": 0.9333359249986093
+      "valeur": 0.9333187979511857
     },
     "correlation_signee_min": {
       "paire": "SP500 / VIXCLS",
-      "valeur": -0.724827217902141
+      "valeur": -0.7248768890195403
     },
-    "correlation_absolue_moyenne_POUR_MEMOIRE": 0.24788071163808362,
-    "n_effectif_paris_correlation": 3.5452991800182057,
-    "n_effectif_paris_covariance": 1.3806590870255264,
-    "n_effectif_paris_opposable": 1.3806590870255264,
+    "correlation_absolue_moyenne_POUR_MEMOIRE": 0.24788411844294095,
+    "n_effectif_paris_correlation": 3.5451475952695906,
+    "n_effectif_paris_covariance": 1.3836851569635351,
+    "n_effectif_paris_opposable": 1.3836851569635351,
     "base_n_eff_opposable": "covariance",
     "motif_base_opposable": "la volatilité de panier est calculée à poids ÉGAUX sur les rendements bruts ; la matrice correspondant à cette pondération est la covariance. N_eff sur la corrélation décrirait un portefeuille pondéré en risque, qui n'est pas celui-ci.",
-    "n_effectif_paris": 1.3806590870255264,
+    "n_effectif_paris": 1.3836851569635351,
     "contributions_variance_pct": {
-      "SP500": -6.272395961987821,
-      "NASDAQ100": -7.7963746357918415,
-      "OBLIG10A": 0.6432850708470308,
-      "DCOILBRENTEU": 18.227567889541557,
-      "DEXUSEU": 0.3244633604498584,
-      "VIXCLS": 94.8734542769412
+      "SP500": -6.259584828583513,
+      "NASDAQ100": -7.778253434798513,
+      "OBLIG10A": 0.6384456736376882,
+      "DCOILBRENTEU": 18.367785941462014,
+      "DEXUSEU": 0.3272416280599844,
+      "VIXCLS": 94.70436502022235
     },
     "actif_dominant_variance": {
       "actif": "VIXCLS",
-      "part_variance_pct": 94.8734542769412
+      "part_variance_pct": 94.70436502022235
     },
-    "lambda_max_sur_n": 0.4409680985104784,
-    "ratio_diversification": 2.1010472704169056,
-    "volatilite_panier_equipondere": 0.011659321368621939,
+    "lambda_max_sur_n": 0.4410478710314338,
+    "ratio_diversification": 2.102631268064405,
+    "volatilite_panier_equipondere": 0.011658925526814683,
     "note": "seule la corrélation SIGNÉE entre dans une limite ; |ρ| est publiée pour mémoire et n'est opposable à rien",
     "matrice": {
       "SP500": {
         "SP500": 1.0,
-        "NASDAQ100": 0.9333359249986093,
-        "OBLIG10A": -0.10863876792636648,
-        "DCOILBRENTEU": 0.18551097568214422,
-        "DEXUSEU": 0.11441153062404574,
-        "VIXCLS": -0.724827217902141
+        "NASDAQ100": 0.9333187979511857,
+        "OBLIG10A": -0.10866037543429014,
+        "DCOILBRENTEU": 0.18567140711604935,
+        "DEXUSEU": 0.11427223661168556,
+        "VIXCLS": -0.7248768890195403
       },
       "NASDAQ100": {
-        "SP500": 0.9333359249986093,
+        "SP500": 0.9333187979511857,
         "NASDAQ100": 1.0,
-        "OBLIG10A": -0.05376163339954769,
-        "DCOILBRENTEU": 0.1292233318757522,
-        "DEXUSEU": 0.10133374168656234,
-        "VIXCLS": -0.7029172771976132
+        "OBLIG10A": -0.05389066055644963,
+        "DCOILBRENTEU": 0.12986877052559112,
+        "DEXUSEU": 0.10121312979499406,
+        "VIXCLS": -0.7029504152248938
       },
       "OBLIG10A": {
-        "SP500": -0.10863876792636648,
-        "NASDAQ100": -0.05376163339954769,
+        "SP500": -0.10866037543429014,
+        "NASDAQ100": -0.05389066055644963,
         "OBLIG10A": 1.0,
-        "DCOILBRENTEU": -0.17690161283801684,
-        "DEXUSEU": 0.19913404556034855,
-        "VIXCLS": 0.1156096487840556
+        "DCOILBRENTEU": -0.17763174769276205,
+        "DEXUSEU": 0.19778365345881277,
+        "VIXCLS": 0.11576781281077275
       },
       "DCOILBRENTEU": {
-        "SP500": 0.18551097568214422,
-        "NASDAQ100": 0.1292233318757522,
-        "OBLIG10A": -0.17690161283801684,
+        "SP500": 0.18567140711604935,
+        "NASDAQ100": 0.12986877052559112,
+        "OBLIG10A": -0.17763174769276205,
         "DCOILBRENTEU": 1.0,
-        "DEXUSEU": -0.02287466865651533,
-        "VIXCLS": -0.10085780152412563
+        "DEXUSEU": -0.021312010760303562,
+        "VIXCLS": -0.10202351880689481
       },
       "DEXUSEU": {
-        "SP500": 0.11441153062404574,
-        "NASDAQ100": 0.10133374168656234,
-        "OBLIG10A": 0.19913404556034855,
-        "DCOILBRENTEU": -0.02287466865651533,
+        "SP500": 0.11427223661168556,
+        "NASDAQ100": 0.10121312979499406,
+        "OBLIG10A": 0.19778365345881277,
+        "DCOILBRENTEU": -0.021312010760303562,
         "DEXUSEU": 1.0,
-        "VIXCLS": -0.04887249591541016
+        "VIXCLS": -0.04902035087988866
       },
       "VIXCLS": {
-        "SP500": -0.724827217902141,
-        "NASDAQ100": -0.7029172771976132,
-        "OBLIG10A": 0.1156096487840556,
-        "DCOILBRENTEU": -0.10085780152412563,
-        "DEXUSEU": -0.04887249591541016,
+        "SP500": -0.7248768890195403,
+        "NASDAQ100": -0.7029504152248938,
+        "OBLIG10A": 0.11576781281077275,
+        "DCOILBRENTEU": -0.10202351880689481,
+        "DEXUSEU": -0.04902035087988866,
         "VIXCLS": 1.0
       }
     }
   },
   "correlation_stress": {
     "disponible": true,
-    "conditionnement": "EXOGÈNE — VIXCLS > percentile 80 (22.83)",
-    "n_seances_conditionnelles": 487,
-    "correlation_moyenne_signee_complet": -0.01073948507654788,
-    "correlation_moyenne_signee_stress": -0.009516006841722638,
-    "delta_observe": 0.001223478234825241,
+    "conditionnement": "EXOGÈNE — VIXCLS > percentile 80 (22.82)",
+    "n_seances_conditionnelles": 489,
+    "correlation_moyenne_signee_complet": -0.010831344007062094,
+    "correlation_moyenne_signee_stress": -0.009588603265475348,
+    "delta_observe": 0.001242740741586746,
     "null_correlation_constante": {
       "n_simulations": 2000,
-      "delta_moyen": 6.537759645478658e-05,
+      "delta_moyen": 8.71448313387712e-06,
       "ic90": [
-        -0.014849864322079244,
-        0.01535086188264108
+        -0.014766534503094769,
+        0.014807669048156348
       ]
     },
-    "ecart_au_null": 0.0011581006383704544,
+    "ecart_au_null": 0.001234026258452869,
     "significatif_a_90pct": false,
     "methode_biaisee_pour_memoire": {
       "conditionnement": "queue gauche 1 % du S&P 500, corrélations INCLUANT le S&P 500",
       "correlation_moyenne_signee": 0.1040121206978272,
-      "artefact_estime": 0.11475160577437507,
+      "artefact_estime": 0.11484346470488929,
       "note": "biais de sélection Boyer-Gibson-Loretan — NON OPPOSABLE"
     },
     "reproduction_chiffre_doctrine": {
       "disponible": true,
       "construction": "moyenne des |ρ| sur le décile des pires séances du S&P 500, corrélations incluant le S&P 500. Appliquée ici au panier CORRIGÉ (10 ans converti en rendement obligataire) ; la même construction est appliquée au panier D'ORIGINE dans la clé `chiffre_doctrine_produit`, dont la valeur est CALCULÉE et non affirmée.",
       "valeur_reproduite": 0.23178423282571364,
-      "valeur_complet": 0.24788071163808362,
-      "delta_observe": -0.016096478812369974,
-      "null_delta_moyen": -0.08108177202146136,
+      "valeur_complet": 0.24788411844294095,
+      "delta_observe": -0.016099885617227305,
+      "null_delta_moyen": -0.0806592826902038,
       "null_ic90": [
-        -0.10388770572145893,
-        -0.05316721471533904
+        -0.10343589834162929,
+        -0.05544991599820921
       ],
-      "ecart_au_null": 0.06498529320909138,
+      "ecart_au_null": 0.06455939707297649,
       "chiffre_doctrine_produit": {
         "disponible": true,
         "construction": "moyenne des |ρ| du panier D'ORIGINE (DGS10 en log(taux), non corrigé) sur le décile inférieur du S&P 500, corrélations incluant le S&P 500",
@@ -1969,12 +1969,12 @@
           "DEXUSEU",
           "VIXCLS"
         ],
-        "n_obs": 2441,
+        "n_obs": 2444,
         "n_obs_decile": 245,
-        "seuil_decile_sp500": -0.011098789654239383,
+        "seuil_decile_sp500": -0.011095963095463545,
         "valeur_produite": 0.25198118571521533,
         "valeur_produite_arrondie": 0.252,
-        "valeur_complet": 0.2682858102210896,
+        "valeur_complet": 0.26824052447192676,
         "chiffre_de_doctrine": 0.25,
         "ecart_au_chiffre_de_doctrine": 0.001981185715215328,
         "reproduit": false
@@ -1994,12 +1994,12 @@
       "DEXUSEU",
       "VIXCLS"
     ],
-    "n_obs": 2441,
+    "n_obs": 2444,
     "n_obs_decile": 245,
-    "seuil_decile_sp500": -0.011098789654239383,
+    "seuil_decile_sp500": -0.011095963095463545,
     "valeur_produite": 0.25198118571521533,
     "valeur_produite_arrondie": 0.252,
-    "valeur_complet": 0.2682858102210896,
+    "valeur_complet": 0.26824052447192676,
     "chiffre_de_doctrine": 0.25,
     "ecart_au_chiffre_de_doctrine": 0.001981185715215328,
     "reproduit": false
@@ -2059,9 +2059,9 @@
     {
       "type": "CONCENTRATION",
       "niveau": "ALERTE",
-      "mesure": "N_eff covariance 1.381 (N_eff corrélation 3.545, non opposable)",
+      "mesure": "N_eff covariance 1.384 (N_eff corrélation 3.545, non opposable)",
       "seuil": "3.0",
-      "action_exigee": "Nombre effectif de paris insuffisant sur la matrice OPPOSABLE : diversification apparente, pas réelle. VIXCLS porte 94.9 % de la variance du panier."
+      "action_exigee": "Nombre effectif de paris insuffisant sur la matrice OPPOSABLE : diversification apparente, pas réelle. VIXCLS porte 94.7 % de la variance du panier."
     }
   ],
   "n_alertes_cycle": 4,
@@ -2074,39 +2074,39 @@
     "n_non_traitees": 4,
     "non_traitees": [
       {
-        "id": "AL-a976ac27",
+        "id": "AL-c8b68948",
         "type": "VAR",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-10-06",
-        "derniere_date_donnees": "2026-10-06",
+        "premiere_date_donnees": "2026-10-07",
+        "derniere_date_donnees": "2026-10-07",
         "derniere_mesure": "-3.30 %",
         "occurrences": 1
       },
       {
-        "id": "AL-81e6843c",
+        "id": "AL-6b4955c1",
         "type": "BACKTEST_VAR",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-10-06",
-        "derniere_date_donnees": "2026-10-06",
+        "premiere_date_donnees": "2026-10-07",
+        "derniere_date_donnees": "2026-10-07",
         "derniere_mesure": "aucune cellule non rejetée",
         "occurrences": 1
       },
       {
-        "id": "AL-a973308b",
+        "id": "AL-dba77481",
         "type": "CORRELATION_MAX",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-10-06",
-        "derniere_date_donnees": "2026-10-06",
+        "premiere_date_donnees": "2026-10-07",
+        "derniere_date_donnees": "2026-10-07",
         "derniere_mesure": "0.933 (SP500 / NASDAQ100)",
         "occurrences": 1
       },
       {
-        "id": "AL-9231f86f",
+        "id": "AL-6abb230f",
         "type": "CONCENTRATION",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-10-06",
-        "derniere_date_donnees": "2026-10-06",
-        "derniere_mesure": "N_eff covariance 1.381 (N_eff corrélation 3.545, non opposable)",
+        "premiere_date_donnees": "2026-10-07",
+        "derniere_date_donnees": "2026-10-07",
+        "derniere_mesure": "N_eff covariance 1.384 (N_eff corrélation 3.545, non opposable)",
         "occurrences": 1
       }
     ]
