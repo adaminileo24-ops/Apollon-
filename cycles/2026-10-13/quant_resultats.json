@@ -1,0 +1,811 @@
+{
+  "version": "2.0",
+  "hypothese": "Le rendement du S&P 500 est conditionnel au régime. Un signal de régime construit sur la volatilité, la pente de la courbe ou les taux réels sépare des périodes de rendement significativement différent.",
+  "n_essais_declares": 90,
+  "n_evalues": 90,
+  "reference_bh_sharpe": 0.747683276671937,
+  "moyenne_grille": 0.42449434295613925,
+  "variance_grille": 0.06287162825862817,
+  "seuil_nul_centre_zero": 0.625177549626387,
+  "seuil_recentre_derive": 1.0496718925825264,
+  "meilleur_sharpe": 0.8778659923797182,
+  "ecart_au_seuil_recentre": -0.17180590020280817,
+  "controle_positif": {
+    "disponible": true,
+    "beta_injecte": 0.35,
+    "n_tirages": 200,
+    "courbe": [
+      {
+        "alpha_injecte_pct": 0.0,
+        "taux_detection": 0.04,
+        "alpha_moyen_recupere_pct": -0.1975300418811543,
+        "t_moyen": -0.0846872710759023,
+        "se_alpha_pct": 2.318114064518987
+      },
+      {
+        "alpha_injecte_pct": 3.0,
+        "taux_detection": 0.215,
+        "alpha_moyen_recupere_pct": 2.802469958118846,
+        "t_moyen": 1.209060889330169,
+        "se_alpha_pct": 2.318114064518985
+      },
+      {
+        "alpha_injecte_pct": 6.0,
+        "taux_detection": 0.67,
+        "alpha_moyen_recupere_pct": 5.802469958118846,
+        "t_moyen": 2.5028090497362405,
+        "se_alpha_pct": 2.3181140645189875
+      },
+      {
+        "alpha_injecte_pct": 9.0,
+        "taux_detection": 0.99,
+        "alpha_moyen_recupere_pct": 8.802469958118847,
+        "t_moyen": 3.7965572101423124,
+        "se_alpha_pct": 2.318114064518986
+      },
+      {
+        "alpha_injecte_pct": 12.0,
+        "taux_detection": 1.0,
+        "alpha_moyen_recupere_pct": 11.802469958118847,
+        "t_moyen": 5.090305370548384,
+        "se_alpha_pct": 2.318114064518988
+      }
+    ],
+    "taux_faux_positifs": 0.04,
+    "puissance_alpha_6pct": 0.67,
+    "banc_etalonne": true
+  },
+  "pbo_grille": 0.4126984126984127,
+  "examens": [
+    {
+      "nom": "VIXCLS|20|0.75|dessous",
+      "sharpe": 0.8778659923797182,
+      "dsr": 0.2980526072561005,
+      "stabilite": {
+        "disponible": true,
+        "n_plis_total": 8,
+        "n_plis_evalues": 8,
+        "n_plis_plats": 0,
+        "n_plis_courts": 0,
+        "mediane": 1.055230977492084,
+        "positifs": 6,
+        "note": "stabilité par sous-période — PAS une validation croisée"
+      },
+      "facteurs": {
+        "disponible": true,
+        "n_obs": 2445,
+        "alpha_annualise_pct": 2.233225377332899,
+        "alpha_t": 0.7956974130476764,
+        "betas": {
+          "Mkt-RF": 0.35552770406579126,
+          "SMB": 0.0284348262137576,
+          "HML": -0.05336527914645371,
+          "RMW": -0.0172294503628313,
+          "CMA": -0.07024057705359484
+        },
+        "r2": 0.39759094314174115
+      },
+      "treynor_mazuy": {
+        "disponible": true,
+        "alpha_annualise_pct": 1.3608859555616546,
+        "alpha_t": 0.4662725473464221,
+        "beta": 0.3743512560378885,
+        "gamma_timing": 0.14895677503989094,
+        "gamma_t": 0.7386289055431944
+      },
+      "alpha_min_detectable": 5.613252828808906,
+      "retenue": false
+    },
+    {
+      "nom": "T10Y2Y|20|0.75|dessus",
+      "sharpe": 0.8660695809028663,
+      "dsr": 0.2789655615382542,
+      "stabilite": {
+        "disponible": true,
+        "n_plis_total": 8,
+        "n_plis_evalues": 5,
+        "n_plis_plats": 3,
+        "n_plis_courts": 0,
+        "mediane": 1.3395836308172109,
+        "positifs": 5,
+        "note": "stabilité par sous-période — PAS une validation croisée"
+      },
+      "facteurs": {
+        "disponible": true,
+        "n_obs": 2445,
+        "alpha_annualise_pct": 1.521599862516052,
+        "alpha_t": 0.5460726012541687,
+        "betas": {
+          "Mkt-RF": 0.3992466997108008,
+          "SMB": 0.030278361948753163,
+          "HML": -0.014251417993014548,
+          "RMW": 0.0473204180400777,
+          "CMA": 0.2225729648125446
+        },
+        "r2": 0.4076220471547912
+      },
+      "treynor_mazuy": {
+        "disponible": true,
+        "alpha_annualise_pct": -6.503690169975586,
+        "alpha_t": -2.2830651651228298,
+        "beta": 0.3809858564182829,
+        "gamma_timing": 2.388754511016719,
+        "gamma_t": 12.136065402287114
+      },
+      "alpha_min_detectable": 5.572884847257977,
+      "retenue": false
+    },
+    {
+      "nom": "T10Y2Y|60|0.75|dessus",
+      "sharpe": 0.8323983038746434,
+      "dsr": 0.24474135727741142,
+      "stabilite": {
+        "disponible": true,
+        "n_plis_total": 8,
+        "n_plis_evalues": 5,
+        "n_plis_plats": 3,
+        "n_plis_courts": 0,
+        "mediane": 1.1080023125724652,
+        "positifs": 5,
+        "note": "stabilité par sous-période — PAS une validation croisée"
+      },
+      "facteurs": {
+        "disponible": true,
+        "n_obs": 2445,
+        "alpha_annualise_pct": 1.3000618928432595,
+        "alpha_t": 0.4673295090269218,
+        "betas": {
+          "Mkt-RF": 0.37672034567772833,
+          "SMB": 0.035338581364094804,
+          "HML": -0.0053049300412086955,
+          "RMW": 0.03507184392028102,
+          "CMA": 0.17781406331566246
+        },
+        "r2": 0.38386098004461455
+      },
+      "treynor_mazuy": {
+        "disponible": true,
+        "alpha_annualise_pct": -6.0589338441594744,
+        "alpha_t": -2.1331078402674892,
+        "beta": 0.3641776757597455,
+        "gamma_timing": 2.16501535709109,
+        "gamma_t": 11.031269803365715
+      },
+      "alpha_min_detectable": 5.563791148349529,
+      "retenue": false
+    }
+  ],
+  "retenues": [],
+  "grille_complete": [
+    {
+      "nom": "VIXCLS|20|0.75|dessous",
+      "sharpe": 0.8778659923797182,
+      "n_obs": 2473,
+      "expo_moy": 0.6785281035179943,
+      "rotations_an": 2.710756972111554
+    },
+    {
+      "nom": "T10Y2Y|20|0.75|dessus",
+      "sharpe": 0.8660695809028663,
+      "n_obs": 2473,
+      "expo_moy": 0.3372422159320663,
+      "rotations_an": 1.8071713147410358
+    },
+    {
+      "nom": "T10Y2Y|60|0.75|dessus",
+      "sharpe": 0.8323983038746434,
+      "n_obs": 2473,
+      "expo_moy": 0.33805095026283866,
+      "rotations_an": 1.4055776892430278
+    },
+    {
+      "nom": "DGS10|60|0.75|dessous",
+      "sharpe": 0.8132866775877978,
+      "n_obs": 2473,
+      "expo_moy": 0.5644965628790942,
+      "rotations_an": 1.4055776892430278
+    },
+    {
+      "nom": "VIXCLS|120|0.5|dessous",
+      "sharpe": 0.7761630603608638,
+      "n_obs": 2473,
+      "expo_moy": 0.35179943388596846,
+      "rotations_an": 2.1083665338645416
+    },
+    {
+      "nom": "VIXCLS|20|0.25|dessous",
+      "sharpe": 0.7511113430218422,
+      "n_obs": 2473,
+      "expo_moy": 0.22361504245855238,
+      "rotations_an": 3.5139442231075697
+    },
+    {
+      "nom": "T10Y2Y|60|0.25|dessus",
+      "sharpe": 0.7510108569339572,
+      "n_obs": 2473,
+      "expo_moy": 0.5394257986251516,
+      "rotations_an": 1.4055776892430278
+    },
+    {
+      "nom": "DGS10|120|0.25|dessus",
+      "sharpe": 0.7421518283459005,
+      "n_obs": 2473,
+      "expo_moy": 0.8018600889607764,
+      "rotations_an": 1.9075697211155378
+    },
+    {
+      "nom": "T10Y2Y|20|0.25|dessus",
+      "sharpe": 0.7264837501667076,
+      "n_obs": 2473,
+      "expo_moy": 0.5394257986251516,
+      "rotations_an": 1.4055776892430278
+    },
+    {
+      "nom": "T10Y2Y|120|0.5|dessus",
+      "sharpe": 0.7183380404527595,
+      "n_obs": 2473,
+      "expo_moy": 0.4395471087747675,
+      "rotations_an": 0.401593625498008
+    },
+    {
+      "nom": "VIXCLS|20|0.5|dessous",
+      "sharpe": 0.7138075753569475,
+      "n_obs": 2473,
+      "expo_moy": 0.419328750505459,
+      "rotations_an": 3.714741035856574
+    },
+    {
+      "nom": "DFII10|60|0.75|dessous",
+      "sharpe": 0.7131710478745393,
+      "n_obs": 2473,
+      "expo_moy": 0.6000808734330773,
+      "rotations_an": 2.409561752988048
+    },
+    {
+      "nom": "T10Y2Y|120|0.25|dessus",
+      "sharpe": 0.7078061651384345,
+      "n_obs": 2473,
+      "expo_moy": 0.7209866558835423,
+      "rotations_an": 2.8111553784860557
+    },
+    {
+      "nom": "T10Y2Y|20|0.5|dessus",
+      "sharpe": 0.6971886454132403,
+      "n_obs": 2473,
+      "expo_moy": 0.4545086938940558,
+      "rotations_an": 1.204780876494024
+    },
+    {
+      "nom": "T10YIE|120|0.75|dessous",
+      "sharpe": 0.6763560345018295,
+      "n_obs": 2473,
+      "expo_moy": 0.7792155276991508,
+      "rotations_an": 2.710756972111554
+    },
+    {
+      "nom": "T10YIE|120|0.5|dessous",
+      "sharpe": 0.6735028938450649,
+      "n_obs": 2473,
+      "expo_moy": 0.47715325515568136,
+      "rotations_an": 2.208764940239044
+    },
+    {
+      "nom": "DFII10|20|0.75|dessous",
+      "sharpe": 0.6710706454210571,
+      "n_obs": 2473,
+      "expo_moy": 0.5604528912252326,
+      "rotations_an": 2.8111553784860557
+    },
+    {
+      "nom": "T10YIE|60|0.25|dessous",
+      "sharpe": 0.6680220497572266,
+      "n_obs": 2473,
+      "expo_moy": 0.2244237767893247,
+      "rotations_an": 2.409561752988048
+    },
+    {
+      "nom": "DFII10|60|0.25|dessus",
+      "sharpe": 0.6588827718983459,
+      "n_obs": 2473,
+      "expo_moy": 0.6793368378487666,
+      "rotations_an": 1.5059760956175299
+    },
+    {
+      "nom": "VIXCLS|120|0.25|dessus",
+      "sharpe": 0.6544903951815012,
+      "n_obs": 2473,
+      "expo_moy": 0.8710068742418116,
+      "rotations_an": 0.7027888446215139
+    },
+    {
+      "nom": "T10Y2Y|120|0.75|dessus",
+      "sharpe": 0.6495443372989541,
+      "n_obs": 2473,
+      "expo_moy": 0.1819652244237768,
+      "rotations_an": 3.8151394422310756
+    },
+    {
+      "nom": "DFII10|120|0.75|dessous",
+      "sharpe": 0.6436592462185505,
+      "n_obs": 2473,
+      "expo_moy": 0.6878285483218762,
+      "rotations_an": 2.409561752988048
+    },
+    {
+      "nom": "DGS10|20|0.75|dessous",
+      "sharpe": 0.6433342908424439,
+      "n_obs": 2473,
+      "expo_moy": 0.5297209866558835,
+      "rotations_an": 3.0119521912350598
+    },
+    {
+      "nom": "DFII10|120|0.25|dessus",
+      "sharpe": 0.635429727253313,
+      "n_obs": 2473,
+      "expo_moy": 0.7897290739991912,
+      "rotations_an": 2.710756972111554
+    },
+    {
+      "nom": "T10YIE|60|0.75|dessous",
+      "sharpe": 0.6198441817371655,
+      "n_obs": 2473,
+      "expo_moy": 0.6659927213910231,
+      "rotations_an": 2.1083665338645416
+    },
+    {
+      "nom": "T10Y2Y|60|0.5|dessus",
+      "sharpe": 0.6108020042823935,
+      "n_obs": 2473,
+      "expo_moy": 0.4488475535786494,
+      "rotations_an": 1.204780876494024
+    },
+    {
+      "nom": "DFII10|20|0.5|dessus",
+      "sharpe": 0.6041240170759513,
+      "n_obs": 2473,
+      "expo_moy": 0.5317428224828143,
+      "rotations_an": 1.5059760956175299
+    },
+    {
+      "nom": "VIXCLS|60|0.75|dessous",
+      "sharpe": 0.5851871110349837,
+      "n_obs": 2473,
+      "expo_moy": 0.672866963202588,
+      "rotations_an": 1.9075697211155378
+    },
+    {
+      "nom": "DGS10|120|0.75|dessous",
+      "sharpe": 0.5792287368736674,
+      "n_obs": 2473,
+      "expo_moy": 0.6898503841488072,
+      "rotations_an": 2.208764940239044
+    },
+    {
+      "nom": "T10YIE|20|0.5|dessous",
+      "sharpe": 0.5619864674409404,
+      "n_obs": 2473,
+      "expo_moy": 0.419328750505459,
+      "rotations_an": 3.0119521912350598
+    },
+    {
+      "nom": "DFII10|20|0.25|dessus",
+      "sharpe": 0.5548971060232071,
+      "n_obs": 2473,
+      "expo_moy": 0.6324302466639709,
+      "rotations_an": 2.3091633466135457
+    },
+    {
+      "nom": "T10YIE|20|0.75|dessous",
+      "sharpe": 0.5543136205799799,
+      "n_obs": 2473,
+      "expo_moy": 0.6134249898908208,
+      "rotations_an": 3.3131474103585656
+    },
+    {
+      "nom": "VIXCLS|60|0.25|dessus",
+      "sharpe": 0.5451486953312327,
+      "n_obs": 2473,
+      "expo_moy": 0.7650626769106349,
+      "rotations_an": 1.104382470119522
+    },
+    {
+      "nom": "VIXCLS|120|0.75|dessous",
+      "sharpe": 0.5423273547366786,
+      "n_obs": 2473,
+      "expo_moy": 0.6938940558026688,
+      "rotations_an": 2.1083665338645416
+    },
+    {
+      "nom": "DGS10|20|0.5|dessus",
+      "sharpe": 0.5420460049032504,
+      "n_obs": 2473,
+      "expo_moy": 0.5907804286291953,
+      "rotations_an": 1.9075697211155378
+    },
+    {
+      "nom": "DGS10|20|0.25|dessus",
+      "sharpe": 0.5375645754321047,
+      "n_obs": 2473,
+      "expo_moy": 0.6898503841488072,
+      "rotations_an": 1.104382470119522
+    },
+    {
+      "nom": "T10YIE|60|0.5|dessus",
+      "sharpe": 0.526885718493362,
+      "n_obs": 2473,
+      "expo_moy": 0.46866154468257176,
+      "rotations_an": 1.5059760956175299
+    },
+    {
+      "nom": "VIXCLS|60|0.5|dessous",
+      "sharpe": 0.5213965722025141,
+      "n_obs": 2473,
+      "expo_moy": 0.40153659522846746,
+      "rotations_an": 3.3131474103585656
+    },
+    {
+      "nom": "DFII10|120|0.5|dessus",
+      "sharpe": 0.5211777273096985,
+      "n_obs": 2473,
+      "expo_moy": 0.5418520016174687,
+      "rotations_an": 1.3051792828685258
+    },
+    {
+      "nom": "DGS10|60|0.25|dessus",
+      "sharpe": 0.502263757572926,
+      "n_obs": 2473,
+      "expo_moy": 0.6926809543065103,
+      "rotations_an": 0.9035856573705179
+    },
+    {
+      "nom": "T10YIE|120|0.25|dessous",
+      "sharpe": 0.4995305202897872,
+      "n_obs": 2473,
+      "expo_moy": 0.09300444803881924,
+      "rotations_an": 2.409561752988048
+    },
+    {
+      "nom": "DGS10|120|0.5|dessus",
+      "sharpe": 0.49099845105110523,
+      "n_obs": 2473,
+      "expo_moy": 0.5523655479175091,
+      "rotations_an": 1.3051792828685258
+    },
+    {
+      "nom": "DFII10|60|0.5|dessous",
+      "sharpe": 0.4765010744176918,
+      "n_obs": 2473,
+      "expo_moy": 0.3736352608168217,
+      "rotations_an": 1.00398406374502
+    },
+    {
+      "nom": "T10YIE|20|0.25|dessous",
+      "sharpe": 0.473101425737285,
+      "n_obs": 2473,
+      "expo_moy": 0.2519207440355843,
+      "rotations_an": 3.0119521912350598
+    },
+    {
+      "nom": "DGS10|60|0.5|dessous",
+      "sharpe": 0.45019313361321645,
+      "n_obs": 2473,
+      "expo_moy": 0.29882733522038013,
+      "rotations_an": 1.00398406374502
+    },
+    {
+      "nom": "DGS10|60|0.5|dessus",
+      "sharpe": 0.44576418167499005,
+      "n_obs": 2473,
+      "expo_moy": 0.5996765062676911,
+      "rotations_an": 0.9035856573705179
+    },
+    {
+      "nom": "T10YIE|120|0.25|dessus",
+      "sharpe": 0.4215406931278898,
+      "n_obs": 2473,
+      "expo_moy": 0.8054993934492519,
+      "rotations_an": 2.50996015936255
+    },
+    {
+      "nom": "DFII10|60|0.5|dessus",
+      "sharpe": 0.41776534255674275,
+      "n_obs": 2473,
+      "expo_moy": 0.5248685806712495,
+      "rotations_an": 0.9035856573705179
+    },
+    {
+      "nom": "VIXCLS|60|0.25|dessous",
+      "sharpe": 0.4165415161502402,
+      "n_obs": 2473,
+      "expo_moy": 0.13344116457743632,
+      "rotations_an": 1.00398406374502
+    },
+    {
+      "nom": "VIXCLS|60|0.5|dessus",
+      "sharpe": 0.4042298470284363,
+      "n_obs": 2473,
+      "expo_moy": 0.4969672462596037,
+      "rotations_an": 3.212749003984064
+    },
+    {
+      "nom": "DGS10|120|0.5|dessous",
+      "sharpe": 0.3969737459290543,
+      "n_obs": 2473,
+      "expo_moy": 0.3461382935705621,
+      "rotations_an": 1.4055776892430278
+    },
+    {
+      "nom": "VIXCLS|20|0.25|dessus",
+      "sharpe": 0.39177336181597544,
+      "n_obs": 2473,
+      "expo_moy": 0.6748887990295188,
+      "rotations_an": 3.413545816733068
+    },
+    {
+      "nom": "DGS10|60|0.25|dessous",
+      "sharpe": 0.3884648329125924,
+      "n_obs": 2473,
+      "expo_moy": 0.20582288718156086,
+      "rotations_an": 0.803187250996016
+    },
+    {
+      "nom": "T10YIE|20|0.25|dessus",
+      "sharpe": 0.3836503326064462,
+      "n_obs": 2473,
+      "expo_moy": 0.6461787302871007,
+      "rotations_an": 3.1123505976095616
+    },
+    {
+      "nom": "T10YIE|60|0.5|dessous",
+      "sharpe": 0.3774269622979805,
+      "n_obs": 2473,
+      "expo_moy": 0.4298422968054994,
+      "rotations_an": 1.606374501992032
+    },
+    {
+      "nom": "DFII10|120|0.5|dessous",
+      "sharpe": 0.37141544534087967,
+      "n_obs": 2473,
+      "expo_moy": 0.3566518398706025,
+      "rotations_an": 1.204780876494024
+    },
+    {
+      "nom": "DGS10|20|0.25|dessous",
+      "sharpe": 0.35787091410904304,
+      "n_obs": 2473,
+      "expo_moy": 0.20824909017387788,
+      "rotations_an": 1.00398406374502
+    },
+    {
+      "nom": "T10Y2Y|120|0.75|dessous",
+      "sharpe": 0.34067914109336517,
+      "n_obs": 2473,
+      "expo_moy": 0.7161342498989082,
+      "rotations_an": 3.915537848605578
+    },
+    {
+      "nom": "VIXCLS|120|0.5|dessus",
+      "sharpe": 0.321971154419438,
+      "n_obs": 2473,
+      "expo_moy": 0.5467044076021027,
+      "rotations_an": 2.00796812749004
+    },
+    {
+      "nom": "DGS10|20|0.5|dessous",
+      "sharpe": 0.30976613117178975,
+      "n_obs": 2473,
+      "expo_moy": 0.3069146785281035,
+      "rotations_an": 2.00796812749004
+    },
+    {
+      "nom": "VIXCLS|120|0.75|dessus",
+      "sharpe": 0.3079543373163677,
+      "n_obs": 2473,
+      "expo_moy": 0.20460978568540233,
+      "rotations_an": 2.00796812749004
+    },
+    {
+      "nom": "VIXCLS|20|0.5|dessus",
+      "sharpe": 0.3053459755935923,
+      "n_obs": 2473,
+      "expo_moy": 0.47917509098261224,
+      "rotations_an": 3.6143426294820715
+    },
+    {
+      "nom": "VIXCLS|60|0.75|dessus",
+      "sharpe": 0.30193106732360786,
+      "n_obs": 2473,
+      "expo_moy": 0.2256368782854832,
+      "rotations_an": 1.8071713147410358
+    },
+    {
+      "nom": "DFII10|20|0.25|dessous",
+      "sharpe": 0.2982763472003077,
+      "n_obs": 2473,
+      "expo_moy": 0.26607359482410026,
+      "rotations_an": 2.208764940239044
+    },
+    {
+      "nom": "DFII10|20|0.5|dessous",
+      "sharpe": 0.2961635276608237,
+      "n_obs": 2473,
+      "expo_moy": 0.36595228467448443,
+      "rotations_an": 1.606374501992032
+    },
+    {
+      "nom": "T10YIE|60|0.25|dessus",
+      "sharpe": 0.270589551008789,
+      "n_obs": 2473,
+      "expo_moy": 0.6736756975333603,
+      "rotations_an": 2.50996015936255
+    },
+    {
+      "nom": "T10Y2Y|60|0.5|dessous",
+      "sharpe": 0.24488127970108367,
+      "n_obs": 2473,
+      "expo_moy": 0.4492519207440356,
+      "rotations_an": 1.3051792828685258
+    },
+    {
+      "nom": "T10YIE|20|0.75|dessus",
+      "sharpe": 0.2200550645309926,
+      "n_obs": 2473,
+      "expo_moy": 0.2834613829357056,
+      "rotations_an": 3.212749003984064
+    },
+    {
+      "nom": "DGS10|120|0.75|dessus",
+      "sharpe": 0.19740439432234547,
+      "n_obs": 2473,
+      "expo_moy": 0.20824909017387788,
+      "rotations_an": 2.1083665338645416
+    },
+    {
+      "nom": "DFII10|60|0.25|dessous",
+      "sharpe": 0.19518677459884692,
+      "n_obs": 2473,
+      "expo_moy": 0.21876263647391833,
+      "rotations_an": 1.4055776892430278
+    },
+    {
+      "nom": "T10YIE|20|0.5|dessus",
+      "sharpe": 0.15938831425920874,
+      "n_obs": 2473,
+      "expo_moy": 0.4775576223210675,
+      "rotations_an": 3.1123505976095616
+    },
+    {
+      "nom": "T10Y2Y|20|0.5|dessous",
+      "sharpe": 0.1490665911332865,
+      "n_obs": 2473,
+      "expo_moy": 0.44399514759401537,
+      "rotations_an": 1.3051792828685258
+    },
+    {
+      "nom": "T10Y2Y|60|0.75|dessous",
+      "sharpe": 0.1482837567213337,
+      "n_obs": 2473,
+      "expo_moy": 0.5600485240598463,
+      "rotations_an": 1.5059760956175299
+    },
+    {
+      "nom": "T10YIE|60|0.75|dessus",
+      "sharpe": 0.1477153709888857,
+      "n_obs": 2473,
+      "expo_moy": 0.23210675293166194,
+      "rotations_an": 2.00796812749004
+    },
+    {
+      "nom": "T10YIE|120|0.5|dessus",
+      "sharpe": 0.14526307637322583,
+      "n_obs": 2473,
+      "expo_moy": 0.42094621916700364,
+      "rotations_an": 2.1083665338645416
+    },
+    {
+      "nom": "T10Y2Y|120|0.5|dessous",
+      "sharpe": 0.1355271074570024,
+      "n_obs": 2473,
+      "expo_moy": 0.4589567327133037,
+      "rotations_an": 0.50199203187251
+    },
+    {
+      "nom": "DGS10|20|0.75|dessus",
+      "sharpe": 0.11936026360101792,
+      "n_obs": 2473,
+      "expo_moy": 0.3683784876668015,
+      "rotations_an": 2.911553784860558
+    },
+    {
+      "nom": "DFII10|120|0.25|dessous",
+      "sharpe": 0.11728121671337656,
+      "n_obs": 2473,
+      "expo_moy": 0.1087747674888799,
+      "rotations_an": 2.6103585657370516
+    },
+    {
+      "nom": "DFII10|20|0.75|dessus",
+      "sharpe": 0.10659503886907483,
+      "n_obs": 2473,
+      "expo_moy": 0.3376465830974525,
+      "rotations_an": 2.710756972111554
+    },
+    {
+      "nom": "T10Y2Y|20|0.75|dessous",
+      "sharpe": 0.10564488161225123,
+      "n_obs": 2473,
+      "expo_moy": 0.5608572583906187,
+      "rotations_an": 2.1083665338645416
+    },
+    {
+      "nom": "DFII10|120|0.75|dessus",
+      "sharpe": 0.08087959935958483,
+      "n_obs": 2473,
+      "expo_moy": 0.21027092600080874,
+      "rotations_an": 2.3091633466135457
+    },
+    {
+      "nom": "VIXCLS|20|0.75|dessus",
+      "sharpe": 0.07370080396753237,
+      "n_obs": 2473,
+      "expo_moy": 0.21997573797007683,
+      "rotations_an": 2.6103585657370516
+    },
+    {
+      "nom": "T10Y2Y|20|0.25|dessous",
+      "sharpe": 0.045592799683626874,
+      "n_obs": 2473,
+      "expo_moy": 0.35867367569753333,
+      "rotations_an": 1.5059760956175299
+    },
+    {
+      "nom": "DFII10|60|0.75|dessus",
+      "sharpe": 0.026335216961699853,
+      "n_obs": 2473,
+      "expo_moy": 0.2972098665588354,
+      "rotations_an": 2.3091633466135457
+    },
+    {
+      "nom": "T10Y2Y|60|0.25|dessous",
+      "sharpe": 0.025607523049723833,
+      "n_obs": 2473,
+      "expo_moy": 0.35907804286291956,
+      "rotations_an": 1.5059760956175299
+    },
+    {
+      "nom": "DGS10|120|0.25|dessous",
+      "sharpe": -0.003576342880618093,
+      "n_obs": 2473,
+      "expo_moy": 0.09623938536190861,
+      "rotations_an": 1.8071713147410358
+    },
+    {
+      "nom": "DGS10|60|0.75|dessus",
+      "sharpe": -0.04009006293255539,
+      "n_obs": 2473,
+      "expo_moy": 0.3331985442782046,
+      "rotations_an": 1.5059760956175299
+    },
+    {
+      "nom": "T10YIE|120|0.75|dessus",
+      "sharpe": -0.08453773254224571,
+      "n_obs": 2473,
+      "expo_moy": 0.11888394662353417,
+      "rotations_an": 2.8111553784860557
+    },
+    {
+      "nom": "VIXCLS|120|0.25|dessous",
+      "sharpe": -0.09884534133691131,
+      "n_obs": 2473,
+      "expo_moy": 0.027496967246259604,
+      "rotations_an": 0.602390438247012
+    },
+    {
+      "nom": "T10Y2Y|120|0.25|dessous",
+      "sharpe": -0.09898665266523714,
+      "n_obs": 2473,
+      "expo_moy": 0.17670845127375656,
+      "rotations_an": 2.710756972111554
+    }
+  ]
+}
