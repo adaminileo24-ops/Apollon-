@@ -1,6 +1,6 @@
 # BRIEF MACRO n° 005 — arrêté au 2026-10-28
 
-*Produit par `apollon_macro.py` le 2026-10-30T11:24:40+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
+*Produit par `apollon_macro.py` le 2026-10-30T23:15:06+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
 
 **Grille de scénarios (R-029, §11), déclarée avant toute lecture de données et empreintée :** `[-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0]` · empreinte SHA-256 `6aaeb3863c875923…` · symétrique : True · horizon 60 séances (3 mois pour les séries mensuelles).
 
@@ -28,8 +28,8 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 | série | rôle déclaré | valeur | date | retard | n obs | profondeur | pct 1 an | pct 5 ans | pct complet |
 |---|---|---:|---|---:|---:|---:|---:|---:|---:|
-| BAMLC0A0CM | risque_credit_ig | 0.86 | 2026-10-28 | 0 | 785 | 3.00 ans | 90.9 | REFUSÉ (insuffisante, -38 %) | 54.6 |
-| BAMLH0A0HYM2 | risque_credit_hy | 3.14 | 2026-10-28 | 0 | 786 | 3.00 ans | 86.1 | REFUSÉ (insuffisante, -38 %) | 62.0 |
+| BAMLC0A0CM | risque_credit_ig | 0.86 | 2026-10-28 | 0 | 784 | 2.99 ans | 90.9 | REFUSÉ (insuffisante, -38 %) | 54.7 |
+| BAMLH0A0HYM2 | risque_credit_hy | 3.14 | 2026-10-28 | 0 | 785 | 2.99 ans | 86.1 | REFUSÉ (insuffisante, -38 %) | 62.0 |
 | CPIAUCSL | inflation_globale | 336.3 | 2026-09-01 | 57 | 118 | 9.83 ans | 100.0 | 100.0 | 100.0 |
 | CPILFESL | inflation_sous_jacente | 338.9 | 2026-09-01 | 57 | 118 | 9.83 ans | 100.0 | 100.0 | 100.0 |
 | DCOILBRENTEU | prix_energie | 123.1 | 2026-10-27 | 1 | 2533 | 9.98 ans | 91.7 | 97.1 | 98.5 |
@@ -72,7 +72,7 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 - identité comptable : T10YIE = DGS10 - DFII10 — T10YIE, DGS10, DFII10 (résidu max 0.0000)
 - identité comptable : T10Y2Y = DGS10 - DGS2 — T10Y2Y, DGS10, DGS2 (résidu max 0.0000)
-- corrélation des variations à 60 séances : BAMLC0A0CM / BAMLH0A0HYM2 = +0.936 sur 725 points (seuil 0.9)
+- corrélation des variations à 60 séances : BAMLC0A0CM / BAMLH0A0HYM2 = +0.935 sur 724 points (seuil 0.9)
 - corrélation des variations à 60 séances : DGS10 / DGS30 = +0.966 sur 2437 points (seuil 0.9)
 - corrélation des variations à 60 séances : INDPRO / PAYEMS = +0.913 sur 116 points (seuil 0.9)
 - corrélation des variations à 60 séances : INDPRO / UNRATE = -0.917 sur 115 points (seuil 0.9)
@@ -88,17 +88,17 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 σ est **mesuré** sur chaque série, jamais choisi. Les probabilités sont les **fréquences historiques** dans chaque bande, jamais un jugement. L'effectif de chaque bande est publié ; sous 20 observations la bande est déclarée NON ESTIMABLE. La colonne « emp./gauss. » est la double confrontation exigée par §11.5 : tout écart supérieur à un facteur 2 est déclaré (⚠).
 
-**BAMLH0A0HYM2** (niveau) — σ à 60 pas = **0.44746** · estimateurs croisés : racine-h 0.53962, blocs disjoints 0.35300 (écart relatif 52.9 %) · dérive d'échantillon -0.07189 (-0.16 σ) · 726 variations chevauchantes, 12 blocs indépendants · 2023-10-30 → 2026-10-28
+**BAMLH0A0HYM2** (niveau) — σ à 60 pas = **0.44646** · estimateurs croisés : racine-h 0.53953, blocs disjoints 0.37474 (écart relatif 44.0 %) · dérive d'échantillon -0.07062 (-0.16 σ) · 725 variations chevauchantes, 12 blocs indépendants · 2023-10-31 → 2026-10-28
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.6712 | 41 | 1 | 0.0565 | 0.0668 | 0.85 | oui |
-| -1.0 | -0.6712 | -0.3356 | 117 | 2 | 0.1612 | 0.1598 | 1.01 | oui |
-| -0.5 | -0.3356 | -0.1119 | 189 | 3 | 0.2603 | 0.1747 | 1.49 | oui |
-| +0.0 | -0.1119 | +0.1119 | 195 | 3 | 0.2686 | 0.1974 | 1.36 | oui |
-| +0.5 | +0.1119 | +0.3356 | 80 | 1 | 0.1102 | 0.1747 | 0.63 | oui |
-| +1.0 | +0.3356 | +0.6712 | 75 | 1 | 0.1033 | 0.1598 | 0.65 | oui |
-| +2.0 | +0.6712 | +∞ | 29 | 0 | 0.0399 | 0.0668 | 0.60 | oui |
+| -2.0 | −∞ | -0.6697 | 43 | 1 | 0.0593 | 0.0668 | 0.89 | oui |
+| -1.0 | -0.6697 | -0.3348 | 114 | 2 | 0.1572 | 0.1598 | 0.98 | oui |
+| -0.5 | -0.3348 | -0.1116 | 189 | 3 | 0.2607 | 0.1747 | 1.49 | oui |
+| +0.0 | -0.1116 | +0.1116 | 195 | 3 | 0.2690 | 0.1974 | 1.36 | oui |
+| +0.5 | +0.1116 | +0.3348 | 80 | 1 | 0.1103 | 0.1747 | 0.63 | oui |
+| +1.0 | +0.3348 | +0.6697 | 74 | 1 | 0.1021 | 0.1598 | 0.64 | oui |
+| +2.0 | +0.6697 | +∞ | 30 | 0 | 0.0414 | 0.0668 | 0.62 | oui |
 
 **DCOILBRENTEU** (log) — σ à 60 pas = **0.24927** · estimateurs croisés : racine-h 0.24986, blocs disjoints 0.20789 (écart relatif 20.2 %) · dérive d'échantillon +0.01880 (+0.08 σ) · 2473 variations chevauchantes, 41 blocs indépendants · 2016-11-01 → 2026-10-27
 
@@ -335,8 +335,8 @@ Aucune prédiction émise ce cycle : aucune thèse n'a été transmise. Une pré
 
 **Source unique : dépôt Apollon `data/history/*.csv`, 26 séries FRED.** Aucune valeur n'a d'autre origine. Portée temporelle complète publiée série par série au §3 (E-004).
 
-- `BAMLC0A0CM` : percentile REFUSÉ sur 5 ans — profondeur réelle 785 obs / 3.00 ans (début 2023-10-30). R-011 : un percentile calculé sur une série tronquée est sans valeur.
-- `BAMLH0A0HYM2` : percentile REFUSÉ sur 5 ans — profondeur réelle 786 obs / 3.00 ans (début 2023-10-30). R-011 : un percentile calculé sur une série tronquée est sans valeur.
+- `BAMLC0A0CM` : percentile REFUSÉ sur 5 ans — profondeur réelle 784 obs / 2.99 ans (début 2023-10-31). R-011 : un percentile calculé sur une série tronquée est sans valeur.
+- `BAMLH0A0HYM2` : percentile REFUSÉ sur 5 ans — profondeur réelle 785 obs / 2.99 ans (début 2023-10-31). R-011 : un percentile calculé sur une série tronquée est sans valeur.
 - `BAMLH0A0HYM2` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
 - `BAMLC0A0CM` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
 - Retards sur la date d'arrêté unique (E-014) : DCOILBRENTEU 1 séance(s), DCOILWTICO 1 séance(s), DEXJPUS 3 séance(s), DEXUSEU 3 séance(s), DTWEXBGS 3 séance(s)
