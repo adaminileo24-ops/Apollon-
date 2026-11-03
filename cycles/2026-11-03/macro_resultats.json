@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-11-03T01:48:17+00:00",
+    "genere_le_utc": "2026-11-03T12:48:10+00:00",
     "date_donnees": "2026-10-30",
     "validite_heures": 24.0,
-    "perime_apres_utc": "2026-11-04T01:48:17+00:00",
+    "perime_apres_utc": "2026-11-04T12:48:10+00:00",
     "execution_complete": true,
     "controle_attendu_de_l_aval": "REFUSER ce fichier si l'heure UTC courante dépasse `perime_apres_utc`, si `date_donnees` ne correspond pas à la date d'arrêté examinée, ou si `execution_complete` est absent ou faux."
   },
@@ -164,8 +164,8 @@
         "NASDAQ100",
         "SP500"
       ],
-      "correlation": 0.9035,
-      "n": 2448,
+      "correlation": 0.9036,
+      "n": 2449,
       "seuil": 0.9
     },
     {
@@ -12332,7 +12332,7 @@
     },
     {
       "identifiant": "M005-NASDAQ100-HAUSSE-ALIGNE",
-      "enonce": "À 60 séances, position dont le P&L est croissant avec la hausse de NASDAQ100 (prix_actions_tech), niveau 2.94e+04 au 2026-10-29, percentile 94.36507936507937 sur 5 ans (profondeur réelle 9.97 ans, 2509 obs). Dossier de confirmation « aligne » : 2 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré 0.0887 (log). Espérance +0.304 % de NAV, ratio 1.08:1 (information).",
+      "enonce": "À 60 séances, position dont le P&L est croissant avec la hausse de NASDAQ100 (prix_actions_tech), niveau 2.838e+04 au 2026-10-30, percentile 90.71428571428571 sur 5 ans (profondeur réelle 9.98 ans, 2510 obs). Dossier de confirmation « aligne » : 2 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré 0.0887 (log). Espérance +0.304 % de NAV, ratio 1.08:1 (information).",
       "instrument": "NASDAQ100",
       "direction": 1,
       "regle_confirmation": "aligne",
@@ -12361,42 +12361,42 @@
       "invalidation_serie": "UNRATE",
       "invalidation_date": "2026-11-02",
       "horizon_jours": 60,
-      "esperance_pct_nav": 0.3042108116710629,
+      "esperance_pct_nav": 0.30389602662671583,
       "scenarios": [
         {
           "k_sigma": -2.0,
-          "variation_serie": -0.17743537520589509,
-          "probabilite_empirique": 0.04409963250306247,
-          "probabilite_gaussienne": 0.06680720126885803,
+          "variation_serie": -0.17742735904366047,
+          "probabilite_empirique": 0.044081632653061226,
+          "probabilite_gaussienne": 0.06680720126885809,
           "ecart_facteur_2_declare": false,
           "n_observations": 108,
-          "pnl_position_pct": -17.1822979871568,
-          "pnl_nav_pct": -1.374583838972544
+          "pnl_position_pct": -17.181626698923978,
+          "pnl_nav_pct": -1.3745301359139181
         },
         {
           "k_sigma": -1.0,
-          "variation_serie": -0.08871768760294754,
-          "probabilite_empirique": 0.06819109840751326,
+          "variation_serie": -0.08871367952183024,
+          "probabilite_empirique": 0.06816326530612245,
           "probabilite_gaussienne": 0.15982015110801012,
           "ecart_facteur_2_declare": true,
           "n_observations": 167,
-          "pnl_position_pct": -9.41342129566751,
-          "pnl_nav_pct": -0.7530737036534008
+          "pnl_position_pct": -9.413054513873373,
+          "pnl_nav_pct": -0.7530443611098698
         },
         {
           "k_sigma": -0.5,
-          "variation_serie": -0.04435884380147377,
-          "probabilite_empirique": 0.0759493670886076,
-          "probabilite_gaussienne": 0.17466632194020815,
+          "variation_serie": -0.04435683976091512,
+          "probabilite_empirique": 0.0763265306122449,
+          "probabilite_gaussienne": 0.1746663219402081,
           "ecart_facteur_2_declare": true,
-          "n_observations": 186,
-          "pnl_position_pct": -5.262747315541103,
-          "pnl_nav_pct": -0.4210197852432882
+          "n_observations": 187,
+          "pnl_position_pct": -5.262555606700456,
+          "pnl_nav_pct": -0.42100444853603647
         },
         {
           "k_sigma": 0.0,
           "variation_serie": 0.0,
-          "probabilite_empirique": 0.1449571253572887,
+          "probabilite_empirique": 0.14489795918367346,
           "probabilite_gaussienne": 0.1974126513658474,
           "ecart_facteur_2_declare": false,
           "n_observations": 355,
@@ -12405,33 +12405,33 @@
         },
         {
           "k_sigma": 0.5,
-          "variation_serie": 0.04435884380147377,
-          "probabilite_empirique": 0.24091465904450796,
-          "probabilite_gaussienne": 0.17466632194020815,
+          "variation_serie": 0.04435683976091512,
+          "probabilite_empirique": 0.24081632653061225,
+          "probabilite_gaussienne": 0.17466632194020804,
           "ecart_facteur_2_declare": false,
           "n_observations": 590,
-          "pnl_position_pct": 3.6119312379698814,
-          "pnl_nav_pct": 0.2889544990375905
+          "pnl_position_pct": 3.6117217443154797,
+          "pnl_nav_pct": 0.2889377395452384
         },
         {
           "k_sigma": 1.0,
-          "variation_serie": 0.08871768760294754,
-          "probabilite_empirique": 0.2968558595345039,
-          "probabilite_gaussienne": 0.15982015110801007,
+          "variation_serie": 0.08871367952183024,
+          "probabilite_empirique": 0.296734693877551,
+          "probabilite_gaussienne": 0.15982015110801018,
           "ecart_facteur_2_declare": false,
           "n_observations": 727,
-          "pnl_position_pct": 8.353401442329947,
-          "pnl_nav_pct": 0.6682721153863957
+          "pnl_position_pct": 8.352963451281873,
+          "pnl_nav_pct": 0.6682370761025499
         },
         {
           "k_sigma": 2.0,
-          "variation_serie": 0.17743537520589509,
-          "probabilite_empirique": 0.12903225806451613,
+          "variation_serie": 0.17742735904366047,
+          "probabilite_empirique": 0.12897959183673469,
           "probabilite_gaussienne": 0.06680720126885809,
           "ecart_facteur_2_declare": false,
           "n_observations": 316,
-          "pnl_position_pct": 18.491278841571983,
-          "pnl_nav_pct": 1.4793023073257587
+          "pnl_position_pct": 18.490321594687114,
+          "pnl_nav_pct": 1.4792257275749692
         }
       ],
       "criteres": {
@@ -12452,11 +12452,11 @@
         "4_profondeur_suffisante": {
           "detail": {
             "NASDAQ100": {
-              "percentile": 94.36507936507937,
+              "percentile": 90.71428571428571,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 2509,
-              "profondeur_annees": 9.97,
+              "n_obs": 2510,
+              "profondeur_annees": 9.98,
               "fenetre_reduite": false
             },
             "SP500": {
@@ -12536,7 +12536,7 @@
             },
             {
               "k": -0.5,
-              "n": 186,
+              "n": 187,
               "n_effectif": 3
             },
             {
@@ -12674,49 +12674,49 @@
         },
         "12_esperance_positive": {
           "ok": true,
-          "esperance_pct_nav": 0.3042108116710629,
-          "gain_maximal_pct_nav": 1.4793023073257587,
-          "perte_maximale_pct_nav": -1.374583838972544,
-          "ratio_gain_max_sur_perte_max": 1.076181943497523,
+          "esperance_pct_nav": 0.30389602662671583,
+          "gain_maximal_pct_nav": 1.4792257275749692,
+          "perte_maximale_pct_nav": -1.3745301359139181,
+          "ratio_gain_max_sur_perte_max": 1.0761682766536358,
           "note": "le ratio est publié pour information et ne peut jamais fonder une admission seul (T-001, faute E-018). L'espérance décide."
         },
         "13_esperance_non_portee_par_derive": {
           "ok": false,
-          "esperance_avec_derive": 0.3042108116710629,
-          "esperance_sans_derive": -0.03406569791827539,
-          "derive_en_sigma": 0.4967849868749519,
+          "esperance_avec_derive": 0.30389602662671583,
+          "esperance_sans_derive": -0.03436219588094545,
+          "derive_en_sigma": 0.49644715684929286,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
           "ok": false,
           "t_minimum_exige": 2.0,
           "mesurable": true,
-          "esperance_conditionnelle_pct_nav": 0.1949768555534751,
-          "esperance_hors_declenchement_pct_nav": 0.602217050776046,
-          "esperance_inconditionnelle_pct_nav": 0.30589119210449794,
-          "ecart_pct_nav": -0.40724019522257093,
-          "erreur_type_ecart": 0.19729762111359161,
-          "t_ecart": -2.0640907524582244,
-          "n_declenchements": 1782,
+          "esperance_conditionnelle_pct_nav": 0.19467474560738512,
+          "esperance_hors_declenchement_pct_nav": 0.6022086351601756,
+          "esperance_inconditionnelle_pct_nav": 0.30562376778359385,
+          "ecart_pct_nav": -0.4075338895527905,
+          "erreur_type_ecart": 0.19728347875743762,
+          "t_ecart": -2.0657274097130975,
+          "n_declenchements": 1783,
           "n_blocs_independants_declenchement": 29,
           "n_hors": 667,
           "note": "un portier qui n'a jamais mesuré sa capacite a dire OUI ne mesure rien quand il dit NON (R-051). Ce critere est le seul qui teste une capacite PREDICTIVE ; les criteres 12 a 14 testent la forme de la distribution inconditionnelle.",
           "declenchements": {
             "disponible": true,
             "masque": "[False False False ...  True  True  True]",
-            "n_dates": 2449,
-            "n_declenchements": 1782,
+            "n_dates": 2450,
+            "n_declenchements": 1783,
             "n_series_testees": 7,
             "classes_medianes": 2.0
           },
-          "ecart_minimal_detectable_pct_nav": 0.39459524222718323,
-          "ecart_minimal_detectable_annualise_pct": 1.6573000173541697,
+          "ecart_minimal_detectable_pct_nav": 0.39456695751487525,
+          "ecart_minimal_detectable_annualise_pct": 1.6571812215624762,
           "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché."
         },
         "14_esperance_stable_dans_le_temps": {
           "ok": true,
-          "esperance_premiere_moitie": 0.44759040893488433,
-          "esperance_seconde_moitie": 0.18729729046093738,
+          "esperance_premiere_moitie": 0.4474321784478514,
+          "esperance_seconde_moitie": 0.1872838812971106,
           "note": "espérance exigée positive sur les deux moitiés disjointes de l'échantillon"
         },
         "15_enonce_sans_affirmation_politique_non_etayee": {
@@ -12736,7 +12736,7 @@
     },
     {
       "identifiant": "M005-NASDAQ100-HAUSSE-CONTRARIEN",
-      "enonce": "À 60 séances, position dont le P&L est croissant avec la hausse de NASDAQ100 (prix_actions_tech), niveau 2.94e+04 au 2026-10-29, percentile 94.36507936507937 sur 5 ans (profondeur réelle 9.97 ans, 2509 obs). Dossier de confirmation « contrarien » : 3 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré 0.0887 (log). Espérance +0.304 % de NAV, ratio 1.08:1 (information).",
+      "enonce": "À 60 séances, position dont le P&L est croissant avec la hausse de NASDAQ100 (prix_actions_tech), niveau 2.838e+04 au 2026-10-30, percentile 90.71428571428571 sur 5 ans (profondeur réelle 9.98 ans, 2510 obs). Dossier de confirmation « contrarien » : 3 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré 0.0887 (log). Espérance +0.304 % de NAV, ratio 1.08:1 (information).",
       "instrument": "NASDAQ100",
       "direction": 1,
       "regle_confirmation": "contrarien",
@@ -12765,42 +12765,42 @@
       "invalidation_serie": "UNRATE",
       "invalidation_date": "2026-11-02",
       "horizon_jours": 60,
-      "esperance_pct_nav": 0.3042108116710629,
+      "esperance_pct_nav": 0.30389602662671583,
       "scenarios": [
         {
           "k_sigma": -2.0,
-          "variation_serie": -0.17743537520589509,
-          "probabilite_empirique": 0.04409963250306247,
-          "probabilite_gaussienne": 0.06680720126885803,
+          "variation_serie": -0.17742735904366047,
+          "probabilite_empirique": 0.044081632653061226,
+          "probabilite_gaussienne": 0.06680720126885809,
           "ecart_facteur_2_declare": false,
           "n_observations": 108,
-          "pnl_position_pct": -17.1822979871568,
-          "pnl_nav_pct": -1.374583838972544
+          "pnl_position_pct": -17.181626698923978,
+          "pnl_nav_pct": -1.3745301359139181
         },
         {
           "k_sigma": -1.0,
-          "variation_serie": -0.08871768760294754,
-          "probabilite_empirique": 0.06819109840751326,
+          "variation_serie": -0.08871367952183024,
+          "probabilite_empirique": 0.06816326530612245,
           "probabilite_gaussienne": 0.15982015110801012,
           "ecart_facteur_2_declare": true,
           "n_observations": 167,
-          "pnl_position_pct": -9.41342129566751,
-          "pnl_nav_pct": -0.7530737036534008
+          "pnl_position_pct": -9.413054513873373,
+          "pnl_nav_pct": -0.7530443611098698
         },
         {
           "k_sigma": -0.5,
-          "variation_serie": -0.04435884380147377,
-          "probabilite_empirique": 0.0759493670886076,
-          "probabilite_gaussienne": 0.17466632194020815,
+          "variation_serie": -0.04435683976091512,
+          "probabilite_empirique": 0.0763265306122449,
+          "probabilite_gaussienne": 0.1746663219402081,
           "ecart_facteur_2_declare": true,
-          "n_observations": 186,
-          "pnl_position_pct": -5.262747315541103,
-          "pnl_nav_pct": -0.4210197852432882
+          "n_observations": 187,
+          "pnl_position_pct": -5.262555606700456,
+          "pnl_nav_pct": -0.42100444853603647
         },
         {
           "k_sigma": 0.0,
           "variation_serie": 0.0,
-          "probabilite_empirique": 0.1449571253572887,
+          "probabilite_empirique": 0.14489795918367346,
           "probabilite_gaussienne": 0.1974126513658474,
           "ecart_facteur_2_declare": false,
           "n_observations": 355,
@@ -12809,33 +12809,33 @@
         },
         {
           "k_sigma": 0.5,
-          "variation_serie": 0.04435884380147377,
-          "probabilite_empirique": 0.24091465904450796,
-          "probabilite_gaussienne": 0.17466632194020815,
+          "variation_serie": 0.04435683976091512,
+          "probabilite_empirique": 0.24081632653061225,
+          "probabilite_gaussienne": 0.17466632194020804,
           "ecart_facteur_2_declare": false,
           "n_observations": 590,
-          "pnl_position_pct": 3.6119312379698814,
-          "pnl_nav_pct": 0.2889544990375905
+          "pnl_position_pct": 3.6117217443154797,
+          "pnl_nav_pct": 0.2889377395452384
         },
         {
           "k_sigma": 1.0,
-          "variation_serie": 0.08871768760294754,
-          "probabilite_empirique": 0.2968558595345039,
-          "probabilite_gaussienne": 0.15982015110801007,
+          "variation_serie": 0.08871367952183024,
+          "probabilite_empirique": 0.296734693877551,
+          "probabilite_gaussienne": 0.15982015110801018,
           "ecart_facteur_2_declare": false,
           "n_observations": 727,
-          "pnl_position_pct": 8.353401442329947,
-          "pnl_nav_pct": 0.6682721153863957
+          "pnl_position_pct": 8.352963451281873,
+          "pnl_nav_pct": 0.6682370761025499
         },
         {
           "k_sigma": 2.0,
-          "variation_serie": 0.17743537520589509,
-          "probabilite_empirique": 0.12903225806451613,
+          "variation_serie": 0.17742735904366047,
+          "probabilite_empirique": 0.12897959183673469,
           "probabilite_gaussienne": 0.06680720126885809,
           "ecart_facteur_2_declare": false,
           "n_observations": 316,
-          "pnl_position_pct": 18.491278841571983,
-          "pnl_nav_pct": 1.4793023073257587
+          "pnl_position_pct": 18.490321594687114,
+          "pnl_nav_pct": 1.4792257275749692
         }
       ],
       "criteres": {
@@ -12856,11 +12856,11 @@
         "4_profondeur_suffisante": {
           "detail": {
             "NASDAQ100": {
-              "percentile": 94.36507936507937,
+              "percentile": 90.71428571428571,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 2509,
-              "profondeur_annees": 9.97,
+              "n_obs": 2510,
+              "profondeur_annees": 9.98,
               "fenetre_reduite": false
             },
             "SP500": {
@@ -12940,7 +12940,7 @@
             },
             {
               "k": -0.5,
-              "n": 186,
+              "n": 187,
               "n_effectif": 3
             },
             {
@@ -13079,49 +13079,49 @@
         },
         "12_esperance_positive": {
           "ok": true,
-          "esperance_pct_nav": 0.3042108116710629,
-          "gain_maximal_pct_nav": 1.4793023073257587,
-          "perte_maximale_pct_nav": -1.374583838972544,
-          "ratio_gain_max_sur_perte_max": 1.076181943497523,
+          "esperance_pct_nav": 0.30389602662671583,
+          "gain_maximal_pct_nav": 1.4792257275749692,
+          "perte_maximale_pct_nav": -1.3745301359139181,
+          "ratio_gain_max_sur_perte_max": 1.0761682766536358,
           "note": "le ratio est publié pour information et ne peut jamais fonder une admission seul (T-001, faute E-018). L'espérance décide."
         },
         "13_esperance_non_portee_par_derive": {
           "ok": false,
-          "esperance_avec_derive": 0.3042108116710629,
-          "esperance_sans_derive": -0.03406569791827539,
-          "derive_en_sigma": 0.4967849868749519,
+          "esperance_avec_derive": 0.30389602662671583,
+          "esperance_sans_derive": -0.03436219588094545,
+          "derive_en_sigma": 0.49644715684929286,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
           "ok": false,
           "t_minimum_exige": 2.0,
           "mesurable": true,
-          "esperance_conditionnelle_pct_nav": 0.49615280207299545,
-          "esperance_hors_declenchement_pct_nav": 0.21730739045549066,
-          "esperance_inconditionnelle_pct_nav": 0.30589119210449794,
-          "ecart_pct_nav": 0.27884541161750476,
-          "erreur_type_ecart": 0.235082077586742,
-          "t_ecart": 1.1861619332278306,
+          "esperance_conditionnelle_pct_nav": 0.49614278170559645,
+          "esperance_hors_declenchement_pct_nav": 0.21697317398495863,
+          "esperance_inconditionnelle_pct_nav": 0.30562376778359385,
+          "ecart_pct_nav": 0.2791696077206378,
+          "erreur_type_ecart": 0.23507242412280185,
+          "t_ecart": 1.187589776905519,
           "n_declenchements": 778,
           "n_blocs_independants_declenchement": 12,
-          "n_hors": 1671,
+          "n_hors": 1672,
           "note": "un portier qui n'a jamais mesuré sa capacite a dire OUI ne mesure rien quand il dit NON (R-051). Ce critere est le seul qui teste une capacite PREDICTIVE ; les criteres 12 a 14 testent la forme de la distribution inconditionnelle.",
           "declenchements": {
             "disponible": true,
             "masque": "[False False False ... False False False]",
-            "n_dates": 2449,
+            "n_dates": 2450,
             "n_declenchements": 778,
             "n_series_testees": 7,
             "classes_medianes": 1.0
           },
-          "ecart_minimal_detectable_pct_nav": 0.470164155173484,
-          "ecart_minimal_detectable_annualise_pct": 1.9746894517286329,
+          "ecart_minimal_detectable_pct_nav": 0.4701448482456037,
+          "ecart_minimal_detectable_annualise_pct": 1.9746083626315356,
           "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché."
         },
         "14_esperance_stable_dans_le_temps": {
           "ok": true,
-          "esperance_premiere_moitie": 0.44759040893488433,
-          "esperance_seconde_moitie": 0.18729729046093738,
+          "esperance_premiere_moitie": 0.4474321784478514,
+          "esperance_seconde_moitie": 0.1872838812971106,
           "note": "espérance exigée positive sur les deux moitiés disjointes de l'échantillon"
         },
         "15_enonce_sans_affirmation_politique_non_etayee": {
@@ -13141,7 +13141,7 @@
     },
     {
       "identifiant": "M005-NASDAQ100-BAISSE-ALIGNE",
-      "enonce": "À 60 séances, position dont le P&L est croissant avec la baisse de NASDAQ100 (prix_actions_tech), niveau 2.94e+04 au 2026-10-29, percentile 94.36507936507937 sur 5 ans (profondeur réelle 9.97 ans, 2509 obs). Dossier de confirmation « aligne » : 3 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré 0.0887 (log). Espérance -0.304 % de NAV, ratio 0.93:1 (information).",
+      "enonce": "À 60 séances, position dont le P&L est croissant avec la baisse de NASDAQ100 (prix_actions_tech), niveau 2.838e+04 au 2026-10-30, percentile 90.71428571428571 sur 5 ans (profondeur réelle 9.98 ans, 2510 obs). Dossier de confirmation « aligne » : 3 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré 0.0887 (log). Espérance -0.304 % de NAV, ratio 0.93:1 (information).",
       "instrument": "NASDAQ100",
       "direction": -1,
       "regle_confirmation": "aligne",
@@ -13170,42 +13170,42 @@
       "invalidation_serie": "UNRATE",
       "invalidation_date": "2026-11-02",
       "horizon_jours": 60,
-      "esperance_pct_nav": -0.3042108116710629,
+      "esperance_pct_nav": -0.30389602662671583,
       "scenarios": [
         {
           "k_sigma": -2.0,
-          "variation_serie": -0.17743537520589509,
-          "probabilite_empirique": 0.04409963250306247,
-          "probabilite_gaussienne": 0.06680720126885803,
+          "variation_serie": -0.17742735904366047,
+          "probabilite_empirique": 0.044081632653061226,
+          "probabilite_gaussienne": 0.06680720126885809,
           "ecart_facteur_2_declare": false,
           "n_observations": 108,
-          "pnl_position_pct": 17.1822979871568,
-          "pnl_nav_pct": 1.374583838972544
+          "pnl_position_pct": 17.181626698923978,
+          "pnl_nav_pct": 1.3745301359139181
         },
         {
           "k_sigma": -1.0,
-          "variation_serie": -0.08871768760294754,
-          "probabilite_empirique": 0.06819109840751326,
+          "variation_serie": -0.08871367952183024,
+          "probabilite_empirique": 0.06816326530612245,
           "probabilite_gaussienne": 0.15982015110801012,
           "ecart_facteur_2_declare": true,
           "n_observations": 167,
-          "pnl_position_pct": 9.41342129566751,
-          "pnl_nav_pct": 0.7530737036534008
+          "pnl_position_pct": 9.413054513873373,
+          "pnl_nav_pct": 0.7530443611098698
         },
         {
           "k_sigma": -0.5,
-          "variation_serie": -0.04435884380147377,
-          "probabilite_empirique": 0.0759493670886076,
-          "probabilite_gaussienne": 0.17466632194020815,
+          "variation_serie": -0.04435683976091512,
+          "probabilite_empirique": 0.0763265306122449,
+          "probabilite_gaussienne": 0.1746663219402081,
           "ecart_facteur_2_declare": true,
-          "n_observations": 186,
-          "pnl_position_pct": 5.262747315541103,
-          "pnl_nav_pct": 0.4210197852432882
+          "n_observations": 187,
+          "pnl_position_pct": 5.262555606700456,
+          "pnl_nav_pct": 0.42100444853603647
         },
         {
           "k_sigma": 0.0,
           "variation_serie": 0.0,
-          "probabilite_empirique": 0.1449571253572887,
+          "probabilite_empirique": 0.14489795918367346,
           "probabilite_gaussienne": 0.1974126513658474,
           "ecart_facteur_2_declare": false,
           "n_observations": 355,
@@ -13214,33 +13214,33 @@
         },
         {
           "k_sigma": 0.5,
-          "variation_serie": 0.04435884380147377,
-          "probabilite_empirique": 0.24091465904450796,
-          "probabilite_gaussienne": 0.17466632194020815,
+          "variation_serie": 0.04435683976091512,
+          "probabilite_empirique": 0.24081632653061225,
+          "probabilite_gaussienne": 0.17466632194020804,
           "ecart_facteur_2_declare": false,
           "n_observations": 590,
-          "pnl_position_pct": -3.6119312379698814,
-          "pnl_nav_pct": -0.2889544990375905
+          "pnl_position_pct": -3.6117217443154797,
+          "pnl_nav_pct": -0.2889377395452384
         },
         {
           "k_sigma": 1.0,
-          "variation_serie": 0.08871768760294754,
-          "probabilite_empirique": 0.2968558595345039,
-          "probabilite_gaussienne": 0.15982015110801007,
+          "variation_serie": 0.08871367952183024,
+          "probabilite_empirique": 0.296734693877551,
+          "probabilite_gaussienne": 0.15982015110801018,
           "ecart_facteur_2_declare": false,
           "n_observations": 727,
-          "pnl_position_pct": -8.353401442329947,
-          "pnl_nav_pct": -0.6682721153863957
+          "pnl_position_pct": -8.352963451281873,
+          "pnl_nav_pct": -0.6682370761025499
         },
         {
           "k_sigma": 2.0,
-          "variation_serie": 0.17743537520589509,
-          "probabilite_empirique": 0.12903225806451613,
+          "variation_serie": 0.17742735904366047,
+          "probabilite_empirique": 0.12897959183673469,
           "probabilite_gaussienne": 0.06680720126885809,
           "ecart_facteur_2_declare": false,
           "n_observations": 316,
-          "pnl_position_pct": -18.491278841571983,
-          "pnl_nav_pct": -1.4793023073257587
+          "pnl_position_pct": -18.490321594687114,
+          "pnl_nav_pct": -1.4792257275749692
         }
       ],
       "criteres": {
@@ -13261,11 +13261,11 @@
         "4_profondeur_suffisante": {
           "detail": {
             "NASDAQ100": {
-              "percentile": 94.36507936507937,
+              "percentile": 90.71428571428571,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 2509,
-              "profondeur_annees": 9.97,
+              "n_obs": 2510,
+              "profondeur_annees": 9.98,
               "fenetre_reduite": false
             },
             "SP500": {
@@ -13345,7 +13345,7 @@
             },
             {
               "k": -0.5,
-              "n": 186,
+              "n": 187,
               "n_effectif": 3
             },
             {
@@ -13484,49 +13484,49 @@
         },
         "12_esperance_positive": {
           "ok": false,
-          "esperance_pct_nav": -0.3042108116710629,
-          "gain_maximal_pct_nav": 1.374583838972544,
-          "perte_maximale_pct_nav": -1.4793023073257587,
-          "ratio_gain_max_sur_perte_max": 0.9292109071725022,
+          "esperance_pct_nav": -0.30389602662671583,
+          "gain_maximal_pct_nav": 1.3745301359139181,
+          "perte_maximale_pct_nav": -1.4792257275749692,
+          "ratio_gain_max_sur_perte_max": 0.9292227077251501,
           "note": "le ratio est publié pour information et ne peut jamais fonder une admission seul (T-001, faute E-018). L'espérance décide."
         },
         "13_esperance_non_portee_par_derive": {
           "ok": false,
-          "esperance_avec_derive": -0.3042108116710629,
-          "esperance_sans_derive": 0.03406569791827539,
-          "derive_en_sigma": 0.4967849868749519,
+          "esperance_avec_derive": -0.30389602662671583,
+          "esperance_sans_derive": 0.03436219588094545,
+          "derive_en_sigma": 0.49644715684929286,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
           "ok": false,
           "t_minimum_exige": 2.0,
           "mesurable": true,
-          "esperance_conditionnelle_pct_nav": -0.49615280207299545,
-          "esperance_hors_declenchement_pct_nav": -0.21730739045549066,
-          "esperance_inconditionnelle_pct_nav": -0.30589119210449794,
-          "ecart_pct_nav": -0.27884541161750476,
-          "erreur_type_ecart": 0.235082077586742,
-          "t_ecart": -1.1861619332278306,
+          "esperance_conditionnelle_pct_nav": -0.49614278170559645,
+          "esperance_hors_declenchement_pct_nav": -0.21697317398495863,
+          "esperance_inconditionnelle_pct_nav": -0.30562376778359385,
+          "ecart_pct_nav": -0.2791696077206378,
+          "erreur_type_ecart": 0.23507242412280185,
+          "t_ecart": -1.187589776905519,
           "n_declenchements": 778,
           "n_blocs_independants_declenchement": 12,
-          "n_hors": 1671,
+          "n_hors": 1672,
           "note": "un portier qui n'a jamais mesuré sa capacite a dire OUI ne mesure rien quand il dit NON (R-051). Ce critere est le seul qui teste une capacite PREDICTIVE ; les criteres 12 a 14 testent la forme de la distribution inconditionnelle.",
           "declenchements": {
             "disponible": true,
             "masque": "[False False False ... False False False]",
-            "n_dates": 2449,
+            "n_dates": 2450,
             "n_declenchements": 778,
             "n_series_testees": 7,
             "classes_medianes": 1.0
           },
-          "ecart_minimal_detectable_pct_nav": 0.470164155173484,
-          "ecart_minimal_detectable_annualise_pct": 1.9746894517286329,
+          "ecart_minimal_detectable_pct_nav": 0.4701448482456037,
+          "ecart_minimal_detectable_annualise_pct": 1.9746083626315356,
           "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché."
         },
         "14_esperance_stable_dans_le_temps": {
           "ok": false,
-          "esperance_premiere_moitie": -0.44759040893488433,
-          "esperance_seconde_moitie": -0.18729729046093738,
+          "esperance_premiere_moitie": -0.4474321784478514,
+          "esperance_seconde_moitie": -0.1872838812971106,
           "note": "espérance exigée positive sur les deux moitiés disjointes de l'échantillon"
         },
         "15_enonce_sans_affirmation_politique_non_etayee": {
@@ -13547,7 +13547,7 @@
     },
     {
       "identifiant": "M005-NASDAQ100-BAISSE-CONTRARIEN",
-      "enonce": "À 60 séances, position dont le P&L est croissant avec la baisse de NASDAQ100 (prix_actions_tech), niveau 2.94e+04 au 2026-10-29, percentile 94.36507936507937 sur 5 ans (profondeur réelle 9.97 ans, 2509 obs). Dossier de confirmation « contrarien » : 2 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré 0.0887 (log). Espérance -0.304 % de NAV, ratio 0.93:1 (information).",
+      "enonce": "À 60 séances, position dont le P&L est croissant avec la baisse de NASDAQ100 (prix_actions_tech), niveau 2.838e+04 au 2026-10-30, percentile 90.71428571428571 sur 5 ans (profondeur réelle 9.98 ans, 2510 obs). Dossier de confirmation « contrarien » : 2 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré 0.0887 (log). Espérance -0.304 % de NAV, ratio 0.93:1 (information).",
       "instrument": "NASDAQ100",
       "direction": -1,
       "regle_confirmation": "contrarien",
@@ -13576,42 +13576,42 @@
       "invalidation_serie": "UNRATE",
       "invalidation_date": "2026-11-02",
       "horizon_jours": 60,
-      "esperance_pct_nav": -0.3042108116710629,
+      "esperance_pct_nav": -0.30389602662671583,
       "scenarios": [
         {
           "k_sigma": -2.0,
-          "variation_serie": -0.17743537520589509,
-          "probabilite_empirique": 0.04409963250306247,
-          "probabilite_gaussienne": 0.06680720126885803,
+          "variation_serie": -0.17742735904366047,
+          "probabilite_empirique": 0.044081632653061226,
+          "probabilite_gaussienne": 0.06680720126885809,
           "ecart_facteur_2_declare": false,
           "n_observations": 108,
-          "pnl_position_pct": 17.1822979871568,
-          "pnl_nav_pct": 1.374583838972544
+          "pnl_position_pct": 17.181626698923978,
+          "pnl_nav_pct": 1.3745301359139181
         },
         {
           "k_sigma": -1.0,
-          "variation_serie": -0.08871768760294754,
-          "probabilite_empirique": 0.06819109840751326,
+          "variation_serie": -0.08871367952183024,
+          "probabilite_empirique": 0.06816326530612245,
           "probabilite_gaussienne": 0.15982015110801012,
           "ecart_facteur_2_declare": true,
           "n_observations": 167,
-          "pnl_position_pct": 9.41342129566751,
-          "pnl_nav_pct": 0.7530737036534008
+          "pnl_position_pct": 9.413054513873373,
+          "pnl_nav_pct": 0.7530443611098698
         },
         {
           "k_sigma": -0.5,
-          "variation_serie": -0.04435884380147377,
-          "probabilite_empirique": 0.0759493670886076,
-          "probabilite_gaussienne": 0.17466632194020815,
+          "variation_serie": -0.04435683976091512,
+          "probabilite_empirique": 0.0763265306122449,
+          "probabilite_gaussienne": 0.1746663219402081,
           "ecart_facteur_2_declare": true,
-          "n_observations": 186,
-          "pnl_position_pct": 5.262747315541103,
-          "pnl_nav_pct": 0.4210197852432882
+          "n_observations": 187,
+          "pnl_position_pct": 5.262555606700456,
+          "pnl_nav_pct": 0.42100444853603647
         },
         {
           "k_sigma": 0.0,
           "variation_serie": 0.0,
-          "probabilite_empirique": 0.1449571253572887,
+          "probabilite_empirique": 0.14489795918367346,
           "probabilite_gaussienne": 0.1974126513658474,
           "ecart_facteur_2_declare": false,
           "n_observations": 355,
@@ -13620,33 +13620,33 @@
         },
         {
           "k_sigma": 0.5,
-          "variation_serie": 0.04435884380147377,
-          "probabilite_empirique": 0.24091465904450796,
-          "probabilite_gaussienne": 0.17466632194020815,
+          "variation_serie": 0.04435683976091512,
+          "probabilite_empirique": 0.24081632653061225,
+          "probabilite_gaussienne": 0.17466632194020804,
           "ecart_facteur_2_declare": false,
           "n_observations": 590,
-          "pnl_position_pct": -3.6119312379698814,
-          "pnl_nav_pct": -0.2889544990375905
+          "pnl_position_pct": -3.6117217443154797,
+          "pnl_nav_pct": -0.2889377395452384
         },
         {
           "k_sigma": 1.0,
-          "variation_serie": 0.08871768760294754,
-          "probabilite_empirique": 0.2968558595345039,
-          "probabilite_gaussienne": 0.15982015110801007,
+          "variation_serie": 0.08871367952183024,
+          "probabilite_empirique": 0.296734693877551,
+          "probabilite_gaussienne": 0.15982015110801018,
           "ecart_facteur_2_declare": false,
           "n_observations": 727,
-          "pnl_position_pct": -8.353401442329947,
-          "pnl_nav_pct": -0.6682721153863957
+          "pnl_position_pct": -8.352963451281873,
+          "pnl_nav_pct": -0.6682370761025499
         },
         {
           "k_sigma": 2.0,
-          "variation_serie": 0.17743537520589509,
-          "probabilite_empirique": 0.12903225806451613,
+          "variation_serie": 0.17742735904366047,
+          "probabilite_empirique": 0.12897959183673469,
           "probabilite_gaussienne": 0.06680720126885809,
           "ecart_facteur_2_declare": false,
           "n_observations": 316,
-          "pnl_position_pct": -18.491278841571983,
-          "pnl_nav_pct": -1.4793023073257587
+          "pnl_position_pct": -18.490321594687114,
+          "pnl_nav_pct": -1.4792257275749692
         }
       ],
       "criteres": {
@@ -13667,11 +13667,11 @@
         "4_profondeur_suffisante": {
           "detail": {
             "NASDAQ100": {
-              "percentile": 94.36507936507937,
+              "percentile": 90.71428571428571,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 2509,
-              "profondeur_annees": 9.97,
+              "n_obs": 2510,
+              "profondeur_annees": 9.98,
               "fenetre_reduite": false
             },
             "SP500": {
@@ -13751,7 +13751,7 @@
             },
             {
               "k": -0.5,
-              "n": 186,
+              "n": 187,
               "n_effectif": 3
             },
             {
@@ -13889,49 +13889,49 @@
         },
         "12_esperance_positive": {
           "ok": false,
-          "esperance_pct_nav": -0.3042108116710629,
-          "gain_maximal_pct_nav": 1.374583838972544,
-          "perte_maximale_pct_nav": -1.4793023073257587,
-          "ratio_gain_max_sur_perte_max": 0.9292109071725022,
+          "esperance_pct_nav": -0.30389602662671583,
+          "gain_maximal_pct_nav": 1.3745301359139181,
+          "perte_maximale_pct_nav": -1.4792257275749692,
+          "ratio_gain_max_sur_perte_max": 0.9292227077251501,
           "note": "le ratio est publié pour information et ne peut jamais fonder une admission seul (T-001, faute E-018). L'espérance décide."
         },
         "13_esperance_non_portee_par_derive": {
           "ok": false,
-          "esperance_avec_derive": -0.3042108116710629,
-          "esperance_sans_derive": 0.03406569791827539,
-          "derive_en_sigma": 0.4967849868749519,
+          "esperance_avec_derive": -0.30389602662671583,
+          "esperance_sans_derive": 0.03436219588094545,
+          "derive_en_sigma": 0.49644715684929286,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
           "ok": true,
           "t_minimum_exige": 2.0,
           "mesurable": true,
-          "esperance_conditionnelle_pct_nav": -0.1949768555534751,
-          "esperance_hors_declenchement_pct_nav": -0.602217050776046,
-          "esperance_inconditionnelle_pct_nav": -0.30589119210449794,
-          "ecart_pct_nav": 0.40724019522257093,
-          "erreur_type_ecart": 0.19729762111359161,
-          "t_ecart": 2.0640907524582244,
-          "n_declenchements": 1782,
+          "esperance_conditionnelle_pct_nav": -0.19467474560738512,
+          "esperance_hors_declenchement_pct_nav": -0.6022086351601756,
+          "esperance_inconditionnelle_pct_nav": -0.30562376778359385,
+          "ecart_pct_nav": 0.4075338895527905,
+          "erreur_type_ecart": 0.19728347875743762,
+          "t_ecart": 2.0657274097130975,
+          "n_declenchements": 1783,
           "n_blocs_independants_declenchement": 29,
           "n_hors": 667,
           "note": "un portier qui n'a jamais mesuré sa capacite a dire OUI ne mesure rien quand il dit NON (R-051). Ce critere est le seul qui teste une capacite PREDICTIVE ; les criteres 12 a 14 testent la forme de la distribution inconditionnelle.",
           "declenchements": {
             "disponible": true,
             "masque": "[False False False ...  True  True  True]",
-            "n_dates": 2449,
-            "n_declenchements": 1782,
+            "n_dates": 2450,
+            "n_declenchements": 1783,
             "n_series_testees": 7,
             "classes_medianes": 2.0
           },
-          "ecart_minimal_detectable_pct_nav": 0.39459524222718323,
-          "ecart_minimal_detectable_annualise_pct": 1.6573000173541697,
+          "ecart_minimal_detectable_pct_nav": 0.39456695751487525,
+          "ecart_minimal_detectable_annualise_pct": 1.6571812215624762,
           "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché."
         },
         "14_esperance_stable_dans_le_temps": {
           "ok": false,
-          "esperance_premiere_moitie": -0.44759040893488433,
-          "esperance_seconde_moitie": -0.18729729046093738,
+          "esperance_premiere_moitie": -0.4474321784478514,
+          "esperance_seconde_moitie": -0.1872838812971106,
           "note": "espérance exigée positive sur les deux moitiés disjointes de l'échantillon"
         },
         "15_enonce_sans_affirmation_politique_non_etayee": {
