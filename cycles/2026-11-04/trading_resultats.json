@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-11-04T00:12:46Z",
+    "genere_le_utc": "2026-11-04T12:59:36Z",
     "date_donnees": "2026-11-03",
     "validite_heures": 36.0,
-    "perime_apres_utc": "2026-11-05T12:12:46Z",
+    "perime_apres_utc": "2026-11-06T00:59:36Z",
     "execution_complete": true,
     "n_paires_examinees": 5,
     "n_paires_ecartees_sur_incident": 0,
