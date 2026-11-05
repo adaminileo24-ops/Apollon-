@@ -1299,7 +1299,7 @@
       "hypothese_nulle": "dépassements i.i.d. Bernoulli(p), tailles réelles",
       "valeur_critique_5pct": {
         "kupiec": 3.932060746131242,
-        "christoffersen": 3.9850340292372266,
+        "christoffersen": 3.985034029237113,
         "conjoint": 5.901947161281896
       },
       "valeur_critique_1pct": {
@@ -1369,7 +1369,7 @@
       "valeur_critique_1pct": {
         "kupiec": 6.9346507472901635,
         "christoffersen": 5.05489648556707,
-        "conjoint": 8.05812265416148
+        "conjoint": 8.058122654161423
       },
       "valeur_critique_asymptotique_5pct": {
         "kupiec": 3.841458820694124,
@@ -1848,7 +1848,7 @@
       "DEXUSEU",
       "VIXCLS"
     ],
-    "correlation_moyenne_signee": -0.01112285311054401,
+    "correlation_moyenne_signee": -0.011122853110544055,
     "correlation_signee_max": {
       "paire": "SP500 / NASDAQ100",
       "valeur": 0.9328195336826269
@@ -1857,7 +1857,7 @@
       "paire": "SP500 / VIXCLS",
       "valeur": -0.7253118833362784
     },
-    "correlation_absolue_moyenne_POUR_MEMOIRE": 0.2479730866242378,
+    "correlation_absolue_moyenne_POUR_MEMOIRE": 0.24797308662423775,
     "n_effectif_paris_correlation": 3.545674765652854,
     "n_effectif_paris_covariance": 1.3856445690857693,
     "n_effectif_paris_opposable": 1.3856445690857693,
@@ -1866,7 +1866,7 @@
     "n_effectif_paris": 1.3856445690857693,
     "contributions_variance_pct": {
       "SP500": -6.272265360754082,
-      "NASDAQ100": -7.838032767095872,
+      "NASDAQ100": -7.838032767095878,
       "OBLIG10A": 0.6615760385597651,
       "DCOILBRENTEU": 18.54949471599341,
       "DEXUSEU": 0.3067795151918481,
@@ -1886,44 +1886,44 @@
         "NASDAQ100": 0.9328195336826269,
         "OBLIG10A": -0.10996143929868052,
         "DCOILBRENTEU": 0.18222394831909255,
-        "DEXUSEU": 0.11691628178144021,
+        "DEXUSEU": 0.11691628178144024,
         "VIXCLS": -0.7253118833362784
       },
       "NASDAQ100": {
         "SP500": 0.9328195336826269,
         "NASDAQ100": 1.0,
-        "OBLIG10A": -0.05852672285774197,
-        "DCOILBRENTEU": 0.12579134084378407,
-        "DEXUSEU": 0.10275209901217247,
-        "VIXCLS": -0.7038881170713448
+        "OBLIG10A": -0.05852672285774196,
+        "DCOILBRENTEU": 0.12579134084378385,
+        "DEXUSEU": 0.10275209901217243,
+        "VIXCLS": -0.703888117071345
       },
       "OBLIG10A": {
         "SP500": -0.10996143929868052,
-        "NASDAQ100": -0.05852672285774197,
+        "NASDAQ100": -0.05852672285774196,
         "OBLIG10A": 1.0,
         "DCOILBRENTEU": -0.17335606005748172,
-        "DEXUSEU": 0.1977595330166791,
+        "DEXUSEU": 0.19775953301667912,
         "VIXCLS": 0.11811401469690812
       },
       "DCOILBRENTEU": {
         "SP500": 0.18222394831909255,
-        "NASDAQ100": 0.12579134084378407,
+        "NASDAQ100": 0.12579134084378385,
         "OBLIG10A": -0.17335606005748172,
         "DCOILBRENTEU": 1.0,
         "DEXUSEU": -0.020174396734693577,
         "VIXCLS": -0.09918559287270032
       },
       "DEXUSEU": {
-        "SP500": 0.11691628178144021,
-        "NASDAQ100": 0.10275209901217247,
-        "OBLIG10A": 0.1977595330166791,
+        "SP500": 0.11691628178144024,
+        "NASDAQ100": 0.10275209901217243,
+        "OBLIG10A": 0.19775953301667912,
         "DCOILBRENTEU": -0.020174396734693577,
         "DEXUSEU": 1.0,
         "VIXCLS": -0.052815335781942314
       },
       "VIXCLS": {
         "SP500": -0.7253118833362784,
-        "NASDAQ100": -0.7038881170713448,
+        "NASDAQ100": -0.703888117071345,
         "OBLIG10A": 0.11811401469690812,
         "DCOILBRENTEU": -0.09918559287270032,
         "DEXUSEU": -0.052815335781942314,
@@ -1935,37 +1935,37 @@
     "disponible": true,
     "conditionnement": "EXOGÈNE — VIXCLS > percentile 80 (22.82)",
     "n_seances_conditionnelles": 489,
-    "correlation_moyenne_signee_complet": -0.01112285311054401,
+    "correlation_moyenne_signee_complet": -0.011122853110544055,
     "correlation_moyenne_signee_stress": -0.009588603265475348,
-    "delta_observe": 0.0015342498450686623,
+    "delta_observe": 0.0015342498450687074,
     "null_correlation_constante": {
       "n_simulations": 2000,
-      "delta_moyen": -9.922176802531517e-05,
+      "delta_moyen": -9.922176802531514e-05,
       "ic90": [
-        -0.014316379292921552,
-        0.015209656245298776
+        -0.014316379292921518,
+        0.015209656245298846
       ]
     },
-    "ecart_au_null": 0.0016334716130939776,
+    "ecart_au_null": 0.0016334716130940227,
     "significatif_a_90pct": false,
     "methode_biaisee_pour_memoire": {
       "conditionnement": "queue gauche 1 % du S&P 500, corrélations INCLUANT le S&P 500",
       "correlation_moyenne_signee": 0.1040121206978272,
-      "artefact_estime": 0.1151349738083712,
+      "artefact_estime": 0.11513497380837126,
       "note": "biais de sélection Boyer-Gibson-Loretan — NON OPPOSABLE"
     },
     "reproduction_chiffre_doctrine": {
       "disponible": true,
       "construction": "moyenne des |ρ| sur le décile des pires séances du S&P 500, corrélations incluant le S&P 500. Appliquée ici au panier CORRIGÉ (10 ans converti en rendement obligataire) ; la même construction est appliquée au panier D'ORIGINE dans la clé `chiffre_doctrine_produit`, dont la valeur est CALCULÉE et non affirmée.",
       "valeur_reproduite": 0.22973155390278419,
-      "valeur_complet": 0.2479730866242378,
-      "delta_observe": -0.018241532721453624,
-      "null_delta_moyen": -0.08125277996596506,
+      "valeur_complet": 0.24797308662423775,
+      "delta_observe": -0.01824153272145357,
+      "null_delta_moyen": -0.08125277996596512,
       "null_ic90": [
-        -0.1042330782884953,
-        -0.05596164894253917
+        -0.1042330782884954,
+        -0.055961648942539244
       ],
-      "ecart_au_null": 0.06301124724451143,
+      "ecart_au_null": 0.06301124724451156,
       "chiffre_doctrine_produit": {
         "disponible": true,
         "construction": "moyenne des |ρ| du panier D'ORIGINE (DGS10 en log(taux), non corrigé) sur le décile inférieur du S&P 500, corrélations incluant le S&P 500",
