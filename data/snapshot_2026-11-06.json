@@ -1,6 +1,6 @@
 {
   "date": "2026-11-06",
-  "generated_at": "2026-11-06T00:33:29",
+  "generated_at": "2026-11-06T12:57:07",
   "regime": {
     "volatilite": "MOYENNE",
     "courbe": "PLATE",
@@ -322,12 +322,12 @@
       "label": "Nasdaq 100",
       "unit": "idx",
       "section": "RISQUE",
-      "value": 28437.17,
-      "date": "2026-11-04",
-      "chg_1d": 256.91,
-      "chg_20d": -2722.91,
+      "value": 26629.81,
+      "date": "2026-11-05",
+      "chg_1d": -1807.36,
+      "chg_20d": -4096.0,
       "debut_historique": "2016-11-08",
-      "n_observations": 2512,
+      "n_observations": 2513,
       "profondeur_tronquee": false
     }
   },

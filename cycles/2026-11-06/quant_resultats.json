@@ -18,36 +18,36 @@
       {
         "alpha_injecte_pct": 0.0,
         "taux_detection": 0.045,
-        "alpha_moyen_recupere_pct": -0.1949241321387895,
-        "t_moyen": -0.08417838546724778,
+        "alpha_moyen_recupere_pct": -0.19492413213879126,
+        "t_moyen": -0.08417838546724848,
         "se_alpha_pct": 2.281921055281635
       },
       {
         "alpha_injecte_pct": 3.0,
         "taux_detection": 0.205,
-        "alpha_moyen_recupere_pct": 2.8050758678612113,
-        "t_moyen": 1.210353896247686,
-        "se_alpha_pct": 2.2819210552816354
+        "alpha_moyen_recupere_pct": 2.80507586786121,
+        "t_moyen": 1.2103538962476856,
+        "se_alpha_pct": 2.281921055281635
       },
       {
         "alpha_injecte_pct": 6.0,
         "taux_detection": 0.7,
         "alpha_moyen_recupere_pct": 5.80507586786121,
-        "t_moyen": 2.5048861779626197,
-        "se_alpha_pct": 2.2819210552816362
+        "t_moyen": 2.5048861779626184,
+        "se_alpha_pct": 2.2819210552816367
       },
       {
         "alpha_injecte_pct": 9.0,
         "taux_detection": 0.96,
-        "alpha_moyen_recupere_pct": 8.805075867861213,
+        "alpha_moyen_recupere_pct": 8.80507586786121,
         "t_moyen": 3.7994184596775527,
-        "se_alpha_pct": 2.281921055281635
+        "se_alpha_pct": 2.2819210552816345
       },
       {
         "alpha_injecte_pct": 12.0,
         "taux_detection": 1.0,
-        "alpha_moyen_recupere_pct": 11.80507586786121,
-        "t_moyen": 5.0939507413924865,
+        "alpha_moyen_recupere_pct": 11.805075867861207,
+        "t_moyen": 5.093950741392486,
         "se_alpha_pct": 2.281921055281634
       }
     ],
@@ -74,26 +74,26 @@
       "facteurs": {
         "disponible": true,
         "n_obs": 2449,
-        "alpha_annualise_pct": 1.7545040004100145,
-        "alpha_t": 0.6294295717853885,
+        "alpha_annualise_pct": 1.7545040004100128,
+        "alpha_t": 0.6294295717853879,
         "betas": {
-          "Mkt-RF": 0.3873533049250771,
-          "SMB": 0.036363439687428376,
-          "HML": -0.009989590504468585,
-          "RMW": 0.03737138467150411,
-          "CMA": 0.18877246606392759
+          "Mkt-RF": 0.38735330492507725,
+          "SMB": 0.036363439687428445,
+          "HML": -0.009989590504468562,
+          "RMW": 0.037371384671504124,
+          "CMA": 0.18877246606392764
         },
-        "r2": 0.3948346242195042
+        "r2": 0.39483462421950466
       },
       "treynor_mazuy": {
         "disponible": true,
-        "alpha_annualise_pct": -6.538396310298242,
-        "alpha_t": -2.309644470850551,
+        "alpha_annualise_pct": -6.538396310298249,
+        "alpha_t": -2.3096444708505532,
         "beta": 0.3745622899593618,
-        "gamma_timing": 2.4387273452778473,
-        "gamma_t": 12.45568570660369
+        "gamma_timing": 2.438727345277848,
+        "gamma_t": 12.455685706603697
       },
-      "alpha_min_detectable": 5.574901717545084,
+      "alpha_min_detectable": 5.5749017175450835,
       "retenue": false
     },
     {
@@ -113,24 +113,24 @@
       "facteurs": {
         "disponible": true,
         "n_obs": 2449,
-        "alpha_annualise_pct": 1.5286374239667115,
-        "alpha_t": 0.549605332918129,
+        "alpha_annualise_pct": 1.52863742396671,
+        "alpha_t": 0.5496053329181284,
         "betas": {
-          "Mkt-RF": 0.39932072503038607,
-          "SMB": 0.03169675268226464,
-          "HML": -0.014960978530435492,
-          "RMW": 0.04852428198111817,
-          "CMA": 0.22310482355298755
+          "Mkt-RF": 0.3993207250303861,
+          "SMB": 0.03169675268226468,
+          "HML": -0.014960978530435477,
+          "RMW": 0.04852428198111826,
+          "CMA": 0.22310482355298752
         },
-        "r2": 0.4078165529632287
+        "r2": 0.40781655296322916
       },
       "treynor_mazuy": {
         "disponible": true,
-        "alpha_annualise_pct": -6.4839795164216385,
-        "alpha_t": -2.279715323178899,
-        "beta": 0.38082914739942153,
+        "alpha_annualise_pct": -6.483979516421642,
+        "alpha_t": -2.2797153231789005,
+        "beta": 0.38082914739942175,
         "gamma_timing": 2.3916568584551117,
-        "gamma_t": 12.158174009290137
+        "gamma_t": 12.15817400929014
       },
       "alpha_min_detectable": 5.562673185321593,
       "retenue": false
@@ -152,24 +152,24 @@
       "facteurs": {
         "disponible": true,
         "n_obs": 2449,
-        "alpha_annualise_pct": 2.0937487573833824,
-        "alpha_t": 0.7463421263959646,
+        "alpha_annualise_pct": 2.0937487573833815,
+        "alpha_t": 0.7463421263959643,
         "betas": {
           "Mkt-RF": 0.3571689737043624,
-          "SMB": 0.025860556368457365,
-          "HML": -0.051214451785840824,
-          "RMW": -0.02042455696447155,
-          "CMA": -0.07362061058729154
+          "SMB": 0.02586055636845734,
+          "HML": -0.05121445178584079,
+          "RMW": -0.020424556964471534,
+          "CMA": -0.07362061058729151
         },
-        "r2": 0.399757864542876
+        "r2": 0.3997578645428759
       },
       "treynor_mazuy": {
         "disponible": true,
-        "alpha_annualise_pct": 1.1843050301529061,
-        "alpha_t": 0.4058988738090217,
-        "beta": 0.3764062724163915,
-        "gamma_timing": 0.16247967817243814,
-        "gamma_t": 0.8051630264060927
+        "alpha_annualise_pct": 1.1843050301529052,
+        "alpha_t": 0.4058988738090214,
+        "beta": 0.3764062724163916,
+        "gamma_timing": 0.1624796781724382,
+        "gamma_t": 0.8051630264060932
       },
       "alpha_min_detectable": 5.6106943004649965,
       "retenue": false

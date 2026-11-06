@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-11-06T00:33:42+00:00",
+    "genere_le_utc": "2026-11-06T12:57:22+00:00",
     "date_donnees": "2026-11-04",
     "validite_heures": 24.0,
-    "perime_apres_utc": "2026-11-07T00:33:42+00:00",
+    "perime_apres_utc": "2026-11-07T12:57:22+00:00",
     "execution_complete": true,
     "controle_attendu_de_l_aval": "REFUSER ce fichier si l'heure UTC courante dépasse `perime_apres_utc`, si `date_donnees` ne correspond pas à la date d'arrêté examinée, ou si `execution_complete` est absent ou faux."
   },
@@ -4764,7 +4764,7 @@
           "ok": true,
           "esperance_avec_derive": -0.05960244002414404,
           "esperance_sans_derive": -0.07459615350202167,
-          "derive_en_sigma": 0.05218775210447317,
+          "derive_en_sigma": 0.052187752104473184,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5151,7 +5151,7 @@
           "ok": true,
           "esperance_avec_derive": -0.05960244002414404,
           "esperance_sans_derive": -0.07459615350202167,
-          "derive_en_sigma": 0.05218775210447317,
+          "derive_en_sigma": 0.052187752104473184,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5540,7 +5540,7 @@
           "ok": true,
           "esperance_avec_derive": 0.05960244002414404,
           "esperance_sans_derive": 0.07459615350202167,
-          "derive_en_sigma": 0.05218775210447317,
+          "derive_en_sigma": 0.052187752104473184,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5926,7 +5926,7 @@
           "ok": true,
           "esperance_avec_derive": 0.05960244002414404,
           "esperance_sans_derive": 0.07459615350202167,
-          "derive_en_sigma": 0.05218775210447317,
+          "derive_en_sigma": 0.052187752104473184,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -13084,7 +13084,7 @@
           "esperance_hors_declenchement_pct_nav": 0.21588635411929935,
           "esperance_inconditionnelle_pct_nav": 0.30459720016027153,
           "ecart_pct_nav": 0.278870505759569,
-          "erreur_type_ecart": 0.22849420843605872,
+          "erreur_type_ecart": 0.22849420843605875,
           "t_ecart": 1.2204707842194935,
           "n_declenchements": 780,
           "n_blocs_independants_declenchement": 13,
@@ -13098,8 +13098,8 @@
             "n_series_testees": 7,
             "classes_medianes": 1.0
           },
-          "ecart_minimal_detectable_pct_nav": 0.45698841687211744,
-          "ecart_minimal_detectable_annualise_pct": 1.9193513508628934,
+          "ecart_minimal_detectable_pct_nav": 0.4569884168721175,
+          "ecart_minimal_detectable_annualise_pct": 1.9193513508628937,
           "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché."
         },
         "14_esperance_stable_dans_le_temps": {
@@ -13489,7 +13489,7 @@
           "esperance_hors_declenchement_pct_nav": -0.21588635411929935,
           "esperance_inconditionnelle_pct_nav": -0.30459720016027153,
           "ecart_pct_nav": -0.278870505759569,
-          "erreur_type_ecart": 0.22849420843605872,
+          "erreur_type_ecart": 0.22849420843605875,
           "t_ecart": -1.2204707842194935,
           "n_declenchements": 780,
           "n_blocs_independants_declenchement": 13,
@@ -13503,8 +13503,8 @@
             "n_series_testees": 7,
             "classes_medianes": 1.0
           },
-          "ecart_minimal_detectable_pct_nav": 0.45698841687211744,
-          "ecart_minimal_detectable_annualise_pct": 1.9193513508628934,
+          "ecart_minimal_detectable_pct_nav": 0.4569884168721175,
+          "ecart_minimal_detectable_annualise_pct": 1.9193513508628937,
           "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché."
         },
         "14_esperance_stable_dans_le_temps": {
