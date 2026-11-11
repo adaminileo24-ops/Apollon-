@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-11-11T00:15:31+00:00",
+    "genere_le_utc": "2026-11-11T12:43:42+00:00",
     "date_donnees": "2026-11-09",
     "validite_heures": 24.0,
-    "perime_apres_utc": "2026-11-12T00:15:31+00:00",
+    "perime_apres_utc": "2026-11-12T12:43:42+00:00",
     "execution_complete": true,
     "controle_attendu_de_l_aval": "REFUSER ce fichier si l'heure UTC courante dépasse `perime_apres_utc`, si `date_donnees` ne correspond pas à la date d'arrêté examinée, ou si `execution_complete` est absent ou faux."
   },
@@ -4764,7 +4764,7 @@
           "ok": true,
           "esperance_avec_derive": -0.05988929098752925,
           "esperance_sans_derive": -0.07464638088141527,
-          "derive_en_sigma": 0.05127856077656349,
+          "derive_en_sigma": 0.051278560776563495,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5151,7 +5151,7 @@
           "ok": true,
           "esperance_avec_derive": -0.05988929098752925,
           "esperance_sans_derive": -0.07464638088141527,
-          "derive_en_sigma": 0.05127856077656349,
+          "derive_en_sigma": 0.051278560776563495,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5540,7 +5540,7 @@
           "ok": true,
           "esperance_avec_derive": 0.05988929098752925,
           "esperance_sans_derive": 0.07464638088141527,
-          "derive_en_sigma": 0.05127856077656349,
+          "derive_en_sigma": 0.051278560776563495,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5926,7 +5926,7 @@
           "ok": true,
           "esperance_avec_derive": 0.05988929098752925,
           "esperance_sans_derive": 0.07464638088141527,
-          "derive_en_sigma": 0.05127856077656349,
+          "derive_en_sigma": 0.051278560776563495,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
