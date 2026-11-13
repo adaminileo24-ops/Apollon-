@@ -1,6 +1,6 @@
 # BRIEF MACRO n° 005 — arrêté au 2026-11-10
 
-*Produit par `apollon_macro.py` le 2026-11-13T00:41:54+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
+*Produit par `apollon_macro.py` le 2026-11-13T13:06:32+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
 
 **Grille de scénarios (R-029, §11), déclarée avant toute lecture de données et empreintée :** `[-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0]` · empreinte SHA-256 `6aaeb3863c875923…` · symétrique : True · horizon 60 séances (3 mois pour les séries mensuelles).
 
@@ -32,8 +32,8 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | BAMLH0A0HYM2 | risque_credit_hy | 3.34 | 2026-11-09 | 1 | 784 | 2.99 ans | 96.4 | REFUSÉ (insuffisante, -38 %) | 83.7 |
 | CPIAUCSL | inflation_globale | 337.5 | 2026-10-01 | 40 | 119 | 9.91 ans | 100.0 | 100.0 | 100.0 |
 | CPILFESL | inflation_sous_jacente | 339.9 | 2026-10-01 | 40 | 119 | 9.91 ans | 100.0 | 100.0 | 100.0 |
-| DCOILBRENTEU | prix_energie | 107 | 2026-11-03 | 5 | 2528 | 9.97 ans | 70.2 | 87.3 | 93.7 |
-| DCOILWTICO | prix_energie_wti | 99.64 | 2026-11-03 | 5 | 2492 | 9.97 ans | 81.3 | 89.2 | 94.5 |
+| DCOILBRENTEU | prix_energie | 90.16 | 2026-11-10 | 0 | 2533 | 9.98 ans | 46.4 | 70.6 | 85.4 |
+| DCOILWTICO | prix_energie_wti | 89.62 | 2026-11-10 | 0 | 2497 | 9.98 ans | 54.4 | 78.3 | 89.1 |
 | DEXJPUS | devise_usdjpy | 158.2 | 2026-11-06 | 2 | 2492 | 9.97 ans | 52.8 | 89.2 | 94.5 |
 | DEXUSEU | devise_eurusd | 1.115 | 2026-11-06 | 2 | 2492 | 9.97 ans | 1.6 | 61.5 | 44.2 |
 | DFF | politique_monetaire | 3.88 | 2026-11-10 | 0 | 3648 | 9.98 ans | 100.0 | 28.9 | 70.9 |
@@ -100,17 +100,17 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | +1.0 | +0.3360 | +0.6720 | 78 | 1 | 0.1077 | 0.1598 | 0.67 | oui |
 | +2.0 | +0.6720 | +∞ | 34 | 1 | 0.0470 | 0.0668 | 0.70 | oui |
 
-**DCOILBRENTEU** (log) — σ à 60 pas = **0.24936** · estimateurs croisés : racine-h 0.25055, blocs disjoints 0.17926 (écart relatif 39.8 %) · dérive d'échantillon +0.01839 (+0.07 σ) · 2468 variations chevauchantes, 41 blocs indépendants · 2016-11-15 → 2026-11-03
+**DCOILBRENTEU** (log) — σ à 60 pas = **0.24911** · estimateurs croisés : racine-h 0.25186, blocs disjoints 0.17926 (écart relatif 40.5 %) · dérive d'échantillon +0.01838 (+0.07 σ) · 2473 variations chevauchantes, 41 blocs indépendants · 2016-11-15 → 2026-11-10
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.3740 | 83 | 1 | 0.0336 | 0.0668 | 0.50 | oui |
-| -1.0 | -0.3740 | -0.1870 | 154 | 3 | 0.0624 | 0.1598 | 0.39 ⚠ | oui |
-| -0.5 | -0.1870 | -0.0623 | 498 | 8 | 0.2018 | 0.1747 | 1.16 | oui |
-| +0.0 | -0.0623 | +0.0623 | 774 | 13 | 0.3136 | 0.1974 | 1.59 | oui |
-| +0.5 | +0.0623 | +0.1870 | 597 | 10 | 0.2419 | 0.1747 | 1.38 | oui |
-| +1.0 | +0.1870 | +0.3740 | 220 | 4 | 0.0891 | 0.1598 | 0.56 | oui |
-| +2.0 | +0.3740 | +∞ | 142 | 2 | 0.0575 | 0.0668 | 0.86 | oui |
+| -2.0 | −∞ | -0.3737 | 83 | 1 | 0.0336 | 0.0668 | 0.50 | oui |
+| -1.0 | -0.3737 | -0.1868 | 155 | 3 | 0.0627 | 0.1598 | 0.39 ⚠ | oui |
+| -0.5 | -0.1868 | -0.0623 | 498 | 8 | 0.2014 | 0.1747 | 1.15 | oui |
+| +0.0 | -0.0623 | +0.0623 | 777 | 13 | 0.3142 | 0.1974 | 1.59 | oui |
+| +0.5 | +0.0623 | +0.1868 | 597 | 10 | 0.2414 | 0.1747 | 1.38 | oui |
+| +1.0 | +0.1868 | +0.3737 | 220 | 4 | 0.0890 | 0.1598 | 0.56 | oui |
+| +2.0 | +0.3737 | +∞ | 143 | 2 | 0.0578 | 0.0668 | 0.87 | oui |
 
 **DCOILWTICO** — non scénarisable : convention log inapplicable : 1 observation(s) non strictement positive(s), minimum -36.98 le 2020-04-20. Le prix a été négatif : aucun log-rendement n'existe. La série est déclarée NON SCÉNARISABLE plutôt que corrigée en silence.
 
@@ -230,10 +230,10 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 | candidat | verdict | espérance % NAV | sans dérive | 1re moitié | 2e moitié | gain max | perte max | ratio (info) | critères échoués |
 |---|:---:|---:|---:|---:|---:|---:|---:|---:|---|
-| M005-DCOILBRENTEU-HAUSSE-ALIGNE | REFUSEE | +0.278 | +0.128 | +0.248 | +0.242 | +5.10 | -3.22 | 1.59:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
-| M005-DCOILBRENTEU-HAUSSE-CONTRARIEN | REFUSEE | +0.278 | +0.128 | +0.248 | +0.242 | +5.10 | -3.22 | 1.59:1 | 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
-| M005-DCOILBRENTEU-BAISSE-ALIGNE | REFUSEE | -0.278 | -0.128 | -0.248 | -0.242 | +3.22 | -5.10 | 0.63:1 | 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DCOILBRENTEU-BAISSE-CONTRARIEN | REFUSEE | -0.278 | -0.128 | -0.248 | -0.242 | +3.22 | -5.10 | 0.63:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILBRENTEU-HAUSSE-ALIGNE | REFUSEE | +0.278 | +0.127 | +0.249 | +0.240 | +5.09 | -3.21 | 1.58:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
+| M005-DCOILBRENTEU-HAUSSE-CONTRARIEN | REFUSEE | +0.278 | +0.127 | +0.249 | +0.240 | +5.09 | -3.21 | 1.58:1 | 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
+| M005-DCOILBRENTEU-BAISSE-ALIGNE | REFUSEE | -0.278 | -0.127 | -0.249 | -0.240 | +3.21 | -5.09 | 0.63:1 | 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILBRENTEU-BAISSE-CONTRARIEN | REFUSEE | -0.278 | -0.127 | -0.249 | -0.240 | +3.21 | -5.09 | 0.63:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DCOILWTICO-HAUSSE-ALIGNE | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 8_confirmations_independantes, 9_test_execute_et_vrai, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DCOILWTICO-HAUSSE-CONTRARIEN | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DCOILWTICO-BAISSE-ALIGNE | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
@@ -339,7 +339,7 @@ Aucune prédiction émise ce cycle : aucune thèse n'a été transmise. Une pré
 - `BAMLH0A0HYM2` : percentile REFUSÉ sur 5 ans — profondeur réelle 784 obs / 2.99 ans (début 2023-11-13). R-011 : un percentile calculé sur une série tronquée est sans valeur.
 - `BAMLH0A0HYM2` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
 - `BAMLC0A0CM` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
-- Retards sur la date d'arrêté unique (E-014) : BAMLC0A0CM 1 séance(s), BAMLH0A0HYM2 1 séance(s), DCOILBRENTEU 5 séance(s), DCOILWTICO 5 séance(s), DEXJPUS 2 séance(s), DEXUSEU 2 séance(s), DTWEXBGS 2 séance(s)
+- Retards sur la date d'arrêté unique (E-014) : BAMLC0A0CM 1 séance(s), BAMLH0A0HYM2 1 séance(s), DEXJPUS 2 séance(s), DEXUSEU 2 séance(s), DTWEXBGS 2 séance(s)
 
 **Vérification tierce (R-032) : NON SATISFAITE pour ce brief.** Le moteur ne dispose d'aucune source extérieure au dépôt. Trois estimateurs **internes** de σ sont publiés côte à côte au §5 ; ce sont des contrôles de cohérence interne, **pas** une vérification tierce, et ils ne sont pas présentés comme telle.
 
