@@ -1,6 +1,6 @@
 {
   "date": "2026-11-17",
-  "generated_at": "2026-11-17T02:37:35",
+  "generated_at": "2026-11-17T14:23:20",
   "regime": {
     "volatilite": "MOYENNE",
     "courbe": "PLATE",
@@ -184,12 +184,12 @@
       "label": "Production industrielle",
       "unit": "idx",
       "section": "M2",
-      "value": 103.9506,
-      "date": "2026-09-01",
-      "chg_1d": 0.6842,
-      "chg_20d": 3.8859,
+      "value": 103.3954,
+      "date": "2026-10-01",
+      "chg_1d": -0.4504,
+      "chg_20d": 2.2961,
       "debut_historique": "2016-11-01",
-      "n_observations": 119,
+      "n_observations": 120,
       "profondeur_tronquee": false
     },
     "DCOILBRENTEU": {
@@ -340,12 +340,12 @@
       "label": "Nasdaq 100",
       "unit": "idx",
       "section": "RISQUE",
-      "value": 27943.74,
-      "date": "2026-11-13",
-      "chg_1d": -345.45,
-      "chg_20d": -1243.81,
+      "value": 27197.15,
+      "date": "2026-11-16",
+      "chg_1d": -746.59,
+      "chg_20d": -2332.19,
       "debut_historique": "2016-11-21",
-      "n_observations": 2510,
+      "n_observations": 2511,
       "profondeur_tronquee": true
     }
   },

@@ -1,6 +1,6 @@
 # BRIEF MACRO n° 005 — arrêté au 2026-11-13
 
-*Produit par `apollon_macro.py` le 2026-11-17T02:37:49+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
+*Produit par `apollon_macro.py` le 2026-11-17T14:23:33+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
 
 **Grille de scénarios (R-029, §11), déclarée avant toute lecture de données et empreintée :** `[-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0]` · empreinte SHA-256 `6aaeb3863c875923…` · symétrique : True · horizon 60 séances (3 mois pour les séries mensuelles).
 
@@ -42,7 +42,7 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | DGS2 | taux_nominal_2a | 4.88 | 2026-11-13 | 0 | 2495 | 9.98 ans | 99.2 | 92.1 | 96.0 |
 | DGS30 | taux_nominal_30a | 5.47 | 2026-11-13 | 0 | 2495 | 9.98 ans | 94.4 | 98.9 | 99.4 |
 | DTWEXBGS | dollar_large | 122.7 | 2026-11-13 | 0 | 2490 | 9.98 ans | 100.0 | 75.3 | 86.1 |
-| INDPRO | activite_industrielle | 104 | 2026-09-01 | 73 | 119 | 9.83 ans | 100.0 | 100.0 | 95.8 |
+| INDPRO | activite_industrielle | 103.4 | 2026-10-01 | 43 | 120 | 9.91 ans | 91.7 | 98.3 | 94.2 |
 | NASDAQ100 | prix_actions_tech | 2.794e+04 | 2026-11-13 | 0 | 2510 | 9.98 ans | 49.2 | 89.8 | 94.9 |
 | OVXCLS | volatilite_implicite_petrole | 50.28 | 2026-11-13 | 0 | 2511 | 9.98 ans | 38.9 | 77.5 | 83.4 |
 | PAYEMS | emploi | 1.593e+05 | 2026-10-01 | 43 | 120 | 9.91 ans | 100.0 | 100.0 | 100.0 |
@@ -74,8 +74,8 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 - identité comptable : T10Y2Y = DGS10 - DGS2 — T10Y2Y, DGS10, DGS2 (résidu max 0.0000)
 - corrélation des variations à 60 séances : BAMLC0A0CM / BAMLH0A0HYM2 = +0.939 sur 723 points (seuil 0.9)
 - corrélation des variations à 60 séances : DGS10 / DGS30 = +0.966 sur 2435 points (seuil 0.9)
-- corrélation des variations à 60 séances : INDPRO / PAYEMS = +0.913 sur 116 points (seuil 0.9)
-- corrélation des variations à 60 séances : INDPRO / UNRATE = -0.917 sur 115 points (seuil 0.9)
+- corrélation des variations à 60 séances : INDPRO / PAYEMS = +0.913 sur 117 points (seuil 0.9)
+- corrélation des variations à 60 séances : INDPRO / UNRATE = -0.917 sur 116 points (seuil 0.9)
 - corrélation des variations à 60 séances : NASDAQ100 / SP500 = +0.942 sur 190 points (seuil 0.9)
 - corrélation des variations à 60 séances : PAYEMS / UNRATE = -0.983 sur 116 points (seuil 0.9)
 - corrélation des variations à 60 séances : SP500 / VXDCLS = -0.905 sur 190 points (seuil 0.9)
@@ -231,14 +231,14 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 
 | candidat | verdict | espérance % NAV | sans dérive | 1re moitié | 2e moitié | gain max | perte max | ratio (info) | critères échoués |
 |---|:---:|---:|---:|---:|---:|---:|---:|---:|---|
-| M005-DCOILBRENTEU-HAUSSE-ALIGNE | REFUSEE | +0.275 | +0.128 | +0.247 | +0.238 | +5.09 | -3.21 | 1.59:1 | 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
-| M005-DCOILBRENTEU-HAUSSE-CONTRARIEN | REFUSEE | +0.275 | +0.128 | +0.247 | +0.238 | +5.09 | -3.21 | 1.59:1 | 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
-| M005-DCOILBRENTEU-BAISSE-ALIGNE | REFUSEE | -0.275 | -0.128 | -0.247 | -0.238 | +3.21 | -5.09 | 0.63:1 | 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DCOILBRENTEU-BAISSE-CONTRARIEN | REFUSEE | -0.275 | -0.128 | -0.247 | -0.238 | +3.21 | -5.09 | 0.63:1 | 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DCOILWTICO-HAUSSE-ALIGNE | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DCOILWTICO-HAUSSE-CONTRARIEN | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DCOILWTICO-BAISSE-ALIGNE | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-DCOILWTICO-BAISSE-CONTRARIEN | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILBRENTEU-HAUSSE-ALIGNE | REFUSEE | +0.275 | +0.128 | +0.247 | +0.238 | +5.09 | -3.21 | 1.59:1 | 16_arete_conditionnelle_mesuree |
+| M005-DCOILBRENTEU-HAUSSE-CONTRARIEN | REFUSEE | +0.275 | +0.128 | +0.247 | +0.238 | +5.09 | -3.21 | 1.59:1 | 16_arete_conditionnelle_mesuree |
+| M005-DCOILBRENTEU-BAISSE-ALIGNE | REFUSEE | -0.275 | -0.128 | -0.247 | -0.238 | +3.21 | -5.09 | 0.63:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILBRENTEU-BAISSE-CONTRARIEN | REFUSEE | -0.275 | -0.128 | -0.247 | -0.238 | +3.21 | -5.09 | 0.63:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILWTICO-HAUSSE-ALIGNE | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILWTICO-HAUSSE-CONTRARIEN | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILWTICO-BAISSE-ALIGNE | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-DCOILWTICO-BAISSE-CONTRARIEN | REFUSEE | n/d | n/d | n/d | n/d | n/d | n/d | n/d | 5_bandes_estimables, 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DEXJPUS-HAUSSE-ALIGNE | REFUSEE | -0.008 | -0.067 | -0.081 | +0.036 | +0.62 | -0.71 | 0.87:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DEXJPUS-HAUSSE-CONTRARIEN | REFUSEE | -0.008 | -0.067 | -0.081 | +0.036 | +0.62 | -0.71 | 0.87:1 | 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DEXJPUS-BAISSE-ALIGNE | REFUSEE | +0.008 | +0.067 | +0.081 | -0.036 | +0.71 | -0.62 | 1.15:1 | 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |

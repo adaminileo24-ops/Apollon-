@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-11-17T02:37:49+00:00",
+    "genere_le_utc": "2026-11-17T14:23:33+00:00",
     "date_donnees": "2026-11-13",
     "validite_heures": 24.0,
-    "perime_apres_utc": "2026-11-18T02:37:49+00:00",
+    "perime_apres_utc": "2026-11-18T14:23:33+00:00",
     "execution_complete": true,
     "controle_attendu_de_l_aval": "REFUSER ce fichier si l'heure UTC courante dépasse `perime_apres_utc`, si `date_donnees` ne correspond pas à la date d'arrêté examinée, ou si `execution_complete` est absent ou faux."
   },
@@ -144,8 +144,8 @@
         "INDPRO",
         "PAYEMS"
       ],
-      "correlation": 0.9127,
-      "n": 116,
+      "correlation": 0.9128,
+      "n": 117,
       "seuil": 0.9
     },
     {
@@ -154,8 +154,8 @@
         "INDPRO",
         "UNRATE"
       ],
-      "correlation": -0.9172,
-      "n": 115,
+      "correlation": -0.9173,
+      "n": 116,
       "seuil": 0.9
     },
     {
@@ -479,9 +479,9 @@
         "T10YIE": 1,
         "INDPRO": -1
       },
-      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-03 : si la variation publiée sur un mois est de signe positif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
+      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-02 : si la variation publiée sur un mois est de signe positif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
       "invalidation_serie": "INDPRO",
-      "invalidation_date": "2026-12-03",
+      "invalidation_date": "2026-12-02",
       "horizon_jours": 60,
       "esperance_pct_nav": 0.2754624155097665,
       "scenarios": [
@@ -614,11 +614,11 @@
               "fenetre_reduite": false
             },
             "INDPRO": {
-              "percentile": 100.0,
+              "percentile": 98.33333333333333,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 119,
-              "profondeur_annees": 9.83,
+              "n_obs": 120,
+              "profondeur_annees": 9.91,
               "fenetre_reduite": false
             }
           },
@@ -732,9 +732,9 @@
             {
               "serie": "INDPRO",
               "role": "activite_industrielle",
-              "percentile": 100.0,
+              "percentile": 98.3,
               "fenetre": "5 ans",
-              "niveau_risque_percentile": 0.0,
+              "niveau_risque_percentile": 1.7,
               "satisfait": false,
               "classe_independance": "INDPRO"
             }
@@ -750,13 +750,13 @@
           "ok": true,
           "motif": "",
           "serie": "INDPRO",
-          "date": "2026-12-03",
+          "date": "2026-12-02",
           "origine_date": "deduite",
           "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
         },
         "11_invalidation_non_deja_survenue": {
-          "ok": false,
-          "deja_survenue": true,
+          "ok": true,
+          "deja_survenue": false,
           "erreur": ""
         },
         "12_esperance_positive": {
@@ -814,7 +814,6 @@
         }
       },
       "criteres_echoues": [
-        "11_invalidation_non_deja_survenue",
         "16_arete_conditionnelle_mesuree"
       ],
       "statut": "REFUSEE",
@@ -843,9 +842,9 @@
         "T10YIE": 1,
         "INDPRO": -1
       },
-      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-03 : si la variation publiée sur un mois est de signe positif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
+      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-02 : si la variation publiée sur un mois est de signe positif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
       "invalidation_serie": "INDPRO",
-      "invalidation_date": "2026-12-03",
+      "invalidation_date": "2026-12-02",
       "horizon_jours": 60,
       "esperance_pct_nav": 0.2754624155097665,
       "scenarios": [
@@ -978,11 +977,11 @@
               "fenetre_reduite": false
             },
             "INDPRO": {
-              "percentile": 100.0,
+              "percentile": 98.33333333333333,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 119,
-              "profondeur_annees": 9.83,
+              "n_obs": 120,
+              "profondeur_annees": 9.91,
               "fenetre_reduite": false
             }
           },
@@ -1095,9 +1094,9 @@
             {
               "serie": "INDPRO",
               "role": "activite_industrielle",
-              "percentile": 100.0,
+              "percentile": 98.3,
               "fenetre": "5 ans",
-              "niveau_risque_percentile": 0.0,
+              "niveau_risque_percentile": 1.7,
               "satisfait": true,
               "classe_independance": "INDPRO"
             }
@@ -1113,13 +1112,13 @@
           "ok": true,
           "motif": "",
           "serie": "INDPRO",
-          "date": "2026-12-03",
+          "date": "2026-12-02",
           "origine_date": "deduite",
           "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
         },
         "11_invalidation_non_deja_survenue": {
-          "ok": false,
-          "deja_survenue": true,
+          "ok": true,
+          "deja_survenue": false,
           "erreur": ""
         },
         "12_esperance_positive": {
@@ -1177,7 +1176,6 @@
         }
       },
       "criteres_echoues": [
-        "11_invalidation_non_deja_survenue",
         "16_arete_conditionnelle_mesuree"
       ],
       "statut": "REFUSEE",
@@ -1206,9 +1204,9 @@
         "T10YIE": 1,
         "INDPRO": -1
       },
-      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-03 : si la variation publiée sur un mois est de signe négatif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
+      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-02 : si la variation publiée sur un mois est de signe négatif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
       "invalidation_serie": "INDPRO",
-      "invalidation_date": "2026-12-03",
+      "invalidation_date": "2026-12-02",
       "horizon_jours": 60,
       "esperance_pct_nav": -0.2754624155097665,
       "scenarios": [
@@ -1341,11 +1339,11 @@
               "fenetre_reduite": false
             },
             "INDPRO": {
-              "percentile": 100.0,
+              "percentile": 98.33333333333333,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 119,
-              "profondeur_annees": 9.83,
+              "n_obs": 120,
+              "profondeur_annees": 9.91,
               "fenetre_reduite": false
             }
           },
@@ -1458,9 +1456,9 @@
             {
               "serie": "INDPRO",
               "role": "activite_industrielle",
-              "percentile": 100.0,
+              "percentile": 98.3,
               "fenetre": "5 ans",
-              "niveau_risque_percentile": 0.0,
+              "niveau_risque_percentile": 1.7,
               "satisfait": true,
               "classe_independance": "INDPRO"
             }
@@ -1476,13 +1474,13 @@
           "ok": true,
           "motif": "",
           "serie": "INDPRO",
-          "date": "2026-12-03",
+          "date": "2026-12-02",
           "origine_date": "deduite",
           "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
         },
         "11_invalidation_non_deja_survenue": {
-          "ok": true,
-          "deja_survenue": false,
+          "ok": false,
+          "deja_survenue": true,
           "erreur": ""
         },
         "12_esperance_positive": {
@@ -1540,6 +1538,7 @@
         }
       },
       "criteres_echoues": [
+        "11_invalidation_non_deja_survenue",
         "12_esperance_positive",
         "16_arete_conditionnelle_mesuree",
         "14_esperance_stable_dans_le_temps"
@@ -1570,9 +1569,9 @@
         "T10YIE": 1,
         "INDPRO": -1
       },
-      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-03 : si la variation publiée sur un mois est de signe négatif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
+      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-02 : si la variation publiée sur un mois est de signe négatif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
       "invalidation_serie": "INDPRO",
-      "invalidation_date": "2026-12-03",
+      "invalidation_date": "2026-12-02",
       "horizon_jours": 60,
       "esperance_pct_nav": -0.2754624155097665,
       "scenarios": [
@@ -1705,11 +1704,11 @@
               "fenetre_reduite": false
             },
             "INDPRO": {
-              "percentile": 100.0,
+              "percentile": 98.33333333333333,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 119,
-              "profondeur_annees": 9.83,
+              "n_obs": 120,
+              "profondeur_annees": 9.91,
               "fenetre_reduite": false
             }
           },
@@ -1823,9 +1822,9 @@
             {
               "serie": "INDPRO",
               "role": "activite_industrielle",
-              "percentile": 100.0,
+              "percentile": 98.3,
               "fenetre": "5 ans",
-              "niveau_risque_percentile": 0.0,
+              "niveau_risque_percentile": 1.7,
               "satisfait": false,
               "classe_independance": "INDPRO"
             }
@@ -1841,13 +1840,13 @@
           "ok": true,
           "motif": "",
           "serie": "INDPRO",
-          "date": "2026-12-03",
+          "date": "2026-12-02",
           "origine_date": "deduite",
           "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
         },
         "11_invalidation_non_deja_survenue": {
-          "ok": true,
-          "deja_survenue": false,
+          "ok": false,
+          "deja_survenue": true,
           "erreur": ""
         },
         "12_esperance_positive": {
@@ -1905,6 +1904,7 @@
         }
       },
       "criteres_echoues": [
+        "11_invalidation_non_deja_survenue",
         "12_esperance_positive",
         "16_arete_conditionnelle_mesuree",
         "14_esperance_stable_dans_le_temps"
@@ -1935,9 +1935,9 @@
         "T10YIE": 1,
         "INDPRO": -1
       },
-      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-03 : si la variation publiée sur un mois est de signe positif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
+      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-02 : si la variation publiée sur un mois est de signe positif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
       "invalidation_serie": "INDPRO",
-      "invalidation_date": "2026-12-03",
+      "invalidation_date": "2026-12-02",
       "horizon_jours": 60,
       "esperance_pct_nav": null,
       "scenarios": [],
@@ -1999,11 +1999,11 @@
               "fenetre_reduite": false
             },
             "INDPRO": {
-              "percentile": 100.0,
+              "percentile": 98.33333333333333,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 119,
-              "profondeur_annees": 9.83,
+              "n_obs": 120,
+              "profondeur_annees": 9.91,
               "fenetre_reduite": false
             }
           },
@@ -2081,9 +2081,9 @@
             {
               "serie": "INDPRO",
               "role": "activite_industrielle",
-              "percentile": 100.0,
+              "percentile": 98.3,
               "fenetre": "5 ans",
-              "niveau_risque_percentile": 0.0,
+              "niveau_risque_percentile": 1.7,
               "satisfait": false,
               "classe_independance": "INDPRO"
             }
@@ -2099,13 +2099,13 @@
           "ok": true,
           "motif": "",
           "serie": "INDPRO",
-          "date": "2026-12-03",
+          "date": "2026-12-02",
           "origine_date": "deduite",
           "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
         },
         "11_invalidation_non_deja_survenue": {
-          "ok": false,
-          "deja_survenue": true,
+          "ok": true,
+          "deja_survenue": false,
           "erreur": ""
         },
         "12_esperance_positive": {
@@ -2148,7 +2148,6 @@
       },
       "criteres_echoues": [
         "5_bandes_estimables",
-        "11_invalidation_non_deja_survenue",
         "12_esperance_positive",
         "13_esperance_non_portee_par_derive",
         "16_arete_conditionnelle_mesuree",
@@ -2180,9 +2179,9 @@
         "T10YIE": 1,
         "INDPRO": -1
       },
-      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-03 : si la variation publiée sur un mois est de signe positif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
+      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-02 : si la variation publiée sur un mois est de signe positif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
       "invalidation_serie": "INDPRO",
-      "invalidation_date": "2026-12-03",
+      "invalidation_date": "2026-12-02",
       "horizon_jours": 60,
       "esperance_pct_nav": null,
       "scenarios": [],
@@ -2244,11 +2243,11 @@
               "fenetre_reduite": false
             },
             "INDPRO": {
-              "percentile": 100.0,
+              "percentile": 98.33333333333333,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 119,
-              "profondeur_annees": 9.83,
+              "n_obs": 120,
+              "profondeur_annees": 9.91,
               "fenetre_reduite": false
             }
           },
@@ -2325,9 +2324,9 @@
             {
               "serie": "INDPRO",
               "role": "activite_industrielle",
-              "percentile": 100.0,
+              "percentile": 98.3,
               "fenetre": "5 ans",
-              "niveau_risque_percentile": 0.0,
+              "niveau_risque_percentile": 1.7,
               "satisfait": true,
               "classe_independance": "INDPRO"
             }
@@ -2343,7 +2342,250 @@
           "ok": true,
           "motif": "",
           "serie": "INDPRO",
-          "date": "2026-12-03",
+          "date": "2026-12-02",
+          "origine_date": "deduite",
+          "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
+        },
+        "11_invalidation_non_deja_survenue": {
+          "ok": true,
+          "deja_survenue": false,
+          "erreur": ""
+        },
+        "12_esperance_positive": {
+          "ok": false,
+          "esperance_pct_nav": null,
+          "gain_maximal_pct_nav": null,
+          "perte_maximale_pct_nav": null,
+          "ratio_gain_max_sur_perte_max": null,
+          "note": "le ratio est publié pour information et ne peut jamais fonder une admission seul (T-001, faute E-018). L'espérance décide."
+        },
+        "13_esperance_non_portee_par_derive": {
+          "ok": false,
+          "esperance_avec_derive": null,
+          "esperance_sans_derive": null,
+          "derive_en_sigma": null,
+          "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
+        },
+        "16_arete_conditionnelle_mesuree": {
+          "ok": false,
+          "t_minimum_exige": 2.0,
+          "mesurable": false,
+          "motif": "non calculé",
+          "ecart_minimal_detectable_pct_nav": null,
+          "ecart_minimal_detectable_annualise_pct": null,
+          "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché.",
+          "note": "un portier qui n'a jamais mesuré sa capacite a dire OUI ne mesure rien quand il dit NON (R-051). Ce critere est le seul qui teste une capacite PREDICTIVE ; les criteres 12 a 14 testent la forme de la distribution inconditionnelle."
+        },
+        "14_esperance_stable_dans_le_temps": {
+          "ok": false,
+          "esperance_premiere_moitie": null,
+          "esperance_seconde_moitie": null,
+          "note": "espérance exigée positive sur les deux moitiés disjointes de l'échantillon"
+        },
+        "15_enonce_sans_affirmation_politique_non_etayee": {
+          "ok": true,
+          "vocabulaire_politique_detecte": false,
+          "serie_de_politique_presente": false,
+          "note": "E-006 : « hausse BoJ non anticipée » alors qu'elle avait déjà eu lieu. Aucune affirmation sur une politique sans donnée à l'appui."
+        }
+      },
+      "criteres_echoues": [
+        "5_bandes_estimables",
+        "12_esperance_positive",
+        "13_esperance_non_portee_par_derive",
+        "16_arete_conditionnelle_mesuree",
+        "14_esperance_stable_dans_le_temps"
+      ],
+      "statut": "REFUSEE",
+      "statut_risque": "NON_SOUMISE_REFUSEE_EN_AMONT"
+    },
+    {
+      "identifiant": "M005-DCOILWTICO-BAISSE-ALIGNE",
+      "enonce": "À 60 séances, position dont le P&L est croissant avec la baisse de DCOILWTICO (prix_energie_wti), niveau 89.62 au 2026-11-11, percentile 78.33333333333333 sur 5 ans (profondeur réelle 9.97 ans, 2494 obs). Dossier de confirmation « aligne » : 2 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré nan (?). Espérance +nan % de NAV, ratio n/d:1 (information).",
+      "instrument": "DCOILWTICO",
+      "direction": -1,
+      "regle_confirmation": "aligne",
+      "sens": "prix_energie_wti::baisse",
+      "series_utilisees": [
+        "DCOILWTICO",
+        "DTWEXBGS",
+        "DGS10",
+        "DFII10",
+        "T10YIE",
+        "INDPRO"
+      ],
+      "lectures": {
+        "DCOILWTICO": 1,
+        "DTWEXBGS": 1,
+        "DGS10": 1,
+        "DFII10": 1,
+        "T10YIE": 1,
+        "INDPRO": -1
+      },
+      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-02 : si la variation publiée sur un mois est de signe négatif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
+      "invalidation_serie": "INDPRO",
+      "invalidation_date": "2026-12-02",
+      "horizon_jours": 60,
+      "esperance_pct_nav": null,
+      "scenarios": [],
+      "criteres": {
+        "1_series_presentes": {
+          "absentes": [],
+          "ok": true
+        },
+        "2_domaine_ouvert": {
+          "domaine": "M3_energie",
+          "ferme": false,
+          "series_manquantes": [],
+          "ok": true
+        },
+        "3_instrument_calculable": {
+          "ok": true,
+          "motif": ""
+        },
+        "4_profondeur_suffisante": {
+          "detail": {
+            "DCOILWTICO": {
+              "percentile": 78.33333333333333,
+              "fenetre_utilisee": "5 ans",
+              "drapeau": "suffisante",
+              "n_obs": 2494,
+              "profondeur_annees": 9.97,
+              "fenetre_reduite": false
+            },
+            "DTWEXBGS": {
+              "percentile": 75.31746031746032,
+              "fenetre_utilisee": "5 ans",
+              "drapeau": "suffisante",
+              "n_obs": 2490,
+              "profondeur_annees": 9.98,
+              "fenetre_reduite": false
+            },
+            "DGS10": {
+              "percentile": 98.88888888888889,
+              "fenetre_utilisee": "5 ans",
+              "drapeau": "suffisante",
+              "n_obs": 2495,
+              "profondeur_annees": 9.98,
+              "fenetre_reduite": false
+            },
+            "DFII10": {
+              "percentile": 99.68253968253968,
+              "fenetre_utilisee": "5 ans",
+              "drapeau": "suffisante",
+              "n_obs": 2495,
+              "profondeur_annees": 9.98,
+              "fenetre_reduite": false
+            },
+            "T10YIE": {
+              "percentile": 18.88888888888889,
+              "fenetre_utilisee": "5 ans",
+              "drapeau": "suffisante",
+              "n_obs": 2495,
+              "profondeur_annees": 9.98,
+              "fenetre_reduite": false
+            },
+            "INDPRO": {
+              "percentile": 98.33333333333333,
+              "fenetre_utilisee": "5 ans",
+              "drapeau": "suffisante",
+              "n_obs": 120,
+              "profondeur_annees": 9.91,
+              "fenetre_reduite": false
+            }
+          },
+          "series_sans_percentile": [],
+          "ok": true
+        },
+        "5_bandes_estimables": {
+          "ok": false,
+          "bandes_non_estimables": null,
+          "min_obs_bande": 20,
+          "effectifs": []
+        },
+        "6_couples_complets": {
+          "ok": true,
+          "manquements": []
+        },
+        "7_lecture_conforme_table": {
+          "ok": true,
+          "series_sans_sens": [],
+          "lectures": {
+            "DCOILWTICO": 1,
+            "DTWEXBGS": 1,
+            "DGS10": 1,
+            "DFII10": 1,
+            "T10YIE": 1,
+            "INDPRO": -1
+          }
+        },
+        "8_confirmations_independantes": {
+          "ok": true,
+          "n_classes_independantes": 2,
+          "minimum": 2,
+          "series_retenues": [
+            "T10YIE",
+            "INDPRO"
+          ],
+          "detail": [
+            {
+              "serie": "DTWEXBGS",
+              "role": "dollar_large",
+              "percentile": 75.3,
+              "fenetre": "5 ans",
+              "niveau_risque_percentile": 75.3,
+              "satisfait": false,
+              "classe_independance": "DTWEXBGS"
+            },
+            {
+              "serie": "DGS10",
+              "role": "taux_nominal_10a",
+              "percentile": 98.9,
+              "fenetre": "5 ans",
+              "niveau_risque_percentile": 98.9,
+              "satisfait": false,
+              "classe_independance": "T10Y2Y"
+            },
+            {
+              "serie": "DFII10",
+              "role": "taux_reel_10a",
+              "percentile": 99.7,
+              "fenetre": "5 ans",
+              "niveau_risque_percentile": 99.7,
+              "satisfait": false,
+              "classe_independance": "T10Y2Y"
+            },
+            {
+              "serie": "T10YIE",
+              "role": "point_mort_10a",
+              "percentile": 18.9,
+              "fenetre": "5 ans",
+              "niveau_risque_percentile": 18.9,
+              "satisfait": true,
+              "classe_independance": "T10Y2Y"
+            },
+            {
+              "serie": "INDPRO",
+              "role": "activite_industrielle",
+              "percentile": 98.3,
+              "fenetre": "5 ans",
+              "niveau_risque_percentile": 1.7,
+              "satisfait": true,
+              "classe_independance": "INDPRO"
+            }
+          ],
+          "note": "les séries liées par une identité comptable ou corrélées au-delà de 0.9 sur les variations à l'horizon comptent pour UNE seule confirmation"
+        },
+        "9_test_execute_et_vrai": {
+          "ok": true,
+          "resultat": true,
+          "erreur": ""
+        },
+        "10_invalidation_fait_date": {
+          "ok": true,
+          "motif": "",
+          "serie": "INDPRO",
+          "date": "2026-12-02",
           "origine_date": "deduite",
           "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
         },
@@ -2402,249 +2644,6 @@
       "statut_risque": "NON_SOUMISE_REFUSEE_EN_AMONT"
     },
     {
-      "identifiant": "M005-DCOILWTICO-BAISSE-ALIGNE",
-      "enonce": "À 60 séances, position dont le P&L est croissant avec la baisse de DCOILWTICO (prix_energie_wti), niveau 89.62 au 2026-11-11, percentile 78.33333333333333 sur 5 ans (profondeur réelle 9.97 ans, 2494 obs). Dossier de confirmation « aligne » : 2 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré nan (?). Espérance +nan % de NAV, ratio n/d:1 (information).",
-      "instrument": "DCOILWTICO",
-      "direction": -1,
-      "regle_confirmation": "aligne",
-      "sens": "prix_energie_wti::baisse",
-      "series_utilisees": [
-        "DCOILWTICO",
-        "DTWEXBGS",
-        "DGS10",
-        "DFII10",
-        "T10YIE",
-        "INDPRO"
-      ],
-      "lectures": {
-        "DCOILWTICO": 1,
-        "DTWEXBGS": 1,
-        "DGS10": 1,
-        "DFII10": 1,
-        "T10YIE": 1,
-        "INDPRO": -1
-      },
-      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-03 : si la variation publiée sur un mois est de signe négatif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
-      "invalidation_serie": "INDPRO",
-      "invalidation_date": "2026-12-03",
-      "horizon_jours": 60,
-      "esperance_pct_nav": null,
-      "scenarios": [],
-      "criteres": {
-        "1_series_presentes": {
-          "absentes": [],
-          "ok": true
-        },
-        "2_domaine_ouvert": {
-          "domaine": "M3_energie",
-          "ferme": false,
-          "series_manquantes": [],
-          "ok": true
-        },
-        "3_instrument_calculable": {
-          "ok": true,
-          "motif": ""
-        },
-        "4_profondeur_suffisante": {
-          "detail": {
-            "DCOILWTICO": {
-              "percentile": 78.33333333333333,
-              "fenetre_utilisee": "5 ans",
-              "drapeau": "suffisante",
-              "n_obs": 2494,
-              "profondeur_annees": 9.97,
-              "fenetre_reduite": false
-            },
-            "DTWEXBGS": {
-              "percentile": 75.31746031746032,
-              "fenetre_utilisee": "5 ans",
-              "drapeau": "suffisante",
-              "n_obs": 2490,
-              "profondeur_annees": 9.98,
-              "fenetre_reduite": false
-            },
-            "DGS10": {
-              "percentile": 98.88888888888889,
-              "fenetre_utilisee": "5 ans",
-              "drapeau": "suffisante",
-              "n_obs": 2495,
-              "profondeur_annees": 9.98,
-              "fenetre_reduite": false
-            },
-            "DFII10": {
-              "percentile": 99.68253968253968,
-              "fenetre_utilisee": "5 ans",
-              "drapeau": "suffisante",
-              "n_obs": 2495,
-              "profondeur_annees": 9.98,
-              "fenetre_reduite": false
-            },
-            "T10YIE": {
-              "percentile": 18.88888888888889,
-              "fenetre_utilisee": "5 ans",
-              "drapeau": "suffisante",
-              "n_obs": 2495,
-              "profondeur_annees": 9.98,
-              "fenetre_reduite": false
-            },
-            "INDPRO": {
-              "percentile": 100.0,
-              "fenetre_utilisee": "5 ans",
-              "drapeau": "suffisante",
-              "n_obs": 119,
-              "profondeur_annees": 9.83,
-              "fenetre_reduite": false
-            }
-          },
-          "series_sans_percentile": [],
-          "ok": true
-        },
-        "5_bandes_estimables": {
-          "ok": false,
-          "bandes_non_estimables": null,
-          "min_obs_bande": 20,
-          "effectifs": []
-        },
-        "6_couples_complets": {
-          "ok": true,
-          "manquements": []
-        },
-        "7_lecture_conforme_table": {
-          "ok": true,
-          "series_sans_sens": [],
-          "lectures": {
-            "DCOILWTICO": 1,
-            "DTWEXBGS": 1,
-            "DGS10": 1,
-            "DFII10": 1,
-            "T10YIE": 1,
-            "INDPRO": -1
-          }
-        },
-        "8_confirmations_independantes": {
-          "ok": true,
-          "n_classes_independantes": 2,
-          "minimum": 2,
-          "series_retenues": [
-            "T10YIE",
-            "INDPRO"
-          ],
-          "detail": [
-            {
-              "serie": "DTWEXBGS",
-              "role": "dollar_large",
-              "percentile": 75.3,
-              "fenetre": "5 ans",
-              "niveau_risque_percentile": 75.3,
-              "satisfait": false,
-              "classe_independance": "DTWEXBGS"
-            },
-            {
-              "serie": "DGS10",
-              "role": "taux_nominal_10a",
-              "percentile": 98.9,
-              "fenetre": "5 ans",
-              "niveau_risque_percentile": 98.9,
-              "satisfait": false,
-              "classe_independance": "T10Y2Y"
-            },
-            {
-              "serie": "DFII10",
-              "role": "taux_reel_10a",
-              "percentile": 99.7,
-              "fenetre": "5 ans",
-              "niveau_risque_percentile": 99.7,
-              "satisfait": false,
-              "classe_independance": "T10Y2Y"
-            },
-            {
-              "serie": "T10YIE",
-              "role": "point_mort_10a",
-              "percentile": 18.9,
-              "fenetre": "5 ans",
-              "niveau_risque_percentile": 18.9,
-              "satisfait": true,
-              "classe_independance": "T10Y2Y"
-            },
-            {
-              "serie": "INDPRO",
-              "role": "activite_industrielle",
-              "percentile": 100.0,
-              "fenetre": "5 ans",
-              "niveau_risque_percentile": 0.0,
-              "satisfait": true,
-              "classe_independance": "INDPRO"
-            }
-          ],
-          "note": "les séries liées par une identité comptable ou corrélées au-delà de 0.9 sur les variations à l'horizon comptent pour UNE seule confirmation"
-        },
-        "9_test_execute_et_vrai": {
-          "ok": true,
-          "resultat": true,
-          "erreur": ""
-        },
-        "10_invalidation_fait_date": {
-          "ok": true,
-          "motif": "",
-          "serie": "INDPRO",
-          "date": "2026-12-03",
-          "origine_date": "deduite",
-          "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
-        },
-        "11_invalidation_non_deja_survenue": {
-          "ok": true,
-          "deja_survenue": false,
-          "erreur": ""
-        },
-        "12_esperance_positive": {
-          "ok": false,
-          "esperance_pct_nav": null,
-          "gain_maximal_pct_nav": null,
-          "perte_maximale_pct_nav": null,
-          "ratio_gain_max_sur_perte_max": null,
-          "note": "le ratio est publié pour information et ne peut jamais fonder une admission seul (T-001, faute E-018). L'espérance décide."
-        },
-        "13_esperance_non_portee_par_derive": {
-          "ok": false,
-          "esperance_avec_derive": null,
-          "esperance_sans_derive": null,
-          "derive_en_sigma": null,
-          "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
-        },
-        "16_arete_conditionnelle_mesuree": {
-          "ok": false,
-          "t_minimum_exige": 2.0,
-          "mesurable": false,
-          "motif": "non calculé",
-          "ecart_minimal_detectable_pct_nav": null,
-          "ecart_minimal_detectable_annualise_pct": null,
-          "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché.",
-          "note": "un portier qui n'a jamais mesuré sa capacite a dire OUI ne mesure rien quand il dit NON (R-051). Ce critere est le seul qui teste une capacite PREDICTIVE ; les criteres 12 a 14 testent la forme de la distribution inconditionnelle."
-        },
-        "14_esperance_stable_dans_le_temps": {
-          "ok": false,
-          "esperance_premiere_moitie": null,
-          "esperance_seconde_moitie": null,
-          "note": "espérance exigée positive sur les deux moitiés disjointes de l'échantillon"
-        },
-        "15_enonce_sans_affirmation_politique_non_etayee": {
-          "ok": true,
-          "vocabulaire_politique_detecte": false,
-          "serie_de_politique_presente": false,
-          "note": "E-006 : « hausse BoJ non anticipée » alors qu'elle avait déjà eu lieu. Aucune affirmation sur une politique sans donnée à l'appui."
-        }
-      },
-      "criteres_echoues": [
-        "5_bandes_estimables",
-        "12_esperance_positive",
-        "13_esperance_non_portee_par_derive",
-        "16_arete_conditionnelle_mesuree",
-        "14_esperance_stable_dans_le_temps"
-      ],
-      "statut": "REFUSEE",
-      "statut_risque": "NON_SOUMISE_REFUSEE_EN_AMONT"
-    },
-    {
       "identifiant": "M005-DCOILWTICO-BAISSE-CONTRARIEN",
       "enonce": "À 60 séances, position dont le P&L est croissant avec la baisse de DCOILWTICO (prix_energie_wti), niveau 89.62 au 2026-11-11, percentile 78.33333333333333 sur 5 ans (profondeur réelle 9.97 ans, 2494 obs). Dossier de confirmation « contrarien » : 3 séries retenues, 2 classes indépendantes. σ à l'horizon mesuré nan (?). Espérance +nan % de NAV, ratio n/d:1 (information).",
       "instrument": "DCOILWTICO",
@@ -2667,9 +2666,9 @@
         "T10YIE": 1,
         "INDPRO": -1
       },
-      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-03 : si la variation publiée sur un mois est de signe négatif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
+      "invalidation": "publication de INDPRO (activite_industrielle) attendue le 2026-12-02 : si la variation publiée sur un mois est de signe négatif, le dossier de confirmation de cette thèse cesse d'être vérifié et la thèse est retirée. Fait observable, daté, indépendant du prix de l'instrument.",
       "invalidation_serie": "INDPRO",
-      "invalidation_date": "2026-12-03",
+      "invalidation_date": "2026-12-02",
       "horizon_jours": 60,
       "esperance_pct_nav": null,
       "scenarios": [],
@@ -2731,11 +2730,11 @@
               "fenetre_reduite": false
             },
             "INDPRO": {
-              "percentile": 100.0,
+              "percentile": 98.33333333333333,
               "fenetre_utilisee": "5 ans",
               "drapeau": "suffisante",
-              "n_obs": 119,
-              "profondeur_annees": 9.83,
+              "n_obs": 120,
+              "profondeur_annees": 9.91,
               "fenetre_reduite": false
             }
           },
@@ -2813,9 +2812,9 @@
             {
               "serie": "INDPRO",
               "role": "activite_industrielle",
-              "percentile": 100.0,
+              "percentile": 98.3,
               "fenetre": "5 ans",
-              "niveau_risque_percentile": 0.0,
+              "niveau_risque_percentile": 1.7,
               "satisfait": false,
               "classe_independance": "INDPRO"
             }
@@ -2831,13 +2830,13 @@
           "ok": true,
           "motif": "",
           "serie": "INDPRO",
-          "date": "2026-12-03",
+          "date": "2026-12-02",
           "origine_date": "deduite",
           "note": "« officielle » = date annoncée par l'émetteur, lue dans data/calendrier_publications.csv. « deduite » = extrapolée de la cadence observée : c'est une estimation, pas un fait daté, et le critère l'indique plutôt que de les confondre."
         },
         "11_invalidation_non_deja_survenue": {
-          "ok": true,
-          "deja_survenue": false,
+          "ok": false,
+          "deja_survenue": true,
           "erreur": ""
         },
         "12_esperance_positive": {
@@ -2880,6 +2879,7 @@
       },
       "criteres_echoues": [
         "5_bandes_estimables",
+        "11_invalidation_non_deja_survenue",
         "12_esperance_positive",
         "13_esperance_non_portee_par_derive",
         "16_arete_conditionnelle_mesuree",
@@ -12675,12 +12675,12 @@
           "ok": false,
           "t_minimum_exige": 2.0,
           "mesurable": true,
-          "esperance_conditionnelle_pct_nav": 0.218583417951704,
+          "esperance_conditionnelle_pct_nav": 0.21858341795170394,
           "esperance_hors_declenchement_pct_nav": 0.330809882449733,
           "esperance_inconditionnelle_pct_nav": 0.30071486727617985,
-          "ecart_pct_nav": -0.11222646449802898,
-          "erreur_type_ecart": 0.22556385815243313,
-          "t_ecart": -0.49753743980645954,
+          "ecart_pct_nav": -0.11222646449802903,
+          "erreur_type_ecart": 0.22556385815243316,
+          "t_ecart": -0.49753743980645976,
           "n_declenchements": 657,
           "n_blocs_independants_declenchement": 10,
           "n_hors": 1793,
@@ -12693,8 +12693,8 @@
             "n_series_testees": 7,
             "classes_medianes": 1.0
           },
-          "ecart_minimal_detectable_pct_nav": 0.45112771630486626,
-          "ecart_minimal_detectable_annualise_pct": 1.8947364084804383,
+          "ecart_minimal_detectable_pct_nav": 0.4511277163048663,
+          "ecart_minimal_detectable_annualise_pct": 1.8947364084804386,
           "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché."
         },
         "14_esperance_stable_dans_le_temps": {
@@ -13891,12 +13891,12 @@
           "ok": false,
           "t_minimum_exige": 2.0,
           "mesurable": true,
-          "esperance_conditionnelle_pct_nav": -0.218583417951704,
+          "esperance_conditionnelle_pct_nav": -0.21858341795170394,
           "esperance_hors_declenchement_pct_nav": -0.330809882449733,
           "esperance_inconditionnelle_pct_nav": -0.30071486727617985,
-          "ecart_pct_nav": 0.11222646449802898,
-          "erreur_type_ecart": 0.22556385815243313,
-          "t_ecart": 0.49753743980645954,
+          "ecart_pct_nav": 0.11222646449802903,
+          "erreur_type_ecart": 0.22556385815243316,
+          "t_ecart": 0.49753743980645976,
           "n_declenchements": 657,
           "n_blocs_independants_declenchement": 10,
           "n_hors": 1793,
@@ -13909,8 +13909,8 @@
             "n_series_testees": 7,
             "classes_medianes": 1.0
           },
-          "ecart_minimal_detectable_pct_nav": 0.45112771630486626,
-          "ecart_minimal_detectable_annualise_pct": 1.8947364084804383,
+          "ecart_minimal_detectable_pct_nav": 0.4511277163048663,
+          "ecart_minimal_detectable_annualise_pct": 1.8947364084804386,
           "note_puissance": "écart minimal détectable au seuil déclaré. Un écart réel INFÉRIEUR à ce nombre est invisible pour ce portier, quelle que soit sa réalité : le refus ne porte alors aucune information sur le marché."
         },
         "14_esperance_stable_dans_le_temps": {

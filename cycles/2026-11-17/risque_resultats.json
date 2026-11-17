@@ -522,28 +522,28 @@
       "paire": "SP500 / VIXCLS",
       "valeur": -0.8559330033732783
     },
-    "correlation_absolue_moyenne_POUR_MEMOIRE": 0.3779445386121624,
-    "n_effectif_paris_correlation": 2.9628961503096796,
-    "n_effectif_paris_covariance": 1.4446241967300986,
-    "n_effectif_paris_opposable": 1.4446241967300986,
+    "correlation_absolue_moyenne_POUR_MEMOIRE": 0.37794453861216243,
+    "n_effectif_paris_correlation": 2.9628961503096787,
+    "n_effectif_paris_covariance": 1.4446241967300992,
+    "n_effectif_paris_opposable": 1.4446241967300992,
     "base_n_eff_opposable": "covariance",
     "motif_base_opposable": "la volatilité de panier est calculée à poids ÉGAUX sur les rendements bruts ; la matrice correspondant à cette pondération est la covariance. N_eff sur la corrélation décrirait un portefeuille pondéré en risque, qui n'est pas celui-ci.",
-    "n_effectif_paris": 1.4446241967300986,
+    "n_effectif_paris": 1.4446241967300992,
     "contributions_variance_pct": {
-      "SP500": -7.064109730000904,
+      "SP500": -7.0641097300009035,
       "NASDAQ100": -9.43733787505154,
       "OBLIG10A": -0.8984339020273782,
-      "DCOILBRENTEU": 34.67894459552408,
-      "DEXUSEU": -0.8159668494640504,
+      "DCOILBRENTEU": 34.67894459552407,
+      "DEXUSEU": -0.8159668494640502,
       "VIXCLS": 83.5369037610198
     },
     "actif_dominant_variance": {
       "actif": "VIXCLS",
       "part_variance_pct": 83.5369037610198
     },
-    "lambda_max_sur_n": 0.5170778777572552,
-    "ratio_diversification": 1.7595483549441382,
-    "volatilite_panier_equipondere": 0.014840320103802946,
+    "lambda_max_sur_n": 0.517077877757255,
+    "ratio_diversification": 1.759548354944138,
+    "volatilite_panier_equipondere": 0.014840320103802948,
     "note": "seule la corrélation SIGNÉE entre dans une limite ; |ρ| est publiée pour mémoire et n'est opposable à rien",
     "matrice": {
       "SP500": {
@@ -551,7 +551,7 @@
         "NASDAQ100": 0.9286338513443083,
         "OBLIG10A": 0.2736143725826258,
         "DCOILBRENTEU": -0.3718559654228918,
-        "DEXUSEU": 0.25699535626779835,
+        "DEXUSEU": 0.25699535626779846,
         "VIXCLS": -0.8559330033732783
       },
       "NASDAQ100": {
@@ -559,7 +559,7 @@
         "NASDAQ100": 1.0,
         "OBLIG10A": 0.18278362889875802,
         "DCOILBRENTEU": -0.28069449452110085,
-        "DEXUSEU": 0.20327804483744066,
+        "DEXUSEU": 0.20327804483744077,
         "VIXCLS": -0.7867733209435279
       },
       "OBLIG10A": {
@@ -567,7 +567,7 @@
         "NASDAQ100": 0.18278362889875802,
         "OBLIG10A": 1.0,
         "DCOILBRENTEU": -0.3748244647601415,
-        "DEXUSEU": 0.22147937871843468,
+        "DEXUSEU": 0.2214793787184347,
         "VIXCLS": -0.14259073828375546
       },
       "DCOILBRENTEU": {
@@ -575,23 +575,23 @@
         "NASDAQ100": -0.28069449452110085,
         "OBLIG10A": -0.3748244647601415,
         "DCOILBRENTEU": 1.0,
-        "DEXUSEU": -0.22578332604801085,
+        "DEXUSEU": -0.22578332604801088,
         "VIXCLS": 0.34741972785098313
       },
       "DEXUSEU": {
-        "SP500": 0.25699535626779835,
-        "NASDAQ100": 0.20327804483744066,
-        "OBLIG10A": 0.22147937871843468,
-        "DCOILBRENTEU": -0.22578332604801085,
+        "SP500": 0.25699535626779846,
+        "NASDAQ100": 0.20327804483744077,
+        "OBLIG10A": 0.2214793787184347,
+        "DCOILBRENTEU": -0.22578332604801088,
         "DEXUSEU": 1.0,
-        "VIXCLS": -0.21650840532938062
+        "VIXCLS": -0.21650840532938068
       },
       "VIXCLS": {
         "SP500": -0.8559330033732783,
         "NASDAQ100": -0.7867733209435279,
         "OBLIG10A": -0.14259073828375546,
         "DCOILBRENTEU": 0.34741972785098313,
-        "DEXUSEU": -0.21650840532938062,
+        "DEXUSEU": -0.21650840532938068,
         "VIXCLS": 1.0
       }
     }
@@ -616,7 +616,7 @@
     "seuil_decile_sp500": -0.010439993392095559,
     "valeur_produite": 0.2552747242852388,
     "valeur_produite_arrondie": 0.2553,
-    "valeur_complet": 0.37992212850365076,
+    "valeur_complet": 0.3799221285036508,
     "chiffre_de_doctrine": 0.25,
     "ecart_au_chiffre_de_doctrine": 0.0052747242852387854,
     "reproduit": false

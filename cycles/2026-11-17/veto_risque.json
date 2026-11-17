@@ -1,6 +1,6 @@
 {
   "date_arrete": "2026-11-16",
-  "horodatage": "2026-11-17T02:38:08+00:00",
+  "horodatage": "2026-11-17T14:23:53+00:00",
   "statut": "AUCUNE IDEE SOUMISE",
   "entete": "VETO — 0 idée(s) soumise(s), 0 bloquée(s) — AUCUNE IDEE SOUMISE (source lue, liste vide)",
   "source": "trading_resultats.json",
@@ -57,7 +57,7 @@
   },
   "sigma_marche_par_paire": {
     "Brent / WTI": 0.008636090191235332,
-    "S&P 500 / Nasdaq 100": 0.008609976852286564,
+    "S&P 500 / Nasdaq 100": 0.008684127351474828,
     "10 ans / 2 ans": 0.008609976852286564,
     "Haut rendement / Investment grade": 0.008609976852286564,
     "30 ans / 10 ans": 0.008609976852286564
