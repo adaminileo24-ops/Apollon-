@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-11-24T04:27:15+00:00",
+    "genere_le_utc": "2026-11-24T15:53:11+00:00",
     "date_donnees": "2026-11-20",
     "validite_heures": 24.0,
-    "perime_apres_utc": "2026-11-25T04:27:15+00:00",
+    "perime_apres_utc": "2026-11-25T15:53:11+00:00",
     "execution_complete": true,
     "controle_attendu_de_l_aval": "REFUSER ce fichier si l'heure UTC courante dépasse `perime_apres_utc`, si `date_donnees` ne correspond pas à la date d'arrêté examinée, ou si `execution_complete` est absent ou faux."
   },
@@ -4758,7 +4758,7 @@
           "ok": true,
           "esperance_avec_derive": -0.06142075412431555,
           "esperance_sans_derive": -0.07479708557889216,
-          "derive_en_sigma": 0.046017932190353654,
+          "derive_en_sigma": 0.04601793219035366,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -4766,7 +4766,7 @@
           "t_minimum_exige": 2.0,
           "mesurable": true,
           "esperance_conditionnelle_pct_nav": -0.09840717029340212,
-          "esperance_hors_declenchement_pct_nav": -0.02774397304012036,
+          "esperance_hors_declenchement_pct_nav": -0.027743973040120357,
           "esperance_inconditionnelle_pct_nav": -0.06096990713701898,
           "ecart_pct_nav": -0.07066319725328177,
           "erreur_type_ecart": 0.08122744064592304,
@@ -5146,7 +5146,7 @@
           "ok": true,
           "esperance_avec_derive": -0.06142075412431555,
           "esperance_sans_derive": -0.07479708557889216,
-          "derive_en_sigma": 0.046017932190353654,
+          "derive_en_sigma": 0.04601793219035366,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5534,7 +5534,7 @@
           "ok": true,
           "esperance_avec_derive": 0.06142075412431555,
           "esperance_sans_derive": 0.07479708557889216,
-          "derive_en_sigma": 0.046017932190353654,
+          "derive_en_sigma": 0.04601793219035366,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5918,7 +5918,7 @@
           "ok": true,
           "esperance_avec_derive": 0.06142075412431555,
           "esperance_sans_derive": 0.07479708557889216,
-          "derive_en_sigma": 0.046017932190353654,
+          "derive_en_sigma": 0.04601793219035366,
           "note": "bandes recentrées sur la moyenne d'échantillon : si le signe de l'espérance change, elle était portée par la dérive en échantillon, pas par la forme de la distribution"
         },
         "16_arete_conditionnelle_mesuree": {
@@ -5926,7 +5926,7 @@
           "t_minimum_exige": 2.0,
           "mesurable": true,
           "esperance_conditionnelle_pct_nav": 0.09840717029340212,
-          "esperance_hors_declenchement_pct_nav": 0.02774397304012036,
+          "esperance_hors_declenchement_pct_nav": 0.027743973040120357,
           "esperance_inconditionnelle_pct_nav": 0.06096990713701898,
           "ecart_pct_nav": 0.07066319725328177,
           "erreur_type_ecart": 0.08122744064592304,
@@ -13064,11 +13064,11 @@
           "t_minimum_exige": 2.0,
           "mesurable": true,
           "esperance_conditionnelle_pct_nav": 0.5015417214855443,
-          "esperance_hors_declenchement_pct_nav": 0.20600491354410083,
+          "esperance_hors_declenchement_pct_nav": 0.20600491354410078,
           "esperance_inconditionnelle_pct_nav": 0.2985260285200548,
-          "ecart_pct_nav": 0.2955368079414435,
+          "ecart_pct_nav": 0.29553680794144355,
           "erreur_type_ecart": 0.23546977447973025,
-          "t_ecart": 1.255094453606333,
+          "t_ecart": 1.2550944536063333,
           "n_declenchements": 767,
           "n_blocs_independants_declenchement": 12,
           "n_hors": 1683,
@@ -13468,11 +13468,11 @@
           "t_minimum_exige": 2.0,
           "mesurable": true,
           "esperance_conditionnelle_pct_nav": -0.5015417214855443,
-          "esperance_hors_declenchement_pct_nav": -0.20600491354410083,
+          "esperance_hors_declenchement_pct_nav": -0.20600491354410078,
           "esperance_inconditionnelle_pct_nav": -0.2985260285200548,
-          "ecart_pct_nav": -0.2955368079414435,
+          "ecart_pct_nav": -0.29553680794144355,
           "erreur_type_ecart": 0.23546977447973025,
-          "t_ecart": -1.255094453606333,
+          "t_ecart": -1.2550944536063333,
           "n_declenchements": 767,
           "n_blocs_independants_declenchement": 12,
           "n_hors": 1683,
