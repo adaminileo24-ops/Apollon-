@@ -1,6 +1,6 @@
 # BRIEF MACRO n° 005 — arrêté au 2026-11-23
 
-*Produit par `apollon_macro.py` le 2026-11-25T03:10:31+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
+*Produit par `apollon_macro.py` le 2026-11-25T15:35:52+00:00. Aucune valeur de ce document n'est saisie à la main : chacune porte sa série, sa date et sa profondeur. Bloc à copier tel quel.*
 
 **Grille de scénarios (R-029, §11), déclarée avant toute lecture de données et empreintée :** `[-2.0, -1.0, -0.5, 0.0, 0.5, 1.0, 2.0]` · empreinte SHA-256 `6aaeb3863c875923…` · symétrique : True · horizon 60 séances (3 mois pour les séries mensuelles).
 
@@ -43,7 +43,7 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | DGS30 | taux_nominal_30a | 5.29 | 2026-11-23 | 0 | 2497 | 9.98 ans | 83.3 | 96.7 | 98.3 |
 | DTWEXBGS | dollar_large | 123.6 | 2026-11-20 | 1 | 2491 | 9.98 ans | 100.0 | 82.9 | 90.6 |
 | INDPRO | activite_industrielle | 102.2 | 2026-10-01 | 53 | 120 | 9.91 ans | 91.7 | 98.3 | 94.2 |
-| NASDAQ100 | prix_actions_tech | 2.652e+04 | 2026-11-19 | 2 | 2510 | 9.97 ans | 40.9 | 88.2 | 94.1 |
+| NASDAQ100 | prix_actions_tech | 2.675e+04 | 2026-11-23 | 0 | 2512 | 9.98 ans | 42.1 | 88.4 | 94.2 |
 | OVXCLS | volatilite_implicite_petrole | 49.19 | 2026-11-23 | 0 | 2513 | 9.98 ans | 33.7 | 75.2 | 81.8 |
 | PAYEMS | emploi | 1.593e+05 | 2026-10-01 | 53 | 120 | 9.91 ans | 100.0 | 100.0 | 100.0 |
 | SP500 | prix_actions | 7237 | 2026-11-23 | 0 | 2511 | 9.98 ans | 45.2 | 89.0 | 94.5 |
@@ -76,7 +76,7 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 - corrélation des variations à 60 séances : DGS10 / DGS30 = +0.966 sur 2437 points (seuil 0.9)
 - corrélation des variations à 60 séances : INDPRO / PAYEMS = +0.916 sur 117 points (seuil 0.9)
 - corrélation des variations à 60 séances : INDPRO / UNRATE = -0.920 sur 116 points (seuil 0.9)
-- corrélation des variations à 60 séances : NASDAQ100 / SP500 = +0.904 sur 2449 points (seuil 0.9)
+- corrélation des variations à 60 séances : NASDAQ100 / SP500 = +0.904 sur 2451 points (seuil 0.9)
 - corrélation des variations à 60 séances : PAYEMS / UNRATE = -0.983 sur 116 points (seuil 0.9)
 - corrélation des variations à 60 séances : VIXCLS / VXDCLS = +0.929 sur 2451 points (seuil 0.9)
 - corrélation des variations à 60 séances : VIXCLS / VXVCLS = +0.958 sur 2451 points (seuil 0.9)
@@ -186,17 +186,17 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | +1.0 | +0.0193 | +0.0387 | 303 | 5 | 0.1246 | 0.1598 | 0.78 | oui |
 | +2.0 | +0.0387 | +∞ | 206 | 3 | 0.0847 | 0.0668 | 1.27 | oui |
 
-**NASDAQ100** (log) — σ à 60 pas = **0.08906** · estimateurs croisés : racine-h 0.11245, blocs disjoints 0.11154 (écart relatif 26.3 %) · dérive d'échantillon +0.04313 (+0.48 σ) · 2450 variations chevauchantes, 41 blocs indépendants · 2016-11-28 → 2026-11-19
+**NASDAQ100** (log) — σ à 60 pas = **0.08917** · estimateurs croisés : racine-h 0.11323, blocs disjoints 0.11154 (écart relatif 27.0 %) · dérive d'échantillon +0.04299 (+0.48 σ) · 2452 variations chevauchantes, 41 blocs indépendants · 2016-11-28 → 2026-11-23
 
 | kσ | borne basse | borne haute | n | n indép. | p empirique | p gaussienne | emp./gauss. | estimable |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
-| -2.0 | −∞ | -0.1336 | 107 | 2 | 0.0437 | 0.0668 | 0.65 | oui |
-| -1.0 | -0.1336 | -0.0668 | 175 | 3 | 0.0714 | 0.1598 | 0.45 ⚠ | oui |
-| -0.5 | -0.0668 | -0.0223 | 194 | 3 | 0.0792 | 0.1747 | 0.45 ⚠ | oui |
-| +0.0 | -0.0223 | +0.0223 | 355 | 6 | 0.1449 | 0.1974 | 0.73 | oui |
-| +0.5 | +0.0223 | +0.0668 | 598 | 10 | 0.2441 | 0.1747 | 1.40 | oui |
-| +1.0 | +0.0668 | +0.1336 | 709 | 12 | 0.2894 | 0.1598 | 1.81 | oui |
-| +2.0 | +0.1336 | +∞ | 312 | 5 | 0.1273 | 0.0668 | 1.91 | oui |
+| -2.0 | −∞ | -0.1338 | 107 | 2 | 0.0436 | 0.0668 | 0.65 | oui |
+| -1.0 | -0.1338 | -0.0669 | 177 | 3 | 0.0722 | 0.1598 | 0.45 ⚠ | oui |
+| -0.5 | -0.0669 | -0.0223 | 192 | 3 | 0.0783 | 0.1747 | 0.45 ⚠ | oui |
+| +0.0 | -0.0223 | +0.0223 | 358 | 6 | 0.1460 | 0.1974 | 0.74 | oui |
+| +0.5 | +0.0223 | +0.0669 | 597 | 10 | 0.2435 | 0.1747 | 1.39 | oui |
+| +1.0 | +0.0669 | +0.1338 | 709 | 12 | 0.2892 | 0.1598 | 1.81 | oui |
+| +2.0 | +0.1338 | +∞ | 312 | 5 | 0.1272 | 0.0668 | 1.90 | oui |
 
 **SP500** (log) — σ à 60 pas = **0.06927** · estimateurs croisés : racine-h 0.08943, blocs disjoints 0.09002 (écart relatif 30.0 %) · dérive d'échantillon +0.02961 (+0.43 σ) · 2451 variations chevauchantes, 41 blocs indépendants · 2016-11-28 → 2026-11-23
 
@@ -262,10 +262,10 @@ Toutes les valeurs sont des FAITS lus dans le dépôt. Le retard est compté en 
 | M005-DTWEXBGS-HAUSSE-CONTRARIEN | REFUSEE | -0.066 | -0.072 | -0.085 | -0.051 | +0.35 | -0.48 | 0.73:1 | 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 12_esperance_positive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
 | M005-DTWEXBGS-BAISSE-ALIGNE | REFUSEE | +0.066 | +0.072 | +0.085 | +0.051 | +0.48 | -0.35 | 1.36:1 | 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
 | M005-DTWEXBGS-BAISSE-CONTRARIEN | REFUSEE | +0.066 | +0.072 | +0.085 | +0.051 | +0.48 | -0.35 | 1.36:1 | 10_invalidation_fait_date, 11_invalidation_non_deja_survenue, 16_arete_conditionnelle_mesuree |
-| M005-NASDAQ100-HAUSSE-ALIGNE | REFUSEE | +0.296 | -0.035 | +0.449 | +0.195 | +1.49 | -1.38 | 1.08:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree |
-| M005-NASDAQ100-HAUSSE-CONTRARIEN | REFUSEE | +0.296 | -0.035 | +0.449 | +0.195 | +1.49 | -1.38 | 1.08:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree |
-| M005-NASDAQ100-BAISSE-ALIGNE | REFUSEE | -0.296 | +0.035 | -0.449 | -0.195 | +1.38 | -1.49 | 0.93:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
-| M005-NASDAQ100-BAISSE-CONTRARIEN | REFUSEE | -0.296 | +0.035 | -0.449 | -0.195 | +1.38 | -1.49 | 0.93:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 14_esperance_stable_dans_le_temps |
+| M005-NASDAQ100-HAUSSE-ALIGNE | REFUSEE | +0.296 | -0.035 | +0.450 | +0.194 | +1.49 | -1.38 | 1.08:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree |
+| M005-NASDAQ100-HAUSSE-CONTRARIEN | REFUSEE | +0.296 | -0.035 | +0.450 | +0.194 | +1.49 | -1.38 | 1.08:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree |
+| M005-NASDAQ100-BAISSE-ALIGNE | REFUSEE | -0.296 | +0.035 | -0.450 | -0.194 | +1.38 | -1.49 | 0.93:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
+| M005-NASDAQ100-BAISSE-CONTRARIEN | REFUSEE | -0.296 | +0.035 | -0.450 | -0.194 | +1.38 | -1.49 | 0.93:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 14_esperance_stable_dans_le_temps |
 | M005-SP500-HAUSSE-ALIGNE | REFUSEE | +0.178 | -0.044 | +0.209 | +0.154 | +1.11 | -1.11 | 1.01:1 | 8_confirmations_independantes, 9_test_execute_et_vrai, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree |
 | M005-SP500-HAUSSE-CONTRARIEN | REFUSEE | +0.178 | -0.044 | +0.209 | +0.154 | +1.11 | -1.11 | 1.01:1 | 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree |
 | M005-SP500-BAISSE-ALIGNE | REFUSEE | -0.178 | +0.044 | -0.209 | -0.154 | +1.11 | -1.11 | 0.99:1 | 11_invalidation_non_deja_survenue, 12_esperance_positive, 13_esperance_non_portee_par_derive, 16_arete_conditionnelle_mesuree, 14_esperance_stable_dans_le_temps |
@@ -339,7 +339,7 @@ Aucune prédiction émise ce cycle : aucune thèse n'a été transmise. Une pré
 - `BAMLH0A0HYM2` : percentile REFUSÉ sur 5 ans — profondeur réelle 784 obs / 2.99 ans (début 2023-11-27). R-011 : un percentile calculé sur une série tronquée est sans valeur.
 - `BAMLH0A0HYM2` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
 - `BAMLC0A0CM` : instrument NON ADMISSIBLE — P&L non calculable depuis le dépôt : l'OAS est un spread, et le dépôt ne contient pas le rendement de l'indice, donc pas la duration de spread. Aucune valeur ne peut être produite sans un chiffre extérieur aux données (E-002).
-- Retards sur la date d'arrêté unique (E-014) : DCOILBRENTEU 4 séance(s), DCOILWTICO 4 séance(s), DEXJPUS 1 séance(s), DEXUSEU 1 séance(s), DTWEXBGS 1 séance(s), NASDAQ100 2 séance(s)
+- Retards sur la date d'arrêté unique (E-014) : DCOILBRENTEU 4 séance(s), DCOILWTICO 4 séance(s), DEXJPUS 1 séance(s), DEXUSEU 1 séance(s), DTWEXBGS 1 séance(s)
 
 **Vérification tierce (R-032) : NON SATISFAITE pour ce brief.** Le moteur ne dispose d'aucune source extérieure au dépôt. Trois estimateurs **internes** de σ sont publiés côte à côte au §5 ; ce sont des contrôles de cohérence interne, **pas** une vérification tierce, et ils ne sont pas présentés comme telle.
 
