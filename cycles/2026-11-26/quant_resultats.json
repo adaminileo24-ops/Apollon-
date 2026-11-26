@@ -18,37 +18,37 @@
       {
         "alpha_injecte_pct": 0.0,
         "taux_detection": 0.03,
-        "alpha_moyen_recupere_pct": -0.21746019342650066,
-        "t_moyen": -0.09159881248279148,
+        "alpha_moyen_recupere_pct": -0.21746019342650424,
+        "t_moyen": -0.09159881248279302,
         "se_alpha_pct": 2.1769751817460667
       },
       {
         "alpha_injecte_pct": 3.0,
         "taux_detection": 0.195,
-        "alpha_moyen_recupere_pct": 2.7825398065734985,
-        "t_moyen": 1.1859711769149859,
+        "alpha_moyen_recupere_pct": 2.7825398065734954,
+        "t_moyen": 1.1859711769149843,
         "se_alpha_pct": 2.176975181746065
       },
       {
         "alpha_injecte_pct": 6.0,
         "taux_detection": 0.71,
-        "alpha_moyen_recupere_pct": 5.782539806573499,
-        "t_moyen": 2.4635411663127638,
-        "se_alpha_pct": 2.1769751817460654
+        "alpha_moyen_recupere_pct": 5.782539806573497,
+        "t_moyen": 2.4635411663127624,
+        "se_alpha_pct": 2.176975181746066
       },
       {
         "alpha_injecte_pct": 9.0,
         "taux_detection": 0.97,
-        "alpha_moyen_recupere_pct": 8.782539806573498,
-        "t_moyen": 3.741111155710541,
+        "alpha_moyen_recupere_pct": 8.782539806573496,
+        "t_moyen": 3.741111155710539,
         "se_alpha_pct": 2.1769751817460645
       },
       {
         "alpha_injecte_pct": 12.0,
         "taux_detection": 1.0,
-        "alpha_moyen_recupere_pct": 11.7825398065735,
-        "t_moyen": 5.01868114510832,
-        "se_alpha_pct": 2.1769751817460676
+        "alpha_moyen_recupere_pct": 11.782539806573498,
+        "t_moyen": 5.018681145108318,
+        "se_alpha_pct": 2.176975181746067
       }
     ],
     "taux_faux_positifs": 0.03,
