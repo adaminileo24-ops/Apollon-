@@ -1,5 +1,5 @@
 {
-  "date_arrete": "2026-11-25",
+  "date_arrete": "2026-11-26",
   "date_donnees_sp500": "2026-11-24",
   "n_series": 26,
   "n_cotations_sp500": 2511,
@@ -1732,7 +1732,7 @@
   ],
   "regime": {
     "volatilite": "HAUTE",
-    "vix": 26.36,
+    "vix": 26.8,
     "courbe": "PLATE",
     "pente_2s10s": 0.24,
     "tendance": "BAISSIERE",
@@ -1745,23 +1745,23 @@
   "percentiles": {
     "VIXCLS": {
       "disponible": true,
-      "valeur": 26.36,
-      "date": "2026-11-24",
-      "n_obs_total": 2544,
-      "pct_252": 94.84126984126983,
+      "valeur": 26.8,
+      "date": "2026-11-26",
+      "n_obs_total": 2546,
+      "pct_252": 95.23809523809523,
       "n_obs_252": 252,
       "profondeur_252": {
-        "n_obs": 2544,
+        "n_obs": 2546,
         "cible": 252,
-        "ecart_pct": 909.52,
+        "ecart_pct": 910.32,
         "etat": "suffisante"
       },
-      "pct_2520": 88.09523809523809,
+      "pct_2520": 88.80952380952381,
       "n_obs_2520": 2520,
       "profondeur_2520": {
-        "n_obs": 2544,
+        "n_obs": 2546,
         "cible": 2520,
-        "ecart_pct": 0.95,
+        "ecart_pct": 1.03,
         "etat": "suffisante"
       }
     },
@@ -2099,38 +2099,38 @@
     "n_non_traitees": 4,
     "non_traitees": [
       {
-        "id": "AL-c4f38e7d",
+        "id": "AL-930fa5dc",
         "type": "DRAWDOWN",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-11-25",
-        "derniere_date_donnees": "2026-11-25",
+        "premiere_date_donnees": "2026-11-26",
+        "derniere_date_donnees": "2026-11-26",
         "derniere_mesure": "-7.90 %",
         "occurrences": 1
       },
       {
-        "id": "AL-1edc0325",
+        "id": "AL-1a3e5f80",
         "type": "VAR",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-11-25",
-        "derniere_date_donnees": "2026-11-25",
+        "premiere_date_donnees": "2026-11-26",
+        "derniere_date_donnees": "2026-11-26",
         "derniere_mesure": "-3.10 %",
         "occurrences": 1
       },
       {
-        "id": "AL-eb5980f1",
+        "id": "AL-7fa9525d",
         "type": "CORRELATION_MAX",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-11-25",
-        "derniere_date_donnees": "2026-11-25",
+        "premiere_date_donnees": "2026-11-26",
+        "derniere_date_donnees": "2026-11-26",
         "derniere_mesure": "0.934 (SP500 / NASDAQ100)",
         "occurrences": 1
       },
       {
-        "id": "AL-ec2d6970",
+        "id": "AL-4359bafc",
         "type": "CONCENTRATION",
         "niveau": "ALERTE",
-        "premiere_date_donnees": "2026-11-25",
-        "derniere_date_donnees": "2026-11-25",
+        "premiere_date_donnees": "2026-11-26",
+        "derniere_date_donnees": "2026-11-26",
         "derniere_mesure": "N_eff covariance 1.381 (N_eff corrélation 3.538, non opposable)",
         "occurrences": 1
       }

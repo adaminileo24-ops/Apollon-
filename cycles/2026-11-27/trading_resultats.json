@@ -1,9 +1,9 @@
 {
   "fraicheur": {
-    "genere_le_utc": "2026-11-27T02:24:48Z",
-    "date_donnees": "2026-11-25",
+    "genere_le_utc": "2026-11-27T15:04:33Z",
+    "date_donnees": "2026-11-26",
     "validite_heures": 36.0,
-    "perime_apres_utc": "2026-11-28T14:24:48Z",
+    "perime_apres_utc": "2026-11-29T03:04:33Z",
     "execution_complete": true,
     "n_paires_examinees": 5,
     "n_paires_ecartees_sur_incident": 0,
@@ -11,7 +11,7 @@
   },
   "idees": [
     {
-      "id": "brent_wti_20261125",
+      "id": "brent_wti_20261126",
       "paire": "Brent / WTI",
       "verdict": "REFUSEE",
       "sens": "short_spread",
@@ -25,12 +25,12 @@
       "z_entree": 0.8689965643684953,
       "demi_vie": 4.8119001006644915,
       "demi_vie_ic95": [
-        4.130377870309405,
-        5.493422331019578
+        4.130377870309404,
+        5.493422331019579
       ],
       "demi_vie_identifiee": true,
       "demi_vie_libelle": "4.8 [4.1 ; 5.5]",
-      "adf_t": -5.5446150605374385,
+      "adf_t": -5.544615060537436,
       "adf_retards": 20,
       "n_obs": 2462,
       "profondeur_annees": 9.984941820670773,
@@ -99,7 +99,7 @@
         "n_obs_test": 1231,
         "demi_vie_calibrage": 3.8174809840346264,
         "demi_vie_calibrage_identifiee": false,
-        "adf_t_calibrage": -2.23102012545218,
+        "adf_t_calibrage": -2.2310201254521824,
         "sigma_calibrage": 0.051262988723341694,
         "n_cible": 10,
         "n_stop": 4,
@@ -472,17 +472,17 @@
       "esperance_sur_ic_kappa": {
         "applicable": true,
         "ic95_demi_vie": [
-          4.130377870309405,
-          5.493422331019578
+          4.130377870309404,
+          5.493422331019579
         ],
         "ic_kappa": [
-          0.12617766099030245,
-          0.1678168928665168
+          0.12617766099030242,
+          0.16781689286651685
         ],
         "points": {
           "demi_vie_basse_kappa_haut": {
-            "demi_vie": 4.130377870309405,
-            "kappa": 0.1678168928665168,
+            "demi_vie": 4.130377870309404,
+            "kappa": 0.16781689286651685,
             "p_cible": 0.9208,
             "p_stop": 0.07795,
             "esperance_brute_pb": 10.12802150537963,
@@ -490,8 +490,8 @@
             "ratio": 0.5549737298884688
           },
           "demi_vie_haute_kappa_bas": {
-            "demi_vie": 5.493422331019578,
-            "kappa": 0.12617766099030245,
+            "demi_vie": 5.493422331019579,
+            "kappa": 0.12617766099030242,
             "p_cible": 0.91516,
             "p_stop": 0.07889,
             "esperance_brute_pb": 9.910712480317818,
@@ -632,7 +632,7 @@
       ]
     },
     {
-      "id": "hy_ig_20261125",
+      "id": "hy_ig_20261126",
       "paire": "Haut rendement / Investment grade",
       "verdict": "REFUSEE",
       "sens": "short_spread",
@@ -1027,7 +1027,7 @@
       ]
     }
   ],
-  "date_donnees": "2026-11-25",
+  "date_donnees": "2026-11-26",
   "graine_simulation": 12345,
   "n_trajectoires": 100000,
   "n_trajectoires_exploration": 20000,
@@ -1074,19 +1074,19 @@
       ],
       "alertes": [],
       "beta_couverture": 1.0072356216886296,
-      "adf_t": -5.5446150605374385,
+      "adf_t": -5.544615060537436,
       "adf_retards": 20,
       "adf_p_max": 26,
       "adf_critere": "BIC",
-      "adf_t_aic": -5.802623720106023,
+      "adf_t_aic": -5.802623720106019,
       "adf_retards_aic": 23,
-      "adf_t_ancien_retards_1": -11.087500306471918,
+      "adf_t_ancien_retards_1": -11.087500306471917,
       "cointegre_5pct": true,
       "cointegre_10pct": true,
       "demi_vie_seances": 4.8119001006644915,
       "demi_vie_ic95": [
-        4.130377870309405,
-        5.493422331019578
+        4.130377870309404,
+        5.493422331019579
       ],
       "demi_vie_identifiee": true,
       "demi_vie_libelle": "4.8 [4.1 ; 5.5]",
@@ -1409,18 +1409,18 @@
       ],
       "alertes": [],
       "beta_couverture": 0.6913032428068372,
-      "adf_t": -2.4054010166982653,
+      "adf_t": -2.405401016698266,
       "adf_retards": 7,
       "adf_p_max": 26,
       "adf_critere": "BIC",
-      "adf_t_aic": -1.934810171911959,
+      "adf_t_aic": -1.9348101719119595,
       "adf_retards_aic": 26,
       "adf_t_ancien_retards_1": -2.257741503609187,
       "cointegre_5pct": false,
       "cointegre_10pct": false,
       "demi_vie_seances": 167.33304298946152,
       "demi_vie_ic95": [
-        19.46038744128569,
+        19.460387441285718,
         null
       ],
       "demi_vie_identifiee": false,
@@ -1750,18 +1750,18 @@
       ],
       "alertes": [],
       "beta_couverture": 0.4402173820360549,
-      "adf_t": -2.3023573956741816,
+      "adf_t": -2.302357395674182,
       "adf_retards": 1,
       "adf_p_max": 26,
       "adf_critere": "BIC",
-      "adf_t_aic": -2.1384825757070747,
+      "adf_t_aic": -2.138482575707075,
       "adf_retards_aic": 25,
-      "adf_t_ancien_retards_1": -2.3023573956741816,
+      "adf_t_ancien_retards_1": -2.302357395674182,
       "cointegre_5pct": false,
       "cointegre_10pct": false,
       "demi_vie_seances": 119.06407650351365,
       "demi_vie_ic95": [
-        31.383434088206016,
+        31.38343408820603,
         null
       ],
       "demi_vie_identifiee": false,
@@ -2223,18 +2223,18 @@
       ],
       "alertes": [],
       "beta_couverture": 0.6879404567879326,
-      "adf_t": -1.4104207986029573,
+      "adf_t": -1.410420798602957,
       "adf_retards": 6,
       "adf_p_max": 26,
       "adf_critere": "BIC",
-      "adf_t_aic": -1.8189091413766059,
+      "adf_t_aic": -1.8189091413766054,
       "adf_retards_aic": 22,
-      "adf_t_ancien_retards_1": -2.2587323541993443,
+      "adf_t_ancien_retards_1": -2.258732354199344,
       "cointegre_5pct": false,
       "cointegre_10pct": false,
       "demi_vie_seances": 144.96552129515186,
       "demi_vie_ic95": [
-        25.278901257423186,
+        25.278901257423158,
         null
       ],
       "demi_vie_identifiee": false,
@@ -2634,12 +2634,12 @@
             "esperance_nette_min_sur_ic_kappa_pct": 0.09460712480317818,
             "esperance_nette_max_sur_ic_kappa_pct": 0.09678021505379629,
             "ic95_demi_vie": [
-              4.130377870309405,
-              5.493422331019578
+              4.130377870309404,
+              5.493422331019579
             ],
             "ic_kappa": [
-              0.12617766099030245,
-              0.1678168928665168
+              0.12617766099030242,
+              0.16781689286651685
             ],
             "positive_sur_tout_ic_kappa": true,
             "motif_ic_indisponible": null,
